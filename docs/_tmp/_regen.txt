@@ -1,0 +1,32 @@
+﻿========================================================================
+从 b002_baseline150.yaml 派生 8 组消融配置
+========================================================================
+[OK] abl_A1_cd_balance.yaml       真实改动 2 项  改进A 双向CD加权-均衡化(w_fwd>w_bwd)
+       loss.w_cd_fwd: 1.0 -> 1.078971
+       loss.w_cd_bwd: 1.0 -> 0.921029
+[OK] abl_A2_cd_boost_bwd.yaml     真实改动 2 项  改进A 反向对照-强化bwd(与A1对称)
+       loss.w_cd_fwd: 1.0 -> 0.921029
+       loss.w_cd_bwd: 1.0 -> 1.078971
+[OK] abl_B1_adv_fixed.yaml        真实改动 1 项 (+1 项显式同值)  改进B 固定权重对抗(中间对照)
+       loss.w_adv: 0.0 -> 8.27
+       (同值) loss.adaptive_adv = False
+[OK] abl_B2_adv_adaptive.yaml     真实改动 2 项 (+1 项显式同值)  改进B 梯度自适应对抗(M1)
+       loss.w_adv: 0.0 -> 8.27
+       loss.adaptive_adv: False -> True
+       (同值) loss.adv_target_ratio = 0.1
+[OK] abl_C1_uniform.yaml          真实改动 1 项  改进C uniform 项
+       loss.w_uniform: 0.0 -> 0.00191
+[OK] abl_D1_scale_qk.yaml         真实改动 1 项  改进D SC-MSA 加 1/sqrt(d) 缩放
+       model.scale_qk: False -> True
+[OK] abl_AC_combo.yaml            真实改动 3 项  组合 A1+C1
+       loss.w_cd_fwd: 1.0 -> 1.078971
+       loss.w_cd_bwd: 1.0 -> 0.921029
+       loss.w_uniform: 0.0 -> 0.00191
+[OK] abl_BD_combo.yaml            真实改动 3 项 (+1 项显式同值)  组合 B2+D1
+       loss.w_adv: 0.0 -> 8.27
+       loss.adaptive_adv: False -> True
+       model.scale_qk: False -> True
+       (同值) loss.adv_target_ratio = 0.1
+
+[提示] 需建判别器的组（+255,426 参数、显存与耗时上升）: ['B1_adv_fixed', 'B2_adv_adaptive', 'BD_combo']
+[存档] E:\AE-CC托管\puv-net\runs\ablation_design\ablation_matrix.json

@@ -1,0 +1,27 @@
+{
+  "source": "data\\smoke\\_tmp_mesh\\pipe_block_0001.ply",
+  "source_sha1": "8a1a5bfdb035ae121d38193f247e2e724047dde1",
+  "spec": {
+    "n_input": 512,
+    "n_surface_gt": 1024,
+    "n_interior_gt": 1024,
+    "seed": 1
+  },
+  "watertight": {
+    "is_watertight": true,
+    "is_winding_consistent": true,
+    "euler_number": 0,
+    "volume": 0.8718469727302174,
+    "n_vertices": 72,
+    "n_faces": 144
+  },
+  "repaired": false,
+  "interior_hit_rate": 0.880126953125,
+  "center": [
+    0.006539691175866039,
+    0.004572828551769768,
+    -0.009661320673649288
+  ],
+  "scale": 0.8599651069571245,
+  "kind": "pipe_block"
+}

@@ -1,0 +1,32 @@
+﻿========================================================================
+�� b002_baseline150.yaml ���� 8 ����������
+========================================================================
+[OK] abl_A1_cd_balance.yaml       ��ʵ�Ķ� 2 ��  �Ľ�A ˫��CD��Ȩ-���⻯(w_fwd>w_bwd)
+       loss.w_cd_fwd: 1.0 -> 1.078971
+       loss.w_cd_bwd: 1.0 -> 0.921029
+[OK] abl_A2_cd_boost_bwd.yaml     ��ʵ�Ķ� 2 ��  �Ľ�A �������-ǿ��bwd(��A1�Գ�)
+       loss.w_cd_fwd: 1.0 -> 0.921029
+       loss.w_cd_bwd: 1.0 -> 1.078971
+[OK] abl_B1_adv_fixed.yaml        ��ʵ�Ķ� 1 �� (+1 ����ʽֵͬ)  �Ľ�B �̶�Ȩ�ضԿ�(�м����)
+       loss.w_adv: 0.0 -> 8.27
+       (ֵͬ) loss.adaptive_adv = False
+[OK] abl_B2_adv_adaptive.yaml     ��ʵ�Ķ� 2 �� (+1 ����ʽֵͬ)  �Ľ�B �ݶ�����Ӧ�Կ�(M1)
+       loss.w_adv: 0.0 -> 8.27
+       loss.adaptive_adv: False -> True
+       (ֵͬ) loss.adv_target_ratio = 0.1
+[OK] abl_C1_uniform.yaml          ��ʵ�Ķ� 1 ��  �Ľ�C uniform ��
+       loss.w_uniform: 0.0 -> 0.00191
+[OK] abl_D1_scale_qk.yaml         ��ʵ�Ķ� 1 ��  �Ľ�D SC-MSA �� 1/sqrt(d) ����
+       model.scale_qk: False -> True
+[OK] abl_AC_combo.yaml            ��ʵ�Ķ� 3 ��  ��� A1+C1
+       loss.w_cd_fwd: 1.0 -> 1.078971
+       loss.w_cd_bwd: 1.0 -> 0.921029
+       loss.w_uniform: 0.0 -> 0.00191
+[OK] abl_BD_combo.yaml            ��ʵ�Ķ� 3 �� (+1 ����ʽֵͬ)  ��� B2+D1
+       loss.w_adv: 0.0 -> 8.27
+       loss.adaptive_adv: False -> True
+       model.scale_qk: False -> True
+       (ֵͬ) loss.adv_target_ratio = 0.1
+
+[��ʾ] �轨�б������飨+255,426 �������Դ����ʱ������: ['B1_adv_fixed', 'B2_adv_adaptive', 'BD_combo']
+[�浵] E:\AE-CC�й�\puv-net\runs\ablation_design\ablation_matrix.json

@@ -1,0 +1,549 @@
+{
+  "generator": {
+    "class": "PUTransformer",
+    "up_ratio": 4,
+    "dims": [
+      32,
+      64,
+      128,
+      256,
+      256
+    ],
+    "tail_mode": "shuffle",
+    "n_params": 1152803,
+    "input_shape": [
+      2,
+      256,
+      3
+    ],
+    "output_shape": [
+      2,
+      1024,
+      3
+    ],
+    "trace": [
+      {
+        "name": "head.linear",
+        "type": "Linear",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          32
+        ],
+        "n_params": 96
+      },
+      {
+        "name": "head.bn",
+        "type": "BatchNorm1d",
+        "in": [
+          512,
+          32
+        ],
+        "out": [
+          512,
+          32
+        ],
+        "n_params": 64
+      },
+      {
+        "name": "head.act",
+        "type": "ReLU",
+        "in": [
+          2,
+          256,
+          32
+        ],
+        "out": [
+          2,
+          256,
+          32
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "head",
+        "type": "PointMLP",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          32
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "encoders.0",
+        "type": "TransformerEncoder",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          32
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "encoders.1",
+        "type": "TransformerEncoder",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          64
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "encoders.2",
+        "type": "TransformerEncoder",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          128
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "encoders.3",
+        "type": "TransformerEncoder",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          256
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "encoders.4",
+        "type": "TransformerEncoder",
+        "in": [
+          2,
+          256,
+          3
+        ],
+        "out": [
+          2,
+          256,
+          256
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "tail.0",
+        "type": "PointMLP",
+        "in": [
+          2,
+          1024,
+          64
+        ],
+        "out": [
+          2,
+          1024,
+          64
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "tail.1",
+        "type": "Linear",
+        "in": [
+          2,
+          1024,
+          64
+        ],
+        "out": [
+          2,
+          1024,
+          3
+        ],
+        "n_params": 195
+      },
+      {
+        "name": "tail",
+        "type": "Sequential",
+        "in": [
+          2,
+          1024,
+          64
+        ],
+        "out": [
+          2,
+          1024,
+          3
+        ],
+        "n_params": 0
+      }
+    ],
+    "blocks": {
+      "TransformerEncoder": [
+        {
+          "name": "encoders.0",
+          "n_params": 8320
+        },
+        {
+          "name": "encoders.1",
+          "n_params": 30464
+        },
+        {
+          "name": "encoders.2",
+          "n_params": 120320
+        },
+        {
+          "name": "encoders.3",
+          "n_params": 478208
+        },
+        {
+          "name": "encoders.4",
+          "n_params": 510976
+        }
+      ],
+      "PositionalFusion": [
+        {
+          "name": "encoders.0.posfus",
+          "n_params": 1184
+        },
+        {
+          "name": "encoders.1.posfus",
+          "n_params": 2368
+        },
+        {
+          "name": "encoders.2.posfus",
+          "n_params": 8832
+        },
+        {
+          "name": "encoders.3.posfus",
+          "n_params": 34048
+        },
+        {
+          "name": "encoders.4.posfus",
+          "n_params": 66816
+        }
+      ],
+      "SCMSA": [
+        {
+          "name": "encoders.0.attn",
+          "n_params": 4896
+        },
+        {
+          "name": "encoders.1.attn",
+          "n_params": 19520
+        },
+        {
+          "name": "encoders.2.attn",
+          "n_params": 77952
+        },
+        {
+          "name": "encoders.3.attn",
+          "n_params": 311552
+        },
+        {
+          "name": "encoders.4.attn",
+          "n_params": 311552
+        }
+      ]
+    }
+  },
+  "discriminator": {
+    "class": "PUGANDiscriminator",
+    "n_params": 255426,
+    "input_shape": [
+      2,
+      1024,
+      3
+    ],
+    "output_shape": [
+      2
+    ],
+    "trace": [
+      {
+        "name": "mlp1.0",
+        "type": "ParametrizedConv1d",
+        "in": [
+          2,
+          3,
+          1024
+        ],
+        "out": [
+          2,
+          64,
+          1024
+        ],
+        "n_params": 64
+      },
+      {
+        "name": "mlp1.1",
+        "type": "LeakyReLU",
+        "in": [
+          2,
+          64,
+          1024
+        ],
+        "out": [
+          2,
+          64,
+          1024
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "mlp1.2",
+        "type": "ParametrizedConv1d",
+        "in": [
+          2,
+          64,
+          1024
+        ],
+        "out": [
+          2,
+          128,
+          1024
+        ],
+        "n_params": 128
+      },
+      {
+        "name": "mlp1.3",
+        "type": "LeakyReLU",
+        "in": [
+          2,
+          128,
+          1024
+        ],
+        "out": [
+          2,
+          128,
+          1024
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "mlp1",
+        "type": "Sequential",
+        "in": [
+          2,
+          3,
+          1024
+        ],
+        "out": [
+          2,
+          128,
+          1024
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "attn.f",
+        "type": "Conv1d",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          32,
+          1024
+        ],
+        "n_params": 8224
+      },
+      {
+        "name": "attn.g",
+        "type": "Conv1d",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          32,
+          1024
+        ],
+        "n_params": 8224
+      },
+      {
+        "name": "attn.h",
+        "type": "Conv1d",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 65792
+      },
+      {
+        "name": "attn",
+        "type": "SelfAttention",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 1
+      },
+      {
+        "name": "mlp2.0",
+        "type": "ParametrizedConv1d",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 256
+      },
+      {
+        "name": "mlp2.1",
+        "type": "LeakyReLU",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "mlp2.2",
+        "type": "ParametrizedConv1d",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 256
+      },
+      {
+        "name": "mlp2.3",
+        "type": "LeakyReLU",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "mlp2",
+        "type": "Sequential",
+        "in": [
+          2,
+          256,
+          1024
+        ],
+        "out": [
+          2,
+          256,
+          1024
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "head.0",
+        "type": "Linear",
+        "in": [
+          2,
+          256
+        ],
+        "out": [
+          2,
+          128
+        ],
+        "n_params": 32896
+      },
+      {
+        "name": "head.1",
+        "type": "LeakyReLU",
+        "in": [
+          2,
+          128
+        ],
+        "out": [
+          2,
+          128
+        ],
+        "n_params": 0
+      },
+      {
+        "name": "head.2",
+        "type": "Linear",
+        "in": [
+          2,
+          128
+        ],
+        "out": [
+          2,
+          1
+        ],
+        "n_params": 129
+      },
+      {
+        "name": "head",
+        "type": "Sequential",
+        "in": [
+          2,
+          256
+        ],
+        "out": [
+          2,
+          1
+        ],
+        "n_params": 0
+      }
+    ]
+  }
+}

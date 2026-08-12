@@ -1,0 +1,206 @@
+{
+ "source_run": "runs/ABL_AC_combo",
+ "n_epochs": 150,
+ "env": {
+  "python": "3.10.9",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "torch": "2.5.1+cu121",
+  "cuda_available": true,
+  "cuda_version": "12.1",
+  "numpy": "2.2.6",
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "gpu_capability": "8.6",
+  "gpu_total_mem_gb": 24.0,
+  "git_commit": null
+ },
+ "train_cd_bwd_share": {
+  "min": 0.537733912729891,
+  "max": 0.5611575116636232,
+  "mean": 0.5464253541704965,
+  "std": 0.0056740033338727215,
+  "min_epoch": 0,
+  "max_epoch": 2,
+  "n_below_0.5": 0,
+  "first": 0.537733912729891,
+  "last": 0.5392022195737809
+ },
+ "monitor_loss_cd_bwd_share": {
+  "min": 0.5289964736611755,
+  "max": 0.5714425808853574,
+  "mean": 0.5470226301528789,
+  "std": 0.007955499081836542,
+  "min_epoch": 20,
+  "max_epoch": 5,
+  "n_below_0.5": 0,
+  "first": 0.5671078816608146,
+  "last": 0.5400226623923691
+ },
+ "plateau": {
+  "epoch_range": [
+   75,
+   149
+  ],
+  "plateau_n": 75,
+  "cd": {
+   "plateau_mean": 0.0023608356722144876,
+   "plateau_std": 8.146693139706043e-05,
+   "best": 0.0021012625193890886,
+   "best_epoch": 37,
+   "cv_pct": 3.450766707563497,
+   "best_gain_pct": 10.994969106931391
+  },
+  "hd": {
+   "plateau_mean": 0.008074871025031117,
+   "plateau_std": 0.00042601440451862243,
+   "best": 0.007102985908594162,
+   "best_epoch": 33,
+   "cv_pct": 5.275804445644143,
+   "best_gain_pct": 12.035921235450445
+  },
+  "nuc": {
+   "plateau_mean": 0.5771202987358306,
+   "plateau_std": 0.01572337395014591,
+   "best": 0.5462713886433178,
+   "best_epoch": 113,
+   "cv_pct": 2.724453460498204,
+   "best_gain_pct": 5.345317113275455
+  }
+ },
+ "multi_window": {
+  "cd": {
+   "w5": {
+    "change_pct": -3.1796855256400143,
+    "converged": false
+   },
+   "w10": {
+    "change_pct": 0.9931064665427172,
+    "converged": true
+   },
+   "w15": {
+    "change_pct": -0.6582695692635618,
+    "converged": true
+   },
+   "w20": {
+    "change_pct": -1.5011647075498584,
+    "converged": false
+   },
+   "w25": {
+    "change_pct": -1.4116588392091005,
+    "converged": false
+   }
+  },
+  "hd": {
+   "w5": {
+    "change_pct": -1.4789651220908406,
+    "converged": false
+   },
+   "w10": {
+    "change_pct": 1.2462943698498286,
+    "converged": false
+   },
+   "w15": {
+    "change_pct": -1.4287542581191632,
+    "converged": false
+   },
+   "w20": {
+    "change_pct": -0.9065674600833539,
+    "converged": true
+   },
+   "w25": {
+    "change_pct": 1.5413543285988878,
+    "converged": false
+   }
+  },
+  "nuc": {
+   "w5": {
+    "change_pct": 0.4818104290266893,
+    "converged": true
+   },
+   "w10": {
+    "change_pct": -0.703786668720248,
+    "converged": true
+   },
+   "w15": {
+    "change_pct": -0.5641890004071498,
+    "converged": true
+   },
+   "w20": {
+    "change_pct": -1.3111531489396901,
+    "converged": false
+   },
+   "w25": {
+    "change_pct": -2.171244149313858,
+    "converged": false
+   }
+  }
+ },
+ "multi_window_summary": {
+  "cd": {
+   "n_windows": 5,
+   "n_converged": 2
+  },
+  "hd": {
+   "n_windows": 5,
+   "n_converged": 1
+  },
+  "nuc": {
+   "n_windows": 5,
+   "n_converged": 3
+  }
+ },
+ "plateau_rank_corr": {
+  "n": 75,
+  "cd_vs_hd": 0.18230440967283074,
+  "cd_vs_nuc": -0.2676813655761024,
+  "hd_vs_nuc": -0.11849217638691323
+ },
+ "selection": {
+  "weights": {
+   "cd": 0.5,
+   "hd": 0.2,
+   "nuc": 0.3
+  },
+  "best_epoch_weighted": 61,
+  "best_epoch_cd_only": 37,
+  "agree": false
+ },
+ "cost": {
+  "sec_per_epoch_mean": 132.91959731543625,
+  "sec_per_epoch_first": 126.7,
+  "total_hours": 5.536588888888891,
+  "gpu_peak_gb": 5.511
+ },
+ "config_echo": {
+  "epochs": 150,
+  "batch_size": 64,
+  "lr": 0.001,
+  "lr_step": 30,
+  "lr_decay": 0.7,
+  "seed": 20260811,
+  "up_ratio": 4,
+  "attention_type": "sc-msa",
+  "tail_mode": "shuffle",
+  "w_cd": 1.0,
+  "w_adv": 0.0,
+  "w_uniform": 0.00191,
+  "squared_cd": true,
+  "select_warmup": 5,
+  "adv_target_ratio": 0.1,
+  "w_cd_fwd": 1.078971,
+  "w_cd_bwd": 0.921029,
+  "w_repulsion": 0.0,
+  "adaptive_adv": false,
+  "adv_warmup_epochs": 0,
+  "adv_ramp_epochs": 10,
+  "select_weights": {
+   "cd": 0.5,
+   "hd": 0.2,
+   "nuc": 0.3
+  }
+ },
+ "is_clean_baseline": false,
+ "ablation_keys": {
+  "w_cd_fwd": 1.078971,
+  "w_cd_bwd": 0.921029
+ }
+}

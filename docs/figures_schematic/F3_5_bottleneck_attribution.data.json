@@ -1,0 +1,11 @@
+{
+  "figure_id": "3-5",
+  "caption": "均匀性—保真性权衡的成因归因与对策框图",
+  "type": "schematic",
+  "chapter": "3.2.2",
+  "n_causes": 3,
+  "n_remedies": 3,
+  "generated_at": "2026-08-11T18:28:26+08:00",
+  "script": "scripts/make_schematic_figures.py",
+  "depends_on_experiment": false
+}

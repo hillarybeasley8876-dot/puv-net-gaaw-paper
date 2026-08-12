@@ -1,0 +1,63 @@
+﻿==============================================================================
+实验存档完整性审计   (规范: docs/ARTIFACT_POLICY.md §3)
+==============================================================================
+  OK   [论文] ABL_A1_cd_balance          ep=150/150   gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [论文] ABL_A2_cd_boost_bwd        ep=117/150   gpu=RTX 3090     workers=0 ◀跑
+         · 暂缺 summary_stats.json (run 仍在跑, 收尾阶段才写)
+         · 进度 117/150 (仍在跑, 1.1 分钟前刚写过)
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+         · 缺必备图: figures/F_loss.png (run 仍在跑)
+         · 缺必备图: figures/F_metric.png (run 仍在跑)
+  OK   [论文] B001_reproduce             ep=100/100   gpu=RTX 3090     workers=0
+         · 豁免缺失 summary_stats.json —— B-001 跑在平台区报数机制上线前; 替代证据 = runs/B001_reproduce/convergence_sensitivity.json (scripts/check_convergence_sensitivity.py 事后多窗口重算)
+         · 豁免缺失 selection.json —— 同上; 替代证据 = selection_replay.json (scripts/replay_selection_b001.py 事后按同一 selector 重放)
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [论文] B002_baseline150           ep=150/150   gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  FAIL [辅助] R001_local_smoke           ep=5/5       gpu=RTX 3090     workers=0
+         ✗ 缺文件: summary_stats.json
+         ✗ 缺文件: selection.json
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [辅助] SMOKE_B1                   ep=3/3       gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [辅助] SMOKE_B2                   ep=4/4       gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [辅助] SMOKE_C1                   ep=3/3       gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [辅助] SMOKE_C1b                  ep=3/3       gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [辅助] SMOKE_sel                  ep=8/8       gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  OK   [辅助] SMOKE_sel2                 ep=8/8       gpu=RTX 3090     workers=0
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  FAIL [辅助] _pipeline_check            ep=1/1       gpu=RTX 3090     workers=0
+         ✗ 缺文件: summary_stats.json
+         ✗ 缺文件: selection.json
+         · 无 git_commit (项目非 git 仓库; 复现性依赖 config.yaml 快照 + docs/EXPERIMENT_LOG.md)
+  FAIL [辅助] smoke                      ep=6/?       gpu=?            workers=0
+         ✗ 缺文件: config.yaml
+         ✗ 缺文件: env.json
+         ✗ 缺文件: metrics.json
+         ✗ 缺文件: summary_stats.json
+         ✗ 缺文件: selection.json
+         ✗ 缺文件: ckpt/best.pt
+         ✗ 缺文件: ckpt/last.pt
+         ✗ 缺 figures/ 目录
+         ✗ 缺 clouds/ 目录 (定性图唯一来源)
+
+==============================================================================
+跨机器混排检查 (红线: 同一张表的数字不得跨机并列)
+==============================================================================
+  全部论文 run 同 GPU (RTX 3090), 无混排风险。
+
+==============================================================================
+消融可比性检查 (batch_size / seed 必须一致, 否则单一变量失效)
+==============================================================================
+  OK   batch_size  全部一致: {64}
+  OK   seed        全部一致: {20260811}
+
+==============================================================================
+结果: 10/13 run 存档完整
+==============================================================================
+论文 run 全部通过。辅助/smoke run 的缺口不阻塞。

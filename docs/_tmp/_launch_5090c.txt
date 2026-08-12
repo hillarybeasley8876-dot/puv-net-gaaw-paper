@@ -1,0 +1,61 @@
+﻿连接 cpod-1tq6i2ltk5mj-s1.podtcp.compshare.cn:28870 ...
+  已连接
+
+========================================================================
+[1/4] 传代码
+========================================================================
+  代码文件 32 个, 本次上传 0 个
+
+========================================================================
+[2/4] 传数据
+========================================================================
+  已存在且大小一致, 跳过: data/PU1K_extract/PU1K/train/pu1k_poisson_256_poisson_1024_pc_2500_patch50_addpugan.h5 (1059.8 MB)
+
+========================================================================
+[3/4] 远端校验
+========================================================================
+abl_A1_cd_balance.yaml abl_A2_cd_boost_bwd.yaml abl_AC_combo.yaml abl_B1_adv_fixed.yaml abl_B2_adv_adaptive.yaml abl_BD_combo.yaml abl_C1_uniform.yaml abl_D1_scale_qk.yaml b001_reproduce.yaml b002_baseline150.yaml r001_local_smoke.yaml remote_ABL_B1_adv_fixed.yaml remote_ABL_B2_adv_adaptive.yaml remote_B002_baseline150_5090.yaml smoke.yaml smoke_5090_b1.yaml
+ROOT /root/puv-net
+h5_exists True
+keys ['poisson_1024', 'poisson_256']
+shape (69000, 256, 3) (69000, 1024, 3)
+
+========================================================================
+[4/4] B 组队列
+========================================================================
+  写远端 config remote_B002_baseline150_5090.yaml  (out_dir=runs/B002_baseline150_5090)
+  写远端 config remote_ABL_B1_adv_fixed.yaml  (out_dir=runs/ABL_B1_adv_fixed)
+  写远端 config remote_ABL_B2_adv_adaptive.yaml  (out_dir=runs/ABL_B2_adv_adaptive)
+python : Traceback (most recent call last):
+所在位置 行:2 字符: 1
++ python scripts/deploy_5090.py --launch 2>&1 | Out-File docs/_launch_5 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\nieyi\AppData\Local\Programs\Python\Python310\lib\site-packages\paramiko\channel.py", line 697, in rec
+v
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\nieyi\AppData\Local\Programs\Python\Python310\lib\site-packages\paramiko\buffered_pipe.py", line 154, 
+in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\AE-CC托管\puv-net\scripts\deploy_5090.py", line 301, in <module>
+    raise SystemExit(main())
+  File "E:\AE-CC托管\puv-net\scripts\deploy_5090.py", line 274, in main
+    sh(cli, "cd %s && rm -f queue_B.log && nohup setsid bash "
+  File "E:\AE-CC托管\puv-net\scripts\deploy_5090.py", line 88, in sh
+    so = o.read().decode("utf-8", errors="replace").rstrip()
+  File "C:\Users\nieyi\AppData\Local\Programs\Python\Python310\lib\site-packages\paramiko\file.py", line 184, in read
+    new_data = self._read(self._DEFAULT_BUFSIZE)
+  File "C:\Users\nieyi\AppData\Local\Programs\Python\Python310\lib\site-packages\paramiko\channel.py", line 1359, in _r
+ead
+    return self.channel.recv(size)
+  File "C:\Users\nieyi\AppData\Local\Programs\Python\Python310\lib\site-packages\paramiko\channel.py", line 699, in rec
+v
+    raise socket.timeout()
+TimeoutError

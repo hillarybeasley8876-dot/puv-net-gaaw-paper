@@ -1,0 +1,75 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{iccv}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{amsmath,booktabs}
+
+%\usepackage[colorlinks,urlcolor=black]{hyperref}
+%\usepackage{cite}
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+\iccvfinalcopy % *** Uncomment this line for the final submission
+
+\def\iccvPaperID{2799} % *** Enter the ICCV Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ificcvfinal\pagestyle{empty}\fi
+\begin{document}
+
+%%%%%%%%% TITLE
+%\title{PU-GAN: a Point cloud Upsampling Generative Adversarial Network}
+%\title{PU-GAN: a Point cloud Unpsampling Adversarial Network}
+%\title{PU-GAN: Point Cloud Upsampling using a Generative Adversarial Network}
+\title{PU-GAN: a Point Cloud Upsampling Adversarial Network}
+
+\author{Ruihui Li$^{1}$\quad Xianzhi Li$^{1,3}$\quad Chi-Wing Fu$^{1,3}$\quad Daniel Cohen-Or$^2$\quad Pheng-Ann Heng$^{1,3}$\\
+	%$^1$Department of Computer Science and Enginering \hspace{10mm} $^2$School of Computer Science,\\
+	\hspace{-10mm}$^1$The Chinese University of Hong Kong \hspace{10mm} $^2$ Tel Aviv University\\
+	$^3$Guangdong Provincial Key Laboratory of Computer Vision and Virtual Reality Technology,\\
+	Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China\\
+	\hspace{-10mm}{\tt\small \{lirh,xzli,cwfu,pheng\}@cse.cuhk.edu.hk}\hspace{10mm}{\tt\small dcor@mail.tau.ac.il}\qquad
+}
+\newcommand{\TODO}[1]{{\color{red}{[TODO: #1]}}}
+\newcommand{\phil}[1]{{\color[rgb]{0.3,0.7,0.3}{[PH: #1]}}}
+%\newcommand{\rh}[1]{{\color{blue}{#1}}}
+\newcommand{\rh}[1]{#1}
+\newcommand{\xz}[1]{{\color[rgb]{1.0,0.6,0}{[XZ: #1]}}}
+\newcommand{\dc}[1]{{\color{red}{[DC: #1]}}}
+\newcommand{\para}[1]{\vspace{.05in}\noindent\textbf{#1}}
+\def\ie{\emph{i.e.}}
+\def\eg{\emph{e.g.}}
+\def\etal{{\em et al.}}
+\def\etc{{\em etc.}}
+
+\maketitle
+%\thispagestyle{empty}
+
+\input{abstract}
+\input{introduction}
+\input{background}
+\input{method}
+\input{experiment}
+\input{conclusion}
+
+\para{Acknowledgments.} \
+We thank anonymous reviewers for the valuable comments.
+The work is supported by the 973 Program (Proj. No. 2015CB351706), the National Natural Science Foundation of China with Proj. No. U1613219, the Research Grants Council of the Hong Kong Special Administrative Region (No. CUHK 14203416 \& 14201717), and the Israel Science Foundation grants 2366/16 and 2472/7.
+
+{\small
+\bibliographystyle{ieee}
+\bibliography{egbib}
+}
+
+\end{document}

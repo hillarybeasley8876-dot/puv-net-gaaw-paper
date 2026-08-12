@@ -1,0 +1,11 @@
+{
+  "figure_id": "3-4",
+  "caption": "上采样质量评价协议流程框图",
+  "type": "schematic",
+  "chapter": "3.3.4",
+  "n_steps": 6,
+  "notes": "口径隔离规则与 PU-GCN 官方协议锚定",
+  "generated_at": "2026-08-11T18:28:26+08:00",
+  "script": "scripts/make_schematic_figures.py",
+  "depends_on_experiment": false
+}

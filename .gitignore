@@ -1,0 +1,72 @@
+# ---- credentials (NEVER commit) ----
+.env
+.env.local
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.yaml
+
+# ---- data & artifacts ----
+data/raw/
+data/patches/
+data/PU1K_extract/    # PU1K 原始 .xyz 不入仓（备份三类范围不含）
+backups/              # 备份 zip 不入仓（备份目录独立管理）
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.h5
+*.hdf5
+*.pkl
+*.zip
+*.tar
+*.tar.gz
+
+# runs/ 屏蔽大件（best.pt 等模型权重 + 大量 npz），
+# 但保留判据文件（history.json/metrics.json/config.yaml/log 等）
+# —— 用下一行的反向例外与白名单实现。
+runs/
+!runs/**/history.json
+!runs/**/metrics.json
+!runs/**/config.yaml
+!runs/**/summary_stats.json
+!runs/**/train_*.log
+!runs/**/calibration.json
+!runs/**/_index.json
+!runs/**/rho_trace_*.json
+!runs/_rho_*.json
+!runs/**/README.md
+
+# runs/<name>/figures/ 是图数据点 (data.json)，不入仓（图本身已禁）
+runs/**/figures/
+
+# paper_assets_TRIAL/ 下 README 明确说禁推，本仓也禁
+paper_assets_TRIAL/
+!paper_assets_TRIAL/figures_ch4/
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---- tooling ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.log
+
+# ---- os ----
+Thumbs.db
+desktop.ini
+.DS_Store

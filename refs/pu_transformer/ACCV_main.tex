@@ -1,0 +1,118 @@
+% Updated in February 2016 by Hwann-Tzong Chen
+% Updated in May 2014 by Hideo Saito
+% Updated in March 2012 by Yasuyuki Matsushita
+% Updated in April 2002 by Antje Endemann, ...., and in March 2010 by Reinhard Klette
+% Based on CVPR 07 and LNCS style, with modifications by DAF, AZ and elle 2008, AA 2010, ACCV 2010
+
+\documentclass[runningheads]{llncs}
+\usepackage{graphicx}
+\usepackage{colortbl}
+%\usepackage{tikz}
+\usepackage{comment}
+\usepackage{amsmath,amssymb} % define this before the line numbering.
+
+\graphicspath{ {./images/} }
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{color, colortbl}
+\usepackage{soul}
+\usepackage{stackengine}
+\usepackage{csquotes}
+\usepackage{amsmath,bm, bbm}
+\usepackage[ruled, lined, linesnumbered, longend]{algorithm2e}
+\SetAlFnt{\scriptsize}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{footmisc}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs,array,siunitx}
+%\usepackage[table]{xcolor}
+\definecolor{Gray}{gray}{0.95}
+\usepackage{cuted}
+\usepackage{capt-of}
+%\setlength\arrayrulewidth{0.7pt}
+\newcommand\xrowht[2][0]{\addstackgap[.5\dimexpr#2\relax]{\vphantom{#1}}}
+
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\etal}{\emph{et al.}}
+\newcommand{\etc}{\emph{etc.}}
+\newcommand{\wrt}{\emph{w.r.t.}}
+
+\def\SA#1{{\color{blue}{\bf [Saeed:} {\it{#1}}{\bf ]}}}
+\def\SQ#1{{\color{red}{\bf [Shi:} {\it{#1}}{\bf ]}}}
+\def\NB#1{{\color{green}{\bf [Nick:} {\it{#1}}{\bf ]}}}
+
+% The "axessiblity" package can be found at: https://ctan.org/pkg/axessibility?lang=en
+\usepackage[accsupp]{axessibility}  % Improves PDF readability for those with disabilities.
+
+%\usepackage{ruler}
+%\usepackage[width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=red,citecolor=green,urlcolor=blue}
+%===========================================================
+\begin{document}
+\pagestyle{headings}
+\mainmatter
+
+\def\ACCV22SubNumber{478}  % Insert your submission number here
+
+%===========================================================
+\title{PU-Transformer: Point Cloud Upsampling Transformer} % Replace with your title
+\begin{comment}
+\titlerunning{ACCV-22 submission ID \ACCV22SubNumber}
+\authorrunning{ACCV-22 submission ID \ACCV22SubNumber}
+
+\author{Anonymous ACCV 2022 submission}
+\institute{Paper ID \ACCV22SubNumber}
+\end{comment}
+
+\titlerunning{PU-Transformer: Point Cloud Upsampling Transformer}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Shi Qiu\inst{1,2} \and
+Saeed Anwar\inst{1,2} \and
+Nick Barnes\inst{1}}
+%
+\authorrunning{S. Qiu et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Australian National University \and
+Data61-CSIRO, Australia\\
+\email{\{shi.qiu, saeed.anwar, nick.barnes\}@anu.edu.au}}
+\maketitle
+
+%===========================================================
+\begin{abstract}
+Given the rapid development of 3D scanners, point clouds are becoming popular in AI-driven machines. However, point cloud data is inherently sparse and irregular, causing significant difficulties for machine perception. In this work, we focus on the point cloud upsampling task that intends to generate dense high-fidelity point clouds from sparse input data. Specifically, to activate the transformer's strong capability in representing features, we develop a new variant of a multi-head self-attention structure to enhance both point-wise and channel-wise relations of the feature map. In addition, we leverage a positional fusion block to comprehensively capture the local context of point cloud data, providing more position-related information about the scattered points. As the first transformer model introduced for point cloud upsampling, we demonstrate the outstanding performance of our approach by comparing with the state-of-the-art CNN-based methods on different benchmarks quantitatively and qualitatively.
+\end{abstract}
+
+%===========================================================
+\input{sections/intro}
+\input{sections/related}
+\input{sections/methodology}
+\input{sections/implementation}
+\input{sections/experiments}
+\input{sections/limit}
+\input{sections/conclusions}
+
+%References are listed in alphabetic order by the surname of the first author, or the identifying word (e.g., in case of a website). Have
+%all anonymized references at the beginning of the list.
+
+%here would be your acknowledgement (if any) in the final accepted paper
+
+%===========================================================
+\bibliographystyle{splncs}
+\bibliography{egbib}
+
+%this would normally be the end of your paper, but you may also have an appendix
+%within the given limit of number of pages
+\end{document}

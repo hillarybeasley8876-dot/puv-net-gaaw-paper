@@ -1,0 +1,42 @@
+﻿连接 cpod-1tq6i2ltk5mj-s1.podtcp.compshare.cn:28870 ...
+  已连接
+
+========================================================================
+[1/4] 传代码
+========================================================================
+  代码文件 32 个, 本次上传 0 个
+
+========================================================================
+[2/4] 传数据
+========================================================================
+  已存在且大小一致, 跳过: data/PU1K_extract/PU1K/train/pu1k_poisson_256_poisson_1024_pc_2500_patch50_addpugan.h5 (1059.8 MB)
+
+========================================================================
+[3/4] 远端校验
+========================================================================
+abl_A1_cd_balance.yaml abl_A2_cd_boost_bwd.yaml abl_AC_combo.yaml abl_B1_adv_fixed.yaml abl_B2_adv_adaptive.yaml abl_BD_combo.yaml abl_C1_uniform.yaml abl_D1_scale_qk.yaml b001_reproduce.yaml b002_baseline150.yaml r001_local_smoke.yaml remote_ABL_B1_adv_fixed.yaml remote_ABL_B2_adv_adaptive.yaml remote_B002_baseline150_5090.yaml smoke.yaml smoke_5090_b1.yaml
+ROOT /root/puv-net
+h5_exists True
+keys ['poisson_1024', 'poisson_256']
+shape (69000, 256, 3) (69000, 1024, 3)
+
+========================================================================
+[4/4] B 组队列
+========================================================================
+  写远端 config remote_B002_baseline150_5090.yaml  (out_dir=runs/B002_baseline150_5090, loader.num_workers=8)
+  写远端 config remote_ABL_B1_adv_fixed.yaml  (out_dir=runs/ABL_B1_adv_fixed, loader.num_workers=8)
+  写远端 config remote_ABL_B2_adv_adaptive.yaml  (out_dir=runs/ABL_B2_adv_adaptive, loader.num_workers=8)
+  远端已有训练在跑:
+    619 /root/puvnet-venv/bin/python scripts/train_pu.py --config configs/remote_B002_baseline150_5090.yaml
+  不重复启动。
+--- queue_B.log ---
+[15:44:47] START B002_baseline150_5090
+--- train log tail ---
+  ep058 total=0.001898 cd=0.001898 | mon_cd=0.002140 mon_hd=0.006969 mon_nuc=0.581417 score=0.807728 (57.56s, 5.512GB)
+  ep059 total=0.001903 cd=0.001903 | mon_cd=0.002099 mon_hd=0.006610 mon_nuc=0.589951 score=0.797372* (57.07s, 5.512GB)
+  ep060 total=0.001870 cd=0.001870 | mon_cd=0.002099 mon_hd=0.007578 mon_nuc=0.572022 score=0.805808 (57.37s, 5.512GB)
+  ep061 total=0.001868 cd=0.001868 | mon_cd=0.002090 mon_hd=0.006826 mon_nuc=0.583754 score=0.796448* (57.4s, 5.512GB)
+  ep062 total=0.001861 cd=0.001861 | mon_cd=0.002193 mon_hd=0.008279 mon_nuc=0.580514 score=0.840308 (56.59s, 5.512GB)
+  ep063 total=0.001860 cd=0.001860 | mon_cd=0.002203 mon_hd=0.007448 mon_nuc=0.584112 score=0.829515 (50.01s, 5.512GB)
+
+[存档] E:\AE-CC托管\puv-net\runs\probe_cpod\deploy_5090.json

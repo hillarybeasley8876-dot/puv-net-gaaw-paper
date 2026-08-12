@@ -1,0 +1,40 @@
+
+\begin{abstract}
+Point clouds acquired from range scans are often sparse, noisy, and non-uniform.
+%, as can be seen in various 3D benchmarks.
+%
+%\dc{do we really need to bring the benchmarks as a proof? i would just make the claim, it is obvious}
+This paper presents a new point cloud upsampling network called PU-GAN \footnote[1]{\href{https://liruihui.github.io/publication/PU-GAN/}{https://liruihui.github.io/publication/PU-GAN/}}, which is formulated based on a generative adversarial network (GAN), to learn a rich variety of point distributions from the latent space and upsample points over patches on object surfaces.
+%
+%To realize a working GAN network, we design an up-down-up expansion unit in the generator to upsample per-point features with %error feedback and self-correction, and formulate a self-attention unit to enhance the feature integration.
+%\dc{since we did not invent the up-down-up, I suggest the following}
+%\phil{Our up-down-up is different from the image one... Fig.3}
+To realize a working GAN network, we construct an up-down-up expansion unit in the generator for upsampling point features with error feedback and self-correction, and formulate a self-attention unit to enhance the feature integration.
+%
+Further, we design a compound loss with adversarial, uniform and reconstruction terms, to encourage the discriminator to learn more latent patterns and enhance the output point distribution uniformity.
+%\dc{where? not clear why ``discover'', maybe ``learn''?}.
+%\phil{actually, XZ and RH follow a GAN paper to use the word "discover", but learn is ok
+%
+Qualitative and quantitative evaluations demonstrate the quality of our results over the state-of-the-arts in terms of distribution uniformity, proximity-to-surface, and 3D reconstruction quality.
+%
+%Both qualitative and quantitative comparison results against recent methods demonstrate the quality of our results over the state-of-the-art methods in terms of distribution uniformity, proximity-to-surface, and 3D reconstruction quality.
+%\dc{the abstract does not sell the key point of why ``GAN'' is so helpful here. I feel that you feel uneasy to claim that the losses alone cannot deliver the work}
+%
+%To encourage the upsampled points to locate on the underlying surface with a uniform distribution, we further formulate loss terms to guide the learning of the generator and discriminator.
+%\phil{to revise}
+%Further, we formulate the uniform loss to improve the distribution uniformity of the points produced by the generator to encourage the discriminator to learn more latent patterns.
+%\phil{this sentence is not a good summary of sec 3.5}
+%
+%To make the GAN framework feasible and capable for the upsampling task, we further introduce a series of adaptations that lead to a substantial performance boost, including a uniform loss, an up-and-down unit, an attention module, etc.
+%
+%
+%We evaluate our method by qualitative and quantitative comparison results, in terms of visual quality, proximity-to-surface, and distribution uniformity, demonstrate the capability of PU-GAN over very recent works on point cloud upsampling and consolidation.
+%outperforms the optimization-based, as well as state-of-the-art deep-learning-based approaches, particularly in terms of handling sparse, non-uniform inputs and revealing a complete and uniform point distribution.
+\end{abstract}
+
+%\begin{abstract}
+%	Point clouds scanned by customer-level devices are typically sparse, noisy, incomplete and non-uniform.
+%	To address these issues and generate a high-quality point cloud, in this paper, we propose a novel generative adversarial network (GAN) based point cloud upsampling framework, namely PU-GAN, to learn multimodal structure of the target distribution, for which a simple variational approximation is infeasible.
+%	To make the GAN framework feasible and capable for the upsampling task, we further introduce a series of adaptations that lead to a substantial performance boost, including a uniform loss, an up-and-down unit, an attention module, etc.
+%	Qualitative and quantitative experimental results show that our PU-GAN significantly outperforms the optimization-based, as well as state-of-the-art deep-learning-based approaches, particularly in terms of handling sparse, non-uniform inputs and revealing a complete and uniform point distribution.
+%\end{abstract}

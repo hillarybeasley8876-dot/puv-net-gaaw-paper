@@ -1,0 +1,188 @@
+==============================================================================
+### 2.1 上采样方法
+==============================================================================
+
+-- topic: upsampling-core (10 条) --
+   [ 53] 2018 MPU                    Patch-based Progressive 3D Point Set Upsampling
+   [ 55] 2018 PUNet                  PU-Net: Point Cloud Upsampling Network
+   [ 56] 2018 EC-Net                 EC-Net: an Edge-aware Point set Consolidation Network
+   [ 68] 2019 PUGCN                  PU-GCN: Point Cloud Upsampling using Graph Convolutional Netwo
+   [ 85] 2021 Dis-PU                 Point Cloud Upsampling via Disentangled Refinement
+   [100] 2022 PUCRN                  Point Cloud Upsampling via Cascaded Refinement Network
+   [103] 2022 PUEVA                  PU-EVA: An Edge Vector based Approximation Solution for Flexib
+   [104] 2022 PUFlow                 PU-Flow: A Point Cloud Upsampling Network With Normalizing Flo
+   [110] 2023 PUSDF                  Parametric Surface Constrained Upsampler Network for Point Clo
+   [113] 2023 iPUNet                 iPUNet:Iterative Cross Field Guided Point Cloud Upsampling
+
+-- topic: upsampling-gan (1 条) --
+   [ 64] 2019 PUGAN                  PU-GAN: a Point Cloud Upsampling Adversarial Network
+
+-- topic: upsampling-transformer (1 条) --
+   [ 92] 2021 PUTransformer          PU-Transformer: Point Cloud Upsampling Transformer
+
+-- topic: upsampling-arbitrary (4 条) --
+   [ 84] 2021 NePs                   Neural Points: Point Cloud Representation with Neural Fields f
+   [ 95] 2021 MAFU                   Meta-PU: An Arbitrary-Scale Upsampling Network for Point Cloud
+   [109] 2022 SAPCU                  Self-Supervised Arbitrary-Scale Point Clouds Upsampling via Im
+   [111] 2023 Grad-PU                Grad-PU: Arbitrary-Scale Point Cloud Upsampling via Gradient D
+
+-- topic: upsampling-diffusion (2 条) --
+   [ 88] 2021 PointDiffusion         Diffusion Probabilistic Models for 3D Point Cloud Generation
+   [112] 2023 PUDM                   A Conditional Denoising Diffusion Probabilistic Model for Poin
+
+-- topic: upsampling-lidar (1 条) --
+   [ 99] 2022 PUDense                Density-Imbalance-Eased LiDAR Point Cloud Upsampling via Featu
+
+-- topic: geometry-optim (5 条) --
+   [  6] 2003 MLS                    Computing and rendering point set surfaces
+   [  7] 2007 LOP                    Parameterization-free projection for geometry reconstruction
+   [  8] 2009 WLOP                   Consolidation of unorganized point clouds for surface reconstr
+   [ 10] 2013 EAR                    Edge-aware point set resampling
+   [ 21] 2015 DeepPointsConsolidation Deep points consolidation
+
+-- topic: geometry-recon (2 条) --
+   [  4] 1999 BallPivoting           The ball-pivoting algorithm for surface reconstruction
+   [ 11] 2013 PoissonRecon           Screened poisson surface reconstruction
+
+==============================================================================
+### 2.2 骨干网络
+==============================================================================
+
+-- topic: point-backbone (5 条) --
+   [ 29] 2016 PointNet               PointNet: Deep Learning on Point Sets for 3D Classification an
+   [ 39] 2017 PointNet2              PointNet++: Deep Hierarchical Feature Learning on Point Sets i
+   [ 45] 2018 PointCNN               PointCNN: Convolution On $\mathcal{X}$-Transformed Points
+   [ 51] 2018 DGCNN                  Dynamic Graph CNN for Learning on Point Clouds
+   [ 71] 2019 KPConv                 KPConv: Flexible and Deformable Convolution for Point Clouds
+
+-- topic: point-transformer (9 条) --
+   [ 75] 2020 PCT                    PCT: Point cloud transformer
+   [ 82] 2020 PointTransformer       Point Transformer
+   [ 83] 2021 PointMixer             PointMixer: MLP-Mixer for Point Cloud Understanding
+   [ 90] 2021 FastPointTransformer   Fast Point Transformer
+   [ 97] 2021 PointBERT              Point-BERT: Pre-training 3D Point Cloud Transformers with Mask
+   [101] 2022 StratifiedTransformer  Stratified Transformer for 3D Point Cloud Segmentation
+   [106] 2022 PUMAE                  Masked Autoencoders for Point Cloud Self-supervised Learning
+   [107] 2022 PointTransformerV2     Point Transformer V2: Grouped Vector Attention and Partition-b
+   [114] 2023 PointTransformerV3     Point Transformer V3: Simpler, Faster, Stronger
+
+-- topic: transformer-core (3 条) --
+   [ 40] 2017 Transformer            Attention Is All You Need
+   [ 74] 2020 ViT                    An Image is Worth 16x16 Words: Transformers for Image Recognit
+   [ 86] 2021 SwinT                  Swin Transformer: Hierarchical Vision Transformer using Shifte
+
+==============================================================================
+### 2.3 GAN与生成
+==============================================================================
+
+-- topic: gan-core (9 条) --
+   [ 13] 2014 GAN                    Generative Adversarial Networks
+   [ 25] 2016 Pix2Pix                Image-to-Image Translation with Conditional Adversarial Networ
+   [ 28] 2016 LSGAN                  Least Squares Generative Adversarial Networks
+   [ 30] 2016 GANTrainTricks         Improved Techniques for Training GANs
+   [ 32] 2017 WGAN                   Wasserstein GAN
+   [ 35] 2017 WGANGP                 Improved Training of Wasserstein GANs
+   [ 43] 2017 CycleGAN               Unpaired Image-to-Image Translation using Cycle-Consistent Adv
+   [ 48] 2018 SNGAN                  Spectral Normalization for Generative Adversarial Networks
+   [ 58] 2018 SAGAN                  Self-Attention Generative Adversarial Networks
+
+-- topic: gan-sr (3 条) --
+   [ 12] 2014 SRCNN                  Image Super-Resolution Using Deep Convolutional Networks
+   [ 26] 2016 SRGAN                  Photo-Realistic Single Image Super-Resolution Using a Generati
+   [ 52] 2018 ESRGAN                 ESRGAN: Enhanced Super-Resolution Generative Adversarial Netwo
+
+-- topic: gan-stability (3 条) --
+   [ 36] 2017 TTUR                   GANs Trained by a Two Time-Scale Update Rule Converge to a Loc
+   [ 47] 2018 GANStability           Which Training Methods for GANs do actually Converge?
+   [ 62] 2019 R1Reg                  Analyzing and Improving the Image Quality of StyleGAN
+
+-- topic: point-gen (6 条) --
+   [ 31] 2017 LGAN                   Learning Representations and Generative Models for 3D Point Cl
+   [ 41] 2017 FoldingNet             FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation
+   [ 54] 2018 P2PNet                 P2P-NET: Bidirectional Point Displacement Net for Shape Transf
+   [ 70] 2019 TreeGAN                3D Point Cloud Generative Adversarial Network Based on Tree St
+   [ 73] 2020 ShapeGF                Learning Gradient Fields for Shape Generation
+   [108] 2022 LION                   LION: Latent Point Diffusion Models for 3D Shape Generation
+
+==============================================================================
+### 2.4 多目标损失
+==============================================================================
+
+-- topic: loss-balance (8 条) --
+   [ 33] 2017 GradNorm               GradNorm: Gradient Normalization for Adaptive Loss Balancing i
+   [ 37] 2017 UncertaintyWeighting   Multi-Task Learning Using Uncertainty to Weigh Losses for Scen
+   [ 46] 2018 DWA                    End-to-End Multi-Task Learning with Attention
+   [ 49] 2018 MGDA                   Multi-Task Learning as Multi-Objective Optimization
+   [ 79] 2020 GradVac                Gradient Vaccine: Investigating and Improving Multi-task Optim
+   [ 81] 2020 PCGrad                 Gradient Surgery for Multi-Task Learning
+   [ 87] 2021 CAGrad                 Conflict-Averse Gradient Descent for Multi-task Learning
+   [105] 2022 NashMTL                Multi-Task Learning as a Bargaining Game
+
+-- topic: optimization (9 条) --
+   [  9] 2012 GradClip               On the difficulty of training Recurrent Neural Networks
+   [ 14] 2014 AdamOpt                Adam: A Method for Stochastic Optimization
+   [ 15] 2014 Dropout                Dropout: a simple way to prevent neural networks from overfitt
+   [ 19] 2015 ResNet                 Deep Residual Learning for Image Recognition
+   [ 20] 2015 BatchNorm              Batch Normalization: Accelerating Deep Network Training by Red
+   [ 22] 2016 LayerNorm              Layer Normalization
+   [ 24] 2016 GELU                   Gaussian Error Linear Units (GELUs)
+   [ 27] 2016 CosineLR               SGDR: Stochastic Gradient Descent with Warm Restarts
+   [ 38] 2017 AdamW                  Decoupled Weight Decay Regularization
+
+-- topic: metric-cd (4 条) --
+   [  2] 1993 HausdorffMetric        Comparing images using the Hausdorff distance
+   [  5] 2000 EMDLoss                The Earth Mover's Distance as a Metric for Image Retrieval
+   [ 23] 2016 PointSetGen            A Point Set Generation Network for 3D Object Reconstruction fr
+   [ 93] 2021 DensityAwareCD         Density-aware Chamfer Distance as a Comprehensive Metric for P
+
+==============================================================================
+### 其他(按需)
+==============================================================================
+
+-- topic: survey (5 条) --
+   [ 34] 2017 GANSurvey              Generative Adversarial Networks: An Overview
+   [ 61] 2019 PointCloudSurvey       Deep Learning for 3D Point Clouds: A Survey
+   [ 78] 2020 MTLSurvey              Multi-Task Learning for Dense Prediction Tasks: A Survey
+   [ 80] 2020 PointCloudGenSurvey    A Survey on Deep Geometry Learning: From a Representation Pers
+   [102] 2022 TransformerSurvey3D    Transformers in 3D Point Clouds: A Survey
+
+-- topic: implicit (4 条) --
+   [ 65] 2019 OccNet                 Occupancy Networks: Learning 3D Reconstruction in Function Spa
+   [ 66] 2019 DeepSDF                DeepSDF: Learning Continuous Signed Distance Functions for Sha
+   [ 77] 2020 NeRF                   NeRF: Representing Scenes as Neural Radiance Fields for View S
+   [ 98] 2022 POCO                   POCO: Point Convolution for Surface Reconstruction
+
+-- topic: denoise (4 条) --
+   [ 60] 2019 TotalDenoising         Total Denoising: Unsupervised Learning of 3D Point Cloud Clean
+   [ 69] 2019 PointCleanNet          PointCleanNet: Learning to Denoise and Remove Outliers from De
+   [ 76] 2020 DMRDenoise             Differentiable Manifold Reconstruction for Point Cloud Denoisi
+   [ 89] 2021 ScoreDenoise           Score-Based Point Cloud Denoising
+
+-- topic: sampling (3 条) --
+   [  3] 1997 FPS                    The farthest point strategy for progressive image sampling
+   [ 44] 2018 LearnToSample          Learning to Sample
+   [ 63] 2019 SampleNet              SampleNet: Differentiable Point Cloud Sampling
+
+-- topic: dataset (3 条) --
+   [ 16] 2014 ModelNet               3D ShapeNets: A Deep Representation for Volumetric Shapes
+   [ 18] 2015 ShapeNet               ShapeNet: An Information-Rich 3D Model Repository
+   [ 72] 2019 ScanObjectNN           Revisiting Point Cloud Classification: A New Benchmark Dataset
+
+-- topic: downstream (3 条) --
+   [ 17] 2014 LOAM                   LOAM: Lidar Odometry and Mapping in Real-time
+   [ 42] 2017 VoxelNet               VoxelNet: End-to-End Learning for Point Cloud Based 3D Object 
+   [ 50] 2018 PointRCNN              PointRCNN: 3D Object Proposal Generation and Detection from Po
+
+-- topic: completion (3 条) --
+   [ 57] 2018 PCN                    PCN: Point Completion Network
+   [ 94] 2021 SnowflakeNet           SnowflakeNet: Point Cloud Completion by Snowflake Point Deconv
+   [ 96] 2021 PoinTr                 PoinTr: Diverse Point Cloud Completion with Geometry-Aware Tra
+
+-- topic: toolchain (2 条) --
+   [ 59] 2018 Open3D                 Open3D: A Modern Library for 3D Data Processing
+   [ 67] 2019 PyTorch                PyTorch: An Imperative Style, High-Performance Deep Learning L
+
+-- topic: statistics (2 条) --
+   [  1] 1989 StatPower              Statistical Power Analysis for the Behavioral Sciences
+   [ 91] 2021 DeepLearningSeeds      Torch.manual_seed(3407) is all you need: On the influence of r
+

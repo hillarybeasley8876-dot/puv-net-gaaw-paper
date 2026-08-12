@@ -1,0 +1,29 @@
+﻿=== ps etimes + lstart ===
+---
+    PID ELAPSED                  STARTED CMD
+    619       0 Tue Aug 11 15:44:46 2026 /root/puvnet-venv/bin/python scripts/train_pu.py --config configs/remote_B002_baseline150_5090.yaml
+---
+=== history.json stat ===
+---
+size=74701 mtime=2026-08-11 17:27:41.336618763 +0000
+---
+=== last.pt mtime (B002 写过就更新) ===
+---
+mtime=2026-08-11 17:27:41.325618809 +0000
+---
+=== monitor_cd 末 5 段 ===
+---
+len= 106
+0 101 57.58 0.002054552684715432
+1 102 57.5 0.0019760164480889016
+2 103 57.54 0.0019642537672627056
+3 104 57.29 0.0020780690223268262
+4 105 57.4 0.0019124468604198603
+---
+=== 所有 python 进程 ===
+---
+root          33       1  0 15:27 ?        00:00:01 /usr/bin/python3 /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+root          51      38  0 15:27 ?        00:00:27 /workspace/minimax-h3-comfyui/myenv/bin/python main.py --listen 0.0.0.0 --port 8188 --preview-method none --async-offload 2 --reserve-vram 1.0 --cache-none --max-upload-size 2048 --enable-dynamic-vram
+root          55      33  0 15:27 ?        00:00:02 /usr/local/miniconda3/bin/python3.13 /usr/local/miniconda3/bin/jupyter-lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token=d3099d78-8809-500d-b3be-89be2ce41df1 --notebook-dir=/
+root         619     617  0 15:44 ?        01:43:48 /root/puvnet-venv/bin/python scripts/train_pu.py --config configs/remote_B002_baseline150_5090.yaml
+---

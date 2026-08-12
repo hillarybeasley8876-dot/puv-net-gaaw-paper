@@ -1,0 +1,73 @@
+{
+  "note": "Batch 2 修正清单 — 处理 Batch 1 被打回的 7 条 + 补充候选。年份改为 API 真实年份; arXiv ID 记错的改走标题检索。",
+  "candidates": [
+    {"key": "PUGCN", "title": "PU-GCN: Point Cloud Upsampling using Graph Convolutional Networks", "arxiv": "1912.03264", "year": "2019", "venue": "CVPR 2021", "topic": "upsampling-core", "cite_in_chapter": ["2.1", "5.1"]},
+    {"key": "PointCloudSurvey", "title": "Deep Learning for 3D Point Clouds: A Survey", "arxiv": "1912.12033", "year": "2019", "venue": "IEEE TPAMI 2021", "topic": "survey", "cite_in_chapter": ["2.2"]},
+    {"key": "MTLSurvey", "title": "Multi-Task Learning for Dense Prediction Tasks: A Survey", "arxiv": "2004.13379", "year": "2020", "venue": "IEEE TPAMI 2022", "topic": "survey", "cite_in_chapter": ["2.4"]},
+    {"key": "EMDLoss", "title": "The Earth Mover's Distance as a Metric for Image Retrieval", "year": "2000", "venue": "IJCV", "topic": "metric-cd", "cite_in_chapter": ["3.3"]},
+
+    {"key": "PUFlow", "title": "PU-Flow: a Point Cloud Upsampling Network with Normalizing Flows", "year": "2022", "venue": "IEEE TVCG", "topic": "upsampling-core", "cite_in_chapter": ["2.1"]},
+    {"key": "PUSSAS", "title": "SSAS: Self-Supervised Arbitrary-Scale Point Clouds Upsampling", "year": "2022", "venue": "arXiv", "topic": "upsampling-selfsup", "cite_in_chapter": ["2.1"]},
+    {"key": "PUDense", "title": "Density-imbalance-eased LiDAR Point Cloud Upsampling via Feature Consistency Learning", "year": "2022", "venue": "IEEE T-IV", "topic": "upsampling-lidar", "cite_in_chapter": ["2.1", "7.4"]},
+
+    {"key": "PUEVA2", "title": "PU-EVA: An Edge-Vector based Approximation Solution for Flexible-scale Point Cloud Upsampling", "year": "2021", "venue": "ICCV 2021", "topic": "upsampling-core", "cite_in_chapter": ["2.1"]},
+    {"key": "PUSSL", "title": "Self-Supervised Arbitrary-Scale Point Clouds Upsampling via Implicit Neural Representation", "arxiv": "2204.08196", "year": "2022", "venue": "CVPR 2022", "topic": "upsampling-selfsup", "cite_in_chapter": ["2.1"]},
+
+    {"key": "PUSDF", "title": "Parametric Surface Constrained Upsampler Network for Point Cloud", "arxiv": "2303.08240", "year": "2023", "venue": "AAAI 2023", "topic": "upsampling-core", "cite_in_chapter": ["2.1"]},
+    {"key": "iPUNet", "title": "iPUNet: Iterative Cross Field Guided Point Cloud Upsampling", "arxiv": "2310.09092", "year": "2023", "venue": "IEEE TVCG", "topic": "upsampling-core", "cite_in_chapter": ["2.1"]},
+    {"key": "RepKPU", "title": "RepKPU: Point Cloud Upsampling with Kernel Point Representation and Deformation", "arxiv": "2403.10962", "year": "2024", "venue": "CVPR 2024", "topic": "upsampling-core", "cite_in_chapter": ["2.1"]},
+    {"key": "PUDM", "title": "A Conditional Denoising Diffusion Probabilistic Model for Point Cloud Upsampling", "arxiv": "2312.02719", "year": "2023", "venue": "CVPR 2024", "topic": "upsampling-diffusion", "cite_in_chapter": ["2.1", "7.4"]},
+    {"key": "PointDiffusion", "title": "Diffusion Probabilistic Models for 3D Point Cloud Generation", "arxiv": "2103.01458", "year": "2021", "venue": "CVPR 2021", "topic": "upsampling-diffusion", "cite_in_chapter": ["2.3", "7.4"]},
+    {"key": "LION", "title": "LION: Latent Point Diffusion Models for 3D Shape Generation", "arxiv": "2210.06978", "year": "2022", "venue": "NeurIPS 2022", "topic": "point-gen", "cite_in_chapter": ["2.3"]},
+
+    {"key": "PointMixer", "title": "PointMixer: MLP-Mixer for Point Cloud Understanding", "arxiv": "2111.11187", "year": "2021", "venue": "ECCV 2022", "topic": "point-transformer", "cite_in_chapter": ["2.2"]},
+    {"key": "StratifiedTransformer", "title": "Stratified Transformer for 3D Point Cloud Segmentation", "arxiv": "2203.14508", "year": "2022", "venue": "CVPR 2022", "topic": "point-transformer", "cite_in_chapter": ["2.2"]},
+    {"key": "PointBERT", "title": "Point-BERT: Pre-training 3D Point Cloud Transformers with Masked Point Modeling", "arxiv": "2111.14819", "year": "2021", "venue": "CVPR 2022", "topic": "point-transformer", "cite_in_chapter": ["2.2"]},
+    {"key": "FastPointTransformer", "title": "Fast Point Transformer", "arxiv": "2112.04702", "year": "2021", "venue": "CVPR 2022", "topic": "point-transformer", "cite_in_chapter": ["2.2"]},
+
+    {"key": "TTUR", "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium", "arxiv": "1706.08500", "year": "2017", "venue": "NeurIPS 2017", "topic": "gan-stability", "cite_in_chapter": ["2.3", "4.2"]},
+    {"key": "R1Reg", "title": "Analyzing and Improving the Image Quality of StyleGAN", "arxiv": "1912.04958", "year": "2019", "venue": "CVPR 2020", "topic": "gan-stability", "cite_in_chapter": ["2.3"]},
+    {"key": "CycleGAN", "title": "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", "arxiv": "1703.10593", "year": "2017", "venue": "ICCV 2017", "topic": "gan-core", "cite_in_chapter": ["2.3"]},
+    {"key": "Pix2Pix", "title": "Image-to-Image Translation with Conditional Adversarial Networks", "arxiv": "1611.07004", "year": "2016", "venue": "CVPR 2017", "topic": "gan-core", "cite_in_chapter": ["2.3"]},
+    {"key": "SRGAN", "title": "Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network", "arxiv": "1609.04802", "year": "2016", "venue": "CVPR 2017", "topic": "gan-sr", "cite_in_chapter": ["2.3", "3.1"]},
+    {"key": "ESRGAN", "title": "ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks", "arxiv": "1809.00219", "year": "2018", "venue": "ECCVW 2018", "topic": "gan-sr", "cite_in_chapter": ["2.3", "3.1"]},
+    {"key": "SRCNN", "title": "Image Super-Resolution Using Deep Convolutional Networks", "arxiv": "1501.00092", "year": "2014", "venue": "IEEE TPAMI 2016", "topic": "gan-sr", "cite_in_chapter": ["3.1"]},
+
+    {"key": "GradVac", "title": "Gradient Vaccine: Investigating and Improving Multi-task Optimization in Massively Multilingual Models", "arxiv": "2010.05874", "year": "2020", "venue": "ICLR 2021", "topic": "loss-balance", "cite_in_chapter": ["2.4"]},
+    {"key": "CAGrad", "title": "Conflict-Averse Gradient Descent for Multi-task Learning", "arxiv": "2110.14048", "year": "2021", "venue": "NeurIPS 2021", "topic": "loss-balance", "cite_in_chapter": ["2.4"]},
+    {"key": "NashMTL", "title": "Multi-Task Learning as a Bargaining Game", "arxiv": "2202.01017", "year": "2022", "venue": "ICML 2022", "topic": "loss-balance", "cite_in_chapter": ["2.4"]},
+    {"key": "MGDA", "title": "Multi-Task Learning as Multi-Objective Optimization", "arxiv": "1810.04650", "year": "2018", "venue": "NeurIPS 2018", "topic": "loss-balance", "cite_in_chapter": ["2.4"]},
+
+    {"key": "PointCleanNet", "title": "PointCleanNet: Learning to Denoise and Remove Outliers from Dense Point Clouds", "arxiv": "1901.01060", "year": "2019", "venue": "CGF", "topic": "denoise", "cite_in_chapter": ["2.1", "6.1"]},
+    {"key": "ScoreDenoise", "title": "Score-Based Point Cloud Denoising", "arxiv": "2107.10981", "year": "2021", "venue": "ICCV 2021", "topic": "denoise", "cite_in_chapter": ["2.1", "6.1"]},
+    {"key": "TotalDenoising", "title": "Total Denoising: Unsupervised Learning of 3D Point Cloud Cleaning", "arxiv": "1904.07615", "year": "2019", "venue": "ICCV 2019", "topic": "denoise", "cite_in_chapter": ["2.1"]},
+    {"key": "DMRDenoise", "title": "Differentiable Manifold Reconstruction for Point Cloud Denoising", "arxiv": "2007.13551", "year": "2020", "venue": "ACM MM 2020", "topic": "denoise", "cite_in_chapter": ["2.1"]},
+
+    {"key": "OccNet", "title": "Occupancy Networks: Learning 3D Reconstruction in Function Space", "arxiv": "1812.03828", "year": "2018", "venue": "CVPR 2019", "topic": "implicit", "cite_in_chapter": ["2.1"]},
+    {"key": "DeepSDF", "title": "DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation", "arxiv": "1901.05103", "year": "2019", "venue": "CVPR 2019", "topic": "implicit", "cite_in_chapter": ["2.1"]},
+    {"key": "NeRF", "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis", "arxiv": "2003.08934", "year": "2020", "venue": "ECCV 2020", "topic": "implicit", "cite_in_chapter": ["2.1", "7.4"]},
+    {"key": "POCO", "title": "POCO: Point Convolution for Surface Reconstruction", "arxiv": "2201.01831", "year": "2022", "venue": "CVPR 2022", "topic": "implicit", "cite_in_chapter": ["6.1"]},
+
+    {"key": "VoxelNet", "title": "VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection", "arxiv": "1711.06396", "year": "2017", "venue": "CVPR 2018", "topic": "downstream", "cite_in_chapter": ["1.1"]},
+    {"key": "PointRCNN", "title": "PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud", "arxiv": "1812.04244", "year": "2018", "venue": "CVPR 2019", "topic": "downstream", "cite_in_chapter": ["1.1"]},
+    {"key": "KITTI", "title": "Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite", "year": "2012", "venue": "CVPR 2012", "topic": "downstream", "cite_in_chapter": ["1.1"]},
+    {"key": "LOAM", "title": "LOAM: Lidar Odometry and Mapping in Real-time", "year": "2014", "venue": "RSS 2014", "topic": "downstream", "cite_in_chapter": ["1.1"]},
+
+    {"key": "FPS", "title": "The Farthest Point Strategy for Progressive Image Sampling", "year": "1997", "venue": "IEEE TIP", "topic": "sampling", "cite_in_chapter": ["3.4"]},
+    {"key": "SampleNet", "title": "SampleNet: Differentiable Point Cloud Sampling", "arxiv": "1912.03663", "year": "2019", "venue": "CVPR 2020", "topic": "sampling", "cite_in_chapter": ["3.4"]},
+    {"key": "LearnToSample", "title": "Learning to Sample", "arxiv": "1812.01659", "year": "2018", "venue": "CVPR 2019", "topic": "sampling", "cite_in_chapter": ["3.4"]},
+
+    {"key": "GELU", "title": "Gaussian Error Linear Units (GELUs)", "arxiv": "1606.08415", "year": "2016", "venue": "arXiv", "topic": "optimization", "cite_in_chapter": ["4.1"]},
+    {"key": "CosineLR", "title": "SGDR: Stochastic Gradient Descent with Warm Restarts", "arxiv": "1608.03983", "year": "2016", "venue": "ICLR 2017", "topic": "optimization", "cite_in_chapter": ["5.1"]},
+    {"key": "AdamW", "title": "Decoupled Weight Decay Regularization", "arxiv": "1711.05101", "year": "2017", "venue": "ICLR 2019", "topic": "optimization", "cite_in_chapter": ["5.1"]},
+    {"key": "GradClip", "title": "On the difficulty of training Recurrent Neural Networks", "arxiv": "1211.5063", "year": "2012", "venue": "ICML 2013", "topic": "optimization", "cite_in_chapter": ["4.3"]},
+
+    {"key": "StatPower", "title": "Statistical Power Analysis for the Behavioral Sciences", "year": "1988", "venue": "Routledge", "topic": "statistics", "cite_in_chapter": ["4.5", "5.3"]},
+    {"key": "ReproducibilityML", "title": "Improving Reproducibility in Machine Learning Research", "arxiv": "2003.12206", "year": "2020", "venue": "JMLR", "topic": "statistics", "cite_in_chapter": ["5.2"]},
+    {"key": "DeepLearningSeeds", "title": "Torch.manual_seed(3407) is all you need: On the influence of random seeds in deep learning architectures for computer vision", "arxiv": "2109.08203", "year": "2021", "venue": "arXiv", "topic": "statistics", "cite_in_chapter": ["5.2", "5.3"]},
+    {"key": "ShowYourWork", "title": "Show Your Work: Improved Reporting of Experimental Results", "arxiv": "1909.03004", "year": "2019", "venue": "EMNLP 2019", "topic": "statistics", "cite_in_chapter": ["5.2"]},
+
+    {"key": "CMMI", "title": "Capability Maturity Model Integration", "year": "2002", "venue": "SEI", "topic": "maturity", "cite_in_chapter": ["6.2"]},
+    {"key": "TRL", "title": "Technology readiness assessment", "year": "2009", "venue": "GAO", "topic": "maturity", "cite_in_chapter": ["6.2"]}
+  ]
+}

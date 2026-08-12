@@ -1,0 +1,37 @@
+﻿========================================================================
+B1 启动日志 (确认 [loader] 行 = 优化是否真生效)
+========================================================================
+[模型] G=1,152,803 D=255,426 total=1,408,229
+[数据] train=65550 val=3450 fixed_samples=[36660, 38686, 61126]
+[环境] NVIDIA GeForce RTX 5090 torch=2.11.0+cu128 cuda=12.8
+[loader] num_workers=8 pin_memory=True persistent=True prefetch=2
+
+========================================================================
+速度对比: 同一台 5090, B002(workers=0) vs B1(workers=8)
+========================================================================
+B002 workers=0 : n=150  median=57.38 s/ep  mean=56.44  min=49.17
+B1   workers=8 : n=19  median=95.15 s/ep  mean=95.19  min=94.08
+
+注意: B1 建了判别器 (+255,426 参数), 单 epoch 计算量本身比 B002 大,
+      故 B1 若与 B002 持平或更快, 说明 dataloader 优化确实抵掉了
+      判别器带来的额外开销; 直接相减不能归因为纯 dataloader 收益。
+
+========================================================================
+B002 最终产物 (第一个 5090 论文 run)
+========================================================================
+total 260
+drwxr-xr-x 5 root root   4096 Aug 11 18:09 .
+drwxr-xr-x 5 root root    109 Aug 11 18:10 ..
+drwxr-xr-x 2 root root     36 Aug 11 15:49 ckpt
+drwxr-xr-x 2 root root   4096 Aug 11 18:09 clouds
+-rw-r--r-- 1 root root   7521 Aug 11 18:09 clouds_manifest.json
+-rw-r--r-- 1 root root    848 Aug 11 15:44 config.yaml
+-rw-r--r-- 1 root root    312 Aug 11 15:44 env.json
+drwxr-xr-x 2 root root   4096 Aug 11 18:09 figures
+-rw-r--r-- 1 root root 106319 Aug 11 18:09 history.json
+-rw-r--r-- 1 root root  68380 Aug 11 18:09 metrics.json
+-rw-r--r-- 1 root root  51923 Aug 11 18:09 selection.json
+--- 平台区 ---
+  cd   mean=0.002025 std=0.000068 best=0.001912 @ep105
+  hd   mean=0.007149 std=0.001034 best=0.005889 @ep106
+  nuc  mean=0.574229 std=0.011654 best=0.512833 @ep56

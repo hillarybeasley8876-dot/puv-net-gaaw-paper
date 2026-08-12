@@ -1,0 +1,12 @@
+\section{Limitations and Future Work}
+\noindent 
+\textbf{Upsampling Efficiency:}
+Compared to the recent works such as Point Transformer~\cite{zhao2021point} ($\sim$7.76M parameters) or PoinTr~\cite{yu2021pointr} ($\sim$22.7M), PU-Transformer ($\sim$0.97M) is an efficient transformer for point clouds. However, it still consumes more parameters than some CNN-based counterparts~\cite{yu2018pu,qi2019deep,qian2021pu,li2021point} shown in Table~\ref{tab:pu1k}. As for inference speed, our approach is very close to others due to the succinct pipeline design, while methods that exploit complex network~\cite{li2019pu}, upsampling strategy~\cite{li2021point} or geometric calculations~\cite{qian2020pugeo} will be a bit slower.
+
+\noindent
+\textbf{Upsampling Flexibility:}
+To generate different resolutions of output, our PU-Transformer may require some post-processing such as multiple inference iterations and farthest point sampling~\cite{qi2017pointnet}. For flexible point cloud upsampling, in future work, we will improve the adaptability of the PU-Transformer's body.
+
+\noindent 
+\textbf{Future Work:}
+As a light-weight transformer targeting point clouds, our PU-Transformer has great potential in practice. For example, we could design a \emph{multi-functional} tail to solve different low-level vision problems such as upsampling, completion, and denoising. Moreover, we could further optimize the efficiency of the PU-Transformer in learning fine-grained point feature representations, benefiting the high-level visual analysis of large-scale point clouds.

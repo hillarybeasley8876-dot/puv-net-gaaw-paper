@@ -1,0 +1,231 @@
+按 key 查 number:
+  [1]  StatPower               Statistical Power Analysis for the Behavioral Sciences
+  [2]  HausdorffMetric         Comparing images using the Hausdorff distance
+  [3]  FPS                     The farthest point strategy for progressive image sampl
+  [4]  BallPivoting            The ball-pivoting algorithm for surface reconstruction
+  [5]  EMDLoss                 The Earth Mover's Distance as a Metric for Image Retrie
+  [6]  MLS                     Computing and rendering point set surfaces
+  [7]  LOP                     Parameterization-free projection for geometry reconstru
+  [8]  WLOP                    Consolidation of unorganized point clouds for surface r
+  [9]  GradClip                On the difficulty of training Recurrent Neural Networks
+  [10]  EAR                     Edge-aware point set resampling
+  [11]  PoissonRecon            Screened poisson surface reconstruction
+  [12]  SRCNN                   Image Super-Resolution Using Deep Convolutional Network
+  [13]  GAN                     Generative Adversarial Networks
+  [14]  AdamOpt                 Adam: A Method for Stochastic Optimization
+  [15]  Dropout                 Dropout: a simple way to prevent neural networks from o
+  [16]  ModelNet                3D ShapeNets: A Deep Representation for Volumetric Shap
+  [17]  LOAM                    LOAM: Lidar Odometry and Mapping in Real-time
+  [18]  ShapeNet                ShapeNet: An Information-Rich 3D Model Repository
+  [19]  ResNet                  Deep Residual Learning for Image Recognition
+  [20]  BatchNorm               Batch Normalization: Accelerating Deep Network Training
+  [21]  DeepPointsConsolidation  Deep points consolidation
+  [22]  LayerNorm               Layer Normalization
+  [23]  PointSetGen             A Point Set Generation Network for 3D Object Reconstruc
+  [24]  GELU                    Gaussian Error Linear Units (GELUs)
+  [25]  Pix2Pix                 Image-to-Image Translation with Conditional Adversarial
+  [26]  SRGAN                   Photo-Realistic Single Image Super-Resolution Using a G
+  [27]  CosineLR                SGDR: Stochastic Gradient Descent with Warm Restarts
+  [28]  LSGAN                   Least Squares Generative Adversarial Networks
+  [29]  PointNet                PointNet: Deep Learning on Point Sets for 3D Classifica
+  [30]  GANTrainTricks          Improved Techniques for Training GANs
+  [31]  LGAN                    Learning Representations and Generative Models for 3D P
+  [32]  WGAN                    Wasserstein GAN
+  [33]  GradNorm                GradNorm: Gradient Normalization for Adaptive Loss Bala
+  [34]  GANSurvey               Generative Adversarial Networks: An Overview
+  [35]  WGANGP                  Improved Training of Wasserstein GANs
+  [36]  TTUR                    GANs Trained by a Two Time-Scale Update Rule Converge t
+  [37]  UncertaintyWeighting    Multi-Task Learning Using Uncertainty to Weigh Losses f
+  [38]  AdamW                   Decoupled Weight Decay Regularization
+  [39]  PointNet2               PointNet++: Deep Hierarchical Feature Learning on Point
+  [40]  Transformer             Attention Is All You Need
+  [41]  FoldingNet              FoldingNet: Point Cloud Auto-encoder via Deep Grid Defo
+  [42]  VoxelNet                VoxelNet: End-to-End Learning for Point Cloud Based 3D 
+  [43]  CycleGAN                Unpaired Image-to-Image Translation using Cycle-Consist
+  [44]  LearnToSample           Learning to Sample
+  [45]  PointCNN                PointCNN: Convolution On $\mathcal{X}$-Transformed Poin
+  [46]  DWA                     End-to-End Multi-Task Learning with Attention
+  [47]  GANStability            Which Training Methods for GANs do actually Converge?
+  [48]  SNGAN                   Spectral Normalization for Generative Adversarial Netwo
+  [49]  MGDA                    Multi-Task Learning as Multi-Objective Optimization
+  [50]  PointRCNN               PointRCNN: 3D Object Proposal Generation and Detection 
+  [51]  DGCNN                   Dynamic Graph CNN for Learning on Point Clouds
+  [52]  ESRGAN                  ESRGAN: Enhanced Super-Resolution Generative Adversaria
+  [53]  MPU                     Patch-based Progressive 3D Point Set Upsampling
+  [54]  P2PNet                  P2P-NET: Bidirectional Point Displacement Net for Shape
+  [55]  PUNet                   PU-Net: Point Cloud Upsampling Network
+  [56]  EC-Net                  EC-Net: an Edge-aware Point set Consolidation Network
+  [57]  PCN                     PCN: Point Completion Network
+  [58]  SAGAN                   Self-Attention Generative Adversarial Networks
+  [59]  Open3D                  Open3D: A Modern Library for 3D Data Processing
+  [60]  TotalDenoising          Total Denoising: Unsupervised Learning of 3D Point Clou
+  [61]  PointCloudSurvey        Deep Learning for 3D Point Clouds: A Survey
+  [62]  R1Reg                   Analyzing and Improving the Image Quality of StyleGAN
+  [63]  SampleNet               SampleNet: Differentiable Point Cloud Sampling
+  [64]  PUGAN                   PU-GAN: a Point Cloud Upsampling Adversarial Network
+  [65]  OccNet                  Occupancy Networks: Learning 3D Reconstruction in Funct
+  [66]  DeepSDF                 DeepSDF: Learning Continuous Signed Distance Functions 
+  [67]  PyTorch                 PyTorch: An Imperative Style, High-Performance Deep Lea
+  [68]  PUGCN                   PU-GCN: Point Cloud Upsampling using Graph Convolutiona
+  [69]  PointCleanNet           PointCleanNet: Learning to Denoise and Remove Outliers 
+  [70]  TreeGAN                 3D Point Cloud Generative Adversarial Network Based on 
+  [71]  KPConv                  KPConv: Flexible and Deformable Convolution for Point C
+  [72]  ScanObjectNN            Revisiting Point Cloud Classification: A New Benchmark 
+  [73]  ShapeGF                 Learning Gradient Fields for Shape Generation
+  [74]  ViT                     An Image is Worth 16x16 Words: Transformers for Image R
+  [75]  PCT                     PCT: Point cloud transformer
+  [76]  DMRDenoise              Differentiable Manifold Reconstruction for Point Cloud 
+  [77]  NeRF                    NeRF: Representing Scenes as Neural Radiance Fields for
+  [78]  MTLSurvey               Multi-Task Learning for Dense Prediction Tasks: A Surve
+  [79]  GradVac                 Gradient Vaccine: Investigating and Improving Multi-tas
+  [80]  PointCloudGenSurvey     A Survey on Deep Geometry Learning: From a Representati
+  [81]  PCGrad                  Gradient Surgery for Multi-Task Learning
+  [82]  PointTransformer        Point Transformer
+  [83]  PointMixer              PointMixer: MLP-Mixer for Point Cloud Understanding
+  [84]  NePs                    Neural Points: Point Cloud Representation with Neural F
+  [85]  Dis-PU                  Point Cloud Upsampling via Disentangled Refinement
+  [86]  SwinT                   Swin Transformer: Hierarchical Vision Transformer using
+  [87]  CAGrad                  Conflict-Averse Gradient Descent for Multi-task Learnin
+  [88]  PointDiffusion          Diffusion Probabilistic Models for 3D Point Cloud Gener
+  [89]  ScoreDenoise            Score-Based Point Cloud Denoising
+  [90]  FastPointTransformer    Fast Point Transformer
+  [91]  DeepLearningSeeds       Torch.manual_seed(3407) is all you need: On the influen
+  [92]  PUTransformer           PU-Transformer: Point Cloud Upsampling Transformer
+  [93]  DensityAwareCD          Density-aware Chamfer Distance as a Comprehensive Metri
+  [94]  SnowflakeNet            SnowflakeNet: Point Cloud Completion by Snowflake Point
+  [95]  MAFU                    Meta-PU: An Arbitrary-Scale Upsampling Network for Poin
+  [96]  PoinTr                  PoinTr: Diverse Point Cloud Completion with Geometry-Aw
+  [97]  PointBERT               Point-BERT: Pre-training 3D Point Cloud Transformers wi
+  [98]  POCO                    POCO: Point Convolution for Surface Reconstruction
+  [99]  PUDense                 Density-Imbalance-Eased LiDAR Point Cloud Upsampling vi
+  [100]  PUCRN                   Point Cloud Upsampling via Cascaded Refinement Network
+  [101]  StratifiedTransformer   Stratified Transformer for 3D Point Cloud Segmentation
+  [102]  TransformerSurvey3D     Transformers in 3D Point Clouds: A Survey
+  [103]  PUEVA                   PU-EVA: An Edge Vector based Approximation Solution for
+  [104]  PUFlow                  PU-Flow: A Point Cloud Upsampling Network With Normaliz
+  [105]  NashMTL                 Multi-Task Learning as a Bargaining Game
+  [106]  PUMAE                   Masked Autoencoders for Point Cloud Self-supervised Lea
+  [107]  PointTransformerV2      Point Transformer V2: Grouped Vector Attention and Part
+  [108]  LION                    LION: Latent Point Diffusion Models for 3D Shape Genera
+  [109]  SAPCU                   Self-Supervised Arbitrary-Scale Point Clouds Upsampling
+  [110]  PUSDF                   Parametric Surface Constrained Upsampler Network for Po
+  [111]  Grad-PU                 Grad-PU: Arbitrary-Scale Point Cloud Upsampling via Gra
+  [112]  PUDM                    A Conditional Denoising Diffusion Probabilistic Model f
+  [113]  iPUNet                  iPUNet:Iterative Cross Field Guided Point Cloud Upsampl
+  [114]  PointTransformerV3      Point Transformer V3: Simpler, Faster, Stronger
+
+按 key 字母序:
+  AdamOpt                  -> [14]
+  AdamW                    -> [38]
+  BallPivoting             -> [4]
+  BatchNorm                -> [20]
+  CAGrad                   -> [87]
+  CosineLR                 -> [27]
+  CycleGAN                 -> [43]
+  DeepLearningSeeds        -> [91]
+  DeepPointsConsolidation  -> [21]
+  DeepSDF                  -> [66]
+  DensityAwareCD           -> [93]
+  DGCNN                    -> [51]
+  Dis-PU                   -> [85]
+  DMRDenoise               -> [76]
+  Dropout                  -> [15]
+  DWA                      -> [46]
+  EAR                      -> [10]
+  EC-Net                   -> [56]
+  EMDLoss                  -> [5]
+  ESRGAN                   -> [52]
+  FastPointTransformer     -> [90]
+  FoldingNet               -> [41]
+  FPS                      -> [3]
+  GAN                      -> [13]
+  GANStability             -> [47]
+  GANSurvey                -> [34]
+  GANTrainTricks           -> [30]
+  GELU                     -> [24]
+  Grad-PU                  -> [111]
+  GradClip                 -> [9]
+  GradNorm                 -> [33]
+  GradVac                  -> [79]
+  HausdorffMetric          -> [2]
+  iPUNet                   -> [113]
+  KPConv                   -> [71]
+  LayerNorm                -> [22]
+  LearnToSample            -> [44]
+  LGAN                     -> [31]
+  LION                     -> [108]
+  LOAM                     -> [17]
+  LOP                      -> [7]
+  LSGAN                    -> [28]
+  MAFU                     -> [95]
+  MGDA                     -> [49]
+  MLS                      -> [6]
+  ModelNet                 -> [16]
+  MPU                      -> [53]
+  MTLSurvey                -> [78]
+  NashMTL                  -> [105]
+  NePs                     -> [84]
+  NeRF                     -> [77]
+  OccNet                   -> [65]
+  Open3D                   -> [59]
+  P2PNet                   -> [54]
+  PCGrad                   -> [81]
+  PCN                      -> [57]
+  PCT                      -> [75]
+  Pix2Pix                  -> [25]
+  POCO                     -> [98]
+  PointBERT                -> [97]
+  PointCleanNet            -> [69]
+  PointCloudGenSurvey      -> [80]
+  PointCloudSurvey         -> [61]
+  PointCNN                 -> [45]
+  PointDiffusion           -> [88]
+  PointMixer               -> [83]
+  PointNet                 -> [29]
+  PointNet2                -> [39]
+  PoinTr                   -> [96]
+  PointRCNN                -> [50]
+  PointSetGen              -> [23]
+  PointTransformer         -> [82]
+  PointTransformerV2       -> [107]
+  PointTransformerV3       -> [114]
+  PoissonRecon             -> [11]
+  PUCRN                    -> [100]
+  PUDense                  -> [99]
+  PUDM                     -> [112]
+  PUEVA                    -> [103]
+  PUFlow                   -> [104]
+  PUGAN                    -> [64]
+  PUGCN                    -> [68]
+  PUMAE                    -> [106]
+  PUNet                    -> [55]
+  PUSDF                    -> [110]
+  PUTransformer            -> [92]
+  PyTorch                  -> [67]
+  R1Reg                    -> [62]
+  ResNet                   -> [19]
+  SAGAN                    -> [58]
+  SampleNet                -> [63]
+  SAPCU                    -> [109]
+  ScanObjectNN             -> [72]
+  ScoreDenoise             -> [89]
+  ShapeGF                  -> [73]
+  ShapeNet                 -> [18]
+  SNGAN                    -> [48]
+  SnowflakeNet             -> [94]
+  SRCNN                    -> [12]
+  SRGAN                    -> [26]
+  StatPower                -> [1]
+  StratifiedTransformer    -> [101]
+  SwinT                    -> [86]
+  TotalDenoising           -> [60]
+  Transformer              -> [40]
+  TransformerSurvey3D      -> [102]
+  TreeGAN                  -> [70]
+  TTUR                     -> [36]
+  UncertaintyWeighting     -> [37]
+  ViT                      -> [74]
+  VoxelNet                 -> [42]
+  WGAN                     -> [32]
+  WGANGP                   -> [35]
+  WLOP                     -> [8]

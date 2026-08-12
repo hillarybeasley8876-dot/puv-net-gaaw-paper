@@ -1,0 +1,196 @@
+{
+ "source_run": "runs/B002_baseline150",
+ "n_epochs": 150,
+ "env": {
+  "python": "3.10.9",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "torch": "2.5.1+cu121",
+  "cuda_available": true,
+  "cuda_version": "12.1",
+  "numpy": "2.2.6",
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "gpu_capability": "8.6",
+  "gpu_total_mem_gb": 24.0,
+  "git_commit": null
+ },
+ "train_cd_bwd_share": {
+  "min": 0.5354772170539945,
+  "max": 0.5601650086755399,
+  "mean": 0.5419028018358707,
+  "std": 0.006096422695129078,
+  "min_epoch": 149,
+  "max_epoch": 2,
+  "n_below_0.5": 0,
+  "first": 0.5377799464331474,
+  "last": 0.5354772170539945
+ },
+ "monitor_loss_cd_bwd_share": {
+  "min": 0.5235253798740881,
+  "max": 0.5687124607739625,
+  "mean": 0.5444024334682358,
+  "std": 0.007202123838189791,
+  "min_epoch": 20,
+  "max_epoch": 23,
+  "n_below_0.5": 0,
+  "first": 0.568267164406953,
+  "last": 0.5399105824806072
+ },
+ "plateau": {
+  "epoch_range": [
+   75,
+   149
+  ],
+  "plateau_n": 75,
+  "cd": {
+   "plateau_mean": 0.0020846627595374778,
+   "plateau_std": 5.217334147009071e-05,
+   "best": 0.001984871545029168,
+   "best_epoch": 147,
+   "cv_pct": 2.5027233412883705,
+   "best_gain_pct": 4.786923642769454
+  },
+  "hd": {
+   "plateau_mean": 0.008791005642266892,
+   "plateau_std": 0.0008975211890991456,
+   "best": 0.006941585010138018,
+   "best_epoch": 50,
+   "cv_pct": 10.209539450002064,
+   "best_gain_pct": 21.03764583242803
+  },
+  "nuc": {
+   "plateau_mean": 0.5696072979530581,
+   "plateau_std": 0.0118831726370104,
+   "best": 0.5363564805388451,
+   "best_epoch": 89,
+   "cv_pct": 2.0862044218383073,
+   "best_gain_pct": 5.837498489521322
+  }
+ },
+ "multi_window": {
+  "cd": {
+   "w5": {
+    "change_pct": -0.9372847001144599,
+    "converged": true
+   },
+   "w10": {
+    "change_pct": -1.0020953702367572,
+    "converged": false
+   },
+   "w15": {
+    "change_pct": -0.26151583316059185,
+    "converged": true
+   },
+   "w20": {
+    "change_pct": -0.6725347214475239,
+    "converged": true
+   },
+   "w25": {
+    "change_pct": -0.8080708336909094,
+    "converged": true
+   }
+  },
+  "hd": {
+   "w5": {
+    "change_pct": -10.83497896399326,
+    "converged": false
+   },
+   "w10": {
+    "change_pct": -2.46840491087918,
+    "converged": false
+   },
+   "w15": {
+    "change_pct": -1.1523119170565819,
+    "converged": false
+   },
+   "w20": {
+    "change_pct": -2.097142619085275,
+    "converged": false
+   },
+   "w25": {
+    "change_pct": -4.584988003137588,
+    "converged": false
+   }
+  },
+  "nuc": {
+   "w5": {
+    "change_pct": -0.9132937522141539,
+    "converged": true
+   },
+   "w10": {
+    "change_pct": 1.0452874591672578,
+    "converged": false
+   },
+   "w15": {
+    "change_pct": 0.6336933929101478,
+    "converged": true
+   },
+   "w20": {
+    "change_pct": 1.4352222739779392,
+    "converged": false
+   },
+   "w25": {
+    "change_pct": 1.001331871341136,
+    "converged": false
+   }
+  }
+ },
+ "multi_window_summary": {
+  "cd": {
+   "n_windows": 5,
+   "n_converged": 4
+  },
+  "hd": {
+   "n_windows": 5,
+   "n_converged": 0
+  },
+  "nuc": {
+   "n_windows": 5,
+   "n_converged": 2
+  }
+ },
+ "plateau_rank_corr": {
+  "n": 75,
+  "cd_vs_hd": 0.3959886201991465,
+  "cd_vs_nuc": -0.571180654338549,
+  "hd_vs_nuc": -0.2761877667140825
+ },
+ "selection": {
+  "weights": {
+   "cd": 0.5,
+   "hd": 0.2,
+   "nuc": 0.3
+  },
+  "best_epoch_weighted": 147,
+  "best_epoch_cd_only": 147,
+  "agree": true
+ },
+ "cost": {
+  "sec_per_epoch_mean": 113.52382550335571,
+  "sec_per_epoch_first": 112.23,
+  "total_hours": 4.729800000000002,
+  "gpu_peak_gb": 5.511
+ },
+ "config_echo": {
+  "epochs": 150,
+  "batch_size": 64,
+  "lr": 0.001,
+  "lr_step": 30,
+  "lr_decay": 0.7,
+  "seed": 20260811,
+  "up_ratio": 4,
+  "attention_type": "sc-msa",
+  "tail_mode": "shuffle",
+  "w_cd": 1.0,
+  "w_adv": 0.0,
+  "w_uniform": 0.0,
+  "squared_cd": true,
+  "select_warmup": 5,
+  "adv_target_ratio": 0.1,
+  "select_weights": {
+   "cd": 0.5,
+   "hd": 0.2,
+   "nuc": 0.3
+  }
+ },
+ "is_clean_baseline": true
+}

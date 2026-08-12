@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+"""从 docs/_cv_nn_measure.json 出 cv_nn 全表（按 GPU 分组，禁止跨机并列）。
+
+键名以真实产物为准（已用 json 实物核过）：
+  runs[<name>]["cv_nn"]["mean"] / ["se_sample"] / ["n"]
+  runs[<name>]["q_layer"]... 分层键名当场探测，不猜。
+"""
+import json
+import pathlib
+
+P = pathlib.Path(__file__).resolve().parents[1] / "docs" / "_cv_nn_measure.json"
+d = json.loads(P.read_text(encoding="utf-8"))
+runs = d["runs"]
+
+BASE = {"3090": "B002_baseline150", "5090": "B002_baseline150_5090"}
+
+# 先探测分层键名，不靠记忆
+sample = runs[list(runs)[0]]
+qkey = None
+for k in sample:
+    if "q4" in k.lower() or "quart" in k.lower() or "layer" in k.lower():
+        qkey = k
+        break
+print("[probe] 分层键名 =", qkey, "| 顶层键 =", [k for k in sample if not isinstance(sample[k], dict)])
+print()
+
+
+def q41(rec):
+    if qkey and isinstance(rec.get(qkey), dict):
+        v = rec[qkey]
+        for kk in ("q4_over_q1", "ratio", "q4_q1"):
+            if kk in v:
+                return v[kk]
+    return rec.get("q4_q1")
+
+
+groups = {}
+for name, rec in runs.items():
+    groups.setdefault(rec.get("gpu", "?"), []).append((name, rec))
+
+for gpu in sorted(groups):
+    base_name = BASE.get(gpu)
+    brec = runs.get(base_name)
+    print("=" * 84)
+    print("[%s]  基准 = %s" % (gpu, base_name))
+    print("-" * 84)
+    print("%-32s %10s %10s %9s %8s %8s" % ("run", "cv_nn", "SE", "delta%", "d/2SE", "Q4/Q1"))
+    if brec is None:
+        print("  !! 该组无基准，跳过（不得跨机借用基准）")
+        continue
+    bm = brec["cv_nn"]["mean"]
+    bse = brec["cv_nn"]["se_sample"]
+    for name, rec in sorted(groups[gpu]):
+        m = rec["cv_nn"]["mean"]
+        se = rec["cv_nn"]["se_sample"]
+        if name == base_name:
+            print("%-32s %10.6f %10.6f %9s %8s %8s" % (name, m, se, "--", "--",
+                                                       "%.4f" % q41(rec) if q41(rec) else "-"))
+            continue
+        dpct = (m - bm) / bm * 100.0
+        # 双样本 SE 合成（同口径 200 样本），2SE 门槛
+        pooled = (bse ** 2 + se ** 2) ** 0.5
+        d2se = (m - bm) / (2 * pooled) if pooled else float("nan")
+        print("%-32s %10.6f %10.6f %+8.2f%% %+8.2f %8s" % (
+            name, m, se, dpct, d2se, "%.4f" % q41(rec) if q41(rec) else "-"))
+    print()
+
+print("注：Δ/2SE 为跨样本 SE 口径（同权重 200 样本），非跨 seed SE。")
+print("    预注册主指标 cv_nn 接受方向 = 相对基线下降；未达门槛记 REJECT_NULL。")

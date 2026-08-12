@@ -1,0 +1,272 @@
+\begin{thebibliography}{10}\itemsep=-1pt
+
+\bibitem{visionair}
+Visionair.
+\newblock \url{http://www.infra-visionair.eu/}.
+\newblock Accessed: 2019-07-24.
+
+\bibitem{achlioptas2018learning}
+P.~Achlioptas, O.~Diamanti, I.~Mitliagkas, and L.~J. Guibas.
+\newblock Learning representations and generative models for {3D} point clouds.
+\newblock In {\em Int. Conf. on Machine Learning. (ICML)}, pages 40--49, 2018.
+
+\bibitem{alexa2003computing}
+M.~Alexa, J.~Behr, D.~Cohen-Or, S.~Fleishman, D.~Levin, and C.~T. Silva.
+\newblock Computing and rendering point set surfaces.
+\newblock {\em IEEE Trans. Vis. $\&$ Comp. Graphics}, 9(1):3--15, 2003.
+
+\bibitem{berger2013benchmark}
+M.~Berger, J.~A. Levine, L.~G. Nonato, G.~Taubin, and C.~T. Silva.
+\newblock A benchmark for surface reconstruction.
+\newblock {\em ACM Trans. on Graphics}, 32(2):20:1--17, 2013.
+
+\bibitem{corsini2012efficient}
+M.~Corsini, P.~Cignoni, and R.~Scopigno.
+\newblock Efficient and flexible sampling with blue noise properties of
+  triangular meshes.
+\newblock {\em IEEE Trans. Vis. $\&$ Comp. Graphics}, 18(6):914--924, 2012.
+
+\bibitem{dai2017scannet}
+A.~Dai, A.~X. Chang, M.~Savva, M.~Halber, T.~Funkhouser, and M.~Nie{\ss}ner.
+\newblock {ScanNet}: Richly-annotated 3{D} reconstructions of indoor scenes.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 5828--5839, 2017.
+
+\bibitem{fan2016point}
+H.~Fan, H.~Su, and L.~J. Guibas.
+\newblock A point set generation network for {3D} object reconstruction from a
+  single image.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 605--613, 2017.
+
+\bibitem{geiger2013vision}
+A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun.
+\newblock Vision meets robotics: The {KITTI} dataset.
+\newblock {\em The International Journal of Robotics Research},
+  32(11):1231--1237, 2013.
+
+\bibitem{goodfellow2014distinguishability}
+I.~J. Goodfellow.
+\newblock On distinguishability criteria for estimating generative models.
+\newblock In {\em Int. Conf. on Learning Representations (ICLR) Workshops},
+  2015.
+
+\bibitem{gurumurthy2019high}
+S.~Gurumurthy and S.~Agrawal.
+\newblock High fidelity semantic shape completion for point clouds using latent
+  optimization.
+\newblock In {\em IEEE Winter Conf. on Applications of Computer Vision (WACV)},
+  pages 1099--1108, 2019.
+
+\bibitem{gwak2017weakly}
+J.~Gwak, C.~B. Choy, M.~Chandraker, A.~Garg, and S.~Savarese.
+\newblock Weakly supervised {3D} reconstruction with adversarial constraint.
+\newblock In {\em 2017 International Conference on 3D Vision (3DV)}, pages
+  263--272, 2017.
+
+\bibitem{heusel2017gans}
+M.~Heusel, H.~Ramsauer, T.~Unterthiner, B.~Nessler, and S.~Hochreiter.
+\newblock {GANs} trained by a two time-scale update rule converge to a local
+  {Nash} equilibrium.
+\newblock In {\em Int. Conf. on Advances in Neural Information Processing
+  Systems (NIPS)}, pages 6626--6637, 2017.
+
+\bibitem{hua2017pointwise}
+B.-S. Hua, M.-K. Tran, and S.-K. Yeung.
+\newblock Pointwise convolutional neural networks.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 984--993, 2018.
+
+\bibitem{huang2009consolidation}
+H.~Huang, D.~Li, H.~Zhang, U.~Ascher, and D.~Cohen-Or.
+\newblock Consolidation of unorganized point clouds for surface reconstruction.
+\newblock {\em ACM Trans. on Graphics (SIGGRAPH Asia)}, 28(5):176:1--7, 2009.
+
+\bibitem{huang2013edge}
+H.~Huang, S.~Wu, M.~Gong, D.~Cohen-Or, U.~Ascher, and H.~Zhang.
+\newblock Edge-aware point set resampling.
+\newblock {\em ACM Trans. on Graphics}, 32(1):9:1--12, 2013.
+
+\bibitem{isola2017image}
+P.~Isola, J.-Y. Zhu, T.~Zhou, and A.~A. Efros.
+\newblock Image-to-image translation with conditional adversarial networks.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 1125--1134, 2017.
+
+\bibitem{kazhdan2013screened}
+M.~Kazhdan and H.~Hoppe.
+\newblock Screened {Poisson} surface reconstruction.
+\newblock {\em ACM Trans. on Graphics}, 32(3):29:1--13, 2013.
+
+\bibitem{kingma2014adam}
+D.~Kingma and J.~Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock In {\em Int. Conf. on Learning Representations (ICLR)}, 2015.
+
+\bibitem{ledig2017photo}
+C.~Ledig, L.~Theis, F.~Husz{\'a}r, J.~Caballero, A.~Cunningham, A.~Acosta,
+  A.~Aitken, A.~Tejani, J.~Totz, Z.~Wang, et~al.
+\newblock Photo-realistic single image super-resolution using a generative
+  adversarial network.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 4681--4690, 2017.
+
+\bibitem{li2018pointcnn}
+Y.~Li, R.~Bu, M.~Sun, W.~Wu, X.~Di, and B.~Chen.
+\newblock {PointCNN}: Convolution on $\mathcal{X}$-transformed points.
+\newblock In {\em Int. Conf. on Advances in Neural Information Processing
+  Systems (NIPS)}, pages 828--838, 2018.
+
+\bibitem{lipman2007parameterization}
+Y.~Lipman, D.~Cohen-Or, D.~Levin, and H.~Tal-Ezer.
+\newblock Parameterization-free projection for geometry reconstruction.
+\newblock {\em ACM Trans. on Graphics (SIGGRAPH)}, 26(3):22:1--5, 2007.
+
+\bibitem{mao2017least}
+X.~Mao, Q.~Li, H.~Xie, R.~Y. Lau, Z.~Wang, and S.~Paul~Smolley.
+\newblock Least squares generative adversarial networks.
+\newblock In {\em IEEE Int. Conf. on Computer Vision (ICCV)}, pages 2794--2802,
+  2017.
+
+\bibitem{qi2016pointnet}
+C.~R. Qi, H.~Su, K.~Mo, and L.~J. Guibas.
+\newblock {PointNet}: Deep learning on point sets for {3D} classification and
+  segmentation.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 652--660, 2017.
+
+\bibitem{qi2017pointnet++}
+C.~R. Qi, L.~Yi, H.~Su, and L.~J. Guibas.
+\newblock {PointNet++}: Deep hierarchical feature learning on point sets in a
+  metric space.
+\newblock In {\em Int. Conf. on Advances in Neural Information Processing
+  Systems (NIPS)}, pages 5099--5108, 2017.
+
+\bibitem{radford2015unsupervised}
+A.~Radford, L.~Metz, and S.~Chintala.
+\newblock Unsupervised representation learning with deep convolutional
+  generative adversarial networks.
+\newblock In {\em Int. Conf. on Learning Representations (ICLR)}, 2016.
+
+\bibitem{shen2018mining}
+Y.~Shen, C.~Feng, Y.~Yang, and D.~Tian.
+\newblock Mining point cloud local structures by kernel correlation and graph
+  pooling.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 4548--4557, 2018.
+
+\bibitem{smith2017improved}
+E.~Smith and D.~Meger.
+\newblock Improved adversarial systems for {3D} object generation and
+  reconstruction.
+\newblock In {\em 1st Annual Conference on Robot Learning({CoRL})}, pages
+  87--96, 2017.
+
+\bibitem{song2015sun}
+S.~Song, S.~P. Lichtenberg, and J.~Xiao.
+\newblock {SUN RGB-D}: A {RGB-D} scene understanding benchmark suite.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 567--576, 2015.
+
+\bibitem{su2018splatnet}
+H.~Su, V.~Jampani, D.~Sun, S.~Maji, E.~Kalogerakis, M.-H. Yang, and J.~Kautz.
+\newblock {SPLATN}et: Sparse lattice networks for point cloud processing.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 2530--2539, 2018.
+
+\bibitem{wang2017shape}
+W.~Wang, Q.~Huang, S.~You, C.~Yang, and U.~Neumann.
+\newblock Shape inpainting using {3D} generative adversarial network and
+  recurrent convolutional networks.
+\newblock In {\em IEEE Int. Conf. on Computer Vision (ICCV)}, pages 2298--2306,
+  2017.
+
+\bibitem{wang2018dynamic}
+Y.~Wang, Y.~Sun, Z.~Liu, S.~E. Sarma, M.~M. Bronstein, and J.~M. Solomon.
+\newblock Dynamic graph {CNN} for learning on point clouds.
+\newblock {\em ACM Trans. on Graphics}, 2019.
+\newblock to appear.
+
+\bibitem{wu2016learning}
+J.~Wu, C.~Zhang, T.~Xue, B.~Freeman, and J.~Tenenbaum.
+\newblock Learning a probabilistic latent space of object shapes via {3D}
+  generative-adversarial modeling.
+\newblock In {\em Int. Conf. on Advances in Neural Information Processing
+  Systems (NIPS)}, pages 82--90, 2016.
+
+\bibitem{wu2015deep}
+S.~Wu, H.~Huang, M.~Gong, M.~Zwicker, and D.~Cohen-Or.
+\newblock Deep points consolidation.
+\newblock {\em ACM Trans. on Graphics (SIGGRAPH Asia)}, 34(6):176:1--13, 2015.
+
+\bibitem{wu20153d}
+Z.~Wu, S.~Song, A.~Khosla, F.~Yu, L.~Zhang, X.~Tang, and J.~Xiao.
+\newblock {3D ShapeNets}: A deep representation for volumetric shapes.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 1912--1920, 2015.
+
+\bibitem{xu2018spidercnn}
+Y.~Xu, T.~Fan, M.~Xu, L.~Zeng, and Y.~Qiao.
+\newblock Spider{CNN}: Deep learning on point sets with parameterized
+  convolutional filters.
+\newblock In {\em European Conf. on Computer Vision (ECCV)}, pages 87--102,
+  2018.
+
+\bibitem{yang20173d}
+B.~Yang, H.~Wen, S.~Wang, R.~Clark, A.~Markham, and N.~Trigoni.
+\newblock {3D} object reconstruction from a single depth view with adversarial
+  learning.
+\newblock In {\em IEEE Int. Conf. on Computer Vision (ICCV)}, pages 679--688,
+  2017.
+
+\bibitem{yang2018foldingnet}
+Y.~Yang, C.~Feng, Y.~Shen, and D.~Tian.
+\newblock {FoldingNet}: Point cloud auto-encoder via deep grid deformation.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 206--215, 2018.
+
+\bibitem{yifan2018patch}
+W.~Yifan, S.~Wu, H.~Huang, D.~Cohen-Or, and O.~Sorkine-Hornung.
+\newblock Patch-based progressive 3{D} point set upsampling.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 5958--5967, 2019.
+
+\bibitem{yu2018ec}
+L.~Yu, X.~Li, C.-W. Fu, D.~Cohen-Or, and P.-A. Heng.
+\newblock {EC-Net}: An edge-aware point set consolidation network.
+\newblock In {\em European Conf. on Computer Vision (ECCV)}, pages 386--402,
+  2018.
+
+\bibitem{yu2018pu}
+L.~Yu, X.~Li, C.-W. Fu, D.~Cohen-Or, and P.-A. Heng.
+\newblock {PU-Net}: Point cloud upsampling network.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 2790--2799, 2018.
+
+\bibitem{yuan2018pcn}
+W.~Yuan, T.~Khot, D.~Held, C.~Mertz, and M.~Hebert.
+\newblock {PCN}: Point completion network.
+\newblock In {\em 2018 International Conference on 3D Vision (3DV)}, pages
+  728--737, 2018.
+
+\bibitem{zhang2019self}
+H.~Zhang, I.~J. Goodfellow, D.~N. Metaxas, and A.~Odena.
+\newblock Self-attention generative adversarial networks.
+\newblock In {\em Int. Conf. on Machine Learning. (ICML)}, pages 7354--7363,
+  2019.
+
+\bibitem{zhang2017stackgan}
+H.~Zhang, T.~Xu, H.~Li, S.~Zhang, X.~Wang, X.~Huang, and D.~N. Metaxas.
+\newblock Stack{GAN}: Text to photo-realistic image synthesis with stacked
+  generative adversarial networks.
+\newblock In {\em IEEE Int. Conf. on Computer Vision (ICCV)}, pages 5907--5915,
+  2017.
+
+\bibitem{zhao2019pointweb}
+H.~Zhao, L.~Jiang, C.-W. Fu, and J.~Jia.
+\newblock {PointWeb}: Enhancing local neighborhood features for point cloud
+  processing.
+\newblock In {\em IEEE Conf. on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 5565--5573, 2019.
+
+\end{thebibliography}

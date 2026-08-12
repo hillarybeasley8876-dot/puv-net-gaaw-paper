@@ -1,0 +1,19 @@
+{
+  "figure_id": "F4-2",
+  "title": "训练与评价流程及梯度自适应对抗权重的介入点（流程图）",
+  "depends_on_experiment": false,
+  "note": "图中引用的实测量(rho=1/82.65, cd_bwd_share=0.5446, 2SE 门槛)来自已完成实验, 见 EVIDENCE_LEDGER",
+  "m1_name": "梯度自适应对抗权重 (gradient-adaptive adversarial weighting, GAAW)",
+  "thresholds_2se": {
+    "cd_pct": 0.66,
+    "hd_pct": 2.18,
+    "nuc_pct": 0.93
+  },
+  "verdict_levels": [
+    "ACCEPT_FULL",
+    "ACCEPT_PART",
+    "REJECT_TRADE",
+    "REJECT_NULL"
+  ],
+  "official_metric_entry": "eval_cd_hd_official()"
+}

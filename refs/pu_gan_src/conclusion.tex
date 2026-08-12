@@ -1,0 +1,25 @@
+\section{Conclusion}
+\label{sec:conclusion}
+%In this paper, we presented a new network based on GAN for point cloud upsampling, namely PU-GAN, to generate dense and uniformly-distributed points from sparse and non-uniform inputs. In particular, we direct the attention of the proposed network to global uniformity by introducing an up-down-up expansion unit, a self-attention module and a uniform loss into the generator. These integrated modules can enhance the uniformity of generative distribution and promote the discriminator to learn more latent patterns. Such adversarial training enable us to generate highly uniform point distribution. Extensive experimental results demonstrate the superiority of our PU-GAN compared with the state-of-the-art approaches.
+
+In this paper, we presented, PU-GAN, a novel GAN-based point cloud upsampling network,  that combines upsampling with data amendment capabilities.
+Such adversarial network enables the generator to produce a uniformly-distributed point set, and  the discriminator to implicitly penalize outputs that deviate from the expected target.
+To facilitate the GAN framework, we introduced an up-down-up unit for feature expansion with error feedback and self-correction, as well as a self-attention unit for better feature fusion.
+Further, we designed a compound loss to guide the learning of the generator and discriminator. We demonstrated the effectiveness of our PU-GAN via extensive experiments, showing that it outperforms the state-of-the-art methods for various metrics, and presented the upsampling performance on real-scanned LiDAR inputs.
+
+However, since PU-GAN is designed to complete tiny holes at patch level, it has limited ability in filling large gaps or holes in point clouds; see Figure~\ref{fig:realscan}. Analyzing and synthesizing at the patch level lacks a global view of the overall shape.
+\rh{Please refer to the supplemental material for a typical failure case.}
+In the future, we will explore a multi-scale training strategy to encourage the network to learn from both local small patched and global structures.
+We are also considering exploring conditional GANs, to let the network learn the uniformity and semantic consistency at the same time.
+
+%In this paper, we presented a novel GAN based point cloud upsampling network, namely PU-GAN, that combines upsampling with data amendment capability.
+%Such adversarial network enables the generator to produce a uniformly-distributed point set, and also the discriminator to implicitly penalize outputs that deviate from the target.
+%To facilitate a working GAN framework, we introduced an up-down-up expansion unit for feature expansion with error feedback and self-correction, as well as a self-attention unit for better feature fusion.
+%Further, we designed a compound loss to guide the learning of the generator and discriminator.
+%We demonstrated the effectiveness of our PU-GAN via extensive experiments, and presented the promising upsampling performance on real-scanned LiDAR inputs.
+
+%However, it cannot be ignored that our method has limited ability to fill in large gaps, despite the fact that it can complete tiny holes at patch level; see Figure~\ref{fig:realscan}.
+%We think that this may be related to the patch-based training strategy, since it lacks the global information.
+%In the future, we would like to employ a dynamic patch size training strategy to enforce the network to learn from both local details and global structures.
+%Further, we may also explore other advanced GAN framework,~\eg, conditional GAN~\cite{mirza2014conditional}, to enforce the network to learn the uniformity and semantic consistency as the same time.
+%extend the proposed network with the Condition GAN  enforce prediction in the same semantic space as the inputs. And we also try to extend the current PU-GAN into point consolidation or completion under the additional constrain, such as single-view images or point-to-edge distances. 

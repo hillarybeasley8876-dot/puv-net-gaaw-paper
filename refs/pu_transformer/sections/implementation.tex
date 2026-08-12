@@ -1,0 +1,15 @@
+\section{Implementation}
+\label{sec:impl}
+\subsection{PU-Transformer Head}
+\label{sec:head}
+As illustrated in Fig.~\ref{fig:net}, our PU-Transformer model begins with the head to encode a preliminary feature map for the following operations. In practice, we only use a single layer MLP (\ie, a single $1\times1$ convolution, followed by a batch normalization layer~\cite{ioffe2015batch} and a ReLU activation~\cite{nair2010rectified}) as the PU-Transformer head, where the generated feature map size is $N\times16$.
+
+\subsection{PU-Transformer Body}
+\label{sec:pu_body}
+To balance the model complexity and effectiveness, empirically, we leverage \emph{five} cascaded Transformer Encoders (\ie, $L=5$ in Alg.~\ref{alg:put} and Fig.~\ref{fig:net}) to form the PU-Transformer body, where the channel dimension of each output follows: $32\rightarrow64\rightarrow128\rightarrow256\rightarrow256$. Particularly, in each Transformer Encoder, we only use the Positional Fusion block to encode the corresponding channel dimension (\ie, $C^{\prime}$ in Eq.~\ref{equ:g}), which remains the same in the subsequent operations. For all Positional Fusion blocks, the number of neighbors is empirically set to $k=20$ as used in previous works~\cite{wang2019dynamic,qian2021pu}.
+
+In terms of the SC-MSA block, the primary way of choosing the shift-related parameters is inspired by the Non-local Network~\cite{wang2018non} and ECA-Net~\cite{Wang_2020_CVPR}. Specifically, a reduction ratio $\psi$~\cite{wang2018non} is introduced to generate the low-dimensional matrices in self-attention; following a similar method, the channel-wise width (\ie, channel dimension) of each split in SC-MSA is set as $w=C^\prime/\psi$. Moreover, since the channel dimension is usually set to a power of 2~\cite{Wang_2020_CVPR}, we simply set the channel-wise shift interval $d = w/2$. Therefore, the number of heads in SC-MSA becomes $M=2\psi-1$. In our implementation, $\psi=4$ is adopted in all SC-MSA blocks of PU-Transformer. 
+
+\subsection{PU-Transformer Tail}
+\label{sec:tail}
+Based on the practical settings above, the input to the PU-Transformer tail (\ie, the output of the last Transformer Encoder) has a size of $N\times256$. Then, the periodic shuffling operation~\cite{shi2016real} reforms the channels and constructs a dense feature map of $rN\times256/r$, where $r$ is the upsampling scale. Finally, another MLP is applied to estimate the upsampled point cloud's 3D coordinates ($rN\times3$).

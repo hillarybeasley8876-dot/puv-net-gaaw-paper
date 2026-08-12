@@ -1,0 +1,63 @@
+﻿==============================================================================
+实验存档完整性审计   (规范: docs/ARTIFACT_POLICY.md §3)
+==============================================================================
+  FAIL [论文] ABL_A1_cd_balance          ep=150/150   gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [论文] ABL_A2_cd_boost_bwd        ep=116/150   gpu=RTX 3090     workers=0
+         - 缺文件: summary_stats.json
+         - ★ 训练未跑满: history 116 条 < config epochs 150 (run 中途崩过?)
+         - env.json 无 git_commit (复现性受损)
+         - 缺必备图: figures/F_loss.png
+         - 缺必备图: figures/F_metric.png
+  FAIL [论文] B001_reproduce             ep=100/100   gpu=RTX 3090     workers=0
+         - 缺文件: summary_stats.json
+         - 缺文件: selection.json
+         - env.json 无 git_commit (复现性受损)
+  FAIL [论文] B002_baseline150           ep=150/150   gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] R001_local_smoke           ep=5/5       gpu=RTX 3090     workers=0
+         - 缺文件: summary_stats.json
+         - 缺文件: selection.json
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] SMOKE_B1                   ep=3/3       gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] SMOKE_B2                   ep=4/4       gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] SMOKE_C1                   ep=3/3       gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] SMOKE_C1b                  ep=3/3       gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] SMOKE_sel                  ep=8/8       gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] SMOKE_sel2                 ep=8/8       gpu=RTX 3090     workers=0
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] _pipeline_check            ep=1/1       gpu=RTX 3090     workers=0
+         - 缺文件: summary_stats.json
+         - 缺文件: selection.json
+         - env.json 无 git_commit (复现性受损)
+  FAIL [辅助] smoke                      ep=6/?       gpu=?            workers=0
+         - 缺文件: config.yaml
+         - 缺文件: env.json
+         - 缺文件: metrics.json
+         - 缺文件: summary_stats.json
+         - 缺文件: selection.json
+         - 缺文件: ckpt/best.pt
+         - 缺文件: ckpt/last.pt
+         - 缺 figures/ 目录
+         - 缺 clouds/ 目录 (定性图唯一来源)
+
+==============================================================================
+跨机器混排检查 (红线: 同一张表的数字不得跨机并列)
+==============================================================================
+  全部论文 run 同 GPU (RTX 3090), 无混排风险。
+
+==============================================================================
+消融可比性检查 (batch_size / seed 必须一致, 否则单一变量失效)
+==============================================================================
+  OK   batch_size  全部一致: {64}
+  OK   seed        全部一致: {20260811}
+
+==============================================================================
+结果: 0/13 run 存档完整
+==============================================================================
+★ 论文 run 存在缺口, 必须修复: ABL_A1_cd_balance, ABL_A2_cd_boost_bwd, B001_reproduce, B002_baseline150

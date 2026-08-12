@@ -1,0 +1,13 @@
+﻿====================================================================
+5090 开机  cpod-1tq6i2ltk5mj  (真执行)
+====================================================================
+当前状态: Stopped
+
+[执行] StartCompShareInstance ...
+  RetCode=0 Message=
+
+[轮询] 等待 Running 并取 SSH 入口 ...
+  [01] State=Running  ssh=有
+
+✅ 就绪。SSH: ssh -p 28870 root@cpod-1tq6i2ltk5mj-s1.podtcp.compshare.cn
+[存档] E:\AE-CC托管\puv-net\runs\probe_cpod\poweron_result.json

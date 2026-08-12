@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-08-11T15:36:14+08:00",
+  "n_rejected": 7,
+  "rejected": [
+    {
+      "key": "PUGCN",
+      "input": {
+        "key": "PUGCN",
+        "title": "PU-GCN: Point Cloud Upsampling using Graph Convolutional Networks",
+        "arxiv": "1912.03264",
+        "year": "2021",
+        "venue": "CVPR 2021",
+        "topic": "upsampling-core",
+        "cite_in_chapter": [
+          "2.1",
+          "5.1"
+        ]
+      },
+      "api_years": [
+        "2019"
+      ],
+      "reason": "year_mismatch",
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    },
+    {
+      "key": "PointCloudSurvey",
+      "input": {
+        "key": "PointCloudSurvey",
+        "title": "Deep Learning for 3D Point Clouds: A Survey",
+        "arxiv": "1912.12033",
+        "year": "2021",
+        "venue": "IEEE TPAMI",
+        "topic": "survey",
+        "cite_in_chapter": [
+          "2.2"
+        ]
+      },
+      "api_years": [
+        "2019"
+      ],
+      "reason": "year_mismatch",
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    },
+    {
+      "key": "MTLSurvey",
+      "input": {
+        "key": "MTLSurvey",
+        "title": "Multi-Task Learning for Dense Prediction Tasks: A Survey",
+        "arxiv": "2004.13379",
+        "year": "2022",
+        "venue": "IEEE TPAMI",
+        "topic": "survey",
+        "cite_in_chapter": [
+          "2.4"
+        ]
+      },
+      "api_years": [
+        "2020"
+      ],
+      "reason": "year_mismatch",
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    },
+    {
+      "key": "PUFlow",
+      "input": {
+        "key": "PUFlow",
+        "title": "PU-Flow: a Point Cloud Upsampling Network with Normalizing Flows",
+        "arxiv": "2107.05543",
+        "year": "2022",
+        "venue": "IEEE TVCG",
+        "topic": "upsampling-core",
+        "cite_in_chapter": [
+          "2.1"
+        ]
+      },
+      "api_titles": [
+        "Conics meeting eight lines over perfect fields"
+      ],
+      "reason": "title_mismatch",
+      "scores": [
+        0.0
+      ],
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    },
+    {
+      "key": "PUSSAS",
+      "input": {
+        "key": "PUSSAS",
+        "title": "Self-Supervised Learning for Point Cloud Upsampling",
+        "arxiv": "2108.02509",
+        "year": "2021",
+        "venue": "arXiv",
+        "topic": "upsampling-selfsup",
+        "cite_in_chapter": [
+          "2.1"
+        ]
+      },
+      "api_titles": [
+        "Generalized Hydrodynamics in the 1D Bose gas: theory and experiments"
+      ],
+      "reason": "title_mismatch",
+      "scores": [
+        0.0
+      ],
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    },
+    {
+      "key": "PUDense",
+      "input": {
+        "key": "PUDense",
+        "title": "Density-imbalance-eased LiDAR Point Cloud Upsampling via Feature Consistency Learning",
+        "arxiv": "2205.05936",
+        "year": "2022",
+        "venue": "IEEE TIV",
+        "topic": "upsampling-lidar",
+        "cite_in_chapter": [
+          "2.1",
+          "7.4"
+        ]
+      },
+      "api_titles": [
+        "Observing Quantum Synchronization of a Single Trapped-Ion Qubit"
+      ],
+      "reason": "title_mismatch",
+      "scores": [
+        0.0
+      ],
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    },
+    {
+      "key": "EMDLoss",
+      "input": {
+        "key": "EMDLoss",
+        "title": "A Metric for Distributions with Applications to Image Databases",
+        "year": "1998",
+        "venue": "ICCV 1998",
+        "topic": "metric-cd",
+        "cite_in_chapter": [
+          "3.3"
+        ]
+      },
+      "api_years": [
+        "2002"
+      ],
+      "reason": "year_mismatch",
+      "checked_at": "2026-08-11T15:36:14+08:00"
+    }
+  ]
+}

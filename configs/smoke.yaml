@@ -1,0 +1,39 @@
+# 最小闭环 smoke 配置 —— 用于验证链路通畅，不是最终实验配置。
+# 真实实验用 configs/base.yaml，规模更大。
+
+data_root: data/smoke
+out_dir: runs/smoke
+device: cuda
+seed: 0
+
+batch_size: 2
+epochs: 6
+lr: 0.001
+weight_decay: 0.0001
+grad_clip: 1.0
+augment: false
+
+model:
+  ratio: 4
+  dim: 64
+  n_blocks: 2
+  k: 8
+  attention: true          # H2
+  positional_enc: true     # H3a
+  n_freq: 6
+  use_normals: false       # H3b
+  volumetric: true         # H6
+  n_interior: 1024
+  upsample_mode: offset
+
+loss_weights:
+  cd: 1.0
+  repulsion: 0.1
+  interior: 1.0
+
+# 单阶段联合训练；H5 对比时改为两阶段：
+# stages:
+#   - {stage: surface,  epochs: 3}
+#   - {stage: interior, epochs: 3}
+stages:
+  - {stage: joint, epochs: 6}

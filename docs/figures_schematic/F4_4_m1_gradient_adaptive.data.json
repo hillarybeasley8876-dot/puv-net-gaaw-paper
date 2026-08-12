@@ -1,0 +1,15 @@
+{
+  "figure_id": "F4-4",
+  "title": "梯度自适应对抗权重（GAAW）的量纲失配诊断与闭环调节机制",
+  "depends_on_experiment": true,
+  "source_of_truth": "puvnet/models/pu_gan.py adaptive_adv_weight (L294-320)",
+  "measured": {
+    "eta_target_ratio": 0.1,
+    "rho_initial": "1/82.65",
+    "rho_initial_pct": 1.21,
+    "w_adv_measured": 8.27,
+    "s_cd_plateau_mean_b001": 0.5446
+  },
+  "ablation_group": "B2",
+  "note": "warmup(adv_warmup_factor) 属 M3, 与 M1 为独立改进点, 本图不混合表述"
+}

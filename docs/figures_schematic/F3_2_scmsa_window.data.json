@@ -1,0 +1,13 @@
+{
+  "figure_id": "3-2",
+  "caption": "SC-MSA 通道窗口划分与注意力计算示意图",
+  "type": "schematic",
+  "chapter": "3.2.3",
+  "illustrative_C": 16,
+  "illustrative_psi": 4,
+  "n_heads": 7,
+  "note": "C/psi 为示意取值；参数量数字取自实测存档",
+  "generated_at": "2026-08-11T19:06:38+08:00",
+  "script": "scripts/make_ch3_figures.py",
+  "depends_on_experiment": false
+}

@@ -1,0 +1,27 @@
+{
+  "source": "data\\smoke\\_tmp_mesh\\solid_0002.ply",
+  "source_sha1": "2409ddc6f8f4ac9f19f13304a5c4e69ee307d804",
+  "spec": {
+    "n_input": 512,
+    "n_surface_gt": 1024,
+    "n_interior_gt": 1024,
+    "seed": 2
+  },
+  "watertight": {
+    "is_watertight": true,
+    "is_winding_consistent": true,
+    "euler_number": 2,
+    "volume": 0.5183676932056386,
+    "n_vertices": 66,
+    "n_faces": 128
+  },
+  "repaired": false,
+  "interior_hit_rate": 0.775634765625,
+  "center": [
+    0.006004858829503542,
+    -0.010418421840322128,
+    -0.027624832879807562
+  ],
+  "scale": 0.6822868288292059,
+  "kind": "solid"
+}

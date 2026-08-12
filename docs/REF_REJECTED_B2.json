@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-08-11T15:42:07+08:00",
+  "n_rejected": 4,
+  "rejected": [
+    {
+      "key": "PUSSAS",
+      "input": {
+        "key": "PUSSAS",
+        "title": "SSAS: Self-Supervised Arbitrary-Scale Point Clouds Upsampling",
+        "year": "2022",
+        "venue": "arXiv",
+        "topic": "upsampling-selfsup",
+        "cite_in_chapter": [
+          "2.1"
+        ]
+      },
+      "errors": [
+        "dblp_http_error: HTTP Error 503: Service Unavailable",
+        "openalex_no_hit"
+      ],
+      "reason": "no_channel_verified",
+      "checked_at": "2026-08-11T15:42:07+08:00"
+    },
+    {
+      "key": "RepKPU",
+      "input": {
+        "key": "RepKPU",
+        "title": "RepKPU: Point Cloud Upsampling with Kernel Point Representation and Deformation",
+        "arxiv": "2403.10962",
+        "year": "2024",
+        "venue": "CVPR 2024",
+        "topic": "upsampling-core",
+        "cite_in_chapter": [
+          "2.1"
+        ]
+      },
+      "api_titles": [
+        "Exploiting Topological Priors for Boosting Point Cloud Generation"
+      ],
+      "reason": "title_mismatch",
+      "scores": [
+        0.133
+      ],
+      "checked_at": "2026-08-11T15:42:07+08:00"
+    },
+    {
+      "key": "KITTI",
+      "input": {
+        "key": "KITTI",
+        "title": "Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite",
+        "year": "2012",
+        "venue": "CVPR 2012",
+        "topic": "downstream",
+        "cite_in_chapter": [
+          "1.1"
+        ]
+      },
+      "errors": [
+        "dblp_http_error: <urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>",
+        "openalex_http_error: HTTP Error 400: Bad Request"
+      ],
+      "reason": "no_channel_verified",
+      "checked_at": "2026-08-11T15:42:07+08:00"
+    },
+    {
+      "key": "CMMI",
+      "input": {
+        "key": "CMMI",
+        "title": "Capability Maturity Model Integration",
+        "year": "2002",
+        "venue": "SEI",
+        "topic": "maturity",
+        "cite_in_chapter": [
+          "6.2"
+        ]
+      },
+      "api_years": [
+        "2014"
+      ],
+      "reason": "year_mismatch",
+      "checked_at": "2026-08-11T15:42:07+08:00"
+    }
+  ]
+}

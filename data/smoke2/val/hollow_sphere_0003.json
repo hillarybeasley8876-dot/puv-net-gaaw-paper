@@ -1,0 +1,27 @@
+{
+  "source": "data\\smoke2\\_tmp_mesh\\hollow_sphere_0003.ply",
+  "source_sha1": "21e4676872dc9f8ae9e18414dfd19198f8b758a7",
+  "spec": {
+    "n_input": 512,
+    "n_surface_gt": 1024,
+    "n_interior_gt": 1024,
+    "seed": 3
+  },
+  "watertight": {
+    "is_watertight": true,
+    "is_winding_consistent": true,
+    "euler_number": 4,
+    "volume": 2.4956809049973976,
+    "n_vertices": 1284,
+    "n_faces": 2560
+  },
+  "repaired": false,
+  "interior_hit_rate": 0.30615234375,
+  "center": [
+    0.021767032604198475,
+    0.00880360627600153,
+    -0.005273778281767482
+  ],
+  "scale": 1.0225098127716958,
+  "kind": "hollow_sphere"
+}

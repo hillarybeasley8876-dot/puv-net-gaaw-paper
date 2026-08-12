@@ -1,0 +1,432 @@
+\begin{thebibliography}{10}
+
+\bibitem{endres20133}
+Endres, F., Hess, J., Sturm, J., Cremers, D., Burgard, W.:
+\newblock 3-d mapping with an rgb-d camera.
+\newblock IEEE transactions on robotics \textbf{30} (2013)  177--187
+
+\bibitem{jaboyedoff2012use}
+Jaboyedoff, M., Oppikofer, T., Abell{\'a}n, A., Derron, M.H., Loye, A.,
+  Metzger, R., Pedrazzini, A.:
+\newblock Use of lidar in landslide investigations: a review.
+\newblock Natural hazards \textbf{61} (2012)  5--28
+
+\bibitem{qi2017pointnet}
+Qi, C.R., Su, H., Mo, K., Guibas, L.J.:
+\newblock Pointnet: Deep learning on point sets for 3d classification and
+  segmentation.
+\newblock In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition. (2017)  652--660
+
+\bibitem{wang2019dynamic}
+Wang, Y., Sun, Y., Liu, Z., Sarma, S.E., Bronstein, M.M., Solomon, J.M.:
+\newblock Dynamic graph cnn for learning on point clouds.
+\newblock ACM Transactions on Graphics (TOG) \textbf{38} (2019)  146
+
+\bibitem{qiu2021geometric}
+Qiu, S., Anwar, S., Barnes, N.:
+\newblock Geometric back-projection network for point cloud classification.
+\newblock IEEE Transactions on Multimedia (2021)
+
+\bibitem{qi2017pointnet++}
+Qi, C.R., Yi, L., Su, H., Guibas, L.J.:
+\newblock Pointnet++: Deep hierarchical feature learning on point sets in a
+  metric space.
+\newblock In: Advances in neural information processing systems. (2017)
+  5099--5108
+
+\bibitem{qiu2021dense}
+Qiu, S., Anwar, S., Barnes, N.:
+\newblock Dense-resolution network for point cloud classification and
+  segmentation.
+\newblock In: Proceedings of the IEEE/CVF Winter Conference on Applications of
+  Computer Vision (WACV). (2021)  3813--3822
+
+\bibitem{hu2020randla}
+Hu, Q., Yang, B., Xie, L., Rosa, S., Guo, Y., Wang, Z., Trigoni, N., Markham,
+  A.:
+\newblock Randla-net: Efficient semantic segmentation of large-scale point
+  clouds.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2020)  11108--11117
+
+\bibitem{qi2019deep}
+Qi, C.R., Litany, O., He, K., Guibas, L.J.:
+\newblock Deep hough voting for 3d object detection in point clouds.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2019)  9277--9286
+
+\bibitem{qi2020imvotenet}
+Qi, C.R., Chen, X., Litany, O., Guibas, L.J.:
+\newblock Imvotenet: Boosting 3d object detection in point clouds with image
+  votes.
+\newblock In: Proceedings of the IEEE/CVF conference on computer vision and
+  pattern recognition. (2020)  4404--4413
+
+\bibitem{qiu2021investigating}
+Qiu, S., Wu, Y., Anwar, S., Li, C.:
+\newblock Investigating attention mechanism in 3d point cloud object detection.
+\newblock In: International Conference on 3D Vision (3DV), IEEE (2021)
+
+\bibitem{uy2019revisiting}
+Uy, M.A., Pham, Q.H., Hua, B.S., Nguyen, T., Yeung, S.K.:
+\newblock Revisiting point cloud classification: A new benchmark dataset and
+  classification model on real-world data.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2019)  1588--1597
+
+\bibitem{qiu2021semantic}
+Qiu, S., Anwar, S., Barnes, N.:
+\newblock Semantic segmentation for real point cloud scenes via bilateral
+  augmentation and adaptive fusion.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR). (2021)  1757--1767
+
+\bibitem{Park_2021_ICCV}
+Park, D., Ambrus, R., Guizilini, V., Li, J., Gaidon, A.:
+\newblock Is pseudo-lidar needed for monocular 3d object detection?
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV). (2021)  3142--3152
+
+\bibitem{ye2021meta}
+Ye, S., Chen, D., Han, S., Wan, Z., Liao, J.:
+\newblock Meta-pu: An arbitrary-scale upsampling network for point cloud.
+\newblock IEEE Transactions on Visualization and Computer Graphics (2021)
+
+\bibitem{liu2019relation}
+Liu, Y., Fan, B., Xiang, S., Pan, C.:
+\newblock Relation-shape convolutional neural network for point cloud analysis.
+\newblock In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition. (2019)  8895--8904
+
+\bibitem{qiu2021pnp}
+Qiu, S., Anwar, S., Barnes, N.:
+\newblock Pnp-3d: A plug-and-play for 3d point clouds.
+\newblock arXiv preprint arXiv:2108.07378 (2021)
+
+\bibitem{mitra2003estimating}
+Mitra, N.J., Nguyen, A.:
+\newblock Estimating surface normals in noisy point cloud data.
+\newblock In: Proceedings of the nineteenth annual symposium on Computational
+  geometry, ACM (2003)  322--328
+
+\bibitem{mitra2004registration}
+Mitra, N.J., Gelfand, N., Pottmann, H., Guibas, L.:
+\newblock Registration of point cloud data from a geometric optimization
+  perspective.
+\newblock In: Proceedings of the 2004 Eurographics/ACM SIGGRAPH symposium on
+  Geometry processing, ACM (2004)  22--31
+
+\bibitem{dong2015image}
+Dong, C., Loy, C.C., He, K., Tang, X.:
+\newblock Image super-resolution using deep convolutional networks.
+\newblock IEEE transactions on pattern analysis and machine intelligence
+  \textbf{38} (2015)  295--307
+
+\bibitem{kim2016accurate}
+Kim, J., Lee, J.K., Lee, K.M.:
+\newblock Accurate image super-resolution using very deep convolutional
+  networks.
+\newblock In: Proceedings of the IEEE conference on computer vision and pattern
+  recognition. (2016)  1646--1654
+
+\bibitem{anwar2020deep}
+Anwar, S., Khan, S., Barnes, N.:
+\newblock A deep journey into super-resolution: A survey.
+\newblock ACM Computing Surveys (CSUR) \textbf{53} (2020)  1--34
+
+\bibitem{qian2021pu}
+Qian, G., Abualshour, A., Li, G., Thabet, A., Ghanem, B.:
+\newblock Pu-gcn: Point cloud upsampling using graph convolutional networks.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2021)  11683--11692
+
+\bibitem{li2019pu}
+Li, R., Li, X., Fu, C.W., Cohen-Or, D., Heng, P.A.:
+\newblock Pu-gan: a point cloud upsampling adversarial network.
+\newblock In: Proceedings of the IEEE International Conference on Computer
+  Vision. (2019)  7203--7212
+
+\bibitem{yifan2019patch}
+Yifan, W., Wu, S., Huang, H., Cohen-Or, D., Sorkine-Hornung, O.:
+\newblock Patch-based progressive 3d point set upsampling.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2019)  5958--5967
+
+\bibitem{liu2020spu}
+Liu, X., Liu, X., Han, Z., Liu, Y.S.:
+\newblock Spu-net: Self-supervised point cloud upsampling by coarse-to-fine
+  reconstruction with self-projection optimization.
+\newblock arXiv preprint arXiv:2012.04439 (2020)
+
+\bibitem{li2021point}
+Li, R., Li, X., Heng, P.A., Fu, C.W.:
+\newblock Point cloud upsampling via disentangled refinement.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2021)  344--353
+
+\bibitem{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N.,
+  Kaiser, {\L}., Polosukhin, I.:
+\newblock Attention is all you need.
+\newblock In: Advances in neural information processing systems. (2017)
+  5998--6008
+
+\bibitem{zhao2021point}
+Zhao, H., Jiang, L., Jia, J., Torr, P.H., Koltun, V.:
+\newblock Point transformer.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2021)  16259--16268
+
+\bibitem{shi2016real}
+Shi, W., Caballero, J., Husz{\'a}r, F., Totz, J., Aitken, A.P., Bishop, R.,
+  Rueckert, D., Wang, Z.:
+\newblock Real-time single image and video super-resolution using an efficient
+  sub-pixel convolutional neural network.
+\newblock In: Proceedings of the IEEE conference on computer vision and pattern
+  recognition. (2016)  1874--1883
+
+\bibitem{carion2020end}
+Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., Zagoruyko, S.:
+\newblock End-to-end object detection with transformers.
+\newblock In: European Conference on Computer Vision, Springer (2020)  213--229
+
+\bibitem{dosovitskiy2020image}
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X.,
+  Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S.,  et~al.:
+\newblock An image is worth 16x16 words: Transformers for image recognition at
+  scale.
+\newblock arXiv preprint arXiv:2010.11929 (2020)
+
+\bibitem{liu2021swin}
+Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., Guo, B.:
+\newblock Swin transformer: Hierarchical vision transformer using shifted
+  windows.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV). (2021)  10012--10022
+
+\bibitem{chen2021pre}
+Chen, H., Wang, Y., Guo, T., Xu, C., Deng, Y., Liu, Z., Ma, S., Xu, C., Xu, C.,
+  Gao, W.:
+\newblock Pre-trained image processing transformer.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2021)  12299--12310
+
+\bibitem{yu2018pu}
+Yu, L., Li, X., Fu, C.W., Cohen-Or, D., Heng, P.A.:
+\newblock Pu-net: Point cloud upsampling network.
+\newblock In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition. (2018)  2790--2799
+
+\bibitem{su2015multi}
+Su, H., Maji, S., Kalogerakis, E., Learned-Miller, E.:
+\newblock Multi-view convolutional neural networks for 3d shape recognition.
+\newblock In: Proceedings of the IEEE international conference on computer
+  vision. (2015)  945--953
+
+\bibitem{lawin2017deep}
+Lawin, F.J., Danelljan, M., Tosteberg, P., Bhat, G., Khan, F.S., Felsberg, M.:
+\newblock Deep projective 3d semantic segmentation.
+\newblock In: International Conference on Computer Analysis of Images and
+  Patterns, Springer (2017)  95--107
+
+\bibitem{guo2020deep}
+Guo, Y., Wang, H., Hu, Q., Liu, H., Liu, L., Bennamoun, M.:
+\newblock Deep learning for 3d point clouds: A survey.
+\newblock IEEE transactions on pattern analysis and machine intelligence (2020)
+
+\bibitem{huang2016point}
+Huang, J., You, S.:
+\newblock Point cloud labeling using 3d convolutional neural network.
+\newblock In: 2016 23rd International Conference on Pattern Recognition (ICPR),
+  IEEE (2016)  2670--2675
+
+\bibitem{su2018splatnet}
+Su, H., Jampani, V., Sun, D., Maji, S., Kalogerakis, E., Yang, M.H., Kautz, J.:
+\newblock Splatnet: Sparse lattice networks for point cloud processing.
+\newblock In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition. (2018)  2530--2539
+
+\bibitem{choy20194d}
+Choy, C., Gwak, J., Savarese, S.:
+\newblock 4d spatio-temporal convnets: Minkowski convolutional neural networks.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2019)  3075--3084
+
+\bibitem{yuan2018pcn}
+Yuan, W., Khot, T., Held, D., Mertz, C., Hebert, M.:
+\newblock Pcn: Point completion network.
+\newblock In: 2018 International Conference on 3D Vision (3DV), IEEE (2018)
+  728--737
+
+\bibitem{goodfellow2014generative}
+Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair,
+  S., Courville, A., Bengio, Y.:
+\newblock Generative adversarial nets.
+\newblock Advances in neural information processing systems \textbf{27} (2014)
+
+\bibitem{qian2020pugeo}
+Qian, Y., Hou, J., Kwong, S., He, Y.:
+\newblock Pugeo-net: A geometry-centric network for 3d point cloud upsampling.
+\newblock In: European Conference on Computer Vision, Springer (2020)  752--769
+
+\bibitem{zhao2021sspu}
+Zhao, Y., Hui, L., Xie, J.:
+\newblock Sspu-net: Self-supervised point cloud upsampling via differentiable
+  rendering.
+\newblock In: Proceedings of the 29th ACM International Conference on
+  Multimedia. (2021)  2214--2223
+
+\bibitem{luo2021pu}
+Luo, L., Tang, L., Zhou, W., Wang, S., Yang, Z.X.:
+\newblock Pu-eva: An edge-vector based approximation solution for
+  flexible-scale point cloud upsampling.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2021)  16208--16217
+
+\bibitem{qian2021deep}
+Qian, Y., Hou, J., Kwong, S., He, Y.:
+\newblock Deep magnification-flexible upsampling over 3d point clouds.
+\newblock IEEE Transactions on Image Processing \textbf{30} (2021)  8354--8367
+
+\bibitem{khan2021transformers}
+Khan, S., Naseer, M., Hayat, M., Zamir, S.W., Khan, F.S., Shah, M.:
+\newblock Transformers in vision: A survey.
+\newblock arXiv preprint arXiv:2101.01169 (2021)
+
+\bibitem{yang2020learning}
+Yang, F., Yang, H., Fu, J., Lu, H., Guo, B.:
+\newblock Learning texture transformer network for image super-resolution.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2020)  5791--5800
+
+\bibitem{zhu2020deformable}
+Zhu, X., Su, W., Lu, L., Li, B., Wang, X., Dai, J.:
+\newblock Deformable detr: Deformable transformers for end-to-end object
+  detection.
+\newblock arXiv preprint arXiv:2010.04159 (2020)
+
+\bibitem{yew2022regtr}
+Yew, Z.J., Lee, G.H.:
+\newblock Regtr: End-to-end point cloud correspondences with transformers.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2022)  6677--6686
+
+\bibitem{fan2021point}
+Fan, H., Yang, Y., Kankanhalli, M.:
+\newblock Point 4d transformer networks for spatio-temporal modeling in point
+  cloud videos.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2021)  14204--14213
+
+\bibitem{yu2022point}
+Yu, X., Tang, L., Rao, Y., Huang, T., Zhou, J., Lu, J.:
+\newblock Point-bert: Pre-training 3d point cloud transformers with masked
+  point modeling.
+\newblock In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. (2022)  19313--19322
+
+\bibitem{fan2022point}
+Fan, H., Yang, Y., Kankanhalli, M.:
+\newblock Point spatio-temporal transformer networks for point cloud video
+  modeling.
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence (2022)
+
+\bibitem{yu2021pointr}
+Yu, X., Rao, Y., Wang, Z., Liu, Z., Lu, J., Zhou, J.:
+\newblock Pointr: Diverse point cloud completion with geometry-aware
+  transformers.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2021)  12498--12507
+
+\bibitem{guo2021pct}
+Guo, M.H., Cai, J.X., Liu, Z.N., Mu, T.J., Martin, R.R., Hu, S.M.:
+\newblock Pct: Point cloud transformer.
+\newblock Computational Visual Media \textbf{7} (2021)  187--199
+
+\bibitem{mazur2021cloud}
+Mazur, K., Lempitsky, V.:
+\newblock Cloud transformers: A universal approach to point cloud processing
+  tasks.
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2021)  10715--10724
+
+\bibitem{ba2016layer}
+Ba, J.L., Kiros, J.R., Hinton, G.E.:
+\newblock Layer normalization.
+\newblock arXiv preprint arXiv:1607.06450 (2016)
+
+\bibitem{ioffe2015batch}
+Ioffe, S., Szegedy, C.:
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock arXiv preprint arXiv:1502.03167 (2015)
+
+\bibitem{nair2010rectified}
+Nair, V., Hinton, G.E.:
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In: Icml. (2010)
+
+\bibitem{wang2018non}
+Wang, X., Girshick, R., Gupta, A., He, K.:
+\newblock Non-local neural networks.
+\newblock In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+  Recognition. (2018)  7794--7803
+
+\bibitem{Wang_2020_CVPR}
+Wang, Q., Wu, B., Zhu, P., Li, P., Zuo, W., Hu, Q.:
+\newblock Eca-net: Efficient channel attention for deep convolutional neural
+  networks.
+\newblock In: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  (CVPR). (2020)
+
+\bibitem{abadi2016tensorflow}
+Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M.,
+  Ghemawat, S., Irving, G., Isard, M.,  et~al.:
+\newblock Tensorflow: A system for large-scale machine learning.
+\newblock In: 12th $\{$USENIX$\}$ symposium on operating systems design and
+  implementation ($\{$OSDI$\}$ 16). (2016)  265--283
+
+\bibitem{chang2015shapenet}
+Chang, A.X., Funkhouser, T., Guibas, L., Hanrahan, P., Huang, Q., Li, Z.,
+  Savarese, S., Savva, M., Song, S., Su, H.,  et~al.:
+\newblock Shapenet: An information-rich 3d model repository.
+\newblock arXiv preprint arXiv:1512.03012 (2015)
+
+\bibitem{berger2013benchmark}
+Berger, M., Levine, J.A., Nonato, L.G., Taubin, G., Silva, C.T.:
+\newblock A benchmark for surface reconstruction.
+\newblock ACM Transactions on Graphics (TOG) \textbf{32} (2013)  1--17
+
+\bibitem{han2022pu}
+Han, B., Zhang, X., Ren, S.:
+\newblock Pu-gacnet: Graph attention convolution network for point cloud
+  upsampling.
+\newblock Image and Vision Computing (2022)  104371
+
+\bibitem{li2019deepgcns}
+Li, G., Muller, M., Thabet, A., Ghanem, B.:
+\newblock Deepgcns: Can gcns go as deep as cnns?
+\newblock In: Proceedings of the IEEE/CVF International Conference on Computer
+  Vision. (2019)  9267--9276
+
+\bibitem{behley2019semantickitti}
+Behley, J., Garbade, M., Milioto, A., Quenzel, J., Behnke, S., Stachniss, C.,
+  Gall, J.:
+\newblock Semantickitti: A dataset for semantic scene understanding of lidar
+  sequences.
+\newblock In: Proceedings of the IEEE International Conference on Computer
+  Vision. (2019)  9297--9307
+
+\bibitem{armeni2017joint}
+Armeni, I., Sax, S., Zamir, A.R., Savarese, S.:
+\newblock Joint 2d-3d-semantic data for indoor scene understanding.
+\newblock arXiv preprint arXiv:1702.01105 (2017)
+
+\bibitem{dai2017scannet}
+Dai, A., Chang, A.X., Savva, M., Halber, M., Funkhouser, T., Nie{\ss}ner, M.:
+\newblock Scannet: Richly-annotated 3d reconstructions of indoor scenes.
+\newblock In: Proceedings of the IEEE conference on computer vision and pattern
+  recognition. (2017)  5828--5839
+
+\end{thebibliography}

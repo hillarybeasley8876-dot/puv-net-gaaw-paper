@@ -1,0 +1,11 @@
+{
+  "figure_id": "3-4",
+  "caption": "训练、选点与官方评价三套口径隔离示意图",
+  "type": "schematic",
+  "chapter": "3.3.4",
+  "n_lanes": 3,
+  "source": "docs/_ch3_stats.json",
+  "generated_at": "2026-08-11T19:06:38+08:00",
+  "script": "scripts/make_ch3_figures.py",
+  "depends_on_experiment": true
+}

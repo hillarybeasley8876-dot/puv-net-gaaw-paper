@@ -1,0 +1,50 @@
+﻿======================================================================
+B002 进程 etime (从启动到现在的累计时间)
+======================================================================
+    PID     ELAPSED CMD
+    619       00:00 /root/puvnet-venv/bin/python scripts/train_pu.py --config configs/remote_B002_baseline150_5090.yaml
+
+======================================================================
+B002 真实进度 (history.json)
+======================================================================
+len= 106
+last_epoch= 105
+last_sec= 57.4
+last_ts_in_log= 0.0019124468604198603
+
+======================================================================
+queue_B.log 全部条目
+======================================================================
+[15:44:47] START B002_baseline150_5090
+
+======================================================================
+远端 remote_*.yaml 的 loader 段 (确认部署是否生效)
+======================================================================
+--- remote_B002_baseline150_5090.yaml ---
+loader:
+  num_workers: 8
+  pin_memory: true
+  prefetch_factor: 2
+  persistent_workers: true
+
+--- remote_ABL_B1_adv_fixed.yaml ---
+loader:
+  num_workers: 8
+  pin_memory: true
+  prefetch_factor: 2
+  persistent_workers: true
+
+--- remote_ABL_B2_adv_adaptive.yaml ---
+loader:
+  num_workers: 8
+  pin_memory: true
+  prefetch_factor: 2
+  persistent_workers: true
+
+======================================================================
+远端 train_pu.py 是否新版本 (含 '[loader]' 行)
+======================================================================
+-rw-r--r-- 1 root root 23458 Aug 11 17:25 /root/puv-net/scripts/train_pu.py
+
+264:    print(f"[loader] num_workers={loader_kwargs_tr['num_workers']} "
+

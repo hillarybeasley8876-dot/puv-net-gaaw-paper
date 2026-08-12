@@ -1,0 +1,33 @@
+﻿连接 cpod-1tq6i2ltk5mj-s1.podtcp.compshare.cn:28870 ...
+  已连接
+
+========================================================================
+[1/4] 传代码
+========================================================================
+  代码文件 32 个, 本次上传 0 个
+
+========================================================================
+[2/4] 传数据
+========================================================================
+  已存在且大小一致, 跳过: data/PU1K_extract/PU1K/train/pu1k_poisson_256_poisson_1024_pc_2500_patch50_addpugan.h5 (1059.8 MB)
+
+========================================================================
+[3/4] 远端校验
+========================================================================
+abl_A1_cd_balance.yaml abl_A2_cd_boost_bwd.yaml abl_AC_combo.yaml abl_B1_adv_fixed.yaml abl_B2_adv_adaptive.yaml abl_BD_combo.yaml abl_C1_uniform.yaml abl_D1_scale_qk.yaml b001_reproduce.yaml b002_baseline150.yaml r001_local_smoke.yaml smoke.yaml smoke_5090_b1.yaml
+ROOT /root/puv-net
+h5_exists True
+keys ['poisson_1024', 'poisson_256']
+shape (69000, 256, 3) (69000, 1024, 3)
+
+========================================================================
+[4/4] B 组队列
+========================================================================
+  写远端 config remote_B002_baseline150_5090.yaml  (out_dir=runs/B002_baseline150_5090)
+  写远端 config remote_ABL_B1_adv_fixed.yaml  (out_dir=runs/ABL_B1_adv_fixed)
+  写远端 config remote_ABL_B2_adv_adaptive.yaml  (out_dir=runs/ABL_B2_adv_adaptive)
+  远端队列已在跑 (pid 537), 不重复启动
+--- queue_B.log ---
+--- train log tail ---
+
+[存档] E:\AE-CC托管\puv-net\runs\probe_cpod\deploy_5090.json

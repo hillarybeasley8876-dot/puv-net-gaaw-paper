@@ -1,0 +1,86 @@
+# =============================================================================
+# 消融组 A2_cd_boost_bwd
+# 改进A 反向对照-强化bwd(与A1对称)
+# =============================================================================
+# ⚠️ 本文件由 scripts/make_ablation_configs.py 自动生成，请勿手改。
+#    要改请改生成脚本后重新生成，否则「除目标项外与 baseline 逐字相同」
+#    这一保证会失效。
+#
+# 派生自 : configs/b002_baseline150.yaml (B-002 baseline @150ep)
+# 检验   : 排除『任何权重扰动都变好』的伪效应
+# 改动项 :
+#   loss.w_cd_fwd: 1.0 -> 0.921029
+#   loss.w_cd_bwd: 1.0 -> 1.078971
+#
+# 显著性判据（跑前定死，禁止事后调整）—— 来自 runs/ablation_design/power_analysis.json
+#   平台区均值相对 B-002 变化须超过：CD 0.66% / HD 2.18% / NUC 0.93%
+#   （= 2 x 平台区均值标准误，n=75）。未超过则判「无显著差异」，
+#   不得在论文中声称有改进。
+#
+# 接受准则（用户 2026-08-11 定案：「各个维度指标最好都要有提升，幅度不用大」）
+#   ACCEPT_FULL  : CD/HD/NUC 三项改善均 > 门槛           -> 可作为主表改进项
+#   ACCEPT_PART  : 部分项 > 门槛，其余项在 ±门槛内(持平)  -> 附录报告，须写明持平项
+#   REJECT_TRADE : 任一项劣化 > 门槛                     -> 判 trade-off，不得声称改进
+#   REJECT_NULL  : 三项均在 ±门槛内                      -> 判无效，如实报告
+#   注：CD/HD 越小越好，NUC 越小越好；改善 = (base - exp) / base。
+# =============================================================================
+
+out_dir: runs/ABL_A2_cd_boost_bwd
+seed: 20260811
+epochs: 150
+batch_size: 64
+lr: 0.001
+lr_step: 30
+lr_decay: 0.7
+betas:
+- 0.9
+- 0.999
+grad_clip: null
+device: null
+eval_every: 1
+dump_cloud_every: 10
+n_fixed_samples: 3
+select_weights:
+  cd: 0.5
+  hd: 0.2
+  nuc: 0.3
+select_warmup: 5
+plateau_frac: 0.5
+data:
+  source: pu1k
+  up_ratio: 4
+  noise_beta: 0.0
+  augment: true
+  limit: null
+  val_ratio: 0.05
+model:
+  up_ratio: 4
+  dims:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 256
+  k: 20
+  psi: 4
+  head_dim: 32
+  mlp_ratio: 1
+  use_geo: true
+  use_feat: true
+  attention_type: sc-msa
+  tail_mode: shuffle
+  scale_qk: false
+gan_mode: hinge
+d_steps: 1
+loss:
+  w_cd: 1.0
+  w_cd_fwd: 0.921029
+  w_cd_bwd: 1.078971
+  w_adv: 0.0
+  w_uniform: 0.0
+  w_repulsion: 0.0
+  squared_cd: true
+  adaptive_adv: false
+  adv_warmup_epochs: 0
+  adv_ramp_epochs: 10
+  adv_target_ratio: 0.1

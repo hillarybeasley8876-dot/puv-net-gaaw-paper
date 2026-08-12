@@ -1,0 +1,2027 @@
+{
+  "note": "每条均经 arXiv/Crossref/DBLP 官方 API 核实; 核不到的条目在 REF_REJECTED.json",
+  "generated_at": "2026-08-11T15:36:14+08:00",
+  "n_accepted": 68,
+  "references": [
+    {
+      "key": "PUNet",
+      "title": "PU-Net: Point Cloud Upsampling Network",
+      "authors": [
+        "Lequan Yu",
+        "Xianzhi Li",
+        "Chi-Wing Fu",
+        "Daniel Cohen-Or",
+        "Pheng-Ann Heng"
+      ],
+      "year": "2018",
+      "venue": "CVPR 2018",
+      "doi": null,
+      "arxiv": "1801.06761",
+      "arxiv_abs": "http://arxiv.org/abs/1801.06761v2",
+      "topic": "upsampling-core",
+      "cite_in_chapter": [
+        "2.1",
+        "3.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1801.06761&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "EC-Net",
+      "title": "EC-Net: an Edge-aware Point set Consolidation Network",
+      "authors": [
+        "Lequan Yu",
+        "Xianzhi Li",
+        "Chi-Wing Fu",
+        "Daniel Cohen-Or",
+        "Pheng-Ann Heng"
+      ],
+      "year": "2018",
+      "venue": "ECCV 2018",
+      "doi": null,
+      "arxiv": "1807.06010",
+      "arxiv_abs": "http://arxiv.org/abs/1807.06010v1",
+      "topic": "upsampling-core",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1807.06010&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "MPU",
+      "title": "Patch-based Progressive 3D Point Set Upsampling",
+      "authors": [
+        "Wang Yifan",
+        "Shihao Wu",
+        "Hui Huang",
+        "Daniel Cohen-Or",
+        "Olga Sorkine-Hornung"
+      ],
+      "year": "2018",
+      "venue": "CVPR 2019",
+      "doi": null,
+      "arxiv": "1811.11286",
+      "arxiv_abs": "http://arxiv.org/abs/1811.11286v3",
+      "topic": "upsampling-core",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1811.11286&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PUGAN",
+      "title": "PU-GAN: a Point Cloud Upsampling Adversarial Network",
+      "authors": [
+        "Ruihui Li",
+        "Xianzhi Li",
+        "Chi-Wing Fu",
+        "Daniel Cohen-Or",
+        "Pheng-Ann Heng"
+      ],
+      "year": "2019",
+      "venue": "ICCV 2019",
+      "doi": null,
+      "arxiv": "1907.10844",
+      "arxiv_abs": "http://arxiv.org/abs/1907.10844v1",
+      "topic": "upsampling-gan",
+      "cite_in_chapter": [
+        "2.1",
+        "2.3",
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1907.10844&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PUTransformer",
+      "title": "PU-Transformer: Point Cloud Upsampling Transformer",
+      "authors": [
+        "Shi Qiu",
+        "Saeed Anwar",
+        "Nick Barnes"
+      ],
+      "year": "2021",
+      "venue": "ACCV 2022",
+      "doi": null,
+      "arxiv": "2111.12242",
+      "arxiv_abs": "http://arxiv.org/abs/2111.12242v2",
+      "topic": "upsampling-transformer",
+      "cite_in_chapter": [
+        "2.1",
+        "2.2",
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2111.12242&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "Dis-PU",
+      "title": "Point Cloud Upsampling via Disentangled Refinement",
+      "authors": [
+        "Ruihui Li",
+        "Xianzhi Li",
+        "Pheng-Ann Heng",
+        "Chi-Wing Fu"
+      ],
+      "year": "2021",
+      "venue": "CVPR 2021",
+      "doi": null,
+      "arxiv": "2106.04779",
+      "arxiv_abs": "http://arxiv.org/abs/2106.04779v1",
+      "topic": "upsampling-core",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2106.04779&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "MAFU",
+      "title": "Meta-PU: An Arbitrary-Scale Upsampling Network for Point Cloud",
+      "authors": [
+        "Shuquan Ye",
+        "Dongdong Chen",
+        "Songfang Han",
+        "Ziyu Wan",
+        "Jing Liao"
+      ],
+      "year": "2021",
+      "venue": "TVCG",
+      "doi": null,
+      "arxiv": "2102.04317",
+      "arxiv_abs": "http://arxiv.org/abs/2102.04317v1",
+      "topic": "upsampling-arbitrary",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2102.04317&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "NePs",
+      "title": "Neural Points: Point Cloud Representation with Neural Fields for Arbitrary Upsampling",
+      "authors": [
+        "Wanquan Feng",
+        "Jin Li",
+        "Hongrui Cai",
+        "Xiaonan Luo",
+        "Juyong Zhang"
+      ],
+      "year": "2021",
+      "venue": "CVPR 2022",
+      "doi": null,
+      "arxiv": "2112.04148",
+      "arxiv_abs": "http://arxiv.org/abs/2112.04148v3",
+      "topic": "upsampling-arbitrary",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2112.04148&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "SAPCU",
+      "title": "Self-Supervised Arbitrary-Scale Point Clouds Upsampling via Implicit Neural Representation",
+      "authors": [
+        "Wenbo Zhao",
+        "Xianming Liu",
+        "Zhiwei Zhong",
+        "Junjun Jiang",
+        "Wei Gao",
+        "Ge Li",
+        "Xiangyang Ji"
+      ],
+      "year": "2022",
+      "venue": "CVPR 2022",
+      "doi": null,
+      "arxiv": "2204.08196",
+      "arxiv_abs": "http://arxiv.org/abs/2204.08196v1",
+      "topic": "upsampling-arbitrary",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2204.08196&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "Grad-PU",
+      "title": "Grad-PU: Arbitrary-Scale Point Cloud Upsampling via Gradient Descent with Learned Distance Functions",
+      "authors": [
+        "Yun He",
+        "Danhang Tang",
+        "Yinda Zhang",
+        "Xiangyang Xue",
+        "Yanwei Fu"
+      ],
+      "year": "2023",
+      "venue": "CVPR 2023",
+      "doi": null,
+      "arxiv": "2304.11846",
+      "arxiv_abs": "http://arxiv.org/abs/2304.11846v1",
+      "topic": "upsampling-arbitrary",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2304.11846&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PUCRN",
+      "title": "Point Cloud Upsampling via Cascaded Refinement Network",
+      "authors": [
+        "Hang Du",
+        "Xuejun Yan",
+        "Jingjing Wang",
+        "Di Xie",
+        "Shiliang Pu"
+      ],
+      "year": "2022",
+      "venue": "ACCV 2022",
+      "doi": null,
+      "arxiv": "2210.03942",
+      "arxiv_abs": "http://arxiv.org/abs/2210.03942v1",
+      "topic": "upsampling-core",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2210.03942&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PUMAE",
+      "title": "Masked Autoencoders for Point Cloud Self-supervised Learning",
+      "authors": [
+        "Yatian Pang",
+        "Wenxiao Wang",
+        "Francis E. H. Tay",
+        "Wei Liu",
+        "Yonghong Tian",
+        "Li Yuan"
+      ],
+      "year": "2022",
+      "venue": "ECCV 2022",
+      "doi": null,
+      "arxiv": "2203.06604",
+      "arxiv_abs": "http://arxiv.org/abs/2203.06604v2",
+      "topic": "point-transformer",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2203.06604&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointNet",
+      "title": "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
+      "authors": [
+        "Charles R. Qi",
+        "Hao Su",
+        "Kaichun Mo",
+        "Leonidas J. Guibas"
+      ],
+      "year": "2016",
+      "venue": "CVPR 2017",
+      "doi": null,
+      "arxiv": "1612.00593",
+      "arxiv_abs": "http://arxiv.org/abs/1612.00593v2",
+      "topic": "point-backbone",
+      "cite_in_chapter": [
+        "2.2",
+        "3.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1612.00593&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointNet2",
+      "title": "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space",
+      "authors": [
+        "Charles R. Qi",
+        "Li Yi",
+        "Hao Su",
+        "Leonidas J. Guibas"
+      ],
+      "year": "2017",
+      "venue": "NeurIPS 2017",
+      "doi": null,
+      "arxiv": "1706.02413",
+      "arxiv_abs": "http://arxiv.org/abs/1706.02413v1",
+      "topic": "point-backbone",
+      "cite_in_chapter": [
+        "2.2",
+        "3.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1706.02413&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "DGCNN",
+      "title": "Dynamic Graph CNN for Learning on Point Clouds",
+      "authors": [
+        "Yue Wang",
+        "Yongbin Sun",
+        "Ziwei Liu",
+        "Sanjay E. Sarma",
+        "Michael M. Bronstein",
+        "Justin M. Solomon"
+      ],
+      "year": "2018",
+      "venue": "ACM TOG",
+      "doi": null,
+      "arxiv": "1801.07829",
+      "arxiv_abs": "http://arxiv.org/abs/1801.07829v2",
+      "topic": "point-backbone",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1801.07829&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointCNN",
+      "title": "PointCNN: Convolution On $\\mathcal{X}$-Transformed Points",
+      "authors": [
+        "Yangyan Li",
+        "Rui Bu",
+        "Mingchao Sun",
+        "Wei Wu",
+        "Xinhan Di",
+        "Baoquan Chen"
+      ],
+      "year": "2018",
+      "venue": "NeurIPS 2018",
+      "doi": null,
+      "arxiv": "1801.07791",
+      "arxiv_abs": "http://arxiv.org/abs/1801.07791v5",
+      "topic": "point-backbone",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1801.07791&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "KPConv",
+      "title": "KPConv: Flexible and Deformable Convolution for Point Clouds",
+      "authors": [
+        "Hugues Thomas",
+        "Charles R. Qi",
+        "Jean-Emmanuel Deschaud",
+        "Beatriz Marcotegui",
+        "François Goulette",
+        "Leonidas J. Guibas"
+      ],
+      "year": "2019",
+      "venue": "ICCV 2019",
+      "doi": null,
+      "arxiv": "1904.08889",
+      "arxiv_abs": "http://arxiv.org/abs/1904.08889v2",
+      "topic": "point-backbone",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1904.08889&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointTransformer",
+      "title": "Point Transformer",
+      "authors": [
+        "Hengshuang Zhao",
+        "Li Jiang",
+        "Jiaya Jia",
+        "Philip Torr",
+        "Vladlen Koltun"
+      ],
+      "year": "2020",
+      "venue": "ICCV 2021",
+      "doi": null,
+      "arxiv": "2012.09164",
+      "arxiv_abs": "http://arxiv.org/abs/2012.09164v2",
+      "topic": "point-transformer",
+      "cite_in_chapter": [
+        "2.2",
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2012.09164&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PCT",
+      "title": "PCT: Point cloud transformer",
+      "authors": [
+        "Meng-Hao Guo",
+        "Jun-Xiong Cai",
+        "Zheng-Ning Liu",
+        "Tai-Jiang Mu",
+        "Ralph R. Martin",
+        "Shi-Min Hu"
+      ],
+      "year": "2020",
+      "venue": "CVM",
+      "doi": null,
+      "arxiv": "2012.09688",
+      "arxiv_abs": "http://arxiv.org/abs/2012.09688v4",
+      "topic": "point-transformer",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2012.09688&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointTransformerV2",
+      "title": "Point Transformer V2: Grouped Vector Attention and Partition-based Pooling",
+      "authors": [
+        "Xiaoyang Wu",
+        "Yixing Lao",
+        "Li Jiang",
+        "Xihui Liu",
+        "Hengshuang Zhao"
+      ],
+      "year": "2022",
+      "venue": "NeurIPS 2022",
+      "doi": null,
+      "arxiv": "2210.05666",
+      "arxiv_abs": "http://arxiv.org/abs/2210.05666v2",
+      "topic": "point-transformer",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2210.05666&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointTransformerV3",
+      "title": "Point Transformer V3: Simpler, Faster, Stronger",
+      "authors": [
+        "Xiaoyang Wu",
+        "Li Jiang",
+        "Peng-Shuai Wang",
+        "Zhijian Liu",
+        "Xihui Liu",
+        "Yu Qiao",
+        "Wanli Ouyang",
+        "Tong He",
+        "Hengshuang Zhao"
+      ],
+      "year": "2023",
+      "venue": "CVPR 2024",
+      "doi": null,
+      "arxiv": "2312.10035",
+      "arxiv_abs": "http://arxiv.org/abs/2312.10035v2",
+      "topic": "point-transformer",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2312.10035&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "Transformer",
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": "2017",
+      "venue": "NeurIPS 2017",
+      "doi": null,
+      "arxiv": "1706.03762",
+      "arxiv_abs": "http://arxiv.org/abs/1706.03762v7",
+      "topic": "transformer-core",
+      "cite_in_chapter": [
+        "2.2",
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1706.03762&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "ViT",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "authors": [
+        "Alexey Dosovitskiy",
+        "Lucas Beyer",
+        "Alexander Kolesnikov",
+        "Dirk Weissenborn",
+        "Xiaohua Zhai",
+        "Thomas Unterthiner",
+        "Mostafa Dehghani",
+        "Matthias Minderer",
+        "Georg Heigold",
+        "Sylvain Gelly",
+        "Jakob Uszkoreit",
+        "Neil Houlsby"
+      ],
+      "year": "2020",
+      "venue": "ICLR 2021",
+      "doi": null,
+      "arxiv": "2010.11929",
+      "arxiv_abs": "http://arxiv.org/abs/2010.11929v2",
+      "topic": "transformer-core",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2010.11929&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "SwinT",
+      "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+      "authors": [
+        "Ze Liu",
+        "Yutong Lin",
+        "Yue Cao",
+        "Han Hu",
+        "Yixuan Wei",
+        "Zheng Zhang",
+        "Stephen Lin",
+        "Baining Guo"
+      ],
+      "year": "2021",
+      "venue": "ICCV 2021",
+      "doi": null,
+      "arxiv": "2103.14030",
+      "arxiv_abs": "http://arxiv.org/abs/2103.14030v2",
+      "topic": "transformer-core",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2103.14030&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "GAN",
+      "title": "Generative Adversarial Networks",
+      "authors": [
+        "Ian J. Goodfellow",
+        "Jean Pouget-Abadie",
+        "Mehdi Mirza",
+        "Bing Xu",
+        "David Warde-Farley",
+        "Sherjil Ozair",
+        "Aaron Courville",
+        "Yoshua Bengio"
+      ],
+      "year": "2014",
+      "venue": "NeurIPS 2014",
+      "doi": null,
+      "arxiv": "1406.2661",
+      "arxiv_abs": "http://arxiv.org/abs/1406.2661v1",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3",
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1406.2661&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "WGAN",
+      "title": "Wasserstein GAN",
+      "authors": [
+        "Martin Arjovsky",
+        "Soumith Chintala",
+        "Léon Bottou"
+      ],
+      "year": "2017",
+      "venue": "ICML 2017",
+      "doi": null,
+      "arxiv": "1701.07875",
+      "arxiv_abs": "http://arxiv.org/abs/1701.07875v3",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1701.07875&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "WGANGP",
+      "title": "Improved Training of Wasserstein GANs",
+      "authors": [
+        "Ishaan Gulrajani",
+        "Faruk Ahmed",
+        "Martin Arjovsky",
+        "Vincent Dumoulin",
+        "Aaron Courville"
+      ],
+      "year": "2017",
+      "venue": "NeurIPS 2017",
+      "doi": null,
+      "arxiv": "1704.00028",
+      "arxiv_abs": "http://arxiv.org/abs/1704.00028v3",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3",
+        "4.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1704.00028&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "LSGAN",
+      "title": "Least Squares Generative Adversarial Networks",
+      "authors": [
+        "Xudong Mao",
+        "Qing Li",
+        "Haoran Xie",
+        "Raymond Y. K. Lau",
+        "Zhen Wang",
+        "Stephen Paul Smolley"
+      ],
+      "year": "2016",
+      "venue": "ICCV 2017",
+      "doi": null,
+      "arxiv": "1611.04076",
+      "arxiv_abs": "http://arxiv.org/abs/1611.04076v3",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3",
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1611.04076&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "SNGAN",
+      "title": "Spectral Normalization for Generative Adversarial Networks",
+      "authors": [
+        "Takeru Miyato",
+        "Toshiki Kataoka",
+        "Masanori Koyama",
+        "Yuichi Yoshida"
+      ],
+      "year": "2018",
+      "venue": "ICLR 2018",
+      "doi": null,
+      "arxiv": "1802.05957",
+      "arxiv_abs": "http://arxiv.org/abs/1802.05957v1",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1802.05957&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "SAGAN",
+      "title": "Self-Attention Generative Adversarial Networks",
+      "authors": [
+        "Han Zhang",
+        "Ian Goodfellow",
+        "Dimitris Metaxas",
+        "Augustus Odena"
+      ],
+      "year": "2018",
+      "venue": "ICML 2019",
+      "doi": null,
+      "arxiv": "1805.08318",
+      "arxiv_abs": "http://arxiv.org/abs/1805.08318v2",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1805.08318&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "GANTrainTricks",
+      "title": "Improved Techniques for Training GANs",
+      "authors": [
+        "Tim Salimans",
+        "Ian Goodfellow",
+        "Wojciech Zaremba",
+        "Vicki Cheung",
+        "Alec Radford",
+        "Xi Chen"
+      ],
+      "year": "2016",
+      "venue": "NeurIPS 2016",
+      "doi": null,
+      "arxiv": "1606.03498",
+      "arxiv_abs": "http://arxiv.org/abs/1606.03498v1",
+      "topic": "gan-core",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1606.03498&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "GANStability",
+      "title": "Which Training Methods for GANs do actually Converge?",
+      "authors": [
+        "Lars Mescheder",
+        "Andreas Geiger",
+        "Sebastian Nowozin"
+      ],
+      "year": "2018",
+      "venue": "ICML 2018",
+      "doi": null,
+      "arxiv": "1801.04406",
+      "arxiv_abs": "http://arxiv.org/abs/1801.04406v4",
+      "topic": "gan-stability",
+      "cite_in_chapter": [
+        "2.3",
+        "4.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1801.04406&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "GradNorm",
+      "title": "GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks",
+      "authors": [
+        "Zhao Chen",
+        "Vijay Badrinarayanan",
+        "Chen-Yu Lee",
+        "Andrew Rabinovich"
+      ],
+      "year": "2017",
+      "venue": "ICML 2018",
+      "doi": null,
+      "arxiv": "1711.02257",
+      "arxiv_abs": "http://arxiv.org/abs/1711.02257v4",
+      "topic": "loss-balance",
+      "cite_in_chapter": [
+        "2.4",
+        "4.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1711.02257&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "UncertaintyWeighting",
+      "title": "Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics",
+      "authors": [
+        "Alex Kendall",
+        "Yarin Gal",
+        "Roberto Cipolla"
+      ],
+      "year": "2017",
+      "venue": "CVPR 2018",
+      "doi": null,
+      "arxiv": "1705.07115",
+      "arxiv_abs": "http://arxiv.org/abs/1705.07115v3",
+      "topic": "loss-balance",
+      "cite_in_chapter": [
+        "2.4",
+        "4.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1705.07115&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PCGrad",
+      "title": "Gradient Surgery for Multi-Task Learning",
+      "authors": [
+        "Tianhe Yu",
+        "Saurabh Kumar",
+        "Abhishek Gupta",
+        "Sergey Levine",
+        "Karol Hausman",
+        "Chelsea Finn"
+      ],
+      "year": "2020",
+      "venue": "NeurIPS 2020",
+      "doi": null,
+      "arxiv": "2001.06782",
+      "arxiv_abs": "http://arxiv.org/abs/2001.06782v4",
+      "topic": "loss-balance",
+      "cite_in_chapter": [
+        "2.4"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2001.06782&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "DWA",
+      "title": "End-to-End Multi-Task Learning with Attention",
+      "authors": [
+        "Shikun Liu",
+        "Edward Johns",
+        "Andrew J. Davison"
+      ],
+      "year": "2018",
+      "venue": "CVPR 2019",
+      "doi": null,
+      "arxiv": "1803.10704",
+      "arxiv_abs": "http://arxiv.org/abs/1803.10704v2",
+      "topic": "loss-balance",
+      "cite_in_chapter": [
+        "2.4"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1803.10704&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointSetGen",
+      "title": "A Point Set Generation Network for 3D Object Reconstruction from a Single Image",
+      "authors": [
+        "Haoqiang Fan",
+        "Hao Su",
+        "Leonidas Guibas"
+      ],
+      "year": "2016",
+      "venue": "CVPR 2017",
+      "doi": null,
+      "arxiv": "1612.00603",
+      "arxiv_abs": "http://arxiv.org/abs/1612.00603v2",
+      "topic": "metric-cd",
+      "cite_in_chapter": [
+        "2.4",
+        "3.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1612.00603&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PCN",
+      "title": "PCN: Point Completion Network",
+      "authors": [
+        "Wentao Yuan",
+        "Tejas Khot",
+        "David Held",
+        "Christoph Mertz",
+        "Martial Hebert"
+      ],
+      "year": "2018",
+      "venue": "3DV 2018",
+      "doi": null,
+      "arxiv": "1808.00671",
+      "arxiv_abs": "http://arxiv.org/abs/1808.00671v3",
+      "topic": "completion",
+      "cite_in_chapter": [
+        "2.1",
+        "3.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1808.00671&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PoinTr",
+      "title": "PoinTr: Diverse Point Cloud Completion with Geometry-Aware Transformers",
+      "authors": [
+        "Xumin Yu",
+        "Yongming Rao",
+        "Ziyi Wang",
+        "Zuyan Liu",
+        "Jiwen Lu",
+        "Jie Zhou"
+      ],
+      "year": "2021",
+      "venue": "ICCV 2021",
+      "doi": null,
+      "arxiv": "2108.08839",
+      "arxiv_abs": "http://arxiv.org/abs/2108.08839v1",
+      "topic": "completion",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2108.08839&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "SnowflakeNet",
+      "title": "SnowflakeNet: Point Cloud Completion by Snowflake Point Deconvolution with Skip-Transformer",
+      "authors": [
+        "Peng Xiang",
+        "Xin Wen",
+        "Yu-Shen Liu",
+        "Yan-Pei Cao",
+        "Pengfei Wan",
+        "Wen Zheng",
+        "Zhizhong Han"
+      ],
+      "year": "2021",
+      "venue": "ICCV 2021",
+      "doi": null,
+      "arxiv": "2108.04444",
+      "arxiv_abs": "http://arxiv.org/abs/2108.04444v2",
+      "topic": "completion",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2108.04444&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "FoldingNet",
+      "title": "FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation",
+      "authors": [
+        "Yaoqing Yang",
+        "Chen Feng",
+        "Yiru Shen",
+        "Dong Tian"
+      ],
+      "year": "2017",
+      "venue": "CVPR 2018",
+      "doi": null,
+      "arxiv": "1712.07262",
+      "arxiv_abs": "http://arxiv.org/abs/1712.07262v2",
+      "topic": "point-gen",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1712.07262&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "LGAN",
+      "title": "Learning Representations and Generative Models for 3D Point Clouds",
+      "authors": [
+        "Panos Achlioptas",
+        "Olga Diamanti",
+        "Ioannis Mitliagkas",
+        "Leonidas Guibas"
+      ],
+      "year": "2017",
+      "venue": "ICML 2018",
+      "doi": null,
+      "arxiv": "1707.02392",
+      "arxiv_abs": "http://arxiv.org/abs/1707.02392v3",
+      "topic": "point-gen",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1707.02392&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "TreeGAN",
+      "title": "3D Point Cloud Generative Adversarial Network Based on Tree Structured Graph Convolutions",
+      "authors": [
+        "Dong Wook Shu",
+        "Sung Woo Park",
+        "Junseok Kwon"
+      ],
+      "year": "2019",
+      "venue": "ICCV 2019",
+      "doi": null,
+      "arxiv": "1905.06292",
+      "arxiv_abs": "http://arxiv.org/abs/1905.06292v2",
+      "topic": "point-gen",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1905.06292&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "ShapeGF",
+      "title": "Learning Gradient Fields for Shape Generation",
+      "authors": [
+        "Ruojin Cai",
+        "Guandao Yang",
+        "Hadar Averbuch-Elor",
+        "Zekun Hao",
+        "Serge Belongie",
+        "Noah Snavely",
+        "Bharath Hariharan"
+      ],
+      "year": "2020",
+      "venue": "ECCV 2020",
+      "doi": null,
+      "arxiv": "2008.06520",
+      "arxiv_abs": "http://arxiv.org/abs/2008.06520v2",
+      "topic": "point-gen",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2008.06520&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "AdamOpt",
+      "title": "Adam: A Method for Stochastic Optimization",
+      "authors": [
+        "Diederik P. Kingma",
+        "Jimmy Ba"
+      ],
+      "year": "2014",
+      "venue": "ICLR 2015",
+      "doi": null,
+      "arxiv": "1412.6980",
+      "arxiv_abs": "http://arxiv.org/abs/1412.6980v9",
+      "topic": "optimization",
+      "cite_in_chapter": [
+        "5.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1412.6980&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "BatchNorm",
+      "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+      "authors": [
+        "Sergey Ioffe",
+        "Christian Szegedy"
+      ],
+      "year": "2015",
+      "venue": "ICML 2015",
+      "doi": null,
+      "arxiv": "1502.03167",
+      "arxiv_abs": "http://arxiv.org/abs/1502.03167v3",
+      "topic": "optimization",
+      "cite_in_chapter": [
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1502.03167&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "LayerNorm",
+      "title": "Layer Normalization",
+      "authors": [
+        "Jimmy Lei Ba",
+        "Jamie Ryan Kiros",
+        "Geoffrey E. Hinton"
+      ],
+      "year": "2016",
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv": "1607.06450",
+      "arxiv_abs": "http://arxiv.org/abs/1607.06450v1",
+      "topic": "optimization",
+      "cite_in_chapter": [
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1607.06450&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "ResNet",
+      "title": "Deep Residual Learning for Image Recognition",
+      "authors": [
+        "Kaiming He",
+        "Xiangyu Zhang",
+        "Shaoqing Ren",
+        "Jian Sun"
+      ],
+      "year": "2015",
+      "venue": "CVPR 2016",
+      "doi": null,
+      "arxiv": "1512.03385",
+      "arxiv_abs": "http://arxiv.org/abs/1512.03385v1",
+      "topic": "optimization",
+      "cite_in_chapter": [
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1512.03385&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "Dropout",
+      "title": "Dropout: a simple way to prevent neural networks from overfitting",
+      "authors": [
+        "Nitish Srivastava",
+        "Geoffrey E. Hinton",
+        "Alex Krizhevsky",
+        "Ilya Sutskever",
+        "Ruslan Salakhutdinov"
+      ],
+      "year": "2014",
+      "venue": "JMLR",
+      "doi": null,
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "optimization",
+      "cite_in_chapter": [
+        "4.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Dropout%3A%20A%20Simple%20Way%20to%20Prevent%20Neural%20Networks%20from%20Overfitting&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "ShapeNet",
+      "title": "ShapeNet: An Information-Rich 3D Model Repository",
+      "authors": [
+        "Angel X. Chang",
+        "Thomas Funkhouser",
+        "Leonidas Guibas",
+        "Pat Hanrahan",
+        "Qixing Huang",
+        "Zimo Li",
+        "Silvio Savarese",
+        "Manolis Savva",
+        "Shuran Song",
+        "Hao Su",
+        "Jianxiong Xiao",
+        "Li Yi",
+        "Fisher Yu"
+      ],
+      "year": "2015",
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv": "1512.03012",
+      "arxiv_abs": "http://arxiv.org/abs/1512.03012v1",
+      "topic": "dataset",
+      "cite_in_chapter": [
+        "5.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1512.03012&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "ModelNet",
+      "title": "3D ShapeNets: A Deep Representation for Volumetric Shapes",
+      "authors": [
+        "Zhirong Wu",
+        "Shuran Song",
+        "Aditya Khosla",
+        "Fisher Yu",
+        "Linguang Zhang",
+        "Xiaoou Tang",
+        "Jianxiong Xiao"
+      ],
+      "year": "2014",
+      "venue": "CVPR 2015",
+      "doi": null,
+      "arxiv": "1406.5670",
+      "arxiv_abs": "http://arxiv.org/abs/1406.5670v3",
+      "topic": "dataset",
+      "cite_in_chapter": [
+        "5.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1406.5670&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "ScanObjectNN",
+      "title": "Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data",
+      "authors": [
+        "Mikaela Angelina Uy",
+        "Quang-Hieu Pham",
+        "Binh-Son Hua",
+        "Duc Thanh Nguyen",
+        "Sai-Kit Yeung"
+      ],
+      "year": "2019",
+      "venue": "ICCV 2019",
+      "doi": null,
+      "arxiv": "1908.04616",
+      "arxiv_abs": "http://arxiv.org/abs/1908.04616v2",
+      "topic": "dataset",
+      "cite_in_chapter": [
+        "5.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1908.04616&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PoissonRecon",
+      "title": "Screened poisson surface reconstruction",
+      "authors": [
+        "Michael Kazhdan",
+        "Hugues Hoppe"
+      ],
+      "year": "2013",
+      "venue": "ACM TOG",
+      "doi": "10.1145/2487228.2487237",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-recon",
+      "cite_in_chapter": [
+        "3.3",
+        "6.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Screened%20poisson%20surface%20reconstruction&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "BallPivoting",
+      "title": "The ball-pivoting algorithm for surface reconstruction",
+      "authors": [
+        "Fausto Bernardini",
+        "Joshua Mittleman",
+        "Holly Rushmeier",
+        "C. Silva",
+        "Gabriel Taubin"
+      ],
+      "year": "1999",
+      "venue": "IEEE TVCG",
+      "doi": "10.1109/2945.817351",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-recon",
+      "cite_in_chapter": [
+        "6.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:The%20ball-pivoting%20algorithm%20for%20surface%20reconstruction&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "DeepPointsConsolidation",
+      "title": "Deep points consolidation",
+      "authors": [
+        "Shihao Wu",
+        "Hui Huang",
+        "Minglun Gong",
+        "Matthias Zwicker",
+        "Daniel Cohen‐Or"
+      ],
+      "year": "2015",
+      "venue": "ACM TOG",
+      "doi": "10.1145/2816795.2818073",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-optim",
+      "cite_in_chapter": [
+        "2.1",
+        "3.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Deep%20points%20consolidation&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "EAR",
+      "title": "Edge-aware point set resampling",
+      "authors": [
+        "Hui Huang",
+        "Shihao Wu",
+        "Minglun Gong",
+        "Daniel Cohen‐Or",
+        "Uri M. Ascher",
+        "Hao Zhang"
+      ],
+      "year": "2013",
+      "venue": "ACM TOG",
+      "doi": "10.1145/2421636.2421645",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-optim",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Edge-aware%20point%20set%20resampling&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "LOP",
+      "title": "Parameterization-free projection for geometry reconstruction",
+      "authors": [
+        "Yaron Lipman",
+        "Daniel Cohen‐Or",
+        "David I. W. Levin",
+        "Hillel Tal‐Ezer"
+      ],
+      "year": "2007",
+      "venue": "ACM TOG",
+      "doi": "10.1145/1276377.1276405",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-optim",
+      "cite_in_chapter": [
+        "2.1",
+        "3.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Parameterization-free%20projection%20for%20geometry%20reconstruction&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "WLOP",
+      "title": "Consolidation of unorganized point clouds for surface reconstruction",
+      "authors": [
+        "Hui Huang",
+        "Dan Li",
+        "Hao Zhang",
+        "Uri M. Ascher",
+        "Daniel Cohen‐Or"
+      ],
+      "year": "2009",
+      "venue": "ACM TOG",
+      "doi": "10.1145/1618452.1618522",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-optim",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Consolidation%20of%20unorganized%20point%20clouds%20for%20surface%20reconstruction&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "MLS",
+      "title": "Computing and rendering point set surfaces",
+      "authors": [
+        "Marc Alexa",
+        "Johannes Behr",
+        "Daniel Cohen‐Or",
+        "Shachar Fleishman",
+        "David Levin",
+        "C.T. Silva"
+      ],
+      "year": "2003",
+      "venue": "IEEE TVCG",
+      "doi": "10.1109/tvcg.2003.1175093",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "geometry-optim",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Computing%20and%20rendering%20point%20set%20surfaces&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PointCloudGenSurvey",
+      "title": "A Survey on Deep Geometry Learning: From a Representation Perspective",
+      "authors": [
+        "Yun-Peng Xiao",
+        "Yu-Kun Lai",
+        "Fang-Lue Zhang",
+        "Chunpeng Li",
+        "Lin Gao"
+      ],
+      "year": "2020",
+      "venue": "CVM",
+      "doi": null,
+      "arxiv": "2002.07995",
+      "arxiv_abs": "http://arxiv.org/abs/2002.07995v2",
+      "topic": "survey",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2002.07995&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "TransformerSurvey3D",
+      "title": "Transformers in 3D Point Clouds: A Survey",
+      "authors": [
+        "Dening Lu",
+        "Qian Xie",
+        "Mingqiang Wei",
+        "Kyle Gao",
+        "Linlin Xu",
+        "Jonathan Li"
+      ],
+      "year": "2022",
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv": "2205.07417",
+      "arxiv_abs": "http://arxiv.org/abs/2205.07417v2",
+      "topic": "survey",
+      "cite_in_chapter": [
+        "2.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2205.07417&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "GANSurvey",
+      "title": "Generative Adversarial Networks: An Overview",
+      "authors": [
+        "Antonia Creswell",
+        "Tom White",
+        "Vincent Dumoulin",
+        "Kai Arulkumaran",
+        "Biswa Sengupta",
+        "Anil A Bharath"
+      ],
+      "year": "2017",
+      "venue": "IEEE SPM",
+      "doi": null,
+      "arxiv": "1710.07035",
+      "arxiv_abs": "http://arxiv.org/abs/1710.07035v1",
+      "topic": "survey",
+      "cite_in_chapter": [
+        "2.3"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1710.07035&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "P2PNet",
+      "title": "P2P-NET: Bidirectional Point Displacement Net for Shape Transform",
+      "authors": [
+        "Kangxue Yin",
+        "Hui Huang",
+        "Daniel Cohen-Or",
+        "Hao Zhang"
+      ],
+      "year": "2018",
+      "venue": "ACM TOG",
+      "doi": null,
+      "arxiv": "1803.09263",
+      "arxiv_abs": "http://arxiv.org/abs/1803.09263v4",
+      "topic": "point-gen",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1803.09263&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PUEVA",
+      "title": "PU-EVA: An Edge Vector based Approximation Solution for Flexible-scale Point Cloud Upsampling",
+      "authors": [
+        "Luqing Luo",
+        "Lulu Tang",
+        "Wanyi Zhou",
+        "Shizheng Wang",
+        "Zhi-Xin Yang"
+      ],
+      "year": "2022",
+      "venue": "ICCV 2021",
+      "doi": null,
+      "arxiv": "2204.10750",
+      "arxiv_abs": "http://arxiv.org/abs/2204.10750v1",
+      "topic": "upsampling-core",
+      "cite_in_chapter": [
+        "2.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2204.10750&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "DensityAwareCD",
+      "title": "Density-aware Chamfer Distance as a Comprehensive Metric for Point Cloud Completion",
+      "authors": [
+        "Tong Wu",
+        "Liang Pan",
+        "Junzhe Zhang",
+        "Tai Wang",
+        "Ziwei Liu",
+        "Dahua Lin"
+      ],
+      "year": "2021",
+      "venue": "NeurIPS 2021",
+      "doi": null,
+      "arxiv": "2111.12702",
+      "arxiv_abs": "http://arxiv.org/abs/2111.12702v1",
+      "topic": "metric-cd",
+      "cite_in_chapter": [
+        "2.4",
+        "3.3",
+        "4.2"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=2111.12702&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "HausdorffMetric",
+      "title": "Comparing images using the Hausdorff distance",
+      "authors": [
+        "D.P. Huttenlocher",
+        "G.A. Klanderman",
+        "W.J. Rucklidge"
+      ],
+      "year": "1993",
+      "venue": "IEEE TPAMI",
+      "doi": "10.1109/34.232073",
+      "arxiv": null,
+      "arxiv_abs": null,
+      "topic": "metric-cd",
+      "cite_in_chapter": [
+        "3.3"
+      ],
+      "verified": {
+        "channels": [
+          "openalex"
+        ],
+        "verify_urls": [
+          "https://api.openalex.org/works?filter=title.search:Comparing%20images%20using%20the%20Hausdorff%20distance&per-page=5"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "Open3D",
+      "title": "Open3D: A Modern Library for 3D Data Processing",
+      "authors": [
+        "Qian-Yi Zhou",
+        "Jaesik Park",
+        "Vladlen Koltun"
+      ],
+      "year": "2018",
+      "venue": "arXiv",
+      "doi": null,
+      "arxiv": "1801.09847",
+      "arxiv_abs": "http://arxiv.org/abs/1801.09847v1",
+      "topic": "toolchain",
+      "cite_in_chapter": [
+        "5.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1801.09847&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    },
+    {
+      "key": "PyTorch",
+      "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+      "authors": [
+        "Adam Paszke",
+        "Sam Gross",
+        "Francisco Massa",
+        "Adam Lerer",
+        "James Bradbury",
+        "Gregory Chanan",
+        "Trevor Killeen",
+        "Zeming Lin",
+        "Natalia Gimelshein",
+        "Luca Antiga",
+        "Alban Desmaison",
+        "Andreas Köpf",
+        "Edward Yang",
+        "Zach DeVito",
+        "Martin Raison",
+        "Alykhan Tejani",
+        "Sasank Chilamkurthy",
+        "Benoit Steiner",
+        "Lu Fang",
+        "Junjie Bai",
+        "Soumith Chintala"
+      ],
+      "year": "2019",
+      "venue": "NeurIPS 2019",
+      "doi": null,
+      "arxiv": "1912.01703",
+      "arxiv_abs": "http://arxiv.org/abs/1912.01703v1",
+      "topic": "toolchain",
+      "cite_in_chapter": [
+        "5.1"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv"
+        ],
+        "verify_urls": [
+          "http://export.arxiv.org/api/query?id_list=1912.01703&max_results=1"
+        ],
+        "checked_at": "2026-08-11T15:36:14+08:00"
+      }
+    }
+  ]
+}

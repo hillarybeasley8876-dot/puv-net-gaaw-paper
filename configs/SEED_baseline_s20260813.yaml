@@ -1,0 +1,59 @@
+out_dir: runs/SEED_baseline_s20260813
+seed: 20260813
+epochs: 150
+batch_size: 64
+lr: 0.001
+lr_step: 30
+lr_decay: 0.7
+betas:
+- 0.9
+- 0.999
+grad_clip: null
+device: null
+eval_every: 1
+dump_cloud_every: 10
+n_fixed_samples: 3
+select_weights:
+  cd: 0.5
+  hd: 0.2
+  nuc: 0.3
+select_warmup: 5
+plateau_frac: 0.5
+data:
+  source: pu1k
+  up_ratio: 4
+  noise_beta: 0.0
+  augment: true
+  limit: null
+  val_ratio: 0.05
+model:
+  up_ratio: 4
+  dims:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 256
+  k: 20
+  psi: 4
+  head_dim: 32
+  mlp_ratio: 1
+  use_geo: true
+  use_feat: true
+  attention_type: sc-msa
+  tail_mode: shuffle
+  scale_qk: false
+gan_mode: hinge
+d_steps: 1
+loss:
+  w_cd: 1.0
+  w_cd_fwd: 1.0
+  w_cd_bwd: 1.0
+  w_adv: 0.0
+  w_uniform: 0.0
+  w_repulsion: 0.0
+  squared_cd: true
+  adaptive_adv: false
+  adv_warmup_epochs: 0
+  adv_ramp_epochs: 10
+  adv_target_ratio: 0.1

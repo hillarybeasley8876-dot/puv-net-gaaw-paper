@@ -1,0 +1,22 @@
+{
+  "figure_id": "F4-3",
+  "title": "通道偏移多头自注意力（SC-MSA）的窗口划分机制与跨头信息通路",
+  "depends_on_experiment": false,
+  "source_of_truth": "puvnet/models/pu_transformer.py SCMSA.__init__ (L248-269)",
+  "params": {
+    "C_prime": 256,
+    "psi": 4,
+    "w": 64,
+    "d": 32,
+    "M_heads": 7,
+    "overlap": 32,
+    "tiling_check": "(M-1)*d + w = 256 == C' = 256",
+    "concat_dim": 448
+  },
+  "msa_baseline": {
+    "d": 64,
+    "M_heads": 4,
+    "overlap": 0
+  },
+  "note": "scale_qk 默认 False, 忠于原论文算法, 作为消融开关"
+}

@@ -1,0 +1,27 @@
+{
+  "source": "data\\smoke\\_tmp_mesh\\porous_block_0002.ply",
+  "source_sha1": "e0cb2722d3591f44490dc872ac3c9b1ecc5f0b3d",
+  "spec": {
+    "n_input": 512,
+    "n_surface_gt": 1024,
+    "n_interior_gt": 1024,
+    "seed": 2
+  },
+  "watertight": {
+    "is_watertight": true,
+    "is_winding_consistent": true,
+    "euler_number": 4,
+    "volume": 0.9574132897835206,
+    "n_vertices": 542,
+    "n_faces": 1076
+  },
+  "repaired": false,
+  "interior_hit_rate": 0.9609375,
+  "center": [
+    0.002482356725017033,
+    -0.03381712932066086,
+    0.020687617978422692
+  ],
+  "scale": 0.8842846125460613,
+  "kind": "porous_block"
+}

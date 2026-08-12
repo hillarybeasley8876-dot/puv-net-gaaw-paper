@@ -1,0 +1,470 @@
+{
+  "debts": [
+    {
+      "debt": "cv_nn 未测",
+      "promised_in": [
+        [
+          "ch1_introduction.md",
+          128
+        ],
+        [
+          "ch3_baseline.md",
+          362
+        ],
+        [
+          "ch3_baseline.md",
+          380
+        ]
+      ],
+      "runs_missing": [
+        "B002_baseline150",
+        "ABL_A1_cd_balance",
+        "ABL_A2_cd_boost_bwd",
+        "ABL_D1_scale_qk",
+        "ABL_C1_uniform",
+        "ABL_AC_combo",
+        "B002_baseline150_5090",
+        "ABL_B1_adv_fixed",
+        "ABL_B2_adv_adaptive"
+      ],
+      "fix": "复用 ch3_diagnose.py 推理口径，对各 run best.pt 补测 cv_nn",
+      "needs_retrain": false
+    },
+    {
+      "debt": "单 seed，2SE 无法兑现",
+      "promised_in": [
+        [
+          "ch1_introduction.md",
+          128
+        ],
+        [
+          "ch2_related_work.md",
+          277
+        ],
+        [
+          "ch3_baseline.md",
+          222
+        ]
+      ],
+      "fix": "补 seed 重跑（用户已批准 baseline+B2 两组 ×2 seed）",
+      "needs_retrain": true
+    },
+    {
+      "debt": "P2F 未测（3.5.5 列为同报指标）",
+      "promised_in": [
+        [
+          "ch1_introduction.pre_outline_v2.md",
+          45
+        ],
+        [
+          "ch2_related_work.md",
+          52
+        ],
+        [
+          "ch2_related_work.md",
+          268
+        ]
+      ],
+      "runs_missing": [
+        "B002_baseline150",
+        "ABL_A1_cd_balance",
+        "ABL_A2_cd_boost_bwd",
+        "ABL_D1_scale_qk",
+        "ABL_C1_uniform",
+        "ABL_AC_combo",
+        "B002_baseline150_5090",
+        "ABL_B1_adv_fixed",
+        "ABL_B2_adv_adaptive"
+      ],
+      "fix": "需 mesh/法向量；若无 GT mesh 则须在文中声明不可测并说明理由",
+      "needs_retrain": false
+    },
+    {
+      "debt": "朴素扩容对照组未跑",
+      "promised_in": [
+        [
+          "ch3_baseline.md",
+          354
+        ],
+        [
+          "EXPERIMENT_LOG.md",
+          1295
+        ]
+      ],
+      "fix": "若第 4 章主线改为训练机制（无参数量增加），该对照前提消失，须在 3.5.5 回改中显式注销并留痕",
+      "needs_retrain": null
+    },
+    {
+      "debt": "改进组的 Q4/Q1 分层后向分量未测",
+      "promised_in": [
+        [
+          "ch3_baseline.md",
+          366
+        ]
+      ],
+      "fix": "与 cv_nn 同一次推理一并产出（同脚本，零额外成本）",
+      "needs_retrain": false
+    }
+  ],
+  "promise_hits": {
+    "cv_nn": [
+      [
+        "ch1_introduction.md",
+        128,
+        "| Q3 | 面向已测瓶颈的结构级改进能否带来可归因的指标改善 | 结构模块设计（遵循最小变更原则）、机制假设与可观测量、复杂度增量分析 | 完整模型对比、模块单因素移除、模块内部组件消融、插入位置与层数消融、复杂度增量五类证据 | 五类证据同时具备且主指标 $\\mathrm{cv}_{\\text{nn}}$ 改善超过"
+      ],
+      [
+        "ch3_baseline.md",
+        362,
+        "主指标为 $\\mathrm{cv}_{\\text{nn}}$，因其直接对应第 3.5.2 节定位的主要瓶颈，且无尺度参数。接受方向为相对基线下降，判定门槛为超过 $2\\mathrm{SE}$。"
+      ],
+      [
+        "ch3_baseline.md",
+        380,
+        "上述证据把瓶颈指向\"从单点特征生成多个空间位置\"与\"在稀疏区聚合局部几何证据\"两个环节，但本章证据不足以在两者间归因，故两者均标注为待验证候选。本章据此固定了第 4 章的四项设计约束与预先声明的验证指标，其中主指标为 $\\mathrm{cv}_{\\text{nn}}$，判定门槛为 $2\\mathrm{SE}$。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1269,
+        "主指标是 $\\mathrm{cv}_{\\text{nn}}$、门槛是 run 间 2SE，需补多 seed 后重算方可裁定。"
+      ]
+    ],
+    "seed": [
+      [
+        "ch1_introduction.md",
+        128,
+        "| Q3 | 面向已测瓶颈的结构级改进能否带来可归因的指标改善 | 结构模块设计（遵循最小变更原则）、机制假设与可观测量、复杂度增量分析 | 完整模型对比、模块单因素移除、模块内部组件消融、插入位置与层数消融、复杂度增量五类证据 | 五类证据同时具备且主指标 $\\mathrm{cv}_{\\text{nn}}$ 改善超过"
+      ],
+      [
+        "ch2_related_work.md",
+        277,
+        "**第三，指标改善的显著性需要统计判定。** 由于测试集规模有限、训练存在随机性，小幅指标差异可能来自随机波动。本文在第 5.1.5 节以平台区统计与 $2\\mathrm{SE}$ 门槛作为判定依据，未达门槛的改善按 `REJECT_NULL` 处理，即在当前样本量下不认定其有效。"
+      ],
+      [
+        "ch3_baseline.md",
+        222,
+        "| 判定 | 显著性门槛 | $2\\mathrm{SE}$ | 未达门槛记为 `REJECT_NULL` |"
+      ],
+      [
+        "ch3_baseline.md",
+        362,
+        "主指标为 $\\mathrm{cv}_{\\text{nn}}$，因其直接对应第 3.5.2 节定位的主要瓶颈，且无尺度参数。接受方向为相对基线下降，判定门槛为超过 $2\\mathrm{SE}$。"
+      ],
+      [
+        "ch3_baseline.md",
+        368,
+        "统计判定沿用第 2.5.4 节的 $2\\mathrm{SE}$ 门槛，未达门槛记为 `REJECT_NULL`，即在当前样本量下不认定其有效，不以\"趋势向好\"表述替代。"
+      ],
+      [
+        "ch3_baseline.md",
+        380,
+        "上述证据把瓶颈指向\"从单点特征生成多个空间位置\"与\"在稀疏区聚合局部几何证据\"两个环节，但本章证据不足以在两者间归因，故两者均标注为待验证候选。本章据此固定了第 4 章的四项设计约束与预先声明的验证指标，其中主指标为 $\\mathrm{cv}_{\\text{nn}}$，判定门槛为 $2\\mathrm{SE}$。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        783,
+        "| 指标 | 平台均值 | σ | 相对 σ | 单点门槛 (2σ) | **均值门槛 (2SE)** |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        888,
+        "定死的显著性门槛（2SE），噪声内的波动不算。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1252,
+        "| 指标 | baseline | A1 | 绝对差 | 倍 SD | 2SE 门槛 |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1266,
+        "由此得到的 2SE 门槛偏小（CD 仅 1.2e-5），会把噪声判成\"过门槛\" —— 三个指标同时"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1269,
+        "主指标是 $\\mathrm{cv}_{\\text{nn}}$、门槛是 run 间 2SE，需补多 seed 后重算方可裁定。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1296,
+        "2. A1 的显著性裁定挂起，待多 seed 补齐后按 run 间 2SE 重算。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1337,
+        "**裁定三：A1 的\"改善\"仍不可作显著性结论。** 门槛 2SE 来自单 seed 平台区时间波动（偏小），"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1397,
+        "5. A1 显著性裁定仍挂起，待多 seed 补齐后按 run 间 2SE 重算。"
+      ],
+      [
+        "STYLE_GUIDE.md",
+        70,
+        "| $2\\mathrm{SE}$ | 显著性门槛（CD 0.66% / HD 2.18% / NUC 0.93%，见 §5.1 功效分析） |"
+      ],
+      [
+        "STYLE_GUIDE.md",
+        117,
+        "| 「显著提升」「大幅改善」（无数字） | 不可验证 | 给出数值 + 是否超过 2SE 门槛 |"
+      ],
+      [
+        "STYLE_GUIDE.md",
+        129,
+        "> 该组相对基线的 CD 改善为 $x\\%$，未超过 2SE 门槛（0.66%），按 §3.4 接受准则判定为 `REJECT_NULL`，即在当前样本量下无法确认其有效性。"
+      ]
+    ],
+    "capacity_ctrl": [
+      [
+        "ch3_baseline.md",
+        354,
+        "第二，改进后的参数量增幅须可报告并受控。基线为 1152803，任何改进方案须同时报告改进后参数量与增幅，且在第 5 章中与\"同等参数量的朴素扩容\"作对照，否则无法区分改善来自结构设计还是来自容量增加。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1295,
+        "参数量增幅须与同等参数朴素扩容对照、不单独调超参、关闭对抗与均匀性损失单独测量）。"
+      ]
+    ],
+    "p2f": [
+      [
+        "ch1_introduction.pre_outline_v2.md",
+        45,
+        "**任务界定**。本文研究的对象是**点云整体上采样**任务：在已知稀疏输入点云 $P \\in \\mathbb{R}^{N \\times 3}$ 与目标倍率 $r$ 的前提下，生成密集输出点云 $Q \\in \\mathbb{R}^{rN \\times 3}$，使其在 Chamfer 距离、Hausdorff 距离、点对"
+      ],
+      [
+        "ch2_related_work.md",
+        52,
+        "**表面贴合性**衡量 $\\mathcal{Q}$ 中各点到真实曲面的距离，即点到面（point-to-face, P2F）距离。该指标需要真值网格而非仅有点云，因此只能在提供网格的测试集上计算。它与分布保真性的区别在于：Chamfer 距离以真值点集为参照，而 P2F 以连续曲面为参照，后者不受真值采样实例的影响。"
+      ],
+      [
+        "ch2_related_work.md",
+        268,
+        "| 表面贴合性 | P2F | 输出点到连续曲面的距离 | 真值网格 | 点偏离真实曲面的程度 | 对点的分布不敏感；需网格数据，仅在含网格测试集可算 | 仅在提供网格的 PU-GAN 测试集上计算 |"
+      ],
+      [
+        "ch3_baseline.md",
+        201,
+        "**CD 与 HD 采用平方距离约定**，CD 定义为前向与后向最近邻平方距离的均值之和，HD 定义为两方向最大平方距离的较大者。**预测点云与真值点云各自独立归一化**后再计算，而非共用同一归一化参数。**P2F 采用 L2 距离并在原始（未归一化）坐标尺度上计算**，与 CD/HD 的尺度约定不同，这一差异必须在报"
+      ],
+      [
+        "ch3_baseline.md",
+        219,
+        "| 指标 | P2F | 点到曲面 L2 距离 | 在原始（未归一化）坐标尺度上计算，与 CD/HD 尺度约定不同 |"
+      ],
+      [
+        "ch3_baseline.md",
+        232,
+        "| 对照构型 | 构造方式 | CD | HD | P2F | NUC | 常识预期 | 实测是否相符 |"
+      ],
+      [
+        "ch3_baseline.md",
+        239,
+        "| `copy4` | 输入点各复制 4 份 | $5.22 \\times 10^{-2}$ | 0.2142 | $2.19 \\times 10^{-7}$ | 1725.3 | 均匀性最差 | NUC 相符；**P2F 反常** |"
+      ],
+      [
+        "ch3_baseline.md",
+        241,
+        "注：CD/HD 为平方距离约定，P2F 为原始坐标尺度下的 L2 距离，故三者数值不可跨列比较量级。`copy4` 的 P2F 接近零与 `gt_exact` 同量级，是指标盲区的直接实证。数据来源 `runs/E000_metric_calibration/result.json`。"
+      ],
+      [
+        "ch3_baseline.md",
+        245,
+        "**上界检查。** `copy4` 构型（把输入点各复制 4 份）的 CD 为 $5.22 \\times 10^{-2}$、NUC 为 1725.3。该构型是均匀性的极端反例——所有点退化为 256 个位置上的四重重合点——其 NUC 比正常构型高出两到三个数量级，说明 NUC 对完全退化的聚簇具备区分能力。同时注意其"
+      ],
+      [
+        "ch3_baseline.md",
+        364,
+        "同报指标为 CD、HD、NUC 与 P2F，按第 2.5.4 节的纪律全部报告，不因方向不利而省略。特别地，若 $\\mathrm{cv}_{\\text{nn}}$ 改善而 CD 抬高，按第 2.5.4 节\"指标反向变化是方法真实性质\"的原则如实报告，并在结论中限定适用范围。"
+      ],
+      [
+        "ch3_baseline.md",
+        376,
+        "在核验方面，固定了 CD/HD 的平方距离约定、独立归一化与 P2F 的原始尺度约定，并以极端对照模型标定了指标的有效性。标定实证了各指标盲区互不重叠：均匀性完全退化的 `copy4` 构型（NUC 1725.3）在 P2F 上的失配值为 $2.19 \\times 10^{-7}$，与理想构型同量级。CD 盲区的受控实"
+      ],
+      [
+        "THESIS_OUTLINE.md",
+        27,
+        "→ CD / HD / NUC / P2F 等指标及局部误差发生变化"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        67,
+        "- ❌ 不能报告任何 CD/HD/P2F/NUC 的\"性能数值\"（这是 loss，不是标准评测指标；"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        198,
+        "CD/HD/P2F/NUC 是否真的更好），结果好坏均如实报告。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        234,
+        "| P2F 距离/坐标系 | L2 / 归一化后 | L2 ✅ / **原始尺度** | `evaluation_code/evaluation.cpp` 直读 .off 与 .xyz，无归一化 |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        238,
+        "- **`evaluation.cpp` 只算 P2F**，不算 CD/HD/uniformity（曾误以为 CD 出自 C++ 侧）。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        316,
+        "### 实测结果（原样抄录，CD/HD/P2F 单位 ×10⁻³）"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        318,
+        "| 参考器 | CD | HD | P2F | NUC |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        335,
+        "| E5 | P2F 对分布不敏感（预期负面发现） | **成立** | copy4 0.0002 < jitter_small 0.9495 |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        395,
+        "1. **实验章节须写明指标协议**（squared CD + 独立归一化 + P2F 原始尺度），并引 PU-GCN 官方实现。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        396,
+        "2. **E5 成立 → Limitations 必须写**：P2F 对点分布不敏感，复制输入即可获得近乎完美 P2F"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        397,
+        "（copy4 P2F=0.0002 优于 jitter_small 0.9495），故 P2F 不可单独作为方法优劣依据。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        1207,
+        "| `E000_metric_calibration` | ✅ 完成 | 20 模型标定；`copy4` 的 P2F=2.19e-7 与 `gt_exact` 的 1.86e-7 同量级 → P2F 盲区实证 |"
+      ],
+      [
+        "STYLE_GUIDE.md",
+        59,
+        "| $\\mathrm{P2F}$ | Point-to-Face 距离 | 需 mesh，仅 PU-GAN 测试集 |"
+      ]
+    ],
+    "strata": [
+      [
+        "ch3_baseline.md",
+        366,
+        "分层指标为第 3.5.3 节的四分位后向分量。若改进针对稀疏区聚合，则 Q4/Q1 比值应下降；若该比值不变而整体误差下降，说明改进作用于其他环节，须相应修正机制解释。"
+      ]
+    ],
+    "verdict": [
+      [
+        "ch2_related_work.md",
+        277,
+        "**第三，指标改善的显著性需要统计判定。** 由于测试集规模有限、训练存在随机性，小幅指标差异可能来自随机波动。本文在第 5.1.5 节以平台区统计与 $2\\mathrm{SE}$ 门槛作为判定依据，未达门槛的改善按 `REJECT_NULL` 处理，即在当前样本量下不认定其有效。"
+      ],
+      [
+        "ch3_baseline.md",
+        222,
+        "| 判定 | 显著性门槛 | $2\\mathrm{SE}$ | 未达门槛记为 `REJECT_NULL` |"
+      ],
+      [
+        "ch3_baseline.md",
+        368,
+        "统计判定沿用第 2.5.4 节的 $2\\mathrm{SE}$ 门槛，未达门槛记为 `REJECT_NULL`，即在当前样本量下不认定其有效，不以\"趋势向好\"表述替代。"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        902,
+        "| `ACCEPT_FULL` | CD/HD/NUC 三项改善均 > 门槛 | **可作为主表改进项** |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        905,
+        "| `REJECT_NULL` | 三项均在 ±门槛内 | 判无效，如实报告 |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        926,
+        "- ⇒ **`AC_combo` 是最可能拿到 `ACCEPT_FULL` 的组**（这也是当初把它排进 8 组的"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        937,
+        "理由：若 AC_combo 已判 `ACCEPT_FULL`，B 系就是可选加分项而非必需品；若 AC 未"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        972,
+        "| 三项全绿-充裕 | +5.0 / +8.0 / +6.0 | `ACCEPT_FULL` | PASS |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        973,
+        "| 三项全绿-边缘 | +0.8 / +2.5 / +1.1 | `ACCEPT_FULL` + 补种子 | PASS |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        976,
+        "| 全在门槛内 | +0.2 / +1.0 / +0.3 | `REJECT_NULL` + 补种子 | PASS |"
+      ],
+      [
+        "EXPERIMENT_LOG.md",
+        977,
+        "| 完全无变化 | 0 / 0 / 0 | `REJECT_NULL` | PASS |"
+      ],
+      [
+        "STYLE_GUIDE.md",
+        129,
+        "> 该组相对基线的 CD 改善为 $x\\%$，未超过 2SE 门槛（0.66%），按 §3.4 接受准则判定为 `REJECT_NULL`，即在当前样本量下无法确认其有效性。"
+      ]
+    ]
+  },
+  "runs": {
+    "B002_baseline150": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "3090"
+    },
+    "ABL_A1_cd_balance": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "3090"
+    },
+    "ABL_A2_cd_boost_bwd": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "3090"
+    },
+    "ABL_D1_scale_qk": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "3090"
+    },
+    "ABL_C1_uniform": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "3090"
+    },
+    "ABL_AC_combo": {
+      "epochs": 52,
+      "seed": "20260811",
+      "gpu": "3090"
+    },
+    "B002_baseline150_5090": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "5090"
+    },
+    "ABL_B1_adv_fixed": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "5090"
+    },
+    "ABL_B2_adv_adaptive": {
+      "epochs": 150,
+      "seed": "20260811",
+      "gpu": "5090"
+    }
+  }
+}

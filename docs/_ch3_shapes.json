@@ -1,0 +1,530 @@
+{
+ "note": "真实 forward hook 抓取，B/N/r 为核验用取值，不代表训练 batch",
+ "setting": {
+  "B": 2,
+  "N": 256,
+  "up_ratio": 4,
+  "dims": [
+   32,
+   64,
+   128,
+   256,
+   256
+  ],
+  "k": 20,
+  "tail_mode": "shuffle"
+ },
+ "generator": {
+  "class": "PUTransformer",
+  "total_params": 1152803,
+  "paper_reported_params": 969900,
+  "ratio_to_paper": 1.1885792349726776,
+  "input_shape": [
+   2,
+   256,
+   3
+  ],
+  "output_shape": [
+   2,
+   1024,
+   3
+  ],
+  "group_params": {
+   "head": 160,
+   "encoders.0": 8320,
+   "encoders.1": 30464,
+   "encoders.2": 120320,
+   "encoders.3": 478208,
+   "encoders.4": 510976,
+   "tail": 4355
+  },
+  "layer_trace": [
+   {
+    "name": "head",
+    "type": "PointMLP",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     32
+    ],
+    "n_params": 160
+   },
+   {
+    "name": "encoders.0.posfus",
+    "type": "PositionalFusion",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      32
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     32
+    ],
+    "n_params": 1184
+   },
+   {
+    "name": "encoders.0.attn",
+    "type": "SCMSA",
+    "in_shapes": [
+     [
+      2,
+      256,
+      32
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     32
+    ],
+    "n_params": 4896
+   },
+   {
+    "name": "encoders.0.mlp",
+    "type": "Sequential",
+    "in_shapes": [
+     [
+      2,
+      256,
+      32
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     32
+    ],
+    "n_params": 2112
+   },
+   {
+    "name": "encoders.0",
+    "type": "TransformerEncoder",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      32
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     32
+    ],
+    "n_params": 8320
+   },
+   {
+    "name": "encoders.1.posfus",
+    "type": "PositionalFusion",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      32
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     64
+    ],
+    "n_params": 2368
+   },
+   {
+    "name": "encoders.1.attn",
+    "type": "SCMSA",
+    "in_shapes": [
+     [
+      2,
+      256,
+      64
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     64
+    ],
+    "n_params": 19520
+   },
+   {
+    "name": "encoders.1.mlp",
+    "type": "Sequential",
+    "in_shapes": [
+     [
+      2,
+      256,
+      64
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     64
+    ],
+    "n_params": 8320
+   },
+   {
+    "name": "encoders.1",
+    "type": "TransformerEncoder",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      32
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     64
+    ],
+    "n_params": 30464
+   },
+   {
+    "name": "encoders.2.posfus",
+    "type": "PositionalFusion",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      64
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     128
+    ],
+    "n_params": 8832
+   },
+   {
+    "name": "encoders.2.attn",
+    "type": "SCMSA",
+    "in_shapes": [
+     [
+      2,
+      256,
+      128
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     128
+    ],
+    "n_params": 77952
+   },
+   {
+    "name": "encoders.2.mlp",
+    "type": "Sequential",
+    "in_shapes": [
+     [
+      2,
+      256,
+      128
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     128
+    ],
+    "n_params": 33024
+   },
+   {
+    "name": "encoders.2",
+    "type": "TransformerEncoder",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      64
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     128
+    ],
+    "n_params": 120320
+   },
+   {
+    "name": "encoders.3.posfus",
+    "type": "PositionalFusion",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      128
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 34048
+   },
+   {
+    "name": "encoders.3.attn",
+    "type": "SCMSA",
+    "in_shapes": [
+     [
+      2,
+      256,
+      256
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 311552
+   },
+   {
+    "name": "encoders.3.mlp",
+    "type": "Sequential",
+    "in_shapes": [
+     [
+      2,
+      256,
+      256
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 131584
+   },
+   {
+    "name": "encoders.3",
+    "type": "TransformerEncoder",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      128
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 478208
+   },
+   {
+    "name": "encoders.4.posfus",
+    "type": "PositionalFusion",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      256
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 66816
+   },
+   {
+    "name": "encoders.4.attn",
+    "type": "SCMSA",
+    "in_shapes": [
+     [
+      2,
+      256,
+      256
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 311552
+   },
+   {
+    "name": "encoders.4.mlp",
+    "type": "Sequential",
+    "in_shapes": [
+     [
+      2,
+      256,
+      256
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 131584
+   },
+   {
+    "name": "encoders.4",
+    "type": "TransformerEncoder",
+    "in_shapes": [
+     [
+      2,
+      256,
+      3
+     ],
+     [
+      2,
+      256,
+      256
+     ],
+     [
+      2,
+      256,
+      20
+     ]
+    ],
+    "out_shape": [
+     2,
+     256,
+     256
+    ],
+    "n_params": 510976
+   },
+   {
+    "name": "tail",
+    "type": "Sequential",
+    "in_shapes": [
+     [
+      2,
+      1024,
+      64
+     ]
+    ],
+    "out_shape": [
+     2,
+     1024,
+     3
+    ],
+    "n_params": 4355
+   }
+  ]
+ },
+ "discriminator": {
+  "class": "PUGANDiscriminator",
+  "n_params": 255426,
+  "in_shape": [
+   2,
+   1024,
+   3
+  ],
+  "out_shape": [
+   2
+  ]
+ }
+}

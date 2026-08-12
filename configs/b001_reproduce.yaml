@@ -1,0 +1,72 @@
+# =============================================================================
+# B-001：PU-Transformer 纯复现基线
+# =============================================================================
+# 目的：在不加任何本文改动的前提下，先跑通原文配置，确认代码能复现出接近原文的
+#       性能。这是后续所有消融与改进的**唯一参照点**。
+#
+# 铁律：本 config 的 loss 只允许开 CD 项。
+#       PU-Transformer 原文（arXiv 2111.12242 §4.1）损失仅用 modified CD，
+#       无对抗、无 uniform、无 repulsion。任何额外项都会让「复现」失去意义。
+#       改动必须由 A/B 组消融的实测结果驱动，不能拍脑袋。
+#
+# 原文超参出处：docs/PU_TRANSFORMER_SPEC.md §4.1
+#   batch 64 / 100 epochs / lr 1e-3 / decay 0.7
+#
+# ⚠️ 已知与原文的差异（必须在论文中如实报告，不得隐瞒）：
+#   1. 本实现参数量 1,152,803 vs 原文 969,900 = 1.189 倍
+#      归因见 PU_TRANSFORMER_SPEC.md §9；原文未给出足以消除该差异的层级细节。
+#   2. head_dim=32 / mlp_ratio=1 由 scripts/param_audit.py 实测定案，非原文明写。
+#   3. SC-MSA 的 softmax(QK^T) 不加 1/sqrt(d) 缩放（scale_qk=false），忠于原文描述。
+#      若训练不稳定，作为消融项显式记录，不偷偷改掉。
+# =============================================================================
+
+out_dir: runs/B001_reproduce
+seed: 20260811
+device: null                    # null = 自动选 cuda
+
+epochs: 100
+batch_size: 64
+lr: 0.001
+lr_step: 20
+lr_decay: 0.7                   # 原文 decay 0.7
+betas: [0.9, 0.999]
+grad_clip: null                 # 原文未提；先不开，若梯度爆再作为消融加
+
+eval_every: 1
+dump_cloud_every: 10            # 每 10 epoch 存固定样本点云（定性演进图唯一来源）
+n_fixed_samples: 3
+
+data:
+  source: pu1k                  # 主实验数据集
+  up_ratio: 4
+  noise_beta: 0.0
+  augment: true
+  limit: null                   # null = 全量 69000 patch
+  val_ratio: 0.05
+
+model:
+  up_ratio: 4
+  dims: [32, 64, 128, 256, 256] # spec §4.1 原文值
+  k: 20                         # PosFus 邻居数，原文值
+  psi: 4                        # SC-MSA reduction ratio，原文值
+  head_dim: 32                  # param_audit 实测定案
+  mlp_ratio: 1                  # param_audit 实测定案
+  use_geo: true
+  use_feat: true
+  attention_type: sc-msa
+  tail_mode: shuffle            # 原文采用 PixelShuffle
+  scale_qk: false                # 忠于原文：不加 1/sqrt(d)
+
+# 纯复现：判别器不建，全部对抗相关项为 0
+gan_mode: hinge
+d_steps: 1
+loss:
+  w_cd: 1.0
+  w_adv: 0.0
+  w_uniform: 0.0
+  w_repulsion: 0.0
+  squared_cd: true
+  adaptive_adv: false
+  adv_warmup_epochs: 0
+  adv_ramp_epochs: 10
+  adv_target_ratio: 0.1
