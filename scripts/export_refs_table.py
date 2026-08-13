@@ -12,7 +12,7 @@ refs = d["references"]
 
 lines = []
 lines.append("# 论文引用分配表（按章节预分配）\n")
-lines.append("> 本文 117 条引用按 `cite_in_chapter` 字段预分配到 7 章及子节。\n")
+lines.append("> 本文 %d 条引用按 `cite_in_chapter` 字段预分配到 7 章及子节。\n" % len(refs))
 lines.append("> 写作时按分配表使用；如某节不足，可向相邻章节借调。\n")
 lines.append("\n## 全部条目（按编号）\n")
 lines.append("\n| # | key | topic | year | 建议引用章节 | 标题（短） |\n")

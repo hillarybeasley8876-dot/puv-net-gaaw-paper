@@ -1,0 +1,2459 @@
+{
+  "audit_skill": "citation-audit",
+  "verdict": "BLOCKED",
+  "reason_code": "semantic_context_review_incomplete",
+  "summary": "81 cited entries pass local key/required-field checks and carry recorded official-API verification, but independent full-text context review is incomplete.",
+  "audited_input_hashes": {
+    "docs/REFERENCES.json": "sha256:21e649b48617cb4699464ebee2e8e774b4e9d8c09a6d68f03e6eeb6f6b627630",
+    "docs/THESIS_MANUSCRIPT.md": "sha256:aec6b22584dd9449e849d5180a80e50010cbf5a85375e735c30567c8f4d4184d",
+    "docs/chapters/ch1_introduction.md": "sha256:9fcd747e3f854c2db2bbd5581e48b05de4bccbdd40659e22d263a973a4c390b7",
+    "docs/chapters/ch2_related_work.md": "sha256:ac488e5a2621deaeac0fd424fcfc7138822429ffcf8bbb23451f935082a41892",
+    "docs/chapters/ch3_analysis_framework.md": "sha256:e5dcc4d8083197946464d4a6124bf3007f89c45592ce531cb6c2943a11ac3ea1",
+    "docs/chapters/ch4_research_design.md": "sha256:b63afec2704fc84c73c2dc327e6bb480e32b196d1b297c32bc73699ccafc71f2",
+    "docs/chapters/ch5_gaaw_method.md": "sha256:5d40b10ee9816043f062fad58cc90a9c6d1decdf40356049c1ff6204af56d7da",
+    "docs/chapters/ch6_results.md": "sha256:725df59fc6c15aca4a1d7b31cd3bcb85d124fb1f7b0aada2b0b1c81daf000e75",
+    "docs/chapters/ch7_conclusion.md": "sha256:9decb2327dafd52200fdfb749f47258344977a9f975e8258bd48b2f5a8771c8f"
+  },
+  "trace_path": ".aris/traces/citation-audit/2026-08-13_run01/",
+  "thread_id": null,
+  "executor_model": "codex-gpt-5.6-sol",
+  "executor_family": "openai",
+  "reviewer_model": null,
+  "reviewer_family": null,
+  "review_independence": "not_established",
+  "acceptance_status": "provisional",
+  "reviewer_reasoning": "not_run",
+  "generated_at": "2026-08-12T23:05:32.558963+00:00",
+  "details": {
+    "total_entries": 81,
+    "reference_library_entries": 116,
+    "uncited_library_entries": 35,
+    "missing_cited_keys": [],
+    "missing_contexts": [],
+    "recorded_verification_channels": {
+      "arxiv": 67,
+      "crossref": 1,
+      "openalex": 14
+    },
+    "required_fields_complete": 81,
+    "per_entry": [
+      {
+        "key": "PointNet",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 11,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 62,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 100,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 15,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointNet2",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 68,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 101,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "VoxelNet",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointRCNN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 11,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "LOAM",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 11,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PoissonRecon",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 11,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 15,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointCloudSurvey",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 7,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "BallPivoting",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 11,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 15,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "MLS",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 11,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 15,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 126,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 134,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "LOP",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 21,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 126,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 135,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "WLOP",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 21,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 126,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 128,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 136,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "EAR",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 21,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 126,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 128,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 137,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUNet",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 26,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 46,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 144,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 184,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 272,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 292,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 27,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "MPU",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 148,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 184,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 41,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 26,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 46,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 210,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 272,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 292,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 27,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch6_results.md",
+            "line": 33,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUGCN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 78,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 105,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 154,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 185,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 27,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUTransformer",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 13,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 26,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 88,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 108,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 162,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 186,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 27,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 78,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "MAFU",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "Grad-PU",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "SAPCU",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUFlow",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUDM",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "RepKPU",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 23,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 188,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "GradNorm",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 66,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 37,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 248,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch6_results.md",
+            "line": 238,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "UncertaintyWeighting",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 37,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "DWA",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 37,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PCGrad",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 66,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 37,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch6_results.md",
+            "line": 238,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "CAGrad",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 66,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 37,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch6_results.md",
+            "line": 238,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "NashMTL",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "TamingTransformers",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv",
+          "crossref"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 31,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 63,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 220,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch4_research_design.md",
+            "line": 91,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 3,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch6_results.md",
+            "line": 238,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointSetGen",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 39,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 30,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 290,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 15,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "DensityAwareCD",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch1_introduction.md",
+            "line": 39,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 38,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 256,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 290,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 36,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "SRCNN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 28,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "EMDLoss",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 36,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "HausdorffMetric",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 36,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 260,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 291,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 311,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "EC-Net",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 50,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 146,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 184,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "iPUNet",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 50,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "FPS",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 68,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointCNN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 70,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 102,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "KPConv",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 70,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 103,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "DGCNN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 76,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 104,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch3_analysis_framework.md",
+            "line": 80,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "Transformer",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 84,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "ViT",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 84,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PCT",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 106,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointTransformer",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 107,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointTransformerV2",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointTransformerV3",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "StratifiedTransformer",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "FastPointTransformer",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "TransformerSurvey3D",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 86,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "DeepPointsConsolidation",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 126,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 138,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "Dis-PU",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 156,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 185,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUCRN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 156,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 185,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUEVA",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 156,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 185,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUDense",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "openalex"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 156,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 185,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "NePs",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PUSDF",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 164,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 187,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "GAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 198,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "LSGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 200,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "WGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 200,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "WGANGP",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 200,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "SNGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 200,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "GANTrainTricks",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 202,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "TTUR",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 202,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "R1Reg",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 202,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "GANStability",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 202,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "Pix2Pix",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 204,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "SRGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 204,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "ESRGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 204,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "LGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "FoldingNet",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "TreeGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "P2PNet",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "ShapeGF",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointDiffusion",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "LION",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "PointCloudGenSurvey",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 208,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "SAGAN",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 210,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "GradVac",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "MGDA",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          },
+          {
+            "file": "docs/chapters/ch5_gaaw_method.md",
+            "line": 37,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      },
+      {
+        "key": "MTLSurvey",
+        "verdict": "BLOCKED",
+        "existence": "VERIFIED_IN_RECORDED_OFFICIAL_API_CHANNEL",
+        "metadata": "LOCAL_REQUIRED_FIELDS_PASS",
+        "context": "PENDING_INDEPENDENT_FULLTEXT_REVIEW",
+        "axis_failures": [
+          "CONTEXT"
+        ],
+        "channels": [
+          "arxiv"
+        ],
+        "uses": [
+          {
+            "file": "docs/chapters/ch2_related_work.md",
+            "line": 216,
+            "verdict": "UNREVIEWED"
+          }
+        ],
+        "note": "Recorded API verification is not promoted to a sentence-level semantic verdict."
+      }
+    ]
+  }
+}

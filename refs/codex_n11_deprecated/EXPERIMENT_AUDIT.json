@@ -1,0 +1,63 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "FAIL",
+  "reason_code": "split_leakage_normalization_and_config_mismatch",
+  "summary": "Ground truth is dataset-derived, but the archived evaluation fails integrity review because 189/200 diagnostic records are training samples, D1 was reconstructed with the wrong model configuration, metric metadata/normalization conflict, and no formal multi-seed or official-test result is archived.",
+  "audited_input_hashes": {
+    "docs/_cv_nn_measure.json": "sha256:2125142b10d8ed5c1114778a1789d67fff86bbed630a43c1fec028474937d650",
+    "docs/_split_audit_and_holdout_subset.json": "sha256:62d963e6ddb794b2b3028df87c73c7f9343b27122c599fd3d5142f665317262f",
+    "docs/_thesis_results_summary.json": "sha256:e4e923e92c98646f8fd3ed4c92486f4ee68837e776825db8cc3760e64bcf152c",
+    "scripts/measure_cv_nn.py": "sha256:1ad6a341f555f25e5ec944ddcac5f96a3398520547ed9a31be4ebf9bcc8f552d",
+    "scripts/evaluate.py": "sha256:59508b42fb60d34944d4b345c8a2444c406a7d8ecf3d2067cf12c35ff66d1447",
+    "scripts/train_pu.py": "sha256:e7769d9b41543cd865ab7c28d0696a40e75c7b1089499bcf22e3fd11e08718d7",
+    "puvnet/data/pu_dataset.py": "sha256:969de295a0780903fa761bb61a1d13be14348ab25647f8e5d3dd731d477b70b3",
+    "puvnet/metrics/pointcloud.py": "sha256:0dad08752dc09beca5841f286b5b3b46dea8a10541633384ee1218bdce34a278",
+    "docs/chapters/ch6_results.md": "sha256:725df59fc6c15aca4a1d7b31cd3bcb85d124fb1f7b0aada2b0b1c81daf000e75",
+    "docs/chapters/ch7_conclusion.md": "sha256:9decb2327dafd52200fdfb749f47258344977a9f975e8258bd48b2f5a8771c8f"
+  },
+  "trace_path": ".aris/traces/experiment-audit/2026-08-13_run01/",
+  "executor_model": "codex-gpt-5.6-sol",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-08-13T06:39:11+08:00",
+  "date": "2026-08-13",
+  "auditor": "gpt-5.6-sol-ultra",
+  "overall_verdict": "fail",
+  "integrity_status": "fail",
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Dataset-provided GT is used, but the archived slice was mislabeled: 11 records are held out and 189 are training records."
+    },
+    "score_normalization": {
+      "status": "fail",
+      "details": "Independent normalization uses prediction statistics and hides scale error; diagnostic and formal paths use different coordinate conventions; evaluate.py metadata conflicts with squared-distance computation."
+    },
+    "result_existence": {
+      "status": "fail",
+      "details": "JSON summaries exist and recompute, but D1 used the wrong reconstructed architecture and the results are not bound to complete checkpoint/config/data/code hashes."
+    },
+    "dead_code": {
+      "status": "warn",
+      "details": "Formal metrics are called in evaluate.py, but the paper results bypass that path; the formal evaluator is incompatible with the wrapped training checkpoint as written."
+    },
+    "scope": {
+      "status": "fail",
+      "details": "One dataset, one 4x patch setting, one seed per configuration, and only an 11-record post-hoc held-out intersection; no formal 127-model test output."
+    },
+    "eval_type": "real_gt_posthoc_patch_diagnostic_with_split_contamination"
+  },
+  "claims": [
+    {"id": "GT", "impact": "supported", "note": "GT is dataset-derived, not model-generated."},
+    {"id": "B0-spacing", "impact": "needs_qualifier", "note": "Exploratory only on the 11-record held-out intersection."},
+    {"id": "B2-vs-B1", "impact": "needs_qualifier", "note": "cv_nn improves 4.84%, while CD and HD worsen 2.80% and 13.43%."},
+    {"id": "B2-vs-B0", "impact": "unsupported", "note": "All four reported metrics are worse."},
+    {"id": "C1", "impact": "needs_qualifier", "note": "cv_nn and HD improve; CD and Q4/Q1 worsen."},
+    {"id": "D1", "impact": "unsupported", "note": "Invalid measurement caused by wrong model reconstruction."},
+    {"id": "generalization", "impact": "unsupported", "note": "No multi-seed or formal test-set evidence."}
+  ]
+}

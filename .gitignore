@@ -18,6 +18,14 @@ data/PU1K_extract/
 # 备份 zip 不入仓（备份目录独立管理）
 backups/
 outputs/
+# Publish only the final thesis deliverables; keep render checks and other
+# generated output artifacts ignored.
+!outputs/
+outputs/*
+!outputs/thesis/
+outputs/thesis/*
+!outputs/thesis/GAAW_thesis_tongji.docx
+!outputs/thesis/GAAW_thesis_tongji.pdf
 *.pt
 *.pth
 *.ckpt

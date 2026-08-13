@@ -113,6 +113,8 @@
   [112]  PUDM                    A Conditional Denoising Diffusion Probabilistic Model f
   [113]  iPUNet                  iPUNet:Iterative Cross Field Guided Point Cloud Upsampl
   [114]  PointTransformerV3      Point Transformer V3: Simpler, Faster, Stronger
+  [115]  RepKPU                  RepKPU: Point Cloud Upsampling with Kernel Point Repres
+  [116]  TamingTransformers      Taming Transformers for High-Resolution Image Synthesis
 
 按 key 字母序:
   AdamOpt                  -> [14]
@@ -203,6 +205,7 @@
   PUTransformer            -> [92]
   PyTorch                  -> [67]
   R1Reg                    -> [62]
+  RepKPU                   -> [115]
   ResNet                   -> [19]
   SAGAN                    -> [58]
   SampleNet                -> [63]
@@ -218,6 +221,7 @@
   StatPower                -> [1]
   StratifiedTransformer    -> [101]
   SwinT                    -> [86]
+  TamingTransformers       -> [116]
   TotalDenoising           -> [60]
   Transformer              -> [40]
   TransformerSurvey3D      -> [102]
