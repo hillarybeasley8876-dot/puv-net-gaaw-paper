@@ -1,0 +1,96 @@
+{
+  "figure": "F5_3_tradeoff_scatter",
+  "axes": {
+    "x": "cv_nn mean (n=200)",
+    "y": "cd mean (n=200)"
+  },
+  "errorbars": "cross-sample se_sample over the 200 validation samples; NOT across-seed SE",
+  "panels": [
+    {
+      "title": "3090 host — uniformity / structure ablations",
+      "group": "3090_uniform_structure",
+      "baseline": "B002_baseline150"
+    },
+    {
+      "title": "5090 host — adversarial ablations",
+      "group": "5090_adversarial",
+      "baseline": "B002_baseline150_5090"
+    }
+  ],
+  "cross_host_rule": "separate panels; absolute values never compared across panels",
+  "off_scale": [
+    "ABL_D1_scale_qk",
+    "ABL_A2_cd_boost_bwd"
+  ],
+  "points": {
+    "B002_baseline150": {
+      "cv_nn": 0.22681210190057755,
+      "cd": 0.001108776920082164,
+      "cv_nn_se": 0.0014079095240127173,
+      "cd_se": 2.7695871887375416e-05,
+      "host": "3090_uniform_structure",
+      "is_baseline": true
+    },
+    "ABL_A1_cd_balance": {
+      "cv_nn": 0.2371644838154316,
+      "cd": 0.0011116117825440597,
+      "cv_nn_se": 0.0015634351619507746,
+      "cd_se": 2.4510485311427507e-05,
+      "host": "3090_uniform_structure",
+      "is_baseline": false
+    },
+    "ABL_C1_uniform": {
+      "cv_nn": 0.21447783946990967,
+      "cd": 0.001115925968188094,
+      "cv_nn_se": 0.0013579287779862208,
+      "cd_se": 2.5244705138079628e-05,
+      "host": "3090_uniform_structure",
+      "is_baseline": false
+    },
+    "ABL_AC_combo": {
+      "cv_nn": 0.24368923544883728,
+      "cd": 0.0011566843867331046,
+      "cv_nn_se": 0.0014105390283377546,
+      "cd_se": 2.5494890821020157e-05,
+      "host": "3090_uniform_structure",
+      "is_baseline": false
+    },
+    "ABL_A2_cd_boost_bwd": {
+      "cv_nn": 0.563453586101532,
+      "cd": 0.0014006070125105908,
+      "host": "3090_uniform_structure",
+      "off_scale": true
+    },
+    "ABL_D1_scale_qk": {
+      "cv_nn": 0.45485057502985,
+      "cd": 0.005717935691645835,
+      "host": "3090_uniform_structure",
+      "off_scale": true
+    },
+    "B002_baseline150_5090": {
+      "cv_nn": 0.22304903641343116,
+      "cd": 0.0011109519002275193,
+      "cv_nn_se": 0.001622862153199279,
+      "cd_se": 2.446302558375641e-05,
+      "host": "5090_adversarial",
+      "is_baseline": true
+    },
+    "ABL_B1_adv_fixed": {
+      "cv_nn": 0.25618962712585924,
+      "cd": 0.0011457446436907049,
+      "cv_nn_se": 0.0013061510670965156,
+      "cd_se": 3.0930039781886224e-05,
+      "host": "5090_adversarial",
+      "is_baseline": false
+    },
+    "ABL_B2_adv_adaptive": {
+      "cv_nn": 0.23970855996012688,
+      "cd": 0.0011301335433745409,
+      "cv_nn_se": 0.0014396111514422877,
+      "cd_se": 3.7467441782950465e-05,
+      "host": "5090_adversarial",
+      "is_baseline": false
+    }
+  },
+  "source": "docs/_thesis_results.json"
+}

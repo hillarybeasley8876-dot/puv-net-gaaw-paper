@@ -64,8 +64,12 @@ runs/**
 runs/**/figures/**
 
 # paper_assets_TRIAL/ 中 README 明确说随后清理，本仓也不收
-paper_assets_TRIAL/
+# 例外：论文章节引用的正式 figures 是交付物，必须入仓
+# 注意 git 规则：若写 `paper_assets_TRIAL/`（目录级排除），则内部任何 `!` 反向例外
+# 都会失效（git 不会进入被排除的目录）。必须改写为「排除内容 + 放行子目录」。
+paper_assets_TRIAL/*
 !paper_assets_TRIAL/figures_ch4/
+!paper_assets_TRIAL/figures_ch5/
 
 # ---- python ----
 __pycache__/

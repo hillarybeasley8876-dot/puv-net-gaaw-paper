@@ -1,0 +1,111 @@
+{
+  "figure": "F5_1_qualitative_pointclouds",
+  "picked_idx": [
+    66077,
+    67002,
+    67133
+  ],
+  "pick_criterion": "argsort desc of cd(ABL_B1_adv_fixed) - cd(ABL_B2_adv_adaptive)",
+  "columns": [
+    {
+      "run": "B002_baseline150_5090",
+      "label": "B0  baseline (no adv.)"
+    },
+    {
+      "run": "ABL_B1_adv_fixed",
+      "label": "B1  fixed $w_{adv}=8.27$"
+    },
+    {
+      "run": "ABL_B2_adv_adaptive",
+      "label": "B2  GA-PUT (ours)"
+    },
+    {
+      "run": "ABL_C1_uniform",
+      "label": "C1  uniformity loss"
+    }
+  ],
+  "rows": [
+    "row1: global view, colour = per-point forward CD to GT (cmap inferno, bright = worse)",
+    "row2: zoom on the region where GT is dense but B1 under-covers it, same colour scale as row1",
+    "row3: global view, colour = within-cloud NN spacing / GT median spacing (cmap viridis)"
+  ],
+  "colour": "per-shape shared vmin/vmax across runs; NOT shared across shapes",
+  "vmax_rule": "CD: percentile 99 over all runs of that shape; spacing: percentile 99 of ratio",
+  "zoom_rule": "12x12 XY grid; centre = cell with GT count >= median(nonzero GT counts) and minimal pred/GT count ratio (worst under-coverage)",
+  "per_panel_cv_nn": "computed on that single shape; differs from 200-sample table means by design",
+  "caliber": {
+    "seed": 20260811,
+    "val_ratio": 0.05,
+    "n_sample_pool": 200,
+    "up_ratio": 4,
+    "augment": false
+  },
+  "cross_host_note": "C1 on 3090 host; B0/B1/B2 on 5090 host. No numeric metric juxtaposed in this figure.",
+  "source_measure": "docs/_cv_nn_measure.json",
+  "panel_stats": [
+    {
+      "idx": 66077,
+      "cd_vmax_p99": 0.06939983367919922,
+      "spacing_vmax_p99_ratio": 1.3259556293487549,
+      "gt_median_spacing": 0.04157676547765732,
+      "cv_nn_gt": 0.053789328783750534,
+      "cv_nn_per_run": {
+        "B002_baseline150_5090": 0.2403976023197174,
+        "ABL_B1_adv_fixed": 0.237871915102005,
+        "ABL_B2_adv_adaptive": 0.2194117158651352,
+        "ABL_C1_uniform": 0.18510781228542328
+      },
+      "zoom_xlim": [
+        -0.21249626576900482,
+        -0.01413176953792572
+      ],
+      "zoom_ylim": [
+        -0.26317098736763,
+        -0.0648064911365509
+      ]
+    },
+    {
+      "idx": 67002,
+      "cd_vmax_p99": 0.052080754190683365,
+      "spacing_vmax_p99_ratio": 1.362047553062439,
+      "gt_median_spacing": 0.04557179659605026,
+      "cv_nn_gt": 0.057832423597574234,
+      "cv_nn_per_run": {
+        "B002_baseline150_5090": 0.19428634643554688,
+        "ABL_B1_adv_fixed": 0.2752515971660614,
+        "ABL_B2_adv_adaptive": 0.22968371212482452,
+        "ABL_C1_uniform": 0.2189742922782898
+      },
+      "zoom_xlim": [
+        -0.5034732818603516,
+        -0.1631675660610199
+      ],
+      "zoom_ylim": [
+        0.17243072390556335,
+        0.512736439704895
+      ]
+    },
+    {
+      "idx": 67133,
+      "cd_vmax_p99": 0.04648469761013985,
+      "spacing_vmax_p99_ratio": 1.3202766180038452,
+      "gt_median_spacing": 0.04979383572936058,
+      "cv_nn_gt": 0.05227498337626457,
+      "cv_nn_per_run": {
+        "B002_baseline150_5090": 0.2179890275001526,
+        "ABL_B1_adv_fixed": 0.2527908384799957,
+        "ABL_B2_adv_adaptive": 0.2560535669326782,
+        "ABL_C1_uniform": 0.20370329916477203
+      },
+      "zoom_xlim": [
+        -0.5898033380508423,
+        -0.2697654366493225
+      ],
+      "zoom_ylim": [
+        0.21350128948688507,
+        0.5335392355918884
+      ]
+    }
+  ],
+  "honesty_note": "Shapes were selected on CD gain, not on cv_nn. Per-panel cv_nn therefore does not favour B2 on every shape (see panel_stats); this is reported as-is in the figure caption rather than re-selecting shapes."
+}

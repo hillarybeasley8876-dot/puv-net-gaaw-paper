@@ -83,7 +83,8 @@
 | 生成器 / 判别器 | generator / discriminator | 不用「生成网络」「鉴别器」 |
 | 对抗训练 | adversarial training | |
 | 梯度尺度失衡 | gradient scale imbalance | **本文核心问题表述**，全文统一 |
-| 梯度自适应对抗权重 | gradient-adaptive adversarial weighting | **候选辅助训练策略**的正式名称，首次出现给英文并缩写为 GAAW。不再使用内部代号「M1」，亦不表述为本文主创新（定位见 THESIS_OUTLINE §0.3） |
+| 梯度自适应对抗权重 | gradient-adaptive adversarial weighting | 本文**训练机制级主创新**的正式名称，首次出现给英文并缩写为 GAAW。不再使用内部代号「M1」。定位红线：主创新在于「问题测量 + 机制适配 + 边界界定」，**梯度范数比公式本身有 VQGAN 自适应判别权重的直接先例，全文禁止写「首次提出该公式」**；亦不得表述为结构级改进（本文未改动 PU-Transformer 骨干结构） |
+| 梯度自适应点云上采样网络 | gradient-adaptive point cloud upsampling Transformer | 方法整体的正式名称，缩写 **GA-PUT** = PU-Transformer 生成器 + PU-GAN 式判别器 + GAAW 训练机制。代码类名 `PUTransGAN`、包名 `puvnet` 不随之改名 |
 | 平台区 | plateau region | 指训练后期指标趋稳的 epoch 区间 |
 | 消融实验 | ablation study | |
 | 多目标权衡 | multi-objective trade-off | 不用「多目标平衡」（平衡暗示可同时最优） |
