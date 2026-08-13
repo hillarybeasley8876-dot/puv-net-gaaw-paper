@@ -1,0 +1,39 @@
+{
+  "purpose": "逐样本配对改善占比（描述性统计，无显著性门槛）",
+  "comparison": "ABL_B2_adv_adaptive (B2, GAAW) vs ABL_B1_adv_fixed (B1, fixed w_adv)",
+  "host": "5090",
+  "n_paired": 200,
+  "pairing": "按 per_sample.idx 严格配对；索引集合完全一致已核验",
+  "convention": "三项指标均越小越好；improved = B2 < B1",
+  "no_threshold_note": "本量为事实陈述（N/200 个样本方向变好），不设接收门槛，不作显著性裁定。",
+  "source": "docs/_cv_nn_measure.json",
+  "metrics": {
+    "cv_nn": {
+      "field": "nn_pred_cv",
+      "n_improved": 158,
+      "n_worse": 42,
+      "n_tie": 0,
+      "pct_improved": 79.0,
+      "median_delta": -0.017194107174873352,
+      "delta_desc": "B2 - B1（负值=B2 更优）"
+    },
+    "cd": {
+      "field": "cd",
+      "n_improved": 131,
+      "n_worse": 69,
+      "n_tie": 0,
+      "pct_improved": 65.5,
+      "median_delta": -1.9462837371975183e-05,
+      "delta_desc": "B2 - B1（负值=B2 更优）"
+    },
+    "hd": {
+      "field": "hd",
+      "n_improved": 106,
+      "n_worse": 94,
+      "n_tie": 0,
+      "pct_improved": 53.0,
+      "median_delta": -0.00012686382979154587,
+      "delta_desc": "B2 - B1（负值=B2 更优）"
+    }
+  }
+}

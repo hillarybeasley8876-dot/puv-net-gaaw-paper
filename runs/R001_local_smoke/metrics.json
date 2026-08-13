@@ -1,0 +1,60 @@
+{
+  "note": "训练期监控指标，非论文数字；论文主表见 evaluate.py",
+  "records": [
+    {
+      "epoch": 0,
+      "monitor_loss_cd": 0.004929910879582167,
+      "monitor_loss_cd_fwd": 0.002307797782123089,
+      "monitor_loss_cd_bwd": 0.002622113163982119,
+      "monitor_loss_cd_bwd_share": 0.5315941146441868,
+      "monitor_loss_total": 0.004929910879582167,
+      "monitor_cd": 0.004512100592794196,
+      "monitor_hd": 0.016699916052265784,
+      "monitor_nuc": 0.9231355067623985
+    },
+    {
+      "epoch": 1,
+      "monitor_loss_cd": 0.0040887704651270595,
+      "monitor_loss_cd_fwd": 0.0018408754840493202,
+      "monitor_loss_cd_bwd": 0.0022478949810777393,
+      "monitor_loss_cd_bwd_share": 0.549648106098175,
+      "monitor_loss_total": 0.0040887704651270595,
+      "monitor_cd": 0.004132979481127539,
+      "monitor_hd": 0.019620452259996785,
+      "monitor_nuc": 0.8281009904477331
+    },
+    {
+      "epoch": 2,
+      "monitor_loss_cd": 0.0047447771898337775,
+      "monitor_loss_cd_fwd": 0.002424287609755993,
+      "monitor_loss_cd_bwd": 0.0023204896466008256,
+      "monitor_loss_cd_bwd_share": 0.4890246263572148,
+      "monitor_loss_total": 0.0047447771898337775,
+      "monitor_cd": 0.003837199691993442,
+      "monitor_hd": 0.01725194040164786,
+      "monitor_nuc": 0.6786943361295594
+    },
+    {
+      "epoch": 3,
+      "monitor_loss_cd": 0.004233100318482944,
+      "monitor_loss_cd_fwd": 0.0019518914299884013,
+      "monitor_loss_cd_bwd": 0.0022812089882791042,
+      "monitor_loss_cd_bwd_share": 0.5387705138751439,
+      "monitor_loss_total": 0.004233100318482944,
+      "monitor_cd": 0.003909889035878699,
+      "monitor_hd": 0.017882230313067914,
+      "monitor_nuc": 0.58535223031044
+    },
+    {
+      "epoch": 4,
+      "monitor_loss_cd": 0.003420886251011065,
+      "monitor_loss_cd_fwd": 0.0015442337275349668,
+      "monitor_loss_cd_bwd": 0.001876652506845338,
+      "monitor_loss_cd_bwd_share": 0.5485946961811611,
+      "monitor_loss_total": 0.003420886251011065,
+      "monitor_cd": 0.0035327240420493376,
+      "monitor_hd": 0.01488074182430058,
+      "monitor_nuc": 0.6043326485984855
+    }
+  ]
+}

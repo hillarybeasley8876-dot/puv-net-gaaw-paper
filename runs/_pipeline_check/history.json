@@ -1,0 +1,21 @@
+[
+  {
+    "epoch": 0,
+    "train_cd": 0.054667863870660464,
+    "train_cd_fwd": 0.030414701998233797,
+    "train_cd_bwd": 0.024253162555396557,
+    "train_cd_bwd_share": 0.42610494593779247,
+    "train_total": 0.054667863870660464,
+    "lr": 0.001,
+    "sec": 0.91,
+    "gpu_peak_gb": 0.455,
+    "monitor_loss_cd": 0.120040662586689,
+    "monitor_loss_cd_fwd": 0.010680459439754486,
+    "monitor_loss_cd_bwd": 0.10936020314693451,
+    "monitor_loss_cd_bwd_share": 0.9110262989997864,
+    "monitor_loss_total": 0.120040662586689,
+    "monitor_cd": 0.042768050859630875,
+    "monitor_hd": 0.26845184256996446,
+    "monitor_nuc": 19.985990618379024
+  }
+]

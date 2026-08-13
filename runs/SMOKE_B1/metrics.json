@@ -1,0 +1,50 @@
+{
+  "note": "训练期监控指标，非论文数字；论文主表见 evaluate.py",
+  "records": [
+    {
+      "epoch": 0,
+      "monitor_loss_cd": 0.19103439152240753,
+      "monitor_loss_cd_fwd": 0.027315868064761162,
+      "monitor_loss_cd_bwd": 0.16371852159500122,
+      "monitor_loss_cd_bwd_share": 0.8570107221603394,
+      "monitor_loss_adv": 0.023242296651005745,
+      "monitor_loss_adv_warmup_factor": 0.1,
+      "monitor_loss_adv_w_effective": 0.827,
+      "monitor_loss_total": 0.21025577187538147,
+      "monitor_cd": 0.0504568973395135,
+      "monitor_hd": 0.23563759520771743,
+      "monitor_nuc": 6.904523126979669,
+      "select_score": null
+    },
+    {
+      "epoch": 1,
+      "monitor_loss_cd": 0.11837177723646164,
+      "monitor_loss_cd_fwd": 0.025567421689629555,
+      "monitor_loss_cd_bwd": 0.09280435740947723,
+      "monitor_loss_cd_bwd_share": 0.7840074896812439,
+      "monitor_loss_adv": 0.03723891079425812,
+      "monitor_loss_adv_warmup_factor": 0.2,
+      "monitor_loss_adv_w_effective": 1.654,
+      "monitor_loss_total": 0.17996492981910706,
+      "monitor_cd": 0.042708545761182534,
+      "monitor_hd": 0.21212549657843205,
+      "monitor_nuc": 25.618879719747436,
+      "select_score": 1.1205377483880326
+    },
+    {
+      "epoch": 2,
+      "monitor_loss_cd": 0.0838407501578331,
+      "monitor_loss_cd_fwd": 0.022245630621910095,
+      "monitor_loss_cd_bwd": 0.061595119535923004,
+      "monitor_loss_cd_bwd_share": 0.7346680164337158,
+      "monitor_loss_adv": 0.038678769022226334,
+      "monitor_loss_adv_warmup_factor": 0.3,
+      "monitor_loss_adv_w_effective": 2.481,
+      "monitor_loss_total": 0.1798027753829956,
+      "monitor_cd": 0.03216932953034453,
+      "monitor_hd": 0.1711985057433985,
+      "monitor_nuc": 10.165658298734161,
+      "select_score": 0.6857678392671913
+    }
+  ]
+}

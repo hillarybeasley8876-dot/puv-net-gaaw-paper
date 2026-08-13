@@ -1,0 +1,65 @@
+{
+  "note": "训练期监控指标，非论文数字；论文主表见 evaluate.py",
+  "records": [
+    {
+      "epoch": 0,
+      "monitor_loss_cd": 0.18770727515220642,
+      "monitor_loss_cd_fwd": 0.02742351032793522,
+      "monitor_loss_cd_bwd": 0.16028375923633575,
+      "monitor_loss_cd_bwd_share": 0.8539027571678162,
+      "monitor_loss_adv": 0.02432163804769516,
+      "monitor_loss_adv_warmup_factor": 0.1,
+      "monitor_loss_adv_w_effective": 0.827,
+      "monitor_loss_total": 0.20782126486301422,
+      "monitor_cd": 0.05271156646605413,
+      "monitor_hd": 0.22901583416298998,
+      "monitor_nuc": 7.689766083025271,
+      "select_score": null
+    },
+    {
+      "epoch": 1,
+      "monitor_loss_cd": 0.11585915833711624,
+      "monitor_loss_cd_fwd": 0.02617882750928402,
+      "monitor_loss_cd_bwd": 0.08968032896518707,
+      "monitor_loss_cd_bwd_share": 0.7740461230278015,
+      "monitor_loss_adv": 0.05362327769398689,
+      "monitor_loss_adv_warmup_factor": 0.2,
+      "monitor_loss_adv_w_effective": 1.654,
+      "monitor_loss_total": 0.2045520544052124,
+      "monitor_cd": 0.04555383898090927,
+      "monitor_hd": 0.2381574412475663,
+      "monitor_nuc": 43.13868187935154,
+      "select_score": 1.1767200237044704
+    },
+    {
+      "epoch": 2,
+      "monitor_loss_cd": 0.06956309080123901,
+      "monitor_loss_cd_fwd": 0.022448692470788956,
+      "monitor_loss_cd_bwd": 0.04711439460515976,
+      "monitor_loss_cd_bwd_share": 0.677290141582489,
+      "monitor_loss_adv": 0.1274288296699524,
+      "monitor_loss_adv_warmup_factor": 0.3,
+      "monitor_loss_adv_w_effective": 2.481,
+      "monitor_loss_total": 0.38571402430534363,
+      "monitor_cd": 0.030412652356961417,
+      "monitor_hd": 0.14379187223778656,
+      "monitor_nuc": 22.886293405817614,
+      "select_score": 0.7027707922729631
+    },
+    {
+      "epoch": 3,
+      "monitor_loss_cd": 0.040321677923202515,
+      "monitor_loss_cd_fwd": 0.017851602286100388,
+      "monitor_loss_cd_bwd": 0.022470075637102127,
+      "monitor_loss_cd_bwd_share": 0.557270348072052,
+      "monitor_loss_adv": 0.26972562074661255,
+      "monitor_loss_adv_warmup_factor": 0.4,
+      "monitor_loss_adv_w_effective": 3.308,
+      "monitor_loss_total": 0.9325740337371826,
+      "monitor_cd": 0.026546733042657873,
+      "monitor_hd": 0.123190142427475,
+      "monitor_nuc": 11.733708013223277,
+      "select_score": 0.5141399796161882
+    }
+  ]
+}

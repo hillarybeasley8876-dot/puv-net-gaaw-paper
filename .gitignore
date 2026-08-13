@@ -8,10 +8,15 @@ credentials.json
 secrets.yaml
 
 # ---- data & artifacts ----
+# 注意：gitignore 不支持行尾 `#` 注释——`data/PU1K_extract/  # 说明` 会被
+# 当成含空格与 `#` 的字面模式，永远匹配不上。实测该写法导致 1.5 GB 的
+# PU1K 原始数据实际处于未忽略状态。注释必须独占一行。
 data/raw/
 data/patches/
-data/PU1K_extract/    # PU1K 原始 .xyz 不入仓（备份三类范围不含）
-backups/              # 备份 zip 不入仓（备份目录独立管理）
+# PU1K 原始 .xyz 不入仓（备份三类范围也不含）
+data/PU1K_extract/
+# 备份 zip 不入仓（备份目录独立管理）
+backups/
 outputs/
 *.pt
 *.pth
@@ -24,10 +29,18 @@ outputs/
 *.tar
 *.tar.gz
 
+# 待盲审的第三方 docx 不入仓（体积大且非本文产物）
+refs/review_docx/
+
 # runs/ 屏蔽大件（best.pt 等模型权重 + 大量 npz），
-# 但保留判据文件（history.json/metrics.json/config.yaml/log 等）
-# —— 用下一行的反向例外与白名单实现。
-runs/
+# 但保留判据文件（history.json/metrics.json/config.yaml/log 等）。
+#
+# 关键：不能写 `runs/`（带斜杠 = 排除整个目录），那样 git 根本不会进入
+# 该目录，后面的 `!runs/**/...` 例外永远不生效 —— 实测此前 runs/ 下
+# 判据文件一个都没入仓。正确写法是「排除目录内所有文件 `runs/**`，
+# 再逐项开白名单」。
+runs/**
+!runs/**/
 !runs/**/history.json
 !runs/**/metrics.json
 !runs/**/config.yaml
@@ -39,10 +52,10 @@ runs/
 !runs/_rho_*.json
 !runs/**/README.md
 
-# runs/<name>/figures/ 是图数据点 (data.json)，不入仓（图本身已禁）
-runs/**/figures/
+# runs/<name>/figures/ 是图数据点 (data.json)，不入仓（图本身已独立管理）
+runs/**/figures/**
 
-# paper_assets_TRIAL/ 下 README 明确说禁推，本仓也禁
+# paper_assets_TRIAL/ 中 README 明确说随后清理，本仓也不收
 paper_assets_TRIAL/
 !paper_assets_TRIAL/figures_ch4/
 
@@ -65,6 +78,13 @@ env/
 .vscode/
 .idea/
 *.log
+# 训练日志是判据文件，必须入仓（须放在全局 *.log 之后才能生效）
+!runs/**/train_*.log
+
+# ---- 一次性探针脚本（不入仓）----
+# scripts/_tmp/ 是诊断/一次性脚本，留档在本地即可；
+# 但负例表与审计器是长期资产，必须入仓（不在此目录下）。
+scripts/_tmp/
 
 # ---- os ----
 Thumbs.db

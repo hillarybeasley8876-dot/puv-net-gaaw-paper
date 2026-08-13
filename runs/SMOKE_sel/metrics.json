@@ -1,0 +1,101 @@
+{
+  "note": "训练期监控指标，非论文数字；论文主表见 evaluate.py",
+  "records": [
+    {
+      "epoch": 0,
+      "monitor_loss_cd": 0.14881888031959534,
+      "monitor_loss_cd_fwd": 0.01453487854450941,
+      "monitor_loss_cd_bwd": 0.13428400456905365,
+      "monitor_loss_cd_bwd_share": 0.9023317694664001,
+      "monitor_loss_total": 0.14881888031959534,
+      "monitor_cd": 0.057752748290645535,
+      "monitor_hd": 0.2961464929992949,
+      "monitor_nuc": 49.020770047012306,
+      "select_score": 1.0
+    },
+    {
+      "epoch": 1,
+      "monitor_loss_cd": 0.10187868773937225,
+      "monitor_loss_cd_fwd": 0.012515181675553322,
+      "monitor_loss_cd_bwd": 0.08936350792646408,
+      "monitor_loss_cd_bwd_share": 0.8771560788154602,
+      "monitor_loss_total": 0.10187868773937225,
+      "monitor_cd": 0.026277263334101637,
+      "monitor_hd": 0.14428739792923784,
+      "monitor_nuc": 24.182458053790864,
+      "select_score": 0.6419621054579351
+    },
+    {
+      "epoch": 2,
+      "monitor_loss_cd": 0.10419540107250214,
+      "monitor_loss_cd_fwd": 0.012521910481154919,
+      "monitor_loss_cd_bwd": 0.09167349338531494,
+      "monitor_loss_cd_bwd_share": 0.879822850227356,
+      "monitor_loss_total": 0.10419540107250214,
+      "monitor_cd": 0.04105680294442106,
+      "monitor_hd": 0.21885407454871217,
+      "monitor_nuc": 43.96214584939016,
+      "select_score": 1.0
+    },
+    {
+      "epoch": 3,
+      "monitor_loss_cd": 0.08420749753713608,
+      "monitor_loss_cd_fwd": 0.012044965289533138,
+      "monitor_loss_cd_bwd": 0.07216253131628036,
+      "monitor_loss_cd_bwd_share": 0.8569608926773071,
+      "monitor_loss_total": 0.08420749753713608,
+      "monitor_cd": 0.01896081537283316,
+      "monitor_hd": 0.10645173279068634,
+      "monitor_nuc": 10.752344968587161,
+      "select_score": 0.4935219978067215
+    },
+    {
+      "epoch": 4,
+      "monitor_loss_cd": 0.06101912632584572,
+      "monitor_loss_cd_fwd": 0.011464563198387623,
+      "monitor_loss_cd_bwd": 0.04955456405878067,
+      "monitor_loss_cd_bwd_share": 0.8121152520179749,
+      "monitor_loss_total": 0.06101912632584572,
+      "monitor_cd": 0.01718973679042933,
+      "monitor_hd": 0.0936506666134688,
+      "monitor_nuc": 12.682869311713509,
+      "select_score": 0.6142348420989047
+    },
+    {
+      "epoch": 5,
+      "monitor_loss_cd": 0.036665178835392,
+      "monitor_loss_cd_fwd": 0.009754667058587074,
+      "monitor_loss_cd_bwd": 0.026910511776804924,
+      "monitor_loss_cd_bwd_share": 0.7339528203010559,
+      "monitor_loss_total": 0.036665178835392,
+      "monitor_cd": 0.014406935209480762,
+      "monitor_hd": 0.07546006422974963,
+      "monitor_nuc": 9.817337451570564,
+      "select_score": 0.5986310465900917
+    },
+    {
+      "epoch": 6,
+      "monitor_loss_cd": 0.023596547544002533,
+      "monitor_loss_cd_fwd": 0.007611513137817383,
+      "monitor_loss_cd_bwd": 0.01598503440618515,
+      "monitor_loss_cd_bwd_share": 0.677431046962738,
+      "monitor_loss_total": 0.023596547544002533,
+      "monitor_cd": 0.011577467511754177,
+      "monitor_hd": 0.05645926349401871,
+      "monitor_nuc": 5.948642602685425,
+      "select_score": 0.5520836079233471
+    },
+    {
+      "epoch": 7,
+      "monitor_loss_cd": 0.015046821907162666,
+      "monitor_loss_cd_fwd": 0.006427897606045008,
+      "monitor_loss_cd_bwd": 0.008618923835456371,
+      "monitor_loss_cd_bwd_share": 0.5728069543838501,
+      "monitor_loss_total": 0.015046821907162666,
+      "monitor_cd": 0.009946918648385147,
+      "monitor_hd": 0.054421203878670985,
+      "monitor_nuc": 4.501305285417372,
+      "select_score": 0.49918397005824133
+    }
+  ]
+}

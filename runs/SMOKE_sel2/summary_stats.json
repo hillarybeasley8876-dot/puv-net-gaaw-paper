@@ -1,0 +1,68 @@
+{
+  "note": "平台区均值±σ 为论文主表报数方式（定案 2026-08-11）；收敛判据须多窗口同看，单窗口结论会翻转",
+  "plateau": {
+    "n_total": 8,
+    "plateau_from_index": 4,
+    "plateau_n": 4,
+    "frac": 0.5,
+    "epoch_range": [
+      4,
+      7
+    ],
+    "cd": {
+      "plateau_mean": 0.013162398509395221,
+      "plateau_std": 0.0031272773278705553,
+      "best": 0.00992313137446224,
+      "best_epoch": 7,
+      "best_sigma_from_mean": -1.0358106414369979
+    },
+    "hd": {
+      "plateau_mean": 0.07003517544216303,
+      "plateau_std": 0.017800605383971383,
+      "best": 0.05443150918993844,
+      "best_epoch": 7,
+      "best_sigma_from_mean": -0.8765806508061218
+    },
+    "nuc": {
+      "plateau_mean": 8.13255666814496,
+      "plateau_std": 3.6508561216108375,
+      "best": 4.464245918522279,
+      "best_epoch": 7,
+      "best_sigma_from_mean": -1.0047809684716207
+    }
+  },
+  "convergence_multi_window": {
+    "w5": {
+      "error": "记录数 8 不足 2×window=10"
+    },
+    "w10": {
+      "error": "记录数 8 不足 2×window=20"
+    },
+    "w15": {
+      "error": "记录数 8 不足 2×window=30"
+    },
+    "w20": {
+      "error": "记录数 8 不足 2×window=40"
+    },
+    "w25": {
+      "error": "记录数 8 不足 2×window=50"
+    }
+  },
+  "selection": {
+    "weights": {
+      "cd": 0.5,
+      "hd": 0.2,
+      "nuc": 0.3
+    },
+    "warmup": 2,
+    "scales": {
+      "cd": 0.042076018193090245,
+      "hd": 0.22160264358487228,
+      "nuc": 36.337354941149556
+    },
+    "best_epoch": 7,
+    "best_score": 0.20390107924814854,
+    "n_records": 8
+  },
+  "shadow_cd_only_epoch": 7
+}

@@ -1,0 +1,487 @@
+{
+ "schema": "puvnet.thesis_results/v1",
+ "purpose": "论文全文唯一数字入口。正文、表格、图形一律从本文件读数，禁止在正文中另行敲入数字。",
+ "provenance": {
+  "measure_file": "docs/_cv_nn_measure.json",
+  "ch3_diag_file": "docs/_ch3_diag.json",
+  "rho_trace_file": "runs/rho_trace_B2.json",
+  "measure_note": "各 run best.pt 推理补测；口径逐字复用 ch3_diagnose.py。se_sample 为跨样本 SE，非跨 seed SE。写入为合并模式：同名 run 覆盖，其余保留。"
+ },
+ "protocol": {
+  "n_sample": 200,
+  "seed": 20260811,
+  "val_ratio": 0.05,
+  "val_range": [
+   65550,
+   69000
+  ],
+  "calib_vs_ch3_diag": true,
+  "holdout_verified": true,
+  "holdout_verification": "经 scripts/_adjudicate_n11_claim.py 逐条核验：9 个 run 各 200 条样本索引全部落在验证区间内，区间外 0 条。"
+ },
+ "criteria": {
+  "accept_multiplier_se": 2.0,
+  "accept_rule": "delta <= -2 * SE_pooled 方可判 ACCEPT；|delta| < 2*SE 判 REJECT_NULL（无法区分于零）；delta >= +2*SE 判 REVERSE_SIGNIFICANT（反向显著）",
+  "se_semantics": "SE 为跨样本标准误（n=200 验证样本），非跨 seed 标准误。本文不报 seed 稳健性。"
+ },
+ "redline": "同一张表的数字不得跨机器并列。5090 组只与 5090 基线比，3090 组只与 3090 基线比。",
+ "groups": {
+  "3090_uniform_structure": {
+   "gpu": "3090",
+   "note": "均匀性与结构消融批次；对抗分支关闭（D1 除外亦不含对抗）",
+   "baseline": "B002_baseline150",
+   "runs": {
+    "B002_baseline150": {
+     "role": "baseline",
+     "best_epoch": 147,
+     "gpu": "3090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.22681210190057755,
+       "se_sample": 0.0014079095240127173,
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean"
+      },
+      "cd": {
+       "mean": 0.001108776920082164,
+       "se_sample": 2.7695871887375416e-05,
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean"
+      },
+      "hd": {
+       "mean": 0.004927639271627413,
+       "se_sample": 0.00017607434858463365,
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean"
+      }
+     },
+     "q4_over_q1": 1.4760463614896135
+    },
+    "ABL_A1_cd_balance": {
+     "role": "ablation",
+     "best_epoch": 142,
+     "gpu": "3090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.2371644838154316,
+       "se_sample": 0.0015634351619507746,
+       "baseline_mean": 0.22681210190057755,
+       "delta": 0.010352381914854047,
+       "rel_pct": 4.564298742485966,
+       "se_pooled": 0.002103934108623595,
+       "n_se": 4.920487705590092,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.0011116117825440597,
+       "se_sample": 2.4510485311427507e-05,
+       "baseline_mean": 0.001108776920082164,
+       "delta": 2.8348624618956906e-06,
+       "rel_pct": 0.25567473587794537,
+       "se_pooled": 3.698412104949387e-05,
+       "n_se": 0.0766507998960404,
+       "verdict": "REJECT_NULL",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.005210686182253994,
+       "se_sample": 0.00017817714653833237,
+       "baseline_mean": 0.004927639271627413,
+       "delta": 0.00028304691062658056,
+       "rel_pct": 5.744067189664653,
+       "se_pooled": 0.0002504980474535589,
+       "n_se": 1.1299365943323612,
+       "verdict": "REJECT_NULL",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.4387788624121007
+    },
+    "ABL_A2_cd_boost_bwd": {
+     "role": "ablation",
+     "best_epoch": 136,
+     "gpu": "3090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.563453586101532,
+       "se_sample": 0.0012326814580904443,
+       "baseline_mean": 0.22681210190057755,
+       "delta": 0.3366414842009544,
+       "rel_pct": 148.42306974806849,
+       "se_pooled": 0.0018712864037676595,
+       "n_se": 179.89842897546757,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.0014006070125105908,
+       "se_sample": 3.950907543109942e-05,
+       "baseline_mean": 0.001108776920082164,
+       "delta": 0.00029183009242842676,
+       "rel_pct": 26.320000636990276,
+       "se_pooled": 4.824964622691254e-05,
+       "n_se": 6.048336417970473,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.006482100075518246,
+       "se_sample": 0.0004752977898813585,
+       "baseline_mean": 0.004927639271627413,
+       "delta": 0.001554460803890833,
+       "rel_pct": 31.54575077849506,
+       "se_pooled": 0.0005068630636529033,
+       "n_se": 3.0668259641726783,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.8546430212618779
+    },
+    "ABL_C1_uniform": {
+     "role": "ablation",
+     "best_epoch": 93,
+     "gpu": "3090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.21447783946990967,
+       "se_sample": 0.0013579287779862208,
+       "baseline_mean": 0.22681210190057755,
+       "delta": -0.012334262430667875,
+       "rel_pct": -5.438097141780629,
+       "se_pooled": 0.001956062318508505,
+       "n_se": 6.305659238951413,
+       "verdict": "ACCEPT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.001115925968188094,
+       "se_sample": 2.5244705138079628e-05,
+       "baseline_mean": 0.001108776920082164,
+       "delta": 7.149048105929961e-06,
+       "rel_pct": 0.6447688418153755,
+       "se_pooled": 3.7474744256772396e-05,
+       "n_se": 0.19076976368258985,
+       "verdict": "REJECT_NULL",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.004959866396384314,
+       "se_sample": 0.00015834756929431897,
+       "baseline_mean": 0.004927639271627413,
+       "delta": 3.222712475690025e-05,
+       "rel_pct": 0.6540073852901339,
+       "se_pooled": 0.00023680398841852775,
+       "n_se": 0.1360919846499459,
+       "verdict": "REJECT_NULL",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.7038018228056244
+    },
+    "ABL_AC_combo": {
+     "role": "ablation",
+     "best_epoch": 61,
+     "gpu": "3090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.24368923544883728,
+       "se_sample": 0.0014105390283377546,
+       "baseline_mean": 0.22681210190057755,
+       "delta": 0.016877133548259732,
+       "rel_pct": 7.441019860420753,
+       "se_pooled": 0.001992944951138825,
+       "n_se": 8.468439401005865,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.0011566843867331046,
+       "se_sample": 2.5494890821020157e-05,
+       "baseline_mean": 0.001108776920082164,
+       "delta": 4.790746665094057e-05,
+       "rel_pct": 4.320748906587132,
+       "se_pooled": 3.7643734904730826e-05,
+       "n_se": 1.2726544476042378,
+       "verdict": "REJECT_NULL",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.005161771292914636,
+       "se_sample": 0.00016391179885014137,
+       "baseline_mean": 0.004927639271627413,
+       "delta": 0.0002341320212872226,
+       "rel_pct": 4.751403428317463,
+       "se_pooled": 0.00024056029188499145,
+       "n_se": 0.9732779231875802,
+       "verdict": "REJECT_NULL",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.6879877981268139
+    },
+    "ABL_D1_scale_qk": {
+     "role": "ablation",
+     "best_epoch": 84,
+     "gpu": "3090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.45485057502985,
+       "se_sample": 0.0021727537462620148,
+       "baseline_mean": 0.22681210190057755,
+       "delta": 0.22803847312927245,
+       "rel_pct": 100.54069920362207,
+       "se_pooled": 0.0025890284026447714,
+       "n_se": 88.07878387750563,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.005717935691645835,
+       "se_sample": 0.00014631048850569773,
+       "baseline_mean": 0.001108776920082164,
+       "delta": 0.004609158771563671,
+       "rel_pct": 415.6975752365153,
+       "se_pooled": 0.00014890876524361425,
+       "n_se": 30.95290437754354,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.06489651403855533,
+       "se_sample": 0.0021845501094086,
+       "baseline_mean": 0.004927639271627413,
+       "delta": 0.059968874766927915,
+       "rel_pct": 1216.9899511967008,
+       "se_pooled": 0.0021916344030760765,
+       "n_se": 27.36262703430754,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.113462951026702
+    }
+   }
+  },
+  "5090_adversarial": {
+   "gpu": "5090",
+   "note": "对抗赋权批次；含判别器",
+   "baseline": "B002_baseline150_5090",
+   "runs": {
+    "B002_baseline150_5090": {
+     "role": "baseline",
+     "best_epoch": 126,
+     "gpu": "5090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.22304903641343116,
+       "se_sample": 0.001622862153199279,
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean"
+      },
+      "cd": {
+       "mean": 0.0011109519002275193,
+       "se_sample": 2.446302558375641e-05,
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean"
+      },
+      "hd": {
+       "mean": 0.0052517176984110845,
+       "se_sample": 0.0001736840359817495,
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean"
+      }
+     },
+     "q4_over_q1": 1.4732311896718155
+    },
+    "ABL_B1_adv_fixed": {
+     "role": "ablation",
+     "best_epoch": 118,
+     "gpu": "5090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.25618962712585924,
+       "se_sample": 0.0013061510670965156,
+       "baseline_mean": 0.22304903641343116,
+       "delta": 0.033140590712428086,
+       "rel_pct": 14.857984255534085,
+       "se_pooled": 0.0020831975850513955,
+       "n_se": 15.908520128017747,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.0011457446436907049,
+       "se_sample": 3.0930039781886224e-05,
+       "baseline_mean": 0.0011109519002275193,
+       "delta": 3.4792743463185616e-05,
+       "rel_pct": 3.1317956660464037,
+       "se_pooled": 3.9434844764758304e-05,
+       "n_se": 0.8822842760187257,
+       "verdict": "REJECT_NULL",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.005083470480021788,
+       "se_sample": 0.00017237363467631516,
+       "baseline_mean": 0.0052517176984110845,
+       "delta": -0.00016824721838929694,
+       "rel_pct": -3.203660745896536,
+       "se_pooled": 0.000244701479943284,
+       "n_se": 0.6875610986426917,
+       "verdict": "REJECT_NULL",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.6295836720366095
+    },
+    "ABL_B2_adv_adaptive": {
+     "role": "ablation",
+     "best_epoch": 120,
+     "gpu": "5090",
+     "metrics": {
+      "cv_nn": {
+       "mean": 0.23970855996012688,
+       "se_sample": 0.0014396111514422877,
+       "baseline_mean": 0.22304903641343116,
+       "delta": 0.016659523546695726,
+       "rel_pct": 7.468995972623961,
+       "se_pooled": 0.0021693689948101475,
+       "n_se": 7.679432861145729,
+       "verdict": "REVERSE_SIGNIFICANT",
+       "desc": "局部间距离散（越小越好）",
+       "source_field": "cv_nn.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "cd": {
+       "mean": 0.0011301335433745409,
+       "se_sample": 3.7467441782950465e-05,
+       "baseline_mean": 0.0011109519002275193,
+       "delta": 1.9181643147021593e-05,
+       "rel_pct": 1.7265952867170267,
+       "se_pooled": 4.474649499648328e-05,
+       "n_se": 0.42867364580240575,
+       "verdict": "REJECT_NULL",
+       "desc": "平均几何保真（越小越好）",
+       "source_field": "cd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      },
+      "hd": {
+       "mean": 0.004997338440298336,
+       "se_sample": 0.00017858557593293452,
+       "baseline_mean": 0.0052517176984110845,
+       "delta": -0.00025437925811274895,
+       "rel_pct": -4.843734425970989,
+       "se_pooled": 0.00024911634287257746,
+       "n_se": 1.0211263347056418,
+       "verdict": "REJECT_NULL",
+       "desc": "最坏区域风险（越小越好）",
+       "source_field": "hd_infer.mean",
+       "formula": "delta = run - baseline; se_pooled = sqrt(se_run^2 + se_base^2)"
+      }
+     },
+     "q4_over_q1": 1.625656675932464
+    }
+   }
+  }
+ },
+ "h1_evidence": {
+  "source": "runs/rho_trace_B2.json",
+  "caveat": "w_auto 为 epoch 内 batch 算术平均；rho_hat 为调和口径代表值，非 mean(rho)。仅可用于数量级演化趋势，不可作单 batch 精确值引用。",
+  "span_max_over_min": 3923883.817716083,
+  "robust_span_p90_over_p10": 431440.5901184709,
+  "robust_span_p95_over_p05": 1507249.6599241293,
+  "early_median": 0.020523771536804073,
+  "plateau_median": 2212.6529301603296,
+  "stage_ratio_plateau_over_early": 107809.27502493921,
+  "segment_medians_25ep": [
+   0.020523771536804073,
+   30.04269821027717,
+   228.20214628620445,
+   493.74766443957265,
+   1777.935139949471,
+   11623.804552730335
+  ],
+  "spearman_segment_monotone": 1.0,
+  "b1_fixed_rho": 0.012091898428053206,
+  "b2_frac_epochs_b1_too_large": 0.9133333333333333,
+  "verdict": "H1 ACCEPT（极差、抗异常点极差、阶段比值、分段单调性四项一致支持）"
+ },
+ "main_comparison": {
+  "label": "B2 (GAAW) vs B1 (fixed w_adv=8.27)",
+  "note": "本文对外主线：同机器、同批次、同 seed 直接对照。相对无对抗基线的比较另行报告，不得省略反向变化。",
+  "metrics": {
+   "cv_nn": {
+    "b1_mean": 0.25618962712585924,
+    "b2_mean": 0.23970855996012688,
+    "delta": -0.01648106716573236,
+    "rel_pct": -6.433151627031193,
+    "se_pooled": 0.0019438392107976308,
+    "n_se": 8.478616479276367,
+    "verdict": "ACCEPT",
+    "desc": "局部间距离散（越小越好）"
+   },
+   "cd": {
+    "b1_mean": 0.0011457446436907049,
+    "b2_mean": 0.0011301335433745409,
+    "delta": -1.5611100316164023e-05,
+    "rel_pct": -1.3625287625938278,
+    "se_pooled": 4.858473581967743e-05,
+    "n_se": 0.32131697441156676,
+    "verdict": "REJECT_NULL",
+    "desc": "平均几何保真（越小越好）"
+   },
+   "hd": {
+    "b1_mean": 0.005083470480021788,
+    "b2_mean": 0.004997338440298336,
+    "delta": -8.613203972345201e-05,
+    "rel_pct": -1.694355068293479,
+    "se_pooled": 0.00024820450814363077,
+    "n_se": 0.3470204484505543,
+    "verdict": "REJECT_NULL",
+    "desc": "最坏区域风险（越小越好）"
+   }
+  },
+  "q4_over_q1": {
+   "b1": 1.6295836720366095,
+   "b2": 1.625656675932464
+  }
+ }
+}

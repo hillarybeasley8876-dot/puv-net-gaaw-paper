@@ -1,0 +1,51 @@
+out_dir: runs/R001_local_smoke
+seed: 20260811
+device: null
+epochs: 5
+batch_size: 16
+lr: 0.001
+lr_step: 20
+lr_decay: 0.7
+betas:
+- 0.9
+- 0.999
+grad_clip: null
+eval_every: 1
+dump_cloud_every: 2
+n_fixed_samples: 3
+data:
+  source: pu1k
+  up_ratio: 4
+  noise_beta: 0.0
+  augment: true
+  limit: 2000
+  val_ratio: 0.05
+model:
+  up_ratio: 4
+  dims:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 256
+  k: 20
+  psi: 4
+  head_dim: 32
+  mlp_ratio: 1
+  use_geo: true
+  use_feat: true
+  attention_type: sc-msa
+  tail_mode: shuffle
+  scale_qk: false
+gan_mode: hinge
+d_steps: 1
+loss:
+  w_cd: 1.0
+  w_adv: 0.0
+  w_uniform: 0.0
+  w_repulsion: 0.0
+  squared_cd: true
+  adaptive_adv: false
+  adv_warmup_epochs: 0
+  adv_ramp_epochs: 10
+  adv_target_ratio: 0.1
