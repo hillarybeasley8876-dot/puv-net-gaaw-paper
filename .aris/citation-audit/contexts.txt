@@ -1,0 +1,673 @@
+# Citation contexts extracted from thesis chapter sources
+
+[PointNet] docs/chapters/ch1_introduction.md:7
+PointNet 以逐点共享映射和对称聚合处理置换不变性{{cite:PointNet}}，PointNet++ 进一步用分层邻域组织局部几何{{cite:PointNet2}}，这些工作奠定了直接处理点集的技术基础。
+
+[PointNet2] docs/chapters/ch1_introduction.md:7
+PointNet 以逐点共享映射和对称聚合处理置换不变性{{cite:PointNet}}，PointNet++ 进一步用分层邻域组织局部几何{{cite:PointNet2}}，这些工作奠定了直接处理点集的技术基础。
+
+[VoxelNet] docs/chapters/ch1_introduction.md:7
+此后，点云被广泛用于三维检测{{cite:VoxelNet}}{{cite:PointRCNN}}、定位建图{{cite:LOAM}}、表面重建{{cite:PoissonRecon}}和形状理解{{cite:PointCloudSurvey}}。
+
+[PointRCNN] docs/chapters/ch1_introduction.md:7
+此后，点云被广泛用于三维检测{{cite:VoxelNet}}{{cite:PointRCNN}}、定位建图{{cite:LOAM}}、表面重建{{cite:PoissonRecon}}和形状理解{{cite:PointCloudSurvey}}。
+
+[LOAM] docs/chapters/ch1_introduction.md:7
+此后，点云被广泛用于三维检测{{cite:VoxelNet}}{{cite:PointRCNN}}、定位建图{{cite:LOAM}}、表面重建{{cite:PoissonRecon}}和形状理解{{cite:PointCloudSurvey}}。
+
+[PoissonRecon] docs/chapters/ch1_introduction.md:7
+此后，点云被广泛用于三维检测{{cite:VoxelNet}}{{cite:PointRCNN}}、定位建图{{cite:LOAM}}、表面重建{{cite:PoissonRecon}}和形状理解{{cite:PointCloudSurvey}}。
+
+[PointCloudSurvey] docs/chapters/ch1_introduction.md:7
+此后，点云被广泛用于三维检测{{cite:VoxelNet}}{{cite:PointRCNN}}、定位建图{{cite:LOAM}}、表面重建{{cite:PoissonRecon}}和形状理解{{cite:PointCloudSurvey}}。
+
+[BallPivoting] docs/chapters/ch1_introduction.md:11
+球旋转重建要求球半径与采样间距相匹配{{cite:BallPivoting}}；屏蔽泊松重建依赖点的位置与法向信息恢复隐式表面{{cite:PoissonRecon}}；移动最小二乘方法则在局部邻域拟合曲面{{cite:MLS}}。
+
+[PoissonRecon] docs/chapters/ch1_introduction.md:11
+球旋转重建要求球半径与采样间距相匹配{{cite:BallPivoting}}；屏蔽泊松重建依赖点的位置与法向信息恢复隐式表面{{cite:PoissonRecon}}；移动最小二乘方法则在局部邻域拟合曲面{{cite:MLS}}。
+
+[MLS] docs/chapters/ch1_introduction.md:11
+球旋转重建要求球半径与采样间距相匹配{{cite:BallPivoting}}；屏蔽泊松重建依赖点的位置与法向信息恢复隐式表面{{cite:PoissonRecon}}；移动最小二乘方法则在局部邻域拟合曲面{{cite:MLS}}。
+
+[LOAM] docs/chapters/ch1_introduction.md:11
+对于以边缘点和平面点建立约束的定位方法或以前景点形成候选框的检测方法，观测密度同样决定模型能够利用多少几何证据{{cite:LOAM}}{{cite:PointRCNN}}。
+
+[PointRCNN] docs/chapters/ch1_introduction.md:11
+对于以边缘点和平面点建立约束的定位方法或以前景点形成候选框的检测方法，观测密度同样决定模型能够利用多少几何证据{{cite:LOAM}}{{cite:PointRCNN}}。
+
+[LOP] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[WLOP] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[EAR] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUNet] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[MPU] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUGAN] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUGCN] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUTransformer] docs/chapters/ch1_introduction.md:13
+传统方法通过投影、重采样或局部几何优化实现增密{{cite:LOP}}{{cite:WLOP}}{{cite:EAR}}；深度方法则从训练数据中学习局部形状和点分布先验{{cite:PUNet}}{{cite:MPU}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[LOP] docs/chapters/ch1_introduction.md:21
+LOP 以参数化无关的投影方式整理点集{{cite:LOP}}，WLOP 在投影过程中兼顾点的吸引与排斥以改善分布{{cite:WLOP}}，EAR 则面向锐利边缘进行重采样{{cite:EAR}}。
+
+[WLOP] docs/chapters/ch1_introduction.md:21
+LOP 以参数化无关的投影方式整理点集{{cite:LOP}}，WLOP 在投影过程中兼顾点的吸引与排斥以改善分布{{cite:WLOP}}，EAR 则面向锐利边缘进行重采样{{cite:EAR}}。
+
+[EAR] docs/chapters/ch1_introduction.md:21
+LOP 以参数化无关的投影方式整理点集{{cite:LOP}}，WLOP 在投影过程中兼顾点的吸引与排斥以改善分布{{cite:WLOP}}，EAR 则面向锐利边缘进行重采样{{cite:EAR}}。
+
+[PUNet] docs/chapters/ch1_introduction.md:23
+PU-Net 将点云上采样转化为端到端学习问题，以分层特征提取和多分支扩张生成稠密点集，并通过重建和均匀性损失训练{{cite:PUNet}}。
+
+[MPU] docs/chapters/ch1_introduction.md:23
+MPU 使用逐级上采样降低一次性高倍率生成的难度{{cite:MPU}}。
+
+[PUGAN] docs/chapters/ch1_introduction.md:23
+PU-GAN 引入判别器和自注意力，使输出点集除受重建损失约束外，还接受分布级真假判别{{cite:PUGAN}}。
+
+[PUGCN] docs/chapters/ch1_introduction.md:23
+PU-GCN 以图卷积组织局部关系{{cite:PUGCN}}，PU-Transformer 以通道偏移多头注意力在计算成本与特征交互之间折中{{cite:PUTransformer}}。
+
+[PUTransformer] docs/chapters/ch1_introduction.md:23
+PU-GCN 以图卷积组织局部关系{{cite:PUGCN}}，PU-Transformer 以通道偏移多头注意力在计算成本与特征交互之间折中{{cite:PUTransformer}}。
+
+[MAFU] docs/chapters/ch1_introduction.md:23
+随后，任意倍率网络{{cite:MAFU}}{{cite:Grad-PU}}{{cite:SAPCU}}、流模型{{cite:PUFlow}}、扩散模型{{cite:PUDM}}和核点表示{{cite:RepKPU}}进一步扩展了方法谱系。
+
+[Grad-PU] docs/chapters/ch1_introduction.md:23
+随后，任意倍率网络{{cite:MAFU}}{{cite:Grad-PU}}{{cite:SAPCU}}、流模型{{cite:PUFlow}}、扩散模型{{cite:PUDM}}和核点表示{{cite:RepKPU}}进一步扩展了方法谱系。
+
+[SAPCU] docs/chapters/ch1_introduction.md:23
+随后，任意倍率网络{{cite:MAFU}}{{cite:Grad-PU}}{{cite:SAPCU}}、流模型{{cite:PUFlow}}、扩散模型{{cite:PUDM}}和核点表示{{cite:RepKPU}}进一步扩展了方法谱系。
+
+[PUFlow] docs/chapters/ch1_introduction.md:23
+随后，任意倍率网络{{cite:MAFU}}{{cite:Grad-PU}}{{cite:SAPCU}}、流模型{{cite:PUFlow}}、扩散模型{{cite:PUDM}}和核点表示{{cite:RepKPU}}进一步扩展了方法谱系。
+
+[PUDM] docs/chapters/ch1_introduction.md:23
+随后，任意倍率网络{{cite:MAFU}}{{cite:Grad-PU}}{{cite:SAPCU}}、流模型{{cite:PUFlow}}、扩散模型{{cite:PUDM}}和核点表示{{cite:RepKPU}}进一步扩展了方法谱系。
+
+[RepKPU] docs/chapters/ch1_introduction.md:23
+随后，任意倍率网络{{cite:MAFU}}{{cite:Grad-PU}}{{cite:SAPCU}}、流模型{{cite:PUFlow}}、扩散模型{{cite:PUDM}}和核点表示{{cite:RepKPU}}进一步扩展了方法谱系。
+
+[GradNorm] docs/chapters/ch1_introduction.md:31
+GradNorm 直接根据任务梯度调整损失权重{{cite:GradNorm}}；不确定性加权把任务噪声写入可学习权重{{cite:UncertaintyWeighting}}；DWA 根据损失下降速率分配权重{{cite:DWA}}；PCGrad、CAGrad 和 Nash-MTL 分别从梯度冲突、共同下降和议价博弈角度处理多目标更新{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}。
+
+[UncertaintyWeighting] docs/chapters/ch1_introduction.md:31
+GradNorm 直接根据任务梯度调整损失权重{{cite:GradNorm}}；不确定性加权把任务噪声写入可学习权重{{cite:UncertaintyWeighting}}；DWA 根据损失下降速率分配权重{{cite:DWA}}；PCGrad、CAGrad 和 Nash-MTL 分别从梯度冲突、共同下降和议价博弈角度处理多目标更新{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}。
+
+[DWA] docs/chapters/ch1_introduction.md:31
+GradNorm 直接根据任务梯度调整损失权重{{cite:GradNorm}}；不确定性加权把任务噪声写入可学习权重{{cite:UncertaintyWeighting}}；DWA 根据损失下降速率分配权重{{cite:DWA}}；PCGrad、CAGrad 和 Nash-MTL 分别从梯度冲突、共同下降和议价博弈角度处理多目标更新{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}。
+
+[PCGrad] docs/chapters/ch1_introduction.md:31
+GradNorm 直接根据任务梯度调整损失权重{{cite:GradNorm}}；不确定性加权把任务噪声写入可学习权重{{cite:UncertaintyWeighting}}；DWA 根据损失下降速率分配权重{{cite:DWA}}；PCGrad、CAGrad 和 Nash-MTL 分别从梯度冲突、共同下降和议价博弈角度处理多目标更新{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}。
+
+[CAGrad] docs/chapters/ch1_introduction.md:31
+GradNorm 直接根据任务梯度调整损失权重{{cite:GradNorm}}；不确定性加权把任务噪声写入可学习权重{{cite:UncertaintyWeighting}}；DWA 根据损失下降速率分配权重{{cite:DWA}}；PCGrad、CAGrad 和 Nash-MTL 分别从梯度冲突、共同下降和议价博弈角度处理多目标更新{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}。
+
+[NashMTL] docs/chapters/ch1_introduction.md:31
+GradNorm 直接根据任务梯度调整损失权重{{cite:GradNorm}}；不确定性加权把任务噪声写入可学习权重{{cite:UncertaintyWeighting}}；DWA 根据损失下降速率分配权重{{cite:DWA}}；PCGrad、CAGrad 和 Nash-MTL 分别从梯度冲突、共同下降和议价博弈角度处理多目标更新{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}。
+
+[TamingTransformers] docs/chapters/ch1_introduction.md:31
+更直接地，Taming Transformers/VQGAN 的官方实现已经使用重建梯度范数与对抗梯度范数之比动态设置判别损失权重{{cite:TamingTransformers}}。
+
+[PointSetGen] docs/chapters/ch1_introduction.md:39
+** Chamfer 距离以双向最近邻距离的均值度量两个点集的接近程度{{cite:PointSetGen}}。
+
+[DensityAwareCD] docs/chapters/ch1_introduction.md:39
+密度感知 Chamfer 距离的提出也反映了传统 Chamfer 对密度差异的描述不足{{cite:DensityAwareCD}}。
+
+[PUGAN] docs/chapters/ch1_introduction.md:41
+PU-GAN 正是沿这一思路把对抗学习引入点云上采样{{cite:PUGAN}}。
+
+[TamingTransformers] docs/chapters/ch1_introduction.md:63
+** Taming Transformers/VQGAN 已有梯度范数比动态判别权重{{cite:TamingTransformers}}。
+
+[PointNet] docs/chapters/ch2_related_work.md:11
+这一约束排除了直接套用卷积核在有序网格上滑动的做法，是 PointNet 采用逐点共享多层感知机加对称池化的直接理由{{cite:PointNet}}。
+
+[PointNet2] docs/chapters/ch2_related_work.md:13
+PointNet++ 在分层结构中采用球查询并引入多尺度分组，正是为缓解非均匀密度下邻域尺度与点数不可同时固定的问题{{cite:PointNet2}}。
+
+[MLS] docs/chapters/ch2_related_work.md:15
+移动最小二乘方法给出了从点集定义曲面的经典途径：以局部加权多项式拟合逼近 $\mathcal{S}$，并将点投影到拟合曲面上{{cite:MLS}}。
+
+[BallPivoting] docs/chapters/ch2_related_work.md:15
+其二是**采样密度充分性**：曲面重建算法对采样密度有下界要求，球旋转算法需要采样间距与球半径匹配才能正确构建三角连接{{cite:BallPivoting}}，屏蔽泊松重建的精度亦随采样密度下降而退化{{cite:PoissonRecon}}。
+
+[PoissonRecon] docs/chapters/ch2_related_work.md:15
+其二是**采样密度充分性**：曲面重建算法对采样密度有下界要求，球旋转算法需要采样间距与球半径匹配才能正确构建三角连接{{cite:BallPivoting}}，屏蔽泊松重建的精度亦随采样密度下降而退化{{cite:PoissonRecon}}。
+
+[PUNet] docs/chapters/ch2_related_work.md:26
+本文中 $r$ 固定为 4，$N = 256$，输出 $rN = 1024$，与主流方法的实验设定一致{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUTransformer}}。
+
+[PUGAN] docs/chapters/ch2_related_work.md:26
+本文中 $r$ 固定为 4，$N = 256$，输出 $rN = 1024$，与主流方法的实验设定一致{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUTransformer}}。
+
+[PUTransformer] docs/chapters/ch2_related_work.md:26
+本文中 $r$ 固定为 4，$N = 256$，输出 $rN = 1024$，与主流方法的实验设定一致{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUTransformer}}。
+
+[SRCNN] docs/chapters/ch2_related_work.md:28
+这一结构与二维超分辨率所面临的病态反问题同源——低分辨率图像同样对应多个高分辨率解{{cite:SRCNN}}——但点云的无序性使二维域中基于像素对齐的损失设计无法迁移。
+
+[PointSetGen] docs/chapters/ch2_related_work.md:30
+Chamfer 距离由 Fan 等人在点集生成任务中引入深度学习框架{{cite:PointSetGen}}，其双向形式为
+
+[EMDLoss] docs/chapters/ch2_related_work.md:36
+Earth Mover's 距离建立在最优传输之上{{cite:EMDLoss}}，要求等势点集间的双射匹配，对分布差异更敏感，但求解匹配使其计算复杂度高于 Chamfer 距离。
+
+[HausdorffMetric] docs/chapters/ch2_related_work.md:36
+Hausdorff 距离取最近邻距离的上确界而非均值{{cite:HausdorffMetric}}，因而刻画最大偏差而非平均偏差。
+
+[DensityAwareCD] docs/chapters/ch2_related_work.md:38
+Wu 等人对此给出了系统分析，指出标准 Chamfer 距离在点云补全评价中会给出与视觉质量不一致的排序，并提出密度感知的改进形式{{cite:DensityAwareCD}}。
+
+[PUNet] docs/chapters/ch2_related_work.md:46
+PU-Net 提出的均匀性损失在局部球邻域内比较实际点数与期望点数{{cite:PUNet}}，PU-GAN 进一步将该思想细化为多尺度球查询下的均匀性度量{{cite:PUGAN}}。
+
+[PUGAN] docs/chapters/ch2_related_work.md:46
+PU-Net 提出的均匀性损失在局部球邻域内比较实际点数与期望点数{{cite:PUNet}}，PU-GAN 进一步将该思想细化为多尺度球查询下的均匀性度量{{cite:PUGAN}}。
+
+[EC-Net] docs/chapters/ch2_related_work.md:50
+EC-Net 的做法是在训练中显式引入边缘距离监督{{cite:EC-Net}}，iPUNet 则借助交叉场引导以保持特征线{{cite:iPUNet}}；这两条路线都反映出细节锐度难以被全局均匀性目标兼容。
+
+[iPUNet] docs/chapters/ch2_related_work.md:50
+EC-Net 的做法是在训练中显式引入边缘距离监督{{cite:EC-Net}}，iPUNet 则借助交叉场引导以保持特征线{{cite:iPUNet}}；这两条路线都反映出细节锐度难以被全局均匀性目标兼容。
+
+[PointNet] docs/chapters/ch2_related_work.md:62
+PointNet 首次给出直接在原始点集上学习的可行方案：以共享权重的多层感知机逐点提取特征，再以最大池化这一对称函数聚合为全局描述子{{cite:PointNet}}。
+
+[FPS] docs/chapters/ch2_related_work.md:68
+PointNet++ 通过"采样—分组—逐组 PointNet"的递归结构引入层次化局部建模：以最远点采样{{cite:FPS}}选取中心点，用球查询构造邻域，在邻域内应用 PointNet 提取局部特征，逐层扩大感受野{{cite:PointNet2}}。
+
+[PointNet2] docs/chapters/ch2_related_work.md:68
+PointNet++ 通过"采样—分组—逐组 PointNet"的递归结构引入层次化局部建模：以最远点采样{{cite:FPS}}选取中心点，用球查询构造邻域，在邻域内应用 PointNet 提取局部特征，逐层扩大感受野{{cite:PointNet2}}。
+
+[PointCNN] docs/chapters/ch2_related_work.md:70
+PointCNN 学习一个 $\mathcal{X}$ 变换以将邻域点重排为潜在的规范顺序，从而使卷积可用{{cite:PointCNN}}；KPConv 引入可变形核点，以核点与邻域点的空间关系定义连续卷积权重{{cite:KPConv}}。
+
+[KPConv] docs/chapters/ch2_related_work.md:70
+PointCNN 学习一个 $\mathcal{X}$ 变换以将邻域点重排为潜在的规范顺序，从而使卷积可用{{cite:PointCNN}}；KPConv 引入可变形核点，以核点与邻域点的空间关系定义连续卷积权重{{cite:KPConv}}。
+
+[DGCNN] docs/chapters/ch2_related_work.md:76
+DGCNN 提出边卷积算子，在特征空间而非坐标空间构建 $k$ 近邻图，并在每层重新计算邻接关系{{cite:DGCNN}}。
+
+[PUGCN] docs/chapters/ch2_related_work.md:78
+PU-GCN 正是基于该思路，用图卷积构造其 Inception 式特征提取器，并配合 NodeShuffle 上采样模块提升邻域信息利用率{{cite:PUGCN}}。
+
+[Transformer] docs/chapters/ch2_related_work.md:84
+Transformer 以自注意力实现序列元素间的全对全交互{{cite:Transformer}}，其在视觉领域的成功{{cite:ViT}}推动了点云方向的迁移。
+
+[ViT] docs/chapters/ch2_related_work.md:84
+Transformer 以自注意力实现序列元素间的全对全交互{{cite:Transformer}}，其在视觉领域的成功{{cite:ViT}}推动了点云方向的迁移。
+
+[PCT] docs/chapters/ch2_related_work.md:86
+**全局注意力路线**以 PCT 为代表，在全部点之间计算注意力并引入偏移注意力以增强特征差异{{cite:PCT}}，能力上限高但复杂度随点数平方增长。
+
+[PointTransformer] docs/chapters/ch2_related_work.md:86
+**局部注意力路线**以 Point Transformer 为代表，将注意力限制在 $k$ 近邻内并采用向量注意力形式，使权重可逐通道调制{{cite:PointTransformer}}；其后续版本引入分组向量注意力与基于分区的池化以改善效率与可扩展性{{cite:PointTransformerV2}}，并进一步以序列化替代邻域查询实现更高吞吐{{cite:PointTransformerV3}}。
+
+[PointTransformerV2] docs/chapters/ch2_related_work.md:86
+**局部注意力路线**以 Point Transformer 为代表，将注意力限制在 $k$ 近邻内并采用向量注意力形式，使权重可逐通道调制{{cite:PointTransformer}}；其后续版本引入分组向量注意力与基于分区的池化以改善效率与可扩展性{{cite:PointTransformerV2}}，并进一步以序列化替代邻域查询实现更高吞吐{{cite:PointTransformerV3}}。
+
+[PointTransformerV3] docs/chapters/ch2_related_work.md:86
+**局部注意力路线**以 Point Transformer 为代表，将注意力限制在 $k$ 近邻内并采用向量注意力形式，使权重可逐通道调制{{cite:PointTransformer}}；其后续版本引入分组向量注意力与基于分区的池化以改善效率与可扩展性{{cite:PointTransformerV2}}，并进一步以序列化替代邻域查询实现更高吞吐{{cite:PointTransformerV3}}。
+
+[StratifiedTransformer] docs/chapters/ch2_related_work.md:86
+此外，分层 Transformer 通过分层窗口划分处理大规模场景{{cite:StratifiedTransformer}}，Fast Point Transformer 从体素化角度降低了推理成本{{cite:FastPointTransformer}}。
+
+[FastPointTransformer] docs/chapters/ch2_related_work.md:86
+此外，分层 Transformer 通过分层窗口划分处理大规模场景{{cite:StratifiedTransformer}}，Fast Point Transformer 从体素化角度降低了推理成本{{cite:FastPointTransformer}}。
+
+[TransformerSurvey3D] docs/chapters/ch2_related_work.md:86
+相关方法的系统梳理可见于该方向的综述工作{{cite:TransformerSurvey3D}}。
+
+[PUTransformer] docs/chapters/ch2_related_work.md:88
+**这条演进线索对本文的意义在于确认了一项设计张力**：全局注意力提供长程几何交互但代价较高，局部注意力更高效但感受野受限，而二者的折中方式——如何在可接受的复杂度下扩展特征交互范围——正是PU-Transformer通道偏移多头自注意力所针对的问题{{cite:PUTransformer}}。
+
+[PointNet] docs/chapters/ch2_related_work.md:100
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[PointNet2] docs/chapters/ch2_related_work.md:101
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[PointCNN] docs/chapters/ch2_related_work.md:102
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[KPConv] docs/chapters/ch2_related_work.md:103
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[DGCNN] docs/chapters/ch2_related_work.md:104
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[PUGCN] docs/chapters/ch2_related_work.md:105
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[PCT] docs/chapters/ch2_related_work.md:106
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[PointTransformer] docs/chapters/ch2_related_work.md:107
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[PUTransformer] docs/chapters/ch2_related_work.md:108
+| 代际 | 代表方法 | 核心机制 | 相对前序的改进 | 已知缺陷或代价 | |---|---|---|---|---| | 逐点特征 + 对称聚合 | PointNet{{cite:PointNet}} | 共享权重 MLP 逐点提特征，最大池化聚合为全局描述子 | 首次实现直接在原始点集上学习，满足置换不变性 | 全局池化仅保留通道极值，邻域内无信息交换，缺失局部几何建模 | | 分层邻域建模 | PointNet++{{cite:PointNet2}} | 采样—分组—逐组 PointNet 的递归结构，逐层扩大感受野 | 引入层次化局部建模；多尺度／多分辨率分组应对密度不均 | 邻域尺度与分组策略需按数据调节 | | 分层邻域建模 | PointCNN{{cite:PointCNN}} | 学习 $\mathcal{X}$ 变换将邻域点重排为潜在规范顺序 | 使卷积算子可直接作用于无序邻域 | 变换的可解释性有限，重排稳定性依赖训练 | | 分层邻域建模 | KPConv{{cite:KPConv}} | 以可变形核点与邻域点的空间关系定义连续卷积权重 | 权重显式依赖相对空间位置，聚合前保留方向信息 | 核点数目与影响半径为敏感超参数 | | 图卷积与动态邻域 | DGCNN{{cite:DGCNN}} | 特征空间 $k$ 近邻图 + 边卷积，每层重建邻接关系 | 同时编码绝对特征与相对差异，突破固定空间邻域限制 | 逐层建图带来时间与显存开销，$k$ 为敏感超参数 | | 图卷积与动态邻域 | PU-GCN{{cite:PUGCN}} | Inception 式密集图卷积特征提取器 + NodeShuffle 扩张 | 在扩张过程中即利用邻域关系 | 结构复杂度与参数量上升 | | 点云 Transformer | PCT{{cite:PCT}} | 全部点间计算注意力，引入偏移注意力增强特征差异 | 全局交互，能力上限高 | 复杂度随点数平方增长 | | 点云 Transformer | Point Transformer{{cite:PointTransformer}} | 注意力限制在 $k$ 近邻内，采用向量注意力形式 | 权重可逐通道调制，复杂度可控 | 感受野受邻域规模限制 | | 点云 Transformer | PU-Transformer{{cite:PUTransformer}} | 位置融合模块 + 通道偏移多头自注意力交替堆叠 | 以较低复杂度扩展特征交互范围，面向上采样任务 | 机制的实际瓶颈需实测确认（见第 3.5 节） |
+
+[MLS] docs/chapters/ch2_related_work.md:126
+移动最小二乘方法以局部多项式拟合定义点集曲面并在其上重采样{{cite:MLS}}。
+
+[LOP] docs/chapters/ch2_related_work.md:126
+局部最优投影（locally optimal projection, LOP）避开了参数化与局部拟合，直接以 $L_1$ 中位数式的能量将点投影到输入点集所隐含的曲面上{{cite:LOP}}；其加权版本 WLOP 引入局部密度权重以抑制点的聚集，改善了输入分布高度不均时的稳定性{{cite:WLOP}}。
+
+[WLOP] docs/chapters/ch2_related_work.md:126
+局部最优投影（locally optimal projection, LOP）避开了参数化与局部拟合，直接以 $L_1$ 中位数式的能量将点投影到输入点集所隐含的曲面上{{cite:LOP}}；其加权版本 WLOP 引入局部密度权重以抑制点的聚集，改善了输入分布高度不均时的稳定性{{cite:WLOP}}。
+
+[EAR] docs/chapters/ch2_related_work.md:126
+边缘感知重采样（edge-aware resampling, EAR）针对上述方法平滑锐利特征的共同缺陷，先重采样远离边缘的区域再向边缘逐步推进，从而在增密的同时保持特征线{{cite:EAR}}。
+
+[DeepPointsConsolidation] docs/chapters/ch2_related_work.md:126
+深度点云整合方法则将法向估计与位置优化联合求解，处理噪声与离群点共存的情形{{cite:DeepPointsConsolidation}}。
+
+[EAR] docs/chapters/ch2_related_work.md:128
+该类方法的能力边界清晰：先验形式由算法固定，无法随数据类别自适应；参数（邻域半径、投影次数、边缘阈值）需按数据经验调节；对噪声与离群点的鲁棒性依赖显式的异常处理机制；均匀性与边缘保持之间需人工权衡{{cite:EAR}}{{cite:WLOP}}。
+
+[WLOP] docs/chapters/ch2_related_work.md:128
+该类方法的能力边界清晰：先验形式由算法固定，无法随数据类别自适应；参数（邻域半径、投影次数、边缘阈值）需按数据经验调节；对噪声与离群点的鲁棒性依赖显式的异常处理机制；均匀性与边缘保持之间需人工权衡{{cite:EAR}}{{cite:WLOP}}。
+
+[MLS] docs/chapters/ch2_related_work.md:134
+| 方法 | 显式几何先验 | 核心机制 | 针对的前序缺陷 | 已知局限 | |---|---|---|---|---| | MLS{{cite:MLS}} | 局部多项式可拟合性 | 以局部多项式拟合定义点集曲面，并在其上重采样 | —（该类方法的基础形式） | 拟合阶数与邻域半径需预设；锐利特征被平滑 | | LOP{{cite:LOP}} | 曲面由输入点集隐含表达 | 以 $L_1$ 中位数式能量将点投影到输入点集隐含的曲面上 | 避开参数化与局部拟合的稳定性问题 | 输入分布高度不均时点易聚集 | | WLOP{{cite:WLOP}} | 同 LOP，附加局部密度均衡 | 在 LOP 能量中引入局部密度权重以抑制聚集 | 改善 LOP 在密度不均输入下的稳定性 | 均匀性提升以进一步平滑特征为代价 | | EAR{{cite:EAR}} | 边缘／特征线的显式存在 | 先重采样远离边缘的区域，再向边缘逐步推进 | 针对上述方法平滑锐利特征的共同缺陷 | 边缘阈值需按数据调节；均匀性与边缘保持需人工权衡 | | 深度点云整合{{cite:DeepPointsConsolidation}} | 法向场的局部一致性 | 法向估计与位置优化联合求解 | 处理噪声与离群点共存的情形 | 联合优化的计算成本较高；依赖法向估计质量 |
+
+[LOP] docs/chapters/ch2_related_work.md:135
+| 方法 | 显式几何先验 | 核心机制 | 针对的前序缺陷 | 已知局限 | |---|---|---|---|---| | MLS{{cite:MLS}} | 局部多项式可拟合性 | 以局部多项式拟合定义点集曲面，并在其上重采样 | —（该类方法的基础形式） | 拟合阶数与邻域半径需预设；锐利特征被平滑 | | LOP{{cite:LOP}} | 曲面由输入点集隐含表达 | 以 $L_1$ 中位数式能量将点投影到输入点集隐含的曲面上 | 避开参数化与局部拟合的稳定性问题 | 输入分布高度不均时点易聚集 | | WLOP{{cite:WLOP}} | 同 LOP，附加局部密度均衡 | 在 LOP 能量中引入局部密度权重以抑制聚集 | 改善 LOP 在密度不均输入下的稳定性 | 均匀性提升以进一步平滑特征为代价 | | EAR{{cite:EAR}} | 边缘／特征线的显式存在 | 先重采样远离边缘的区域，再向边缘逐步推进 | 针对上述方法平滑锐利特征的共同缺陷 | 边缘阈值需按数据调节；均匀性与边缘保持需人工权衡 | | 深度点云整合{{cite:DeepPointsConsolidation}} | 法向场的局部一致性 | 法向估计与位置优化联合求解 | 处理噪声与离群点共存的情形 | 联合优化的计算成本较高；依赖法向估计质量 |
+
+[WLOP] docs/chapters/ch2_related_work.md:136
+| 方法 | 显式几何先验 | 核心机制 | 针对的前序缺陷 | 已知局限 | |---|---|---|---|---| | MLS{{cite:MLS}} | 局部多项式可拟合性 | 以局部多项式拟合定义点集曲面，并在其上重采样 | —（该类方法的基础形式） | 拟合阶数与邻域半径需预设；锐利特征被平滑 | | LOP{{cite:LOP}} | 曲面由输入点集隐含表达 | 以 $L_1$ 中位数式能量将点投影到输入点集隐含的曲面上 | 避开参数化与局部拟合的稳定性问题 | 输入分布高度不均时点易聚集 | | WLOP{{cite:WLOP}} | 同 LOP，附加局部密度均衡 | 在 LOP 能量中引入局部密度权重以抑制聚集 | 改善 LOP 在密度不均输入下的稳定性 | 均匀性提升以进一步平滑特征为代价 | | EAR{{cite:EAR}} | 边缘／特征线的显式存在 | 先重采样远离边缘的区域，再向边缘逐步推进 | 针对上述方法平滑锐利特征的共同缺陷 | 边缘阈值需按数据调节；均匀性与边缘保持需人工权衡 | | 深度点云整合{{cite:DeepPointsConsolidation}} | 法向场的局部一致性 | 法向估计与位置优化联合求解 | 处理噪声与离群点共存的情形 | 联合优化的计算成本较高；依赖法向估计质量 |
+
+[EAR] docs/chapters/ch2_related_work.md:137
+| 方法 | 显式几何先验 | 核心机制 | 针对的前序缺陷 | 已知局限 | |---|---|---|---|---| | MLS{{cite:MLS}} | 局部多项式可拟合性 | 以局部多项式拟合定义点集曲面，并在其上重采样 | —（该类方法的基础形式） | 拟合阶数与邻域半径需预设；锐利特征被平滑 | | LOP{{cite:LOP}} | 曲面由输入点集隐含表达 | 以 $L_1$ 中位数式能量将点投影到输入点集隐含的曲面上 | 避开参数化与局部拟合的稳定性问题 | 输入分布高度不均时点易聚集 | | WLOP{{cite:WLOP}} | 同 LOP，附加局部密度均衡 | 在 LOP 能量中引入局部密度权重以抑制聚集 | 改善 LOP 在密度不均输入下的稳定性 | 均匀性提升以进一步平滑特征为代价 | | EAR{{cite:EAR}} | 边缘／特征线的显式存在 | 先重采样远离边缘的区域，再向边缘逐步推进 | 针对上述方法平滑锐利特征的共同缺陷 | 边缘阈值需按数据调节；均匀性与边缘保持需人工权衡 | | 深度点云整合{{cite:DeepPointsConsolidation}} | 法向场的局部一致性 | 法向估计与位置优化联合求解 | 处理噪声与离群点共存的情形 | 联合优化的计算成本较高；依赖法向估计质量 |
+
+[DeepPointsConsolidation] docs/chapters/ch2_related_work.md:138
+| 方法 | 显式几何先验 | 核心机制 | 针对的前序缺陷 | 已知局限 | |---|---|---|---|---| | MLS{{cite:MLS}} | 局部多项式可拟合性 | 以局部多项式拟合定义点集曲面，并在其上重采样 | —（该类方法的基础形式） | 拟合阶数与邻域半径需预设；锐利特征被平滑 | | LOP{{cite:LOP}} | 曲面由输入点集隐含表达 | 以 $L_1$ 中位数式能量将点投影到输入点集隐含的曲面上 | 避开参数化与局部拟合的稳定性问题 | 输入分布高度不均时点易聚集 | | WLOP{{cite:WLOP}} | 同 LOP，附加局部密度均衡 | 在 LOP 能量中引入局部密度权重以抑制聚集 | 改善 LOP 在密度不均输入下的稳定性 | 均匀性提升以进一步平滑特征为代价 | | EAR{{cite:EAR}} | 边缘／特征线的显式存在 | 先重采样远离边缘的区域，再向边缘逐步推进 | 针对上述方法平滑锐利特征的共同缺陷 | 边缘阈值需按数据调节；均匀性与边缘保持需人工权衡 | | 深度点云整合{{cite:DeepPointsConsolidation}} | 法向场的局部一致性 | 法向估计与位置优化联合求解 | 处理噪声与离群点共存的情形 | 联合优化的计算成本较高；依赖法向估计质量 |
+
+[PUNet] docs/chapters/ch2_related_work.md:144
+PU-Net 是首个端到端学习的上采样网络，其流程为：分层提取多尺度点特征、通过多分支卷积将特征在通道维扩张 $r$ 倍、重排为 $rN$ 个点特征后回归坐标{{cite:PUNet}}。
+
+[EC-Net] docs/chapters/ch2_related_work.md:146
+EC-Net 在同一框架下加入边缘感知监督，通过点到边缘距离的回归显式保护特征线{{cite:EC-Net}}。
+
+[MPU] docs/chapters/ch2_related_work.md:148
+MPU 采用另一条思路：将高倍率上采样分解为多级级联的 $2\times$ 子任务，每级在 patch 上渐进增密，并在级间共享结构{{cite:MPU}}。
+
+[PUGCN] docs/chapters/ch2_related_work.md:154
+PU-GCN 将图卷积引入上采样，提出 Inception 式的密集图卷积特征提取器以在多个感受野尺度上聚合邻域信息，并设计 NodeShuffle 模块在图结构上完成点数扩张{{cite:PUGCN}}。
+
+[Dis-PU] docs/chapters/ch2_related_work.md:156
+Dis-PU 提出功能解耦：将任务拆为"稠密点生成"与"空间精化"两个串联单元，前者负责粗略增密，后者负责将点向真实曲面调整{{cite:Dis-PU}}。
+
+[PUCRN] docs/chapters/ch2_related_work.md:156
+PU-CRN 沿级联思路进一步展开，以多级精化网络逐步修正输出并在级间传递特征{{cite:PUCRN}}。
+
+[PUEVA] docs/chapters/ch2_related_work.md:156
+PU-EVA 从边向量近似的角度构造上采样单元，使倍率在推理时可灵活调整{{cite:PUEVA}}。
+
+[PUDense] docs/chapters/ch2_related_work.md:156
+针对激光雷达点云固有的密度不均衡，PU-Dense 类工作引入特征一致性约束以处理近密远疏的分布特性{{cite:PUDense}}。
+
+[PUTransformer] docs/chapters/ch2_related_work.md:162
+PU-Transformer 将 Transformer 引入上采样任务，其生成器由位置融合模块与通道偏移多头自注意力交替堆叠构成：前者编码邻域相对几何，后者在通道维度划分注意力头并对窗口做偏移，以较低复杂度扩展特征交互范围{{cite:PUTransformer}}。
+
+[NePs] docs/chapters/ch2_related_work.md:164
+Neural Points 以神经场表示局部曲面，从而支持任意倍率采样{{cite:NePs}}；Meta-PU 通过元学习生成与倍率相关的网络参数以处理连续倍率{{cite:MAFU}}；自监督的任意倍率方法借助隐式神经表示摆脱对配对数据的依赖{{cite:SAPCU}}；Grad-PU 将上采样表述为在学习到的距离函数上做梯度下降的过程{{cite:Grad-PU}}；参数曲面约束方法引入显式的参数曲面作为几何约束{{cite:PUSDF}}。
+
+[MAFU] docs/chapters/ch2_related_work.md:164
+Neural Points 以神经场表示局部曲面，从而支持任意倍率采样{{cite:NePs}}；Meta-PU 通过元学习生成与倍率相关的网络参数以处理连续倍率{{cite:MAFU}}；自监督的任意倍率方法借助隐式神经表示摆脱对配对数据的依赖{{cite:SAPCU}}；Grad-PU 将上采样表述为在学习到的距离函数上做梯度下降的过程{{cite:Grad-PU}}；参数曲面约束方法引入显式的参数曲面作为几何约束{{cite:PUSDF}}。
+
+[SAPCU] docs/chapters/ch2_related_work.md:164
+Neural Points 以神经场表示局部曲面，从而支持任意倍率采样{{cite:NePs}}；Meta-PU 通过元学习生成与倍率相关的网络参数以处理连续倍率{{cite:MAFU}}；自监督的任意倍率方法借助隐式神经表示摆脱对配对数据的依赖{{cite:SAPCU}}；Grad-PU 将上采样表述为在学习到的距离函数上做梯度下降的过程{{cite:Grad-PU}}；参数曲面约束方法引入显式的参数曲面作为几何约束{{cite:PUSDF}}。
+
+[Grad-PU] docs/chapters/ch2_related_work.md:164
+Neural Points 以神经场表示局部曲面，从而支持任意倍率采样{{cite:NePs}}；Meta-PU 通过元学习生成与倍率相关的网络参数以处理连续倍率{{cite:MAFU}}；自监督的任意倍率方法借助隐式神经表示摆脱对配对数据的依赖{{cite:SAPCU}}；Grad-PU 将上采样表述为在学习到的距离函数上做梯度下降的过程{{cite:Grad-PU}}；参数曲面约束方法引入显式的参数曲面作为几何约束{{cite:PUSDF}}。
+
+[PUSDF] docs/chapters/ch2_related_work.md:164
+Neural Points 以神经场表示局部曲面，从而支持任意倍率采样{{cite:NePs}}；Meta-PU 通过元学习生成与倍率相关的网络参数以处理连续倍率{{cite:MAFU}}；自监督的任意倍率方法借助隐式神经表示摆脱对配对数据的依赖{{cite:SAPCU}}；Grad-PU 将上采样表述为在学习到的距离函数上做梯度下降的过程{{cite:Grad-PU}}；参数曲面约束方法引入显式的参数曲面作为几何约束{{cite:PUSDF}}。
+
+[PUFlow] docs/chapters/ch2_related_work.md:164
+归一化流{{cite:PUFlow}}与条件扩散模型{{cite:PUDM}}则从概率生成的角度建模稠密点分布。
+
+[PUDM] docs/chapters/ch2_related_work.md:164
+归一化流{{cite:PUFlow}}与条件扩散模型{{cite:PUDM}}则从概率生成的角度建模稠密点分布。
+
+[RepKPU] docs/chapters/ch2_related_work.md:164
+近期工作 RepKPU 则沿核点卷积的思路，以核点表示编码局部几何并通过核点形变生成新点{{cite:RepKPU}}，其输出仍为显式坐标，但生成方式不同于通道维扩张。
+
+[PUNet] docs/chapters/ch2_related_work.md:184
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[EC-Net] docs/chapters/ch2_related_work.md:184
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[MPU] docs/chapters/ch2_related_work.md:184
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUGCN] docs/chapters/ch2_related_work.md:185
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[Dis-PU] docs/chapters/ch2_related_work.md:185
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUCRN] docs/chapters/ch2_related_work.md:185
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUEVA] docs/chapters/ch2_related_work.md:185
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUDense] docs/chapters/ch2_related_work.md:185
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUTransformer] docs/chapters/ch2_related_work.md:186
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[NePs] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[MAFU] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[SAPCU] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[Grad-PU] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUSDF] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUFlow] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[PUDM] docs/chapters/ch2_related_work.md:187
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[RepKPU] docs/chapters/ch2_related_work.md:188
+| 类别 | 代表方法 | 核心机制 | 主要优势 | 已知局限 | 与本文的关系 | |---|---|---|---|---|---| | 逐点与多分支特征扩张 | PU-Net{{cite:PUNet}}、EC-Net{{cite:EC-Net}}、MPU{{cite:MPU}} | 多尺度点特征提取后在通道维扩张 $r$ 倍并重排回归坐标；EC-Net 加边缘监督，MPU 分解为多级 $2\times$ 级联 | 端到端训练，流程简洁；形成重建损失与均匀性损失的组合路线 | 扩张在通道维完成，子点空间关系主要由坐标回归和损失隐式形成；EC-Net 需边缘信息；多级方法存在逐级误差传递风险 | 本文第3.2和3.4节据此分离结构事实与待验证原因 | | 图卷积与级联细化 | PU-GCN{{cite:PUGCN}}、Dis-PU{{cite:Dis-PU}}、PU-CRN{{cite:PUCRN}}、PU-EVA{{cite:PUEVA}}、PU-Dense{{cite:PUDense}} | 图卷积在扩张过程中利用邻域关系；功能解耦为"稠密生成 + 空间精化"；多级精化逐步修正 | 缓解子点聚簇；分阶段处理降低子目标间相互干扰 | 结构复杂度与参数量上升；级联各级贡献难以单独归因 | 归因困难正是本文强调最小变更集合与单因素消融的原因（第 4.1.3、5.4.2 节） | | Transformer 骨干 | PU-Transformer{{cite:PUTransformer}} | 位置融合模块编码邻域相对几何，通道偏移多头自注意力扩展特征交互范围 | 确立 Transformer 骨干在本任务上的可行性；复杂度可控 | 通道偏移机制的实际瓶颈需实测确认 | 本文选择其作为基线生成器的直接依据 | | 隐式表示与概率生成 | Neural Points{{cite:NePs}}、Meta-PU{{cite:MAFU}}、SAPCU{{cite:SAPCU}}、Grad-PU{{cite:Grad-PU}}、参数曲面约束{{cite:PUSDF}}、PU-Flow{{cite:PUFlow}}、PUDM{{cite:PUDM}} | 改变输出定义方式：神经场表示局部曲面、元学习生成倍率相关参数、在学习到的距离函数上做梯度下降、归一化流与条件扩散建模稠密点分布 | 支持任意／连续倍率；部分方法可摆脱配对数据依赖 | 网络容量分配、训练目标与评价方式针对连续倍率设计 | 与本文固定 $r=4$ 设定不直接可比，本章梳理但不纳入第 5 章主线对比 | | 核点表示与形变 | RepKPU{{cite:RepKPU}} | 以核点表示编码局部几何，通过核点形变生成新点，输出仍为显式坐标 | 生成方式不依赖通道维扩张，局部几何编码与点生成统一在核点框架内 | 核点配置为结构超参数；与固定倍率 shuffle 类方法的容量口径不同 | 属近期方法谱系，本章梳理；是否纳入第 5 章对比取决于协议可对齐性 |
+
+[GAN] docs/chapters/ch2_related_work.md:198
+生成对抗网络将生成建模表述为生成器与判别器的极小极大博弈{{cite:GAN}}。
+
+[LSGAN] docs/chapters/ch2_related_work.md:200
+** LSGAN 以最小二乘损失替代交叉熵，使远离决策边界的样本仍能获得有效梯度{{cite:LSGAN}}。
+
+[WGAN] docs/chapters/ch2_related_work.md:200
+WGAN 改用 Wasserstein 距离并对判别器施加 Lipschitz 约束，从度量层面缓解了梯度消失{{cite:WGAN}}；WGAN-GP 以梯度惩罚替代权重裁剪，改善了约束方式带来的容量损失{{cite:WGANGP}}。
+
+[WGANGP] docs/chapters/ch2_related_work.md:200
+WGAN 改用 Wasserstein 距离并对判别器施加 Lipschitz 约束，从度量层面缓解了梯度消失{{cite:WGAN}}；WGAN-GP 以梯度惩罚替代权重裁剪，改善了约束方式带来的容量损失{{cite:WGANGP}}。
+
+[SNGAN] docs/chapters/ch2_related_work.md:200
+谱归一化从参数矩阵谱范数的角度实现 Lipschitz 约束，实现代价更低{{cite:SNGAN}}。
+
+[GANTrainTricks] docs/chapters/ch2_related_work.md:202
+** 早期工作系统整理了特征匹配、小批量判别等稳定化技巧{{cite:GANTrainTricks}}；双时间尺度更新规则为生成器与判别器设置不同学习率并给出收敛性分析{{cite:TTUR}}；$R_1$ 正则以真实样本处的梯度惩罚稳定训练{{cite:R1Reg}}。
+
+[TTUR] docs/chapters/ch2_related_work.md:202
+** 早期工作系统整理了特征匹配、小批量判别等稳定化技巧{{cite:GANTrainTricks}}；双时间尺度更新规则为生成器与判别器设置不同学习率并给出收敛性分析{{cite:TTUR}}；$R_1$ 正则以真实样本处的梯度惩罚稳定训练{{cite:R1Reg}}。
+
+[R1Reg] docs/chapters/ch2_related_work.md:202
+** 早期工作系统整理了特征匹配、小批量判别等稳定化技巧{{cite:GANTrainTricks}}；双时间尺度更新规则为生成器与判别器设置不同学习率并给出收敛性分析{{cite:TTUR}}；$R_1$ 正则以真实样本处的梯度惩罚稳定训练{{cite:R1Reg}}。
+
+[GANStability] docs/chapters/ch2_related_work.md:202
+Mescheder 等人对各类训练方法的收敛性做了统一分析，指出不同正则形式在收敛保证上并不等价{{cite:GANStability}}。
+
+[Pix2Pix] docs/chapters/ch2_related_work.md:204
+对抗学习在条件生成与图像复原任务中的价值已被反复验证：条件对抗框架用于图像转换{{cite:Pix2Pix}}，超分辨率方向的 SRGAN{{cite:SRGAN}}与 ESRGAN{{cite:ESRGAN}}表明对抗监督能恢复重建损失所无法恢复的高频细节。
+
+[SRGAN] docs/chapters/ch2_related_work.md:204
+对抗学习在条件生成与图像复原任务中的价值已被反复验证：条件对抗框架用于图像转换{{cite:Pix2Pix}}，超分辨率方向的 SRGAN{{cite:SRGAN}}与 ESRGAN{{cite:ESRGAN}}表明对抗监督能恢复重建损失所无法恢复的高频细节。
+
+[ESRGAN] docs/chapters/ch2_related_work.md:204
+对抗学习在条件生成与图像复原任务中的价值已被反复验证：条件对抗框架用于图像转换{{cite:Pix2Pix}}，超分辨率方向的 SRGAN{{cite:SRGAN}}与 ESRGAN{{cite:ESRGAN}}表明对抗监督能恢复重建损失所无法恢复的高频细节。
+
+[LGAN] docs/chapters/ch2_related_work.md:208
+在点云域，l-GAN 先训练自编码器再在隐空间做对抗生成，回避了直接在点集上判别的困难{{cite:LGAN}}；FoldingNet 以二维网格形变的方式解码点云，提供了结构化的生成路径{{cite:FoldingNet}}；TreeGAN 采用树结构图卷积生成器逐级展开点集{{cite:TreeGAN}}；P2P-Net 通过双向位移网络学习点集之间的形状变换{{cite:P2PNet}}。
+
+[FoldingNet] docs/chapters/ch2_related_work.md:208
+在点云域，l-GAN 先训练自编码器再在隐空间做对抗生成，回避了直接在点集上判别的困难{{cite:LGAN}}；FoldingNet 以二维网格形变的方式解码点云，提供了结构化的生成路径{{cite:FoldingNet}}；TreeGAN 采用树结构图卷积生成器逐级展开点集{{cite:TreeGAN}}；P2P-Net 通过双向位移网络学习点集之间的形状变换{{cite:P2PNet}}。
+
+[TreeGAN] docs/chapters/ch2_related_work.md:208
+在点云域，l-GAN 先训练自编码器再在隐空间做对抗生成，回避了直接在点集上判别的困难{{cite:LGAN}}；FoldingNet 以二维网格形变的方式解码点云，提供了结构化的生成路径{{cite:FoldingNet}}；TreeGAN 采用树结构图卷积生成器逐级展开点集{{cite:TreeGAN}}；P2P-Net 通过双向位移网络学习点集之间的形状变换{{cite:P2PNet}}。
+
+[P2PNet] docs/chapters/ch2_related_work.md:208
+在点云域，l-GAN 先训练自编码器再在隐空间做对抗生成，回避了直接在点集上判别的困难{{cite:LGAN}}；FoldingNet 以二维网格形变的方式解码点云，提供了结构化的生成路径{{cite:FoldingNet}}；TreeGAN 采用树结构图卷积生成器逐级展开点集{{cite:TreeGAN}}；P2P-Net 通过双向位移网络学习点集之间的形状变换{{cite:P2PNet}}。
+
+[ShapeGF] docs/chapters/ch2_related_work.md:208
+此外，基于梯度场{{cite:ShapeGF}}、扩散过程{{cite:PointDiffusion}}与隐空间扩散{{cite:LION}}的方法从概率建模角度提供了替代路径。
+
+[PointDiffusion] docs/chapters/ch2_related_work.md:208
+此外，基于梯度场{{cite:ShapeGF}}、扩散过程{{cite:PointDiffusion}}与隐空间扩散{{cite:LION}}的方法从概率建模角度提供了替代路径。
+
+[LION] docs/chapters/ch2_related_work.md:208
+此外，基于梯度场{{cite:ShapeGF}}、扩散过程{{cite:PointDiffusion}}与隐空间扩散{{cite:LION}}的方法从概率建模角度提供了替代路径。
+
+[PointCloudGenSurvey] docs/chapters/ch2_related_work.md:208
+该方向的整体脉络可参见相关综述{{cite:PointCloudGenSurvey}}。
+
+[PUGAN] docs/chapters/ch2_related_work.md:210
+在上采样任务中，PU-GAN 首次引入判别器：以逐点特征编码配合自注意力构造判别器，对生成的稠密 patch 与真值 patch 做真假判别，从而在重建损失之外提供分布层面的监督{{cite:PUGAN}}。
+
+[SAGAN] docs/chapters/ch2_related_work.md:210
+其判别器中的自注意力设计可溯源至图像域的自注意力生成对抗网络{{cite:SAGAN}}。
+
+[GradNorm] docs/chapters/ch2_related_work.md:216
+GradNorm 通过约束各任务梯度范数向共同尺度靠拢来动态调整权重{{cite:GradNorm}}；不确定性加权以任务噪声的可学习估计导出权重{{cite:UncertaintyWeighting}}；动态权重平均以损失下降速率设定权重{{cite:DWA}}。
+
+[UncertaintyWeighting] docs/chapters/ch2_related_work.md:216
+GradNorm 通过约束各任务梯度范数向共同尺度靠拢来动态调整权重{{cite:GradNorm}}；不确定性加权以任务噪声的可学习估计导出权重{{cite:UncertaintyWeighting}}；动态权重平均以损失下降速率设定权重{{cite:DWA}}。
+
+[DWA] docs/chapters/ch2_related_work.md:216
+GradNorm 通过约束各任务梯度范数向共同尺度靠拢来动态调整权重{{cite:GradNorm}}；不确定性加权以任务噪声的可学习估计导出权重{{cite:UncertaintyWeighting}}；动态权重平均以损失下降速率设定权重{{cite:DWA}}。
+
+[PCGrad] docs/chapters/ch2_related_work.md:216
+另一类方法直接操作梯度方向：PCGrad 将冲突梯度做投影消除{{cite:PCGrad}}，CAGrad 在保证共同下降的约束下求解更新方向{{cite:CAGrad}}，梯度疫苗从梯度相似性角度改进多任务优化{{cite:GradVac}}；从多目标优化视角出发的方法则将其表述为帕累托最优求解{{cite:MGDA}}或议价博弈{{cite:NashMTL}}。
+
+[CAGrad] docs/chapters/ch2_related_work.md:216
+另一类方法直接操作梯度方向：PCGrad 将冲突梯度做投影消除{{cite:PCGrad}}，CAGrad 在保证共同下降的约束下求解更新方向{{cite:CAGrad}}，梯度疫苗从梯度相似性角度改进多任务优化{{cite:GradVac}}；从多目标优化视角出发的方法则将其表述为帕累托最优求解{{cite:MGDA}}或议价博弈{{cite:NashMTL}}。
+
+[GradVac] docs/chapters/ch2_related_work.md:216
+另一类方法直接操作梯度方向：PCGrad 将冲突梯度做投影消除{{cite:PCGrad}}，CAGrad 在保证共同下降的约束下求解更新方向{{cite:CAGrad}}，梯度疫苗从梯度相似性角度改进多任务优化{{cite:GradVac}}；从多目标优化视角出发的方法则将其表述为帕累托最优求解{{cite:MGDA}}或议价博弈{{cite:NashMTL}}。
+
+[MGDA] docs/chapters/ch2_related_work.md:216
+另一类方法直接操作梯度方向：PCGrad 将冲突梯度做投影消除{{cite:PCGrad}}，CAGrad 在保证共同下降的约束下求解更新方向{{cite:CAGrad}}，梯度疫苗从梯度相似性角度改进多任务优化{{cite:GradVac}}；从多目标优化视角出发的方法则将其表述为帕累托最优求解{{cite:MGDA}}或议价博弈{{cite:NashMTL}}。
+
+[NashMTL] docs/chapters/ch2_related_work.md:216
+另一类方法直接操作梯度方向：PCGrad 将冲突梯度做投影消除{{cite:PCGrad}}，CAGrad 在保证共同下降的约束下求解更新方向{{cite:CAGrad}}，梯度疫苗从梯度相似性角度改进多任务优化{{cite:GradVac}}；从多目标优化视角出发的方法则将其表述为帕累托最优求解{{cite:MGDA}}或议价博弈{{cite:NashMTL}}。
+
+[MTLSurvey] docs/chapters/ch2_related_work.md:216
+该方向的整体进展可见于相关综述{{cite:MTLSurvey}}。
+
+[TamingTransformers] docs/chapters/ch2_related_work.md:220
+与本文最接近的先例不是一般多任务加权，而是 Esser、Rombach 和 Ommer 在 Taming Transformers/VQGAN 中采用的自适应判别损失权重{{cite:TamingTransformers}}。
+
+[DensityAwareCD] docs/chapters/ch2_related_work.md:256
+Chamfer 距离的均值形式所导致的敏感度不足已在 2.1.2 节说明，密度感知的改进形式提供了一条替代路径{{cite:DensityAwareCD}}。
+
+[HausdorffMetric] docs/chapters/ch2_related_work.md:260
+Hausdorff 距离取双向最近邻距离的上确界{{cite:HausdorffMetric}}：
+
+[PUNet] docs/chapters/ch2_related_work.md:272
+** PU-Net 提出的均匀性损失在输出点集上取若干局部球邻域，比较邻域内实际点数与理想均匀分布下的期望点数，并对偏差施加惩罚{{cite:PUNet}}；PU-GAN 将其扩展为多个半径尺度上的联合度量，并加入邻域内点间距的偏差项{{cite:PUGAN}}。
+
+[PUGAN] docs/chapters/ch2_related_work.md:272
+** PU-Net 提出的均匀性损失在输出点集上取若干局部球邻域，比较邻域内实际点数与理想均匀分布下的期望点数，并对偏差施加惩罚{{cite:PUNet}}；PU-GAN 将其扩展为多个半径尺度上的联合度量，并加入邻域内点间距的偏差项{{cite:PUGAN}}。
+
+[PointSetGen] docs/chapters/ch2_related_work.md:290
+| 质量维度 | 主要指标 | 度量对象 | 参照物 | 敏感目标 | 已知盲区 | 本文用法 | |---|---|---|---|---|---|---| | 分布保真性 | CD{{cite:PointSetGen}} | 双向最近邻距离的均值 | 真值点集 $\mathcal{Y}$ | 整体分布偏离；双向分量可分解失效模式 | 均值形式对局部聚簇的惩罚被稀释{{cite:DensityAwareCD}} | 主评价指标，不替换以保持与公开报告值可比 | | 分布保真性（最坏情形） | HD{{cite:HausdorffMetric}} | 双向最近邻距离的上确界 | 真值点集 $\mathcal{Y}$ | 单个最坏离群点／漂浮点 | 只看最坏点，对整体分布不敏感；方差较大 | 与CD同报；当前仅作描述性诊断，不单独作显著性判定 | | 空间均匀性 | NUC / 均匀性损失{{cite:PUNet}}{{cite:PUGAN}} | 局部球邻域内实际点数与期望点数的偏差 | 输出点集自身 | 局部聚簇与空洞 | 依赖预设邻域半径，数值随尺度变化；对整体偏离曲面不敏感 | 同报指标；跨论文比较时须核对半径设定 | | 空间均匀性（无尺度参数） | $\mathrm{cv}_{\text{nn}}$ | 最近邻距离分布的标准差与均值之比 | 输出点集自身 | 点间距的相对离散程度，聚簇致长尾 | 不区分聚簇的空间位置；同样不反映是否贴合曲面 | 本文引入的辅助均匀性度量，无需预设半径 | | 表面贴合性 | P2F | 输出点到连续曲面的距离 | 真值网格 | 点偏离真实曲面的程度 | 对点的分布不敏感；需网格数据，仅在含网格测试集可算 | 仅在提供网格的 PU-GAN 测试集上计算 | | 细节锐度 | 无公认标量指标 | 锐利边缘、薄结构与高曲率区域的保留程度 | 真值几何／可视化 | 特征线的丢失 | 缺乏公认的独立标量指标 | 通过局部区域误差分解与可视化对比评估 |
+
+[DensityAwareCD] docs/chapters/ch2_related_work.md:290
+| 质量维度 | 主要指标 | 度量对象 | 参照物 | 敏感目标 | 已知盲区 | 本文用法 | |---|---|---|---|---|---|---| | 分布保真性 | CD{{cite:PointSetGen}} | 双向最近邻距离的均值 | 真值点集 $\mathcal{Y}$ | 整体分布偏离；双向分量可分解失效模式 | 均值形式对局部聚簇的惩罚被稀释{{cite:DensityAwareCD}} | 主评价指标，不替换以保持与公开报告值可比 | | 分布保真性（最坏情形） | HD{{cite:HausdorffMetric}} | 双向最近邻距离的上确界 | 真值点集 $\mathcal{Y}$ | 单个最坏离群点／漂浮点 | 只看最坏点，对整体分布不敏感；方差较大 | 与CD同报；当前仅作描述性诊断，不单独作显著性判定 | | 空间均匀性 | NUC / 均匀性损失{{cite:PUNet}}{{cite:PUGAN}} | 局部球邻域内实际点数与期望点数的偏差 | 输出点集自身 | 局部聚簇与空洞 | 依赖预设邻域半径，数值随尺度变化；对整体偏离曲面不敏感 | 同报指标；跨论文比较时须核对半径设定 | | 空间均匀性（无尺度参数） | $\mathrm{cv}_{\text{nn}}$ | 最近邻距离分布的标准差与均值之比 | 输出点集自身 | 点间距的相对离散程度，聚簇致长尾 | 不区分聚簇的空间位置；同样不反映是否贴合曲面 | 本文引入的辅助均匀性度量，无需预设半径 | | 表面贴合性 | P2F | 输出点到连续曲面的距离 | 真值网格 | 点偏离真实曲面的程度 | 对点的分布不敏感；需网格数据，仅在含网格测试集可算 | 仅在提供网格的 PU-GAN 测试集上计算 | | 细节锐度 | 无公认标量指标 | 锐利边缘、薄结构与高曲率区域的保留程度 | 真值几何／可视化 | 特征线的丢失 | 缺乏公认的独立标量指标 | 通过局部区域误差分解与可视化对比评估 |
+
+[HausdorffMetric] docs/chapters/ch2_related_work.md:291
+| 质量维度 | 主要指标 | 度量对象 | 参照物 | 敏感目标 | 已知盲区 | 本文用法 | |---|---|---|---|---|---|---| | 分布保真性 | CD{{cite:PointSetGen}} | 双向最近邻距离的均值 | 真值点集 $\mathcal{Y}$ | 整体分布偏离；双向分量可分解失效模式 | 均值形式对局部聚簇的惩罚被稀释{{cite:DensityAwareCD}} | 主评价指标，不替换以保持与公开报告值可比 | | 分布保真性（最坏情形） | HD{{cite:HausdorffMetric}} | 双向最近邻距离的上确界 | 真值点集 $\mathcal{Y}$ | 单个最坏离群点／漂浮点 | 只看最坏点，对整体分布不敏感；方差较大 | 与CD同报；当前仅作描述性诊断，不单独作显著性判定 | | 空间均匀性 | NUC / 均匀性损失{{cite:PUNet}}{{cite:PUGAN}} | 局部球邻域内实际点数与期望点数的偏差 | 输出点集自身 | 局部聚簇与空洞 | 依赖预设邻域半径，数值随尺度变化；对整体偏离曲面不敏感 | 同报指标；跨论文比较时须核对半径设定 | | 空间均匀性（无尺度参数） | $\mathrm{cv}_{\text{nn}}$ | 最近邻距离分布的标准差与均值之比 | 输出点集自身 | 点间距的相对离散程度，聚簇致长尾 | 不区分聚簇的空间位置；同样不反映是否贴合曲面 | 本文引入的辅助均匀性度量，无需预设半径 | | 表面贴合性 | P2F | 输出点到连续曲面的距离 | 真值网格 | 点偏离真实曲面的程度 | 对点的分布不敏感；需网格数据，仅在含网格测试集可算 | 仅在提供网格的 PU-GAN 测试集上计算 | | 细节锐度 | 无公认标量指标 | 锐利边缘、薄结构与高曲率区域的保留程度 | 真值几何／可视化 | 特征线的丢失 | 缺乏公认的独立标量指标 | 通过局部区域误差分解与可视化对比评估 |
+
+[PUNet] docs/chapters/ch2_related_work.md:292
+| 质量维度 | 主要指标 | 度量对象 | 参照物 | 敏感目标 | 已知盲区 | 本文用法 | |---|---|---|---|---|---|---| | 分布保真性 | CD{{cite:PointSetGen}} | 双向最近邻距离的均值 | 真值点集 $\mathcal{Y}$ | 整体分布偏离；双向分量可分解失效模式 | 均值形式对局部聚簇的惩罚被稀释{{cite:DensityAwareCD}} | 主评价指标，不替换以保持与公开报告值可比 | | 分布保真性（最坏情形） | HD{{cite:HausdorffMetric}} | 双向最近邻距离的上确界 | 真值点集 $\mathcal{Y}$ | 单个最坏离群点／漂浮点 | 只看最坏点，对整体分布不敏感；方差较大 | 与CD同报；当前仅作描述性诊断，不单独作显著性判定 | | 空间均匀性 | NUC / 均匀性损失{{cite:PUNet}}{{cite:PUGAN}} | 局部球邻域内实际点数与期望点数的偏差 | 输出点集自身 | 局部聚簇与空洞 | 依赖预设邻域半径，数值随尺度变化；对整体偏离曲面不敏感 | 同报指标；跨论文比较时须核对半径设定 | | 空间均匀性（无尺度参数） | $\mathrm{cv}_{\text{nn}}$ | 最近邻距离分布的标准差与均值之比 | 输出点集自身 | 点间距的相对离散程度，聚簇致长尾 | 不区分聚簇的空间位置；同样不反映是否贴合曲面 | 本文引入的辅助均匀性度量，无需预设半径 | | 表面贴合性 | P2F | 输出点到连续曲面的距离 | 真值网格 | 点偏离真实曲面的程度 | 对点的分布不敏感；需网格数据，仅在含网格测试集可算 | 仅在提供网格的 PU-GAN 测试集上计算 | | 细节锐度 | 无公认标量指标 | 锐利边缘、薄结构与高曲率区域的保留程度 | 真值几何／可视化 | 特征线的丢失 | 缺乏公认的独立标量指标 | 通过局部区域误差分解与可视化对比评估 |
+
+[PUGAN] docs/chapters/ch2_related_work.md:292
+| 质量维度 | 主要指标 | 度量对象 | 参照物 | 敏感目标 | 已知盲区 | 本文用法 | |---|---|---|---|---|---|---| | 分布保真性 | CD{{cite:PointSetGen}} | 双向最近邻距离的均值 | 真值点集 $\mathcal{Y}$ | 整体分布偏离；双向分量可分解失效模式 | 均值形式对局部聚簇的惩罚被稀释{{cite:DensityAwareCD}} | 主评价指标，不替换以保持与公开报告值可比 | | 分布保真性（最坏情形） | HD{{cite:HausdorffMetric}} | 双向最近邻距离的上确界 | 真值点集 $\mathcal{Y}$ | 单个最坏离群点／漂浮点 | 只看最坏点，对整体分布不敏感；方差较大 | 与CD同报；当前仅作描述性诊断，不单独作显著性判定 | | 空间均匀性 | NUC / 均匀性损失{{cite:PUNet}}{{cite:PUGAN}} | 局部球邻域内实际点数与期望点数的偏差 | 输出点集自身 | 局部聚簇与空洞 | 依赖预设邻域半径，数值随尺度变化；对整体偏离曲面不敏感 | 同报指标；跨论文比较时须核对半径设定 | | 空间均匀性（无尺度参数） | $\mathrm{cv}_{\text{nn}}$ | 最近邻距离分布的标准差与均值之比 | 输出点集自身 | 点间距的相对离散程度，聚簇致长尾 | 不区分聚簇的空间位置；同样不反映是否贴合曲面 | 本文引入的辅助均匀性度量，无需预设半径 | | 表面贴合性 | P2F | 输出点到连续曲面的距离 | 真值网格 | 点偏离真实曲面的程度 | 对点的分布不敏感；需网格数据，仅在含网格测试集可算 | 仅在提供网格的 PU-GAN 测试集上计算 | | 细节锐度 | 无公认标量指标 | 锐利边缘、薄结构与高曲率区域的保留程度 | 真值几何／可视化 | 特征线的丢失 | 缺乏公认的独立标量指标 | 通过局部区域误差分解与可视化对比评估 |
+
+[PointSetGen] docs/chapters/ch2_related_work.md:311
+第一，点云上采样通常被建模为无序集合上的欠定生成问题，因此集合距离、局部邻域和分布先验成为常见设计要素{{cite:PointSetGen}}{{cite:PUNet}}{{cite:PointCloudSurvey}}。
+
+[PUNet] docs/chapters/ch2_related_work.md:311
+第一，点云上采样通常被建模为无序集合上的欠定生成问题，因此集合距离、局部邻域和分布先验成为常见设计要素{{cite:PointSetGen}}{{cite:PUNet}}{{cite:PointCloudSurvey}}。
+
+[PointCloudSurvey] docs/chapters/ch2_related_work.md:311
+第一，点云上采样通常被建模为无序集合上的欠定生成问题，因此集合距离、局部邻域和分布先验成为常见设计要素{{cite:PointSetGen}}{{cite:PUNet}}{{cite:PointCloudSurvey}}。
+
+[PUNet] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[PUGAN] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[PUGCN] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[PUTransformer] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[MAFU] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[Grad-PU] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[PUDM] docs/chapters/ch2_related_work.md:311
+第二，PU-Net、PU-GAN、PU-GCN、PU-Transformer以及后续任意倍率与生成式方法分别采用不同的特征提取、扩张和坐标回归组织方式，并报告了相应几何与分布结果{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}。
+
+[HausdorffMetric] docs/chapters/ch2_related_work.md:311
+第三，Chamfer、Hausdorff、P2F、NUC与密度感知距离的定义对象不同，单一指标不足以完整描述输出质量{{cite:HausdorffMetric}}{{cite:DensityAwareCD}}。
+
+[DensityAwareCD] docs/chapters/ch2_related_work.md:311
+第三，Chamfer、Hausdorff、P2F、NUC与密度感知距离的定义对象不同，单一指标不足以完整描述输出质量{{cite:HausdorffMetric}}{{cite:DensityAwareCD}}。
+
+[GradNorm] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[UncertaintyWeighting] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[DWA] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[PCGrad] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[CAGrad] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[NashMTL] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[TamingTransformers] docs/chapters/ch2_related_work.md:311
+第四，多目标优化和VQGAN文献给出了按训练状态调整损失或梯度贡献的已有方法先例{{cite:GradNorm}}{{cite:UncertaintyWeighting}}{{cite:DWA}}{{cite:PCGrad}}{{cite:CAGrad}}{{cite:NashMTL}}{{cite:TamingTransformers}}。
+
+[PointNet] docs/chapters/ch3_analysis_framework.md:15
+点集的无序性决定了训练目标必须在置换不变的集合度量下建立；PointNet对集合对称函数的分析以及点集生成研究均为这一建模方式提供了基础{{cite:PointNet}}{{cite:PointSetGen}}。
+
+[PointSetGen] docs/chapters/ch3_analysis_framework.md:15
+点集的无序性决定了训练目标必须在置换不变的集合度量下建立；PointNet对集合对称函数的分析以及点集生成研究均为这一建模方式提供了基础{{cite:PointNet}}{{cite:PointSetGen}}。
+
+[MAFU] docs/chapters/ch3_analysis_framework.md:23
+任意倍率方法、扩散式方法和真实扫描方法仍是重要方向{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}，但它们不属于本研究的因果比较范围。
+
+[Grad-PU] docs/chapters/ch3_analysis_framework.md:23
+任意倍率方法、扩散式方法和真实扫描方法仍是重要方向{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}，但它们不属于本研究的因果比较范围。
+
+[PUDM] docs/chapters/ch3_analysis_framework.md:23
+任意倍率方法、扩散式方法和真实扫描方法仍是重要方向{{cite:MAFU}}{{cite:Grad-PU}}{{cite:PUDM}}，但它们不属于本研究的因果比较范围。
+
+[PUNet] docs/chapters/ch3_analysis_framework.md:27
+PU-Net、PU-GAN、PU-GCN和PU-Transformer在网络结构和损失设计上采取了不同方案，但其评价表通常都不能由单一指标替代{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUGAN] docs/chapters/ch3_analysis_framework.md:27
+PU-Net、PU-GAN、PU-GCN和PU-Transformer在网络结构和损失设计上采取了不同方案，但其评价表通常都不能由单一指标替代{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUGCN] docs/chapters/ch3_analysis_framework.md:27
+PU-Net、PU-GAN、PU-GCN和PU-Transformer在网络结构和损失设计上采取了不同方案，但其评价表通常都不能由单一指标替代{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[PUTransformer] docs/chapters/ch3_analysis_framework.md:27
+PU-Net、PU-GAN、PU-GCN和PU-Transformer在网络结构和损失设计上采取了不同方案，但其评价表通常都不能由单一指标替代{{cite:PUNet}}{{cite:PUGAN}}{{cite:PUGCN}}{{cite:PUTransformer}}。
+
+[DensityAwareCD] docs/chapters/ch3_analysis_framework.md:36
+密度感知Chamfer距离的研究同样指出，传统Chamfer距离可能对点密度差异不够敏感{{cite:DensityAwareCD}}。
+
+[GradNorm] docs/chapters/ch3_analysis_framework.md:66
+多任务加权和梯度冲突研究说明，多损失联合优化的结果取决于梯度大小与方向，而不只取决于损失值本身{{cite:GradNorm}}{{cite:PCGrad}}{{cite:CAGrad}}。
+
+[PCGrad] docs/chapters/ch3_analysis_framework.md:66
+多任务加权和梯度冲突研究说明，多损失联合优化的结果取决于梯度大小与方向，而不只取决于损失值本身{{cite:GradNorm}}{{cite:PCGrad}}{{cite:CAGrad}}。
+
+[CAGrad] docs/chapters/ch3_analysis_framework.md:66
+多任务加权和梯度冲突研究说明，多损失联合优化的结果取决于梯度大小与方向，而不只取决于损失值本身{{cite:GradNorm}}{{cite:PCGrad}}{{cite:CAGrad}}。
+
+[PUTransformer] docs/chapters/ch3_analysis_framework.md:78
+生成器沿用PU-Transformer的基本结构：输入坐标先映射为逐点特征，随后经过位置融合与通道偏移多头自注意力编码，最终通过通道到点数维的重排得到密集点特征并回归坐标{{cite:PUTransformer}}。
+
+[DGCNN] docs/chapters/ch3_analysis_framework.md:80
+动态图卷积采用随层更新的特征邻域{{cite:DGCNN}}，两种做法在计算稳定性和语义适应性之间形成不同取舍。
+
+[PUGAN] docs/chapters/ch3_analysis_framework.md:86
+判别器沿用PU-GAN式逐点编码、特征交互和全局判定思路{{cite:PUGAN}}。
+
+[TamingTransformers] docs/chapters/ch4_research_design.md:91
+** VQGAN官方实现对最后一层参数计算重建与对抗梯度范数{{cite:TamingTransformers}}，本文代码默认对生成器全部可训练参数求范数。
+
+[TamingTransformers] docs/chapters/ch5_gaaw_method.md:3
+需要在章首先说明原创性边界：按重建梯度范数与对抗梯度范数之比计算动态判别权重，在Taming Transformers/VQGAN的论文和官方实现中已有直接先例{{cite:TamingTransformers}}。
+
+[GradNorm] docs/chapters/ch5_gaaw_method.md:37
+GradNorm通过调整任务权重使梯度范数与训练速率目标相协调{{cite:GradNorm}}，不确定性加权从任务噪声估计权重{{cite:UncertaintyWeighting}}，DWA利用损失下降速率动态赋权{{cite:DWA}}。
+
+[UncertaintyWeighting] docs/chapters/ch5_gaaw_method.md:37
+GradNorm通过调整任务权重使梯度范数与训练速率目标相协调{{cite:GradNorm}}，不确定性加权从任务噪声估计权重{{cite:UncertaintyWeighting}}，DWA利用损失下降速率动态赋权{{cite:DWA}}。
+
+[DWA] docs/chapters/ch5_gaaw_method.md:37
+GradNorm通过调整任务权重使梯度范数与训练速率目标相协调{{cite:GradNorm}}，不确定性加权从任务噪声估计权重{{cite:UncertaintyWeighting}}，DWA利用损失下降速率动态赋权{{cite:DWA}}。
+
+[PCGrad] docs/chapters/ch5_gaaw_method.md:37
+PCGrad、CAGrad和MGDA等方法进一步关注梯度方向冲突与多目标下降{{cite:PCGrad}}{{cite:CAGrad}}{{cite:MGDA}}。
+
+[CAGrad] docs/chapters/ch5_gaaw_method.md:37
+PCGrad、CAGrad和MGDA等方法进一步关注梯度方向冲突与多目标下降{{cite:PCGrad}}{{cite:CAGrad}}{{cite:MGDA}}。
+
+[MGDA] docs/chapters/ch5_gaaw_method.md:37
+PCGrad、CAGrad和MGDA等方法进一步关注梯度方向冲突与多目标下降{{cite:PCGrad}}{{cite:CAGrad}}{{cite:MGDA}}。
+
+[GradNorm] docs/chapters/ch5_gaaw_method.md:248
+GradNorm的目标是协调多个任务的训练速率，它不仅查看梯度范数，还使用各任务相对初始损失的下降速度{{cite:GradNorm}}。
+
+[PUGAN] docs/chapters/ch6_results.md:33
+B1与B2都启用PU-GAN式点云判别器和hinge对抗损失{{cite:PUGAN}}。
+
+[TamingTransformers] docs/chapters/ch6_results.md:238
+VQGAN的最后一层梯度范数比是最接近GAAW的先例{{cite:TamingTransformers}}。
+
+[GradNorm] docs/chapters/ch6_results.md:238
+GradNorm、PCGrad或CAGrad可以作为扩展对照，但不能代替最相近的Taming-style对照{{cite:GradNorm}}{{cite:PCGrad}}{{cite:CAGrad}}。
+
+[PCGrad] docs/chapters/ch6_results.md:238
+GradNorm、PCGrad或CAGrad可以作为扩展对照，但不能代替最相近的Taming-style对照{{cite:GradNorm}}{{cite:PCGrad}}{{cite:CAGrad}}。
+
+[CAGrad] docs/chapters/ch6_results.md:238
+GradNorm、PCGrad或CAGrad可以作为扩展对照，但不能代替最相近的Taming-style对照{{cite:GradNorm}}{{cite:PCGrad}}{{cite:CAGrad}}。

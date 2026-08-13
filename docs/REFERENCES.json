@@ -1,7 +1,7 @@
 {
   "note": "论文参考文献库。每条均经 arXiv / Crossref / OpenAlex 官方 API 逐条核实，verify_urls 可复查。核实未通过的条目一律不收录，见 REF_REJECTED_*.json。",
-  "generated_at": "2026-08-11T18:06:08+08:00",
-  "n_references": 115,
+  "generated_at": "2026-08-13T02:50:00+08:00",
+  "n_references": 116,
   "verification_policy": {
     "channels": [
       "arxiv",
@@ -3510,6 +3510,40 @@
       },
       "number": 115,
       "note": "无 arXiv 预印本；REF_CANDIDATES_B2.json 中登记的 arXiv:2403.10962 属误填（该 ID 实为 Exploiting Topological Priors for Boosting Point Cloud Generation），故首轮自动校验以 title_mismatch 误拒。本轮改用 OpenAlex 标题检索 + CVPR DOI 双证据复核通过。官方实现: github.com/EasyRy/RepKPU"
+    },
+    {
+      "key": "TamingTransformers",
+      "title": "Taming Transformers for High-Resolution Image Synthesis",
+      "authors": [
+        "Patrick Esser",
+        "Robin Rombach",
+        "Björn Ommer"
+      ],
+      "year": "2021",
+      "venue": "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "doi": "10.1109/CVPR46437.2021.01268",
+      "arxiv": "2012.09841",
+      "arxiv_abs": "https://arxiv.org/abs/2012.09841",
+      "topic": "adaptive-adversarial-weight",
+      "cite_in_chapter": [
+        "2.3",
+        "2.4",
+        "5.1",
+        "5.5"
+      ],
+      "verified": {
+        "channels": [
+          "arxiv",
+          "crossref"
+        ],
+        "verify_urls": [
+          "https://export.arxiv.org/api/query?id_list=2012.09841",
+          "https://api.crossref.org/works/10.1109/CVPR46437.2021.01268"
+        ],
+        "checked_at": "2026-08-13T02:50:00+08:00"
+      },
+      "number": 116,
+      "note": "官方代码 CompVis/taming-transformers 的 vqperceptual.py 使用重建梯度范数与对抗梯度范数之比计算动态判别损失权重；这是本文 GAAW 原创性定位必须披露的直接先例。"
     }
   ]
 }

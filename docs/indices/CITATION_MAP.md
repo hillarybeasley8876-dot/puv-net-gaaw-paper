@@ -1,0 +1,83 @@
+# 引用编号映射
+
+- [1] `PointNet` — PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation
+- [2] `PointNet2` — PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space
+- [3] `VoxelNet` — VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection
+- [4] `PointRCNN` — PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud
+- [5] `LOAM` — LOAM: Lidar Odometry and Mapping in Real-time
+- [6] `PoissonRecon` — Screened poisson surface reconstruction
+- [7] `PointCloudSurvey` — Deep Learning for 3D Point Clouds: A Survey
+- [8] `BallPivoting` — The ball-pivoting algorithm for surface reconstruction
+- [9] `MLS` — Computing and rendering point set surfaces
+- [10] `LOP` — Parameterization-free projection for geometry reconstruction
+- [11] `WLOP` — Consolidation of unorganized point clouds for surface reconstruction
+- [12] `EAR` — Edge-aware point set resampling
+- [13] `PUNet` — PU-Net: Point Cloud Upsampling Network
+- [14] `MPU` — Patch-based Progressive 3D Point Set Upsampling
+- [15] `PUGAN` — PU-GAN: a Point Cloud Upsampling Adversarial Network
+- [16] `PUGCN` — PU-GCN: Point Cloud Upsampling using Graph Convolutional Networks
+- [17] `PUTransformer` — PU-Transformer: Point Cloud Upsampling Transformer
+- [18] `MAFU` — Meta-PU: An Arbitrary-Scale Upsampling Network for Point Cloud
+- [19] `Grad-PU` — Grad-PU: Arbitrary-Scale Point Cloud Upsampling via Gradient Descent with Learned Distance Functions
+- [20] `SAPCU` — Self-Supervised Arbitrary-Scale Point Clouds Upsampling via Implicit Neural Representation
+- [21] `PUFlow` — PU-Flow: A Point Cloud Upsampling Network With Normalizing Flows
+- [22] `PUDM` — A Conditional Denoising Diffusion Probabilistic Model for Point Cloud Upsampling
+- [23] `RepKPU` — RepKPU: Point Cloud Upsampling with Kernel Point Representation and Deformation
+- [24] `GradNorm` — GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks
+- [25] `UncertaintyWeighting` — Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics
+- [26] `DWA` — End-to-End Multi-Task Learning with Attention
+- [27] `PCGrad` — Gradient Surgery for Multi-Task Learning
+- [28] `CAGrad` — Conflict-Averse Gradient Descent for Multi-task Learning
+- [29] `NashMTL` — Multi-Task Learning as a Bargaining Game
+- [30] `TamingTransformers` — Taming Transformers for High-Resolution Image Synthesis
+- [31] `PointSetGen` — A Point Set Generation Network for 3D Object Reconstruction from a Single Image
+- [32] `DensityAwareCD` — Density-aware Chamfer Distance as a Comprehensive Metric for Point Cloud Completion
+- [33] `SRCNN` — Image Super-Resolution Using Deep Convolutional Networks
+- [34] `EMDLoss` — The Earth Mover's Distance as a Metric for Image Retrieval
+- [35] `HausdorffMetric` — Comparing images using the Hausdorff distance
+- [36] `EC-Net` — EC-Net: an Edge-aware Point set Consolidation Network
+- [37] `iPUNet` — iPUNet:Iterative Cross Field Guided Point Cloud Upsampling
+- [38] `FPS` — The farthest point strategy for progressive image sampling
+- [39] `PointCNN` — PointCNN: Convolution On $\mathcal{X}$-Transformed Points
+- [40] `KPConv` — KPConv: Flexible and Deformable Convolution for Point Clouds
+- [41] `DGCNN` — Dynamic Graph CNN for Learning on Point Clouds
+- [42] `Transformer` — Attention Is All You Need
+- [43] `ViT` — An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
+- [44] `PCT` — PCT: Point cloud transformer
+- [45] `PointTransformer` — Point Transformer
+- [46] `PointTransformerV2` — Point Transformer V2: Grouped Vector Attention and Partition-based Pooling
+- [47] `PointTransformerV3` — Point Transformer V3: Simpler, Faster, Stronger
+- [48] `StratifiedTransformer` — Stratified Transformer for 3D Point Cloud Segmentation
+- [49] `FastPointTransformer` — Fast Point Transformer
+- [50] `TransformerSurvey3D` — Transformers in 3D Point Clouds: A Survey
+- [51] `DeepPointsConsolidation` — Deep points consolidation
+- [52] `Dis-PU` — Point Cloud Upsampling via Disentangled Refinement
+- [53] `PUCRN` — Point Cloud Upsampling via Cascaded Refinement Network
+- [54] `PUEVA` — PU-EVA: An Edge Vector based Approximation Solution for Flexible-scale Point Cloud Upsampling
+- [55] `PUDense` — Density-Imbalance-Eased LiDAR Point Cloud Upsampling via Feature Consistency Learning
+- [56] `NePs` — Neural Points: Point Cloud Representation with Neural Fields for Arbitrary Upsampling
+- [57] `PUSDF` — Parametric Surface Constrained Upsampler Network for Point Cloud
+- [58] `GAN` — Generative Adversarial Networks
+- [59] `LSGAN` — Least Squares Generative Adversarial Networks
+- [60] `WGAN` — Wasserstein GAN
+- [61] `WGANGP` — Improved Training of Wasserstein GANs
+- [62] `SNGAN` — Spectral Normalization for Generative Adversarial Networks
+- [63] `GANTrainTricks` — Improved Techniques for Training GANs
+- [64] `TTUR` — GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium
+- [65] `R1Reg` — Analyzing and Improving the Image Quality of StyleGAN
+- [66] `GANStability` — Which Training Methods for GANs do actually Converge?
+- [67] `Pix2Pix` — Image-to-Image Translation with Conditional Adversarial Networks
+- [68] `SRGAN` — Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network
+- [69] `ESRGAN` — ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks
+- [70] `LGAN` — Learning Representations and Generative Models for 3D Point Clouds
+- [71] `FoldingNet` — FoldingNet: Point Cloud Auto-encoder via Deep Grid Deformation
+- [72] `TreeGAN` — 3D Point Cloud Generative Adversarial Network Based on Tree Structured Graph Convolutions
+- [73] `P2PNet` — P2P-NET: Bidirectional Point Displacement Net for Shape Transform
+- [74] `ShapeGF` — Learning Gradient Fields for Shape Generation
+- [75] `PointDiffusion` — Diffusion Probabilistic Models for 3D Point Cloud Generation
+- [76] `LION` — LION: Latent Point Diffusion Models for 3D Shape Generation
+- [77] `PointCloudGenSurvey` — A Survey on Deep Geometry Learning: From a Representation Perspective
+- [78] `SAGAN` — Self-Attention Generative Adversarial Networks
+- [79] `GradVac` — Gradient Vaccine: Investigating and Improving Multi-task Optimization in Massively Multilingual Models
+- [80] `MGDA` — Multi-Task Learning as Multi-Objective Optimization
+- [81] `MTLSurvey` — Multi-Task Learning for Dense Prediction Tasks: A Survey

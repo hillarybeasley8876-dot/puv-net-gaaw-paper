@@ -1,5 +1,5 @@
 # 论文引用分配表（按章节预分配）
-> 本文 117 条引用按 `cite_in_chapter` 字段预分配到 7 章及子节。
+> 本文 116 条引用按 `cite_in_chapter` 字段预分配到 7 章及子节。
 > 写作时按分配表使用；如某节不足，可向相邻章节借调。
 
 ## 全部条目（按编号）
@@ -120,6 +120,8 @@
 | 112 | `PUDM` | upsampling-diffusion | 2023 | 2.1, 7.4 | A Conditional Denoising Diffusion Probabilistic Model for  |
 | 113 | `iPUNet` | upsampling-core | 2023 | 2.1 | iPUNet:Iterative Cross Field Guided Point Cloud Upsampling |
 | 114 | `PointTransformerV3` | point-transformer | 2023 | 2.2 | Point Transformer V3: Simpler, Faster, Stronger |
+| 115 | `RepKPU` | upsampling-core | 2024 | 2.3 | RepKPU: Point Cloud Upsampling with Kernel Point Represent |
+| 116 | `TamingTransformers` | adaptive-adversarial-weight | 2021 | 2.3, 2.4, 5.1, 5.5 | Taming Transformers for High-Resolution Image Synthesis |
 
 ## 按章节聚合（写入正文时的检索用）
 
@@ -197,7 +199,7 @@
 | 107 | Wu et al., 2022, *Point Transformer V2: Grouped Vector Attention and Part* | point-transformer |
 | 114 | Wu et al., 2023, *Point Transformer V3: Simpler, Faster, Stronger* | point-transformer |
 
-### §2.3（21 条）
+### §2.3（23 条）
 
 | # | 引用 | 主题 |
 |---|---|---|
@@ -222,8 +224,10 @@
 | 73 | Cai et al., 2020, *Learning Gradient Fields for Shape Generation* | point-gen |
 | 88 | Luo et al., 2021, *Diffusion Probabilistic Models for 3D Point Cloud Gener* | upsampling-diffusion |
 | 108 | Zeng et al., 2022, *LION: Latent Point Diffusion Models for 3D Shape Genera* | point-gen |
+| 115 | Rong et al., 2024, *RepKPU: Point Cloud Upsampling with Kernel Point Repres* | upsampling-core |
+| 116 | Esser et al., 2021, *Taming Transformers for High-Resolution Image Synthesis* | adaptive-adversarial-weight |
 
-### §2.4（11 条）
+### §2.4（12 条）
 
 | # | 引用 | 主题 |
 |---|---|---|
@@ -238,6 +242,7 @@
 | 87 | Liu et al., 2021, *Conflict-Averse Gradient Descent for Multi-task Learnin* | loss-balance |
 | 93 | Wu et al., 2021, *Density-aware Chamfer Distance as a Comprehensive Metri* | metric-cd |
 | 105 | Navon et al., 2022, *Multi-Task Learning as a Bargaining Game* | loss-balance |
+| 116 | Esser et al., 2021, *Taming Transformers for High-Resolution Image Synthesis* | adaptive-adversarial-weight |
 
 ### §3.1（8 条）
 
@@ -310,7 +315,7 @@
 |---|---|---|
 | 1 | Muller et al., 1989, *Statistical Power Analysis for the Behavioral Sciences* | statistics |
 
-### §5.1（9 条）
+### §5.1（10 条）
 
 | # | 引用 | 主题 |
 |---|---|---|
@@ -323,6 +328,7 @@
 | 67 | Paszke et al., 2019, *PyTorch: An Imperative Style, High-Performance Deep Lea* | toolchain |
 | 68 | Qian et al., 2019, *PU-GCN: Point Cloud Upsampling using Graph Convolutiona* | upsampling-core |
 | 72 | Uy et al., 2019, *Revisiting Point Cloud Classification: A New Benchmark * | dataset |
+| 116 | Esser et al., 2021, *Taming Transformers for High-Resolution Image Synthesis* | adaptive-adversarial-weight |
 
 ### §5.2（1 条）
 
@@ -336,6 +342,12 @@
 |---|---|---|
 | 1 | Muller et al., 1989, *Statistical Power Analysis for the Behavioral Sciences* | statistics |
 | 91 | Picard et al., 2021, *Torch.manual_seed(3407) is all you need: On the influen* | statistics |
+
+### §5.5（1 条）
+
+| # | 引用 | 主题 |
+|---|---|---|
+| 116 | Esser et al., 2021, *Taming Transformers for High-Resolution Image Synthesis* | adaptive-adversarial-weight |
 
 ### §6.1（5 条）
 
