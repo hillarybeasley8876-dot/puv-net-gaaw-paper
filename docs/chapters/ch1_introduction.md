@@ -78,7 +78,7 @@ PointNet 通过逐点多层感知机与对称池化解决了点云的置换不�
 
 Transformer 架构{{cite:Transformer}}被引入点云领域后，PCT{{cite:PCT}}与 Point Transformer{{cite:PointTransformer}}分别探索了全局注意力与局部向量注意力，为长程几何依赖建模提供了新途径。PU-Transformer 将该思路用于上采样任务，其位置融合模块编码邻域几何、通道偏移多头自注意力（SC-MSA）在通道维度划分并偏移注意力窗口，以较低代价扩展特征交互范围{{cite:PUTransformer}}。
 
-生成式方向上，生成对抗网络{{cite:GAN}}的目标函数经由 LSGAN{{cite:LSGAN}}、WGAN{{cite:WGAN}}与 WGAN-GP{{cite:WGANGP}}逐步改善了训练稳定性；在点云域，l-GAN 探索了隐空间生成{{cite:LGAN}}，TreeGAN 采用树结构图卷积生成器{{cite:TreeGAN}}。此外，扩散模型{{cite:PointDiffusion}}与归一化流{{cite:PUFlow}}亦被用于点云生成与上采样。需要注意的是，对抗训练在实践中存在梯度尺度与收敛稳定性问题{{cite:GANStability}}{{cite:TTUR}}，这构成本文将对抗分支定位为**辅助约束而非主创新**的直接依据。
+生成式方向上，生成对抗网络{{cite:GAN}}的目标函数经由 LSGAN{{cite:LSGAN}}、WGAN{{cite:WGAN}}与 WGAN-GP{{cite:WGANGP}}逐步改善了训练稳定性；在点云域，l-GAN 探索了隐空间生成{{cite:LGAN}}，TreeGAN 采用树结构图卷积生成器{{cite:TreeGAN}}。此外，扩散模型{{cite:PointDiffusion}}与归一化流{{cite:PUFlow}}亦被用于点云生成与上采样。需要注意的是，对抗训练在实践中存在梯度尺度与收敛稳定性问题{{cite:GANStability}}{{cite:TTUR}}，这正是本文把**对抗损失权重的给定方式**作为研究对象的直接依据：本文不改动对抗分支本身的结构或损失形式，而是针对其权重在训练过程中是否持续恰当这一具体问题展开测量与改进。
 
 ### 1.3.4 现有研究的主要不足
 
