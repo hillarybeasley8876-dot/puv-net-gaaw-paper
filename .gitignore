@@ -98,6 +98,13 @@ env/
 # 但负例表与审计器是长期资产，必须入仓（不在此目录下）。
 scripts/_tmp/
 
+# ---- 一次性回滚备份（不入仓）----
+# 引用编号替换（apply_cite_numbers.py --apply）与文献剔除会先写这两类备份，
+# 用于就地回滚。它们是替换前正文/文献库的完整副本，与 git 历史重复，
+# 且体积可观，故不入仓；需要回滚时用本地文件或 git revert。
+*.bak_cite
+*.bak_prune
+
 # ---- os ----
 Thumbs.db
 desktop.ini

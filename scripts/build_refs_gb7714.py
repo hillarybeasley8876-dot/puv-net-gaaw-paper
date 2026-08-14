@@ -116,6 +116,20 @@ lines.append("> 本表由 `scripts/build_refs_gb7714.py` 从 `docs/REFERENCES.js
 lines.append("> 排版要求：宋体 10.5pt，行距固定值 16pt，悬挂缩进 21pt。")
 lines.append("> **本文件为生成产物，不要手工编辑**；如需修正条目请改 `REFERENCES.json` 后重新生成。")
 lines.append("")
+# 编号空档说明：正文 [N] 已定稿，剔除未引用条目后不重编号，否则引用错位。
+_nums = sorted(int(r["number"]) for r in refs)
+_gaps = [n for n in range(_nums[0], _nums[-1] + 1) if n not in set(_nums)]
+if _gaps:
+    lines.append(f"> **关于编号不连续**：本表共 {len(refs)} 条，"
+                 f"编号范围 {_nums[0]}–{_nums[-1]}，其中 {len(_gaps)} 个编号空缺。"
+                 "原因是文献库初稿收录了部分正文最终未引用的条目，"
+                 "按「参考文献须与正文引用一一对应」的规范予以剔除；"
+                 "而正文中的引用编号已定稿，重新编号会造成引用错位，"
+                 "故保留原编号并容许空档。"
+                 "被剔除条目及其理由完整记录于 `docs/REFERENCES.json` 的 "
+                 "`excluded_unused` 字段，可供核查。")
+    lines.append(f"> 空缺编号：{', '.join(str(n) for n in _gaps)}。")
+    lines.append("")
 lines.append("---")
 lines.append("")
 
