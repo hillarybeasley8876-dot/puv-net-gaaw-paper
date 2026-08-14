@@ -1,0 +1,214 @@
+"""
+第 5 章硬红线审计：
+  ① 越界句式扫描（STYLE_GUIDE §2.9 禁线）
+  ② 正文数字逐条回溯到存档 json（B 类断言纪律）
+  ③ 跨机器红线：不得跨机并列
+  ④ 标题层级（无 4 级）
+  ⑤ 图表文件真实存在
+
+关键设计：受检数量必须达到预期量级，否则视为通道失效（假绿防护）。
+"""
+import json, os, re, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CH5 = os.path.join(ROOT, "docs/chapters/ch5_experiments.md")
+text = open(CH5, encoding="utf-8").read()
+
+cv = json.loads(open(os.path.join(ROOT, "docs/_cv_nn_measure.json"), encoding="utf-8").read())
+spk = json.loads(open(os.path.join(ROOT, "docs/_hd_spike_table.json"), encoding="utf-8").read())
+rho = json.loads(open(os.path.join(ROOT, "runs/rho_trace_B2.json"), encoding="utf-8").read())
+
+def plat(run):
+    d = json.loads(open(os.path.join(ROOT, f"runs/{run}/summary_stats.json"), encoding="utf-8").read())
+    return d.get("plateau", d)
+
+fails = []
+
+# ============================================================
+print("=" * 74)
+print("① 越界句式扫描（§2.9 禁线）")
+print("=" * 74)
+BANNED = [
+    (r"大家争论|学界争议|学界共识|普遍认为|公认为|众所周知", "把推断包装成学界共识"),
+    (r"前人未[关注讨论及意识涉及研究]|目前无人[研究讨论]|尚无人", "替学界作证未做的事"),
+    (r"已有文献尚未提供|文献未[给报]", "声明文献未做的事"),
+]
+hit = 0
+for pat, why in BANNED:
+    for m in re.finditer(pat, text):
+        ln = text[:m.start()].count("\n") + 1
+        print(f"  ❌ L{ln}  「{m.group(0)}」 — {why}")
+        hit += 1
+if hit == 0:
+    print("  ✅ 无越界句式")
+else:
+    fails.append(f"越界句式 {hit} 处")
+
+# ============================================================
+print()
+print("=" * 74)
+print("② 数字逐条回溯")
+print("=" * 74)
+
+base3090 = cv['runs']['B002_baseline150']['cv_nn']['mean']
+base5090 = cv['runs']['B002_baseline150_5090']['cv_nn']['mean']
+
+def d2se(run):
+    v = cv['runs'][run]
+    b = cv['runs']['B002_baseline150_5090' if v['gpu'] == '5090' else 'B002_baseline150']
+    d = v['cv_nn']['mean'] - b['cv_nn']['mean']
+    sp = (b['cv_nn']['se_sample']**2 + v['cv_nn']['se_sample']**2) ** 0.5
+    return d / b['cv_nn']['mean'] * 100, d / (2 * sp)
+
+FACTS = []
+# cv_nn 全表
+for run in ['B002_baseline150','B002_baseline150_5090','ABL_A1_cd_balance','ABL_A2_cd_boost_bwd',
+            'ABL_C1_uniform','ABL_D1_scale_qk','ABL_AC_combo','ABL_B1_adv_fixed','ABL_B2_adv_adaptive']:
+    FACTS.append((f"{run} cv_nn", cv['runs'][run]['cv_nn']['mean'], 6))
+    FACTS.append((f"{run} Q4/Q1", cv['runs'][run]['strata']['q4_over_q1'], 4))
+# 相对变化与 2SE
+for run in ['ABL_A1_cd_balance','ABL_A2_cd_boost_bwd','ABL_C1_uniform','ABL_D1_scale_qk',
+            'ABL_AC_combo','ABL_B1_adv_fixed','ABL_B2_adv_adaptive']:
+    p, s = d2se(run)
+    FACTS.append((f"{run} Δ%", abs(p), 2))
+    FACTS.append((f"{run} Δ/2SE", abs(s), 2))
+# CD/HD/NUC
+for run in ['B002_baseline150','ABL_A1_cd_balance','ABL_A2_cd_boost_bwd','ABL_C1_uniform',
+            'ABL_D1_scale_qk','ABL_AC_combo','B002_baseline150_5090','ABL_B1_adv_fixed','ABL_B2_adv_adaptive']:
+    pp = plat(run)
+    FACTS.append((f"{run} CD", pp['cd']['plateau_mean'], 6))
+    FACTS.append((f"{run} HD", pp['hd']['plateau_mean'], 6))
+    FACTS.append((f"{run} NUC", pp['nuc']['plateau_mean'], 6))
+# HD 尖峰表
+for run, d in spk['runs'].items():
+    FACTS.append((f"{run} spikes_unified", d['spikes_unified'], 0))
+    FACTS.append((f"{run} spikes_own", d['spikes_own_scale'], 0))
+    FACTS.append((f"{run} HD max", d['max'], 6))
+FACTS.append(("unified threshold", spk['unified_threshold'], 5))
+# rho
+FACTS.append(("rho span", rho['stats_rho_hat']['decades'], 0))
+FACTS.append(("rho plateau median", rho['stats_rho_plateau']['median'], 2))
+FACTS.append(("rho fixed", rho['doc_calibration']['rho'], 6))
+FACTS.append(("rho b2_frac_below", rho['doc_calibration']['b2_frac_below'] * 100, 1))
+
+def in_text(val, prec):
+    """正文里是否出现该数值（按精度容差匹配，非字符串精确匹配）。"""
+    if prec == 0:
+        cands = [f"{val:.0f}", f"{val:,.0f}", f"{val:.2e}", f"{val/1e6:.2f}"]
+    else:
+        cands = [f"{val:.{prec}f}", f"{val:.{max(prec-1,0)}f}", f"{val:.{prec+1}f}"]
+    return any(c in text for c in cands), cands[0]
+
+checked = found = 0
+missing = []
+for tag, val, prec in FACTS:
+    checked += 1
+    ok, shown = in_text(val, prec)
+    if ok:
+        found += 1
+    else:
+        missing.append((tag, shown))
+
+print(f"  受检数字事实: {checked}")
+print(f"  正文中命中  : {found}")
+print(f"  未在正文出现: {len(missing)}（属正常——并非所有存档量都需写入正文）")
+# 关键数字必须出现（这些是结论所依赖的）
+MUST = [
+    ("C1 cv_nn", cv['runs']['ABL_C1_uniform']['cv_nn']['mean'], 6),
+    ("B2 cv_nn", cv['runs']['ABL_B2_adv_adaptive']['cv_nn']['mean'], 6),
+    ("B1 cv_nn", cv['runs']['ABL_B1_adv_fixed']['cv_nn']['mean'], 6),
+    ("B2 CD", plat('ABL_B2_adv_adaptive')['cd']['plateau_mean'], 6),
+    ("B1 CD", plat('ABL_B1_adv_fixed')['cd']['plateau_mean'], 6),
+    ("A2 NUC", plat('ABL_A2_cd_boost_bwd')['nuc']['plateau_mean'], 6),
+    ("B2 spikes_unified", spk['runs']['ABL_B2_adv_adaptive']['spikes_unified'], 0),
+    ("B1 spikes_unified", spk['runs']['ABL_B1_adv_fixed']['spikes_unified'], 0),
+    ("rho plateau median", rho['stats_rho_plateau']['median'], 2),
+    ("rho b2_frac", rho['doc_calibration']['b2_frac_below'] * 100, 1),
+]
+print()
+print("  --- 结论关键数字（必须出现在正文）---")
+must_fail = 0
+for tag, val, prec in MUST:
+    ok, shown = in_text(val, prec)
+    print(f"    {'✅' if ok else '❌'} {tag:24s} {shown}")
+    if not ok:
+        must_fail += 1
+if must_fail:
+    fails.append(f"结论关键数字缺失 {must_fail} 项")
+
+# 受检数量守卫（防通道失效假绿）
+if checked < 60:
+    print(f"  ❌ 受检数量 {checked} < 60，通道疑似失效")
+    fails.append("受检数量异常偏低")
+
+# ============================================================
+print()
+print("=" * 74)
+print("③ 跨机器红线（表内不得跨机并列）")
+print("=" * 74)
+# 检查每个 markdown 表格：若同表出现 3090 与 5090 的 run，必须有机器列
+tables = re.findall(r"(\|[^\n]*\|\n\|[\s:|-]+\|\n(?:\|[^\n]*\|\n)+)", text)
+print(f"  检出 markdown 表格: {len(tables)} 个")
+bad = 0
+R3090 = ['B002_baseline150','ABL_A1_cd_balance','ABL_A2_cd_boost_bwd','ABL_C1_uniform','ABL_D1_scale_qk','ABL_AC_combo']
+R5090 = ['B002_baseline150_5090','ABL_B1_adv_fixed','ABL_B2_adv_adaptive']
+for i, t in enumerate(tables):
+    # 5090 名字含 3090 名字（B002_baseline150 是 B002_baseline150_5090 的前缀），先剔除 5090 再判
+    t_ = t.replace('B002_baseline150_5090', '@@5090BASE@@')
+    has3 = any(r in t_ for r in R3090) or '3090' in t_
+    has5 = '@@5090BASE@@' in t_ or any(r in t_ for r in R5090[1:]) or '5090' in t_
+    if has3 and has5:
+        has_gpu_col = ('机器' in t.split('\n')[0]) or ('gpu' in t.split('\n')[0].lower())
+        print(f"    表{i+1}: 同表含两机数据 — 机器列={'有 ✅' if has_gpu_col else '无 ❌'}")
+        if not has_gpu_col:
+            bad += 1
+if bad == 0:
+    print("  ✅ 无违规跨机并列（含两机的表均有机器列）")
+else:
+    fails.append(f"跨机并列违规 {bad} 处")
+
+# ============================================================
+print()
+print("=" * 74)
+print("④ 标题层级")
+print("=" * 74)
+lv = [len(m) for m in re.findall(r"^(#{1,6}) ", text, re.M)]
+from collections import Counter
+for k, v in sorted(Counter(lv).items()):
+    print(f"  {'#'*k:<7} × {v}")
+if any(x >= 4 for x in lv):
+    print("  ❌ 出现 4 级及以上标题（FORMAT_TONGJI §2.1 禁线）")
+    fails.append("标题层级违规")
+else:
+    print("  ✅ 无 4 级及以上标题")
+
+# ============================================================
+print()
+print("=" * 74)
+print("⑤ 图表文件存在性")
+print("=" * 74)
+FIGS = [
+    "paper_assets_TRIAL/figures_ch5/F5_1_B2_vs_B1.png",
+    "paper_assets_TRIAL/figures_ch5/F5_2_verdicts.png",
+    "paper_assets_TRIAL/figures_ch5/F5_3_HD_per_epoch.png",
+    "paper_assets_TRIAL/figures_ch5/F5_4_tradeoff.png",
+    "paper_assets_TRIAL/figures_ch4/F4_1_rho_curve_B2.png",
+]
+for f in FIGS:
+    p = os.path.join(ROOT, f)
+    ok = os.path.exists(p)
+    sz = os.path.getsize(p) if ok else 0
+    print(f"  {'✅' if ok else '❌'} {f:52s} {sz:>8} B")
+    if not ok:
+        fails.append(f"缺图 {f}")
+
+# ============================================================
+print()
+print("=" * 74)
+print("汇总")
+print("=" * 74)
+if not fails:
+    print("✅ 全部硬红线通过")
+else:
+    print("❌ " + " / ".join(fails))
+    sys.exit(1)

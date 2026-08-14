@@ -1,0 +1,76 @@
+"""
+HD 尖峰计数复核 —— 关系到论文是否要写「GAAW 训练稳定性更差」这一不利结论。
+多口径同看，防单一阈值造成的结论翻转。
+"""
+import json, os
+import numpy as np
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+RUNS = ['B002_baseline150_5090', 'ABL_B1_adv_fixed', 'ABL_B2_adv_adaptive']
+
+def hist(run):
+    return json.loads(open(os.path.join(ROOT, f"runs/{run}/history.json"), encoding="utf-8").read())
+
+print("=" * 78)
+print("HD 尖峰计数多口径复核（平台区 epoch 75-149, n=75）")
+print("=" * 78)
+
+# 先确认 HD 的键名
+h0 = hist(RUNS[0])
+hd_keys = [k for k in h0[0].keys() if 'hd' in k.lower()]
+print(f"  history.json 中含 'hd' 的键: {hd_keys}")
+KEY = hd_keys[0] if hd_keys else None
+print(f"  使用键: {KEY}")
+print()
+
+results = {}
+for run in RUNS:
+    h = hist(run)
+    pl = np.array([r[KEY] for r in h if r['epoch'] >= 75], dtype=float)
+    med = float(np.median(pl))
+    mad = float(np.median(np.abs(pl - med)))
+    mean = float(pl.mean())
+    std = float(pl.std(ddof=1))
+    p90 = float(np.percentile(pl, 90))
+    results[run] = dict(pl=pl, med=med, mad=mad, mean=mean, std=std, p90=p90)
+
+print(f"  {'run':26s} {'median':>9s} {'MAD':>9s} {'mean':>9s} {'std':>9s} {'max':>9s}")
+for run, r in results.items():
+    print(f"  {run:26s} {r['med']:>9.6f} {r['mad']:>9.6f} {r['mean']:>9.6f} {r['std']:>9.6f} {r['pl'].max():>9.6f}")
+
+print()
+print("  === 多口径尖峰计数 ===")
+CRITERIA = [
+    ("median + 3*1.4826*MAD (自身尺度)", lambda r: r['med'] + 3 * 1.4826 * r['mad']),
+    ("median + 5*1.4826*MAD (自身尺度)", lambda r: r['med'] + 5 * 1.4826 * r['mad']),
+    ("mean + 3*std (自身尺度)",          lambda r: r['mean'] + 3 * r['std']),
+    ("2x median (自身尺度)",              lambda r: 2 * r['med']),
+]
+# 关键：还要加一个「统一绝对阈值」口径 —— 用 baseline 的阈值套到所有 run，
+# 否则「自身尺度」会让波动大的 run 阈值也高，掩盖真实差异（这是最容易出错的地方）
+base_r = results['B002_baseline150_5090']
+CRITERIA.append(("baseline 的 median+3MAD（统一绝对阈值）",
+                 lambda r, b=base_r: b['med'] + 3 * 1.4826 * b['mad']))
+
+for label, fn in CRITERIA:
+    print(f"\n  [{label}]")
+    for run, r in results.items():
+        thr = fn(r)
+        n = int((r['pl'] > thr).sum())
+        print(f"     {run:26s} thr={thr:.6f}  spikes={n:>3d}")
+
+print()
+print("=" * 78)
+print("结论判定")
+print("=" * 78)
+print("""
+  关键区分：
+  - 「自身尺度」阈值 = 每个 run 用自己的 median/MAD 算阈值
+    → 波动大的 run 阈值也高，会低估其尖峰数（对 B2 有利，不能单用）
+  - 「统一绝对阈值」= 全部 run 用 baseline 的阈值
+    → 直接比较绝对波动幅度（这才是「谁更不稳」的正确口径）
+
+  论文写法：必须报「统一绝对阈值」口径，并同时给出自身尺度口径作为对照，
+  说明结论在两个口径下是否一致。若不一致，如实说明并不下强结论。
+""")

@@ -142,7 +142,9 @@ def main() -> int:
         ax.grid(True, ls=":", alpha=0.42)
         ax.legend(fontsize=8.0, loc="lower right", framealpha=0.93)
 
-    fig.suptitle("Fig. 5-3  Uniformity / geometry trade-off across ablations "
+    # 图号跟随正稿章号：权衡平面属第 6 章 §6.5.4 → 图 6-2。
+    # （文件名沿用 F5_3_* 不改，避免打断既有 .meta.json 与引用路径。）
+    fig.suptitle("Fig. 6-2  Uniformity / geometry trade-off across ablations "
                  "(dashed cross = per-host baseline)", fontsize=11.5, y=0.985)
     fig.tight_layout(rect=(0, 0.135, 1, 0.955))
     fig.text(0.5, 0.004, CAVEAT, ha="center", va="bottom", fontsize=7.1,

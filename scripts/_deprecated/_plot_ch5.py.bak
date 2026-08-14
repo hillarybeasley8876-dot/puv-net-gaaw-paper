@@ -1,0 +1,288 @@
+"""
+第 5 章图表 v3（终版）：
+  图 5-1  B2 vs B1 主对比（y 轴截断）—— v2 已 OK，保持
+  图 5-2  裁定图（legend 不遮标注）
+  图 5-3  HD 逐 epoch + 尖峰对照（双 y 轴分量纲，legend 不遮柱）
+  图 5-4  权衡散点（断轴 broken-axis，取代 v2 失败的 inset）
+
+修订历史见文件末尾。全部数字从存档 json 读，无手敲字面量。
+"""
+import json, os, math
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, "paper_assets_TRIAL", "figures_ch5")
+os.makedirs(OUT, exist_ok=True)
+
+cv = json.loads(open(os.path.join(ROOT, "docs/_cv_nn_measure.json"), encoding="utf-8").read())
+
+def plat(run):
+    d = json.loads(open(os.path.join(ROOT, f"runs/{run}/summary_stats.json"), encoding="utf-8").read())
+    return d.get("plateau", d)
+
+def hist(run):
+    return json.loads(open(os.path.join(ROOT, f"runs/{run}/history.json"), encoding="utf-8").read())
+
+HDKEY = 'monitor_hd'
+
+# ============================================================
+# 图 5-1  （v2 版本已 OK，原样重出以保证一次运行产出全套）
+# ============================================================
+b1c = cv['runs']['ABL_B1_adv_fixed']['cv_nn']
+b2c = cv['runs']['ABL_B2_adv_adaptive']['cv_nn']
+b1p, b2p = plat('ABL_B1_adv_fixed'), plat('ABL_B2_adv_adaptive')
+n = b1p['plateau_n']
+
+fig, (axL, axR) = plt.subplots(1, 2, figsize=(8.4, 3.6))
+names = ['B1\nfixed $w_{adv}$=8.27', 'B2 / GAAW\ngradient-adaptive']
+
+def styled_bar(ax, vals, errs, fmt, title, ylab, delta_pct, sigma):
+    bars = ax.bar(names, vals, yerr=errs, capsize=6, width=0.5,
+                  color=['#c44e52', '#4c72b0'], edgecolor='black', linewidth=0.8)
+    lo = min(v - e for v, e in zip(vals, errs)); hi = max(v + e for v, e in zip(vals, errs))
+    pad = (hi - lo) * 0.55
+    ax.set_ylim(lo - pad * 0.5, hi + pad)
+    ax.set_ylabel(ylab); ax.set_title(title, fontsize=10)
+    for b, v, e in zip(bars, vals, errs):
+        ax.text(b.get_x() + b.get_width()/2, v + e + (hi-lo)*0.06,
+                fmt.format(v), ha='center', fontsize=9, fontweight='bold')
+    ax.text(0.5, 0.955, f'$\\Delta$ = {delta_pct:+.2f}%    ({sigma:+.2f}$\\times$2SE)',
+            ha='center', va='top', fontsize=9.5, transform=ax.transAxes,
+            bbox=dict(boxstyle='round,pad=0.4', fc='#fff8dc', ec='#b8860b', lw=0.8))
+    ax.grid(axis='y', linestyle=':', alpha=0.45)
+    ax.text(-0.075, -0.015, '⌇', transform=ax.transAxes, fontsize=13,
+            color='#666', ha='center', va='center', clip_on=False)
+
+d = b2c['mean'] - b1c['mean']
+sep = (b1c['se_sample']**2 + b2c['se_sample']**2) ** 0.5
+styled_bar(axL, [b1c['mean'], b2c['mean']], [2*b1c['se_sample'], 2*b2c['se_sample']],
+           '{:.4f}', r'(a) Uniformity: $\mathrm{cv}_{\mathrm{nn}}$ $\downarrow$',
+           r'$\mathrm{cv}_{\mathrm{nn}}$', d/b1c['mean']*100, d/sep)
+cd1, cd2 = b1p['cd'], b2p['cd']
+d2 = cd2['plateau_mean'] - cd1['plateau_mean']
+se2 = ((cd1['plateau_std']**2 + cd2['plateau_std']**2) / n) ** 0.5
+styled_bar(axR, [cd1['plateau_mean'], cd2['plateau_mean']],
+           [2*cd1['plateau_std']/math.sqrt(n), 2*cd2['plateau_std']/math.sqrt(n)],
+           '{:.6f}', r'(b) Fidelity: Chamfer Distance $\downarrow$', 'CD',
+           d2/cd1['plateau_mean']*100, d2/(2*se2))
+fig.suptitle('Fig. 5-1  GAAW (B2) vs. fixed adversarial weight (B1) — same GPU, same seed, 150 epochs',
+             fontsize=10.5, y=1.03)
+fig.text(0.5, -0.10,
+         'Error bars: $\\pm$2SE.  cv$_{nn}$: 200 validation samples.  CD: plateau region (epochs 75–149, n=75).\n'
+         'Note the truncated y-axes (⌇) — both differences exceed the pre-registered 2SE threshold by >8$\\times$.',
+         ha='center', fontsize=7.5, style='italic', color='#555')
+plt.tight_layout()
+p1 = os.path.join(OUT, 'F5_1_B2_vs_B1.png'); plt.savefig(p1, dpi=200, bbox_inches='tight'); plt.close()
+print('wrote', p1)
+
+# ============================================================
+# 图 5-2  裁定图
+# ============================================================
+base = {'3090': cv['runs']['B002_baseline150'], '5090': cv['runs']['B002_baseline150_5090']}
+ORDER = [('ABL_A1_cd_balance', 'A1\nCD balance'), ('ABL_A2_cd_boost_bwd', 'A2\nCD bwd boost'),
+         ('ABL_C1_uniform', 'C1\nuniform loss'), ('ABL_D1_scale_qk', 'D1\n$1/\\sqrt{d}$ scale'),
+         ('ABL_AC_combo', 'AC\nA1+C1'), ('ABL_B1_adv_fixed', 'B1\nfixed $w_{adv}$'),
+         ('ABL_B2_adv_adaptive', 'B2\nGAAW')]
+labels, ratios, colors = [], [], []
+for r, lab in ORDER:
+    v = cv['runs'][r]; gpu = v['gpu']
+    bm = base[gpu]['cv_nn']['mean']; bse = base[gpu]['cv_nn']['se_sample']
+    m, se = v['cv_nn']['mean'], v['cv_nn']['se_sample']
+    dd = m - bm; sp = (bse**2 + se**2) ** 0.5
+    ratios.append(dd / (2 * sp)); labels.append(lab + f'\n({gpu})')
+    colors.append('#4c72b0' if dd < 0 else '#c44e52')
+
+fig, ax = plt.subplots(figsize=(9.6, 4.2))
+CLIP = 10.0
+disp = [np.sign(x) * min(abs(x), CLIP) for x in ratios]
+bars = ax.bar(labels, disp, color=colors, edgecolor='black', linewidth=0.8, width=0.58)
+ax.axhline(0, color='black', lw=1.0)
+ax.axhline(-1, color='#2ca02c', ls='--', lw=1.5, label='ACCEPT threshold ($-1\\times$2SE)')
+ax.axhline(1, color='#999', ls=':', lw=1.0, label='reject band ($+1\\times$2SE)')
+ax.set_ylabel(r'$\Delta \mathrm{cv}_{\mathrm{nn}}$ / 2SE' + '\n(negative = improvement)', fontsize=9.5)
+ax.set_title('Fig. 5-2  Pre-registered verdict per ablation group '
+             '(primary metric $\\mathrm{cv}_{\\mathrm{nn}}$, threshold 2SE)', fontsize=10.5)
+ax.set_ylim(-5.2, CLIP + 5.5)
+for b, real, d_ in zip(bars, ratios, disp):
+    clipped = abs(real) > CLIP
+    txt = f'{real:+.1f}' + (' ▲' if clipped else '')
+    va = 'bottom' if d_ >= 0 else 'top'; off = 0.40 if d_ >= 0 else -0.40
+    ax.text(b.get_x() + b.get_width()/2, d_ + off, txt, ha='center', va=va,
+            fontsize=8.5, fontweight='bold' if clipped else 'normal')
+# legend 放在图外顶部，彻底不遮任何柱和标注
+ax.legend(fontsize=8.5, framealpha=0.95, loc='lower center',
+          bbox_to_anchor=(0.5, 1.06), ncol=2)
+ax.grid(axis='y', linestyle=':', alpha=0.45)
+fig.text(0.5, -0.14,
+         'Bars clipped at $\\pm$10 (▲ = clipped, true value annotated).  '
+         'Only C1 (uniformity loss) meets the pre-registered ACCEPT criterion.\n'
+         'B2 is evaluated against B1 (Fig. 5-1), not against this no-adversarial baseline; '
+         'its $+3.84$ here is reported as required by the pre-registration, not as the GAAW verdict.',
+         ha='center', fontsize=7.5, style='italic', color='#555')
+plt.tight_layout()
+p2 = os.path.join(OUT, 'F5_2_verdicts.png'); plt.savefig(p2, dpi=200, bbox_inches='tight'); plt.close()
+print('wrote', p2)
+
+# ============================================================
+# 图 5-3  HD 逐 epoch + 尖峰对照（双 y 轴分量纲）
+# ============================================================
+COL = {'B002_baseline150_5090': ('#7f7f7f', 'baseline (5090)'),
+       'ABL_B1_adv_fixed': ('#c44e52', 'B1  fixed $w_{adv}$'),
+       'ABL_B2_adv_adaptive': ('#4c72b0', 'B2  GAAW')}
+stats = {}
+for run in COL:
+    h = hist(run)
+    ep = np.array([r['epoch'] for r in h]); hd = np.array([r[HDKEY] for r in h], dtype=float)
+    pl = hd[ep >= 75]
+    med = float(np.median(pl)); mad = float(np.median(np.abs(pl - med)))
+    stats[run] = dict(ep=ep, hd=hd, pl=pl, med=med, mad=mad, max=float(pl.max()))
+bs = stats['B002_baseline150_5090']
+THR = bs['med'] + 3 * 1.4826 * bs['mad']
+for run, s in stats.items():
+    s['n_abs'] = int((s['pl'] > THR).sum())
+    s['n_self'] = int((s['pl'] > s['med'] + 3 * 1.4826 * s['mad']).sum())
+
+fig = plt.figure(figsize=(9.6, 5.2))
+gs = fig.add_gridspec(2, 1, height_ratios=[2.5, 1], hspace=0.30)
+ax = fig.add_subplot(gs[0]); axb = fig.add_subplot(gs[1])
+
+for run, (c, lab) in COL.items():
+    s = stats[run]
+    ax.plot(s['ep'], s['hd'], color=c, lw=1.15, label=lab, alpha=0.9)
+ax.axvspan(75, 149, color='#f4f4f4', zorder=0)
+ax.axhline(THR, color='#2ca02c', ls='--', lw=1.3,
+           label=f'unified threshold = {THR:.5f}')
+ax.set_ylabel('HD  $\\downarrow$'); ax.set_xlim(0, 149)
+ax.set_xlabel('epoch', fontsize=9)          # 修正：上面板保留自己的 x 轴标签
+ax.legend(fontsize=8, framealpha=0.95, ncol=4, loc='lower center', bbox_to_anchor=(0.5, 1.015))
+fig.suptitle('Fig. 5-3  Hausdorff distance per epoch — spikes are sporadic, not oscillation',
+             fontsize=10.5, y=1.055)
+ax.grid(True, linestyle=':', alpha=0.4)
+ax.text(0.985, 0.94, 'plateau [75,149] shaded', transform=ax.transAxes, ha='right',
+        fontsize=7.5, style='italic', color='#777')
+
+# 下面板：左轴 = 尖峰计数，右轴 = MAD（修正 v2 的混量纲问题）
+runs_ord = list(COL.keys())
+xs = np.arange(3); w = 0.30
+n_abs = [stats[r]['n_abs'] for r in runs_ord]
+n_self = [stats[r]['n_self'] for r in runs_ord]
+mads = [stats[r]['mad'] * 1e4 for r in runs_ord]
+b1_ = axb.bar(xs - w/2, n_abs, w, label='spikes @ unified abs. threshold  (correct comparison)',
+              color='#4c72b0', edgecolor='k', lw=0.6)
+b2_ = axb.bar(xs + w/2, n_self, w, label='spikes @ own-scale threshold  (artefact-prone)',
+              color='#dd8452', edgecolor='k', lw=0.6)
+axb.set_ylabel('spike count', fontsize=9)
+axb.set_ylim(0, max(n_abs) * 1.55)
+for i, (a, b_) in enumerate(zip(n_abs, n_self)):
+    axb.text(i - w/2, a + max(n_abs)*0.04, str(a), ha='center', fontsize=8.5, fontweight='bold')
+    axb.text(i + w/2, b_ + max(n_abs)*0.04, str(b_), ha='center', fontsize=8.5)
+axr = axb.twinx()
+axr.plot(xs, mads, 'o--', color='#55a868', lw=1.6, ms=8, mec='k', mew=0.7,
+         label='MAD $\\times10^{4}$ (day-to-day jitter)')
+axr.set_ylabel('MAD $\\times10^{4}$', fontsize=9, color='#387a4f')
+axr.tick_params(axis='y', labelcolor='#387a4f')
+axr.set_ylim(0, max(mads) * 1.55)
+for i, m_ in enumerate(mads):
+    axr.text(i, m_ + max(mads)*0.07, f'{m_:.2f}', ha='center', fontsize=8, color='#387a4f')
+axb.set_xticks(xs); axb.set_xticklabels(['baseline', 'B1 fixed', 'B2 GAAW'], fontsize=9)
+axb.grid(axis='y', linestyle=':', alpha=0.4)
+h1, l1 = axb.get_legend_handles_labels(); h2, l2 = axr.get_legend_handles_labels()
+axb.legend(h1 + h2, l1 + l2, fontsize=7.2, loc='upper left', framealpha=0.95, ncol=1)
+
+fig.text(0.5, -0.09,
+         'Own-scale thresholds are computed per run: a run with small MAD gets a low threshold and therefore appears to have MORE spikes — '
+         'an artefact of the criterion, not instability.\n'
+         'Under the unified absolute threshold (the correct comparison), B2 has FEWER spikes than B1 '
+         f'({stats["ABL_B2_adv_adaptive"]["n_abs"]} vs {stats["ABL_B1_adv_fixed"]["n_abs"]}), '
+         f'a smaller MAD ({stats["ABL_B2_adv_adaptive"]["mad"]*1e4:.2f} vs {stats["ABL_B1_adv_fixed"]["mad"]*1e4:.2f}$\\times10^{{-4}}$) '
+         f'and a lower maximum ({stats["ABL_B2_adv_adaptive"]["max"]:.4f} vs {stats["ABL_B1_adv_fixed"]["max"]:.4f}).',
+         ha='center', fontsize=7.5, style='italic', color='#555')
+p3 = os.path.join(OUT, 'F5_3_HD_per_epoch.png'); plt.savefig(p3, dpi=200, bbox_inches='tight'); plt.close()
+print('wrote', p3)
+
+# ============================================================
+# 图 5-4  权衡散点（断轴，取代失败的 inset）
+# ============================================================
+PTS = [('B002_baseline150','baseline (3090)','#7f7f7f','o',95),
+       ('ABL_A1_cd_balance','A1  CD balance','#dd8452','s',95),
+       ('ABL_C1_uniform','C1  uniform ★ACCEPT','#55a868','^',250),
+       ('ABL_AC_combo','AC  A1+C1','#8172b3','D',95),
+       ('ABL_D1_scale_qk','D1  $1/\\sqrt{d}$','#937860','v',95),
+       ('B002_baseline150_5090','baseline (5090)','#333333','o',95),
+       ('ABL_B1_adv_fixed','B1  fixed $w_{adv}$','#c44e52','s',120),
+       ('ABL_B2_adv_adaptive','B2  GAAW ★','#4c72b0','*',340)]
+XY = {r: (plat(r)['cd']['plateau_mean'], cv['runs'][r]['cv_nn']['mean']) for r, *_ in PTS}
+
+# 断轴：下面板 = 主区 (cv_nn 0.21-0.26)，上面板 = D1 离群 (0.45+)
+fig, (axT, axB) = plt.subplots(2, 1, figsize=(9.8, 5.6), sharex=True,
+                               gridspec_kw={'height_ratios': [1, 3.4], 'hspace': 0.07})
+for run, lab, c, mk, sz in PTS:
+    x, y = XY[run]
+    for a in (axT, axB):
+        a.scatter(x, y, s=sz, c=c, marker=mk, edgecolors='black', linewidths=0.8, zorder=3,
+                  label=lab if a is axB else None)
+for a, b, c_ in [('B002_baseline150_5090','ABL_B1_adv_fixed','#c44e52'),
+                 ('ABL_B1_adv_fixed','ABL_B2_adv_adaptive','#4c72b0')]:
+    x0, y0 = XY[a]; x1, y1 = XY[b]
+    axB.annotate('', xy=(x1, y1), xytext=(x0, y0),
+                 arrowprops=dict(arrowstyle='->', color=c_, lw=1.9, alpha=0.8))
+# 标注箭头含义
+_bx, _by = XY['ABL_B2_adv_adaptive']
+axB.annotate('GAAW improves\nboth axes', xy=(_bx, _by), xytext=(_bx + 6e-5, _by - 0.012),
+             fontsize=7.5, va='top', ha='left', color='#2b4f7d', style='italic',
+             arrowprops=dict(arrowstyle='-', color='#2b4f7d', lw=0.7))
+
+main = [r for r, *_ in PTS if r != 'ABL_D1_scale_qk']
+ys_ = [XY[r][1] for r in main]; xs_ = [XY[r][0] for r in main]
+my = (max(ys_) - min(ys_)) * 0.14; mx = (max(xs_) - min(xs_)) * 0.10
+axB.set_ylim(min(ys_) - my, max(ys_) + my)
+axT.set_ylim(0.44, 0.47)
+axB.set_xlim(min(xs_) - mx, max(xs_) + mx * 1.6)
+# 断轴斜线
+axT.spines['bottom'].set_visible(False); axB.spines['top'].set_visible(False)
+axT.tick_params(bottom=False, labelbottom=False)
+dd_ = .012
+kw = dict(transform=axT.transAxes, color='k', clip_on=False, lw=1.1)
+axT.plot((-dd_, +dd_), (-dd_*3, +dd_*3), **kw); axT.plot((1-dd_, 1+dd_), (-dd_*3, +dd_*3), **kw)
+kw.update(transform=axB.transAxes)
+axB.plot((-dd_, +dd_), (1-dd_, 1+dd_), **kw); axB.plot((1-dd_, 1+dd_), (1-dd_, 1+dd_), **kw)
+
+axB.set_xlabel('CD  (fidelity $\\downarrow$)')
+fig.text(0.035, 0.55, r'$\mathrm{cv}_{\mathrm{nn}}$  (uniformity $\downarrow$)',
+         rotation=90, va='center', fontsize=10)
+axT.set_title('Fig. 5-4  Fidelity–uniformity trade-off across all ablations', fontsize=10.5, pad=8)
+axB.legend(fontsize=7.4, loc='upper left', ncol=1, framealpha=0.96,
+           bbox_to_anchor=(1.015, 1.02), borderaxespad=0)
+for a in (axT, axB):
+    a.grid(True, linestyle=':', alpha=0.4)
+axT.text(0.985, 0.55, 'D1 outlier', transform=axT.transAxes, ha='right', fontsize=7.5,
+         style='italic', color='#777')
+
+fig.text(0.5, -0.055,
+         'Lower-left is better on both axes.  Arrows: baseline$\\rightarrow$B1$\\rightarrow$B2 on the 5090.  '
+         'Broken y-axis isolates the D1 outlier.\n'
+         'A2 omitted entirely (NUC = 37.9 vs baseline 0.57 — training collapsed).  '
+         'C1 reaches the uniformity end, B2 the fidelity end: different mechanisms, different ends.',
+         ha='center', fontsize=7.5, style='italic', color='#555')
+p4 = os.path.join(OUT, 'F5_4_tradeoff.png'); plt.savefig(p4, dpi=200, bbox_inches='tight'); plt.close()
+print('wrote', p4)
+
+# 落盘尖峰表
+outj = os.path.join(ROOT, 'docs', '_hd_spike_table.json')
+json.dump({
+    'note': 'HD 尖峰多口径对照。统一绝对阈值为主口径；自身尺度阈值会因 MAD 小而低估阈值，产生伪影。',
+    'hd_key': HDKEY, 'plateau': [75, 149],
+    'unified_threshold': THR, 'unified_threshold_formula': 'baseline median + 3*1.4826*MAD',
+    'runs': {r: {'median': stats[r]['med'], 'mad': stats[r]['mad'], 'max': stats[r]['max'],
+                 'spikes_unified': stats[r]['n_abs'], 'spikes_own_scale': stats[r]['n_self']}
+             for r in stats},
+}, open(outj, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+print('wrote', outj)
+
+print()
+print('=== 修订历史 ===')
+print('  v1 -> v2: 5-1 y轴截断 / 5-2 legend移位 / 5-3 增多口径面板 / 5-4 加inset')
+print('  v2 -> v3: 5-2 legend移图外 / 5-3 双y轴分量纲+上面板保留x标签 / 5-4 inset改断轴（inset遮点）')

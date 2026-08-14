@@ -1,0 +1,33 @@
+{
+  "note": "HD 尖峰多口径对照。统一绝对阈值为主口径；自身尺度阈值会因 MAD 小而低估阈值，产生伪影。",
+  "hd_key": "monitor_hd",
+  "plateau": [
+    75,
+    149
+  ],
+  "unified_threshold": 0.008328013446688175,
+  "unified_threshold_formula": "baseline median + 3*1.4826*MAD",
+  "runs": {
+    "B002_baseline150_5090": {
+      "median": 0.007037808620221147,
+      "mad": 0.0002900770777613717,
+      "max": 0.014974023191585493,
+      "spikes_unified": 3,
+      "spikes_own_scale": 3
+    },
+    "ABL_B1_adv_fixed": {
+      "median": 0.00823031734813695,
+      "mad": 0.0007386843971624877,
+      "max": 0.044301841438607444,
+      "spikes_unified": 35,
+      "spikes_own_scale": 6
+    },
+    "ABL_B2_adv_adaptive": {
+      "median": 0.007965825090690794,
+      "mad": 0.00034068676081336173,
+      "max": 0.03908181162681074,
+      "spikes_unified": 22,
+      "spikes_own_scale": 11
+    }
+  }
+}

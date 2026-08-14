@@ -1,0 +1,79 @@
+"""
+从论文唯一数字入口 docs/_thesis_results.json 导出第 5 章全部表格数据。
+禁止从其他文件读数（该文件的 purpose 字段明确要求）。
+"""
+import json, os
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TR = json.loads(open(os.path.join(ROOT, "docs/_thesis_results.json"), encoding="utf-8").read())
+
+print("=" * 78)
+print("协议与判据（来自唯一入口）")
+print("=" * 78)
+p = TR['protocol']; c = TR['criteria']
+print(f"  n_sample={p['n_sample']}  seed={p['seed']}  val_ratio={p['val_ratio']}  val_range={p['val_range']}")
+print(f"  口径校验 vs ch3_diag: {p['calib_vs_ch3_diag']}   holdout 核验: {p['holdout_verified']}")
+print(f"  门槛: {c['accept_multiplier_se']} x SE_pooled")
+print(f"  规则: {c['accept_rule']}")
+print(f"  SE 语义: {c['se_semantics']}")
+print(f"  红线: {TR['redline']}")
+
+METRICS = ['cv_nn', 'cd', 'hd']
+for gname, g in TR['groups'].items():
+    print()
+    print("=" * 78)
+    print(f"【{gname}】 gpu={g['gpu']}  baseline={g['baseline']}")
+    print(f"  {g['note']}")
+    print("=" * 78)
+    base = g['baseline']
+    hdr = f"  {'run':26s} {'best_ep':>7s}"
+    for m in METRICS:
+        hdr += f" | {m:>10s} {'rel%':>8s} {'n_se':>7s} {'verdict':>19s}"
+    print(hdr)
+    for rn, r in g['runs'].items():
+        line = f"  {rn:26s} {r['best_epoch']:>7d}"
+        for m in METRICS:
+            mm = r['metrics'][m]
+            if r['role'] == 'baseline':
+                line += f" | {mm['mean']:>10.6f} {'—':>8s} {'—':>7s} {'baseline':>19s}"
+            else:
+                line += f" | {mm['mean']:>10.6f} {mm['rel_pct']:>+7.2f}% {mm['n_se']:>7.2f} {mm['verdict']:>19s}"
+        print(line)
+    print(f"  {'Q4/Q1':26s}", end="")
+    for rn, r in g['runs'].items():
+        pass
+    print()
+    for rn, r in g['runs'].items():
+        print(f"    {rn:26s} Q4/Q1 = {r['q4_over_q1']:.4f}")
+
+print()
+print("=" * 78)
+print("主对比（本文对外主线）")
+print("=" * 78)
+mc = TR['main_comparison']
+print(f"  {mc['label']}")
+print(f"  {mc['note']}")
+print()
+print(f"  {'指标':8s} {'B1':>12s} {'B2':>12s} {'rel%':>9s} {'n_se':>7s} {'裁定':>14s}  说明")
+for m, d in mc['metrics'].items():
+    print(f"  {m:8s} {d['b1_mean']:>12.6f} {d['b2_mean']:>12.6f} {d['rel_pct']:>+8.2f}% {d['n_se']:>7.3f} {d['verdict']:>14s}  {d['desc']}")
+print(f"  Q4/Q1    B1={mc['q4_over_q1']['b1']:.4f}  B2={mc['q4_over_q1']['b2']:.4f}")
+
+print()
+print("=" * 78)
+print("H1 证据")
+print("=" * 78)
+h = TR['h1_evidence']
+print(f"  极差            : {h['span_max_over_min']:.4g} 倍")
+print(f"  抗异常 p90/p10  : {h['robust_span_p90_over_p10']:.4g} 倍")
+print(f"  抗异常 p95/p05  : {h['robust_span_p95_over_p05']:.4g} 倍")
+print(f"  早期中位        : {h['early_median']:.6f}")
+print(f"  平台区中位      : {h['plateau_median']:.4f}")
+print(f"  阶段比值        : {h['stage_ratio_plateau_over_early']:.4g} 倍")
+print(f"  分段中位(25ep)  : {[round(x,4) for x in h['segment_medians_25ep']]}")
+print(f"  分段 Spearman   : {h['spearman_segment_monotone']}")
+print(f"  B1 fixed rho    : {h['b1_fixed_rho']:.6f}")
+print(f"  B1 过大 epoch 占比: {h['b2_frac_epochs_b1_too_large']*100:.1f}%")
+print(f"  裁定            : {h['verdict']}")
+print()
+print(f"  caveat: {h['caveat']}")

@@ -1,0 +1,85 @@
+"""B2 vs B1 主对比 + 各组裁定表 —— 第 5 章主表数据源，全部脚本回溯。"""
+import json, os
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def cvload():
+    return json.loads(open(os.path.join(ROOT, "docs/_cv_nn_measure.json"), encoding="utf-8").read())
+
+def plat(run):
+    p = os.path.join(ROOT, f"runs/{run}/summary_stats.json")
+    d = json.loads(open(p, encoding="utf-8").read())
+    return d.get("plateau", d)
+
+cv = cvload()
+
+print("=" * 78)
+print("【表 5-A】B2 vs B1 主对比（同机 5090，同 seed，论文主线）")
+print("=" * 78)
+b1_cv = cv['runs']['ABL_B1_adv_fixed']['cv_nn']
+b2_cv = cv['runs']['ABL_B2_adv_adaptive']['cv_nn']
+b1_p = plat('ABL_B1_adv_fixed')
+b2_p = plat('ABL_B2_adv_adaptive')
+
+# cv_nn: B2 - B1
+d_cv = b2_cv['mean'] - b1_cv['mean']
+# 合并 SE（两独立样本均值差的 SE）
+se_pool = (b1_cv['se_sample']**2 + b2_cv['se_sample']**2) ** 0.5
+print(f"  cv_nn : B1={b1_cv['mean']:.6f}  B2={b2_cv['mean']:.6f}")
+print(f"          Δ={d_cv:+.6f} ({d_cv/b1_cv['mean']*100:+.2f}%)  SE_pool={se_pool:.6f}  Δ/2SE={d_cv/se_pool:+.2f}")
+
+# CD: 平台区
+b1_cd = b1_p['cd']; b2_cd = b2_p['cd']
+d_cd = b2_cd['plateau_mean'] - b1_cd['plateau_mean']
+# 平台区 n=75，SE = std/sqrt(n)
+import math
+n = b1_p['plateau_n']
+se_cd = ((b1_cd['plateau_std']**2 + b2_cd['plateau_std']**2) / n) ** 0.5
+print(f"  CD    : B1={b1_cd['plateau_mean']:.6f}±{b1_cd['plateau_std']:.6f}  B2={b2_cd['plateau_mean']:.6f}±{b2_cd['plateau_std']:.6f}")
+print(f"          Δ={d_cd:+.6f} ({d_cd/b1_cd['plateau_mean']*100:+.2f}%)  SE={se_cd:.6f}  Δ/2SE={d_cd/(2*se_cd):+.2f}")
+
+# HD / NUC 同报
+for key, label in [('hd','HD'), ('nuc','NUC')]:
+    a = b1_p[key]['plateau_mean']; b = b2_p[key]['plateau_mean']
+    print(f"  {label:5s} : B1={a:.6f}  B2={b:.6f}  Δ={b-a:+.6f} ({(b-a)/a*100:+.2f}%)")
+
+# Q4/Q1
+q1 = cv['runs']['ABL_B1_adv_fixed']['strata']['q4_over_q1']
+q2 = cv['runs']['ABL_B2_adv_adaptive']['strata']['q4_over_q1']
+print(f"  Q4/Q1 : B1={q1:.4f}  B2={q2:.4f}  Δ={q2-q1:+.4f}")
+
+print()
+print("=" * 78)
+print("【表 5-B】各消融组相对同机 baseline 的裁定（预注册主指标 cv_nn，门槛 2SE）")
+print("=" * 78)
+base = {'3090': cv['runs']['B002_baseline150'], '5090': cv['runs']['B002_baseline150_5090']}
+ORDER = ['ABL_A1_cd_balance','ABL_A2_cd_boost_bwd','ABL_C1_uniform','ABL_D1_scale_qk',
+         'ABL_AC_combo','ABL_B1_adv_fixed','ABL_B2_adv_adaptive']
+print(f"  {'run':28s} {'gpu':>5s} {'cv_nn':>10s} {'Δ%':>9s} {'Δ/2SE':>9s} {'裁定':>14s}")
+for r in ORDER:
+    v = cv['runs'][r]
+    gpu = v['gpu']
+    bm = base[gpu]['cv_nn']['mean']
+    bse = base[gpu]['cv_nn']['se_sample']
+    m = v['cv_nn']['mean']; se = v['cv_nn']['se_sample']
+    d = m - bm
+    sep = (bse**2 + se**2) ** 0.5
+    ratio = d / (2 * sep)
+    # 预注册：接受方向为下降，门槛超过 2SE
+    if d < 0 and abs(ratio) > 1:
+        verdict = "ACCEPT"
+    elif d > 0 and abs(ratio) > 1:
+        verdict = "REJECT(反向显著)"
+    else:
+        verdict = "REJECT_NULL"
+    print(f"  {r:28s} {gpu:>5s} {m:>10.6f} {d/bm*100:>+8.2f}% {ratio:>+8.2f} {verdict:>14s}")
+
+print()
+print("=" * 78)
+print("【表 5-C】NUC 异常检查（A2 是否训练崩溃）")
+print("=" * 78)
+for r in ORDER + ['B002_baseline150','B002_baseline150_5090']:
+    p = plat(r)
+    nuc = p['nuc']['plateau_mean']
+    flag = "  ← 异常（>10× baseline）" if nuc > 5 else ""
+    print(f"  {r:28s} NUC={nuc:>12.6f}{flag}")

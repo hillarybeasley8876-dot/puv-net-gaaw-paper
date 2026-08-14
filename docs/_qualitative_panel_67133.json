@@ -1,0 +1,60 @@
+{
+ "schema": "qualitative_panel_evidence_v1",
+ "purpose": "为 ch6 §6.5.3 的定性小节提供汇总层证据；正文引用的每个数字均须能在本文件中回溯",
+ "source": "docs/_cv_nn_measure.json (per_sample)",
+ "note": "per_sample 被审计器权威池有意排除，故此处将正文所需量预先聚合为汇总层字段",
+ "comparison": "ABL_B2_adv_adaptive vs ABL_B1_adv_fixed",
+ "n_paired": 200,
+ "target_idx": 67133,
+ "target_metrics": {
+  "nn_pred_cv": {
+   "b1": 0.2527908384799957,
+   "b2": 0.2560535669326782,
+   "delta": 0.003262728452682495,
+   "rel_pct": 1.2906830296148912,
+   "direction": "B2_worse"
+  },
+  "cd": {
+   "b1": 0.0018761120736598969,
+   "b2": 0.0013795139384455979,
+   "delta": -0.000496598135214299,
+   "rel_pct": -26.46953463955601,
+   "direction": "B2_better"
+  },
+  "hd": {
+   "b1": 0.005255453288555145,
+   "b2": 0.004047831520438194,
+   "delta": -0.001207621768116951,
+   "rel_pct": -22.978451178451177,
+   "direction": "B2_better"
+  }
+ },
+ "cv_nn_worse_stats": {
+  "n_worse": 42,
+  "target_rank_desc": 33,
+  "rank_note": "1 = 劣化最严重",
+  "target_delta": 0.003262728452682495,
+  "worst_idx": 66013,
+  "worst_delta": 0.03182920813560486,
+  "worst_over_target": 9.75539601202057
+ },
+ "pick_criterion": {
+  "rule": "argsort desc of cd(B1) - cd(B2), take top 3",
+  "computed_top3": [
+   66077,
+   67002,
+   67133
+  ],
+  "figure_meta_picked_idx": [
+   66077,
+   67002,
+   67133
+  ],
+  "reproduced": true,
+  "cd_gain_top3": [
+   0.0005905378493480384,
+   0.0005618890281766653,
+   0.000496598135214299
+  ]
+ }
+}

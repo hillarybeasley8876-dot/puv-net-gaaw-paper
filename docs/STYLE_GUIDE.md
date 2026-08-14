@@ -43,7 +43,7 @@
 | $\mathcal{L}_{\text{unif}}$ | 均匀性损失（PU-GAN uniform loss） | 权重 $w_{\text{unif}} = 0.00191$（实测标定，见 §5.1） |
 | $\mathcal{L}_{\text{adv}}$ | 生成器对抗损失 | |
 | $\mathcal{L}_{D}$ | 判别器损失 | |
-| $w_{\text{adv}}$ | 对抗损失权重 | 基线中为固定常数；**GAAW（候选辅助策略）的作用对象**是将其改为梯度自适应 |
+| $w_{\text{adv}}$ | 对抗损失权重 | 基线中为固定常数；**GAAW（训练机制级主创新）的作用对象**是将其改为梯度自适应 |
 | $\lambda_{\text{gp}}$ | 梯度惩罚系数 | |
 | $g_{\text{cd}}, g_{\text{adv}}$ | 对应损失回传到 $\theta$ 的梯度范数 | $g_\bullet = \|\nabla_\theta \mathcal{L}_\bullet\|_2$ |
 | $\rho$ | 梯度尺度比 | $\rho = g_{\text{adv}} / g_{\text{cd}}$；实测初值 $1/82.65$ |

@@ -100,7 +100,13 @@ def load_authoritative():
     for name in ('_cv_nn_measure.json', '_ch3_diag.json', '_ch3_stats.json',
                  '_ch3_diag_SMOKE.json', '_ch3_shapes.json',
                  '_arch_probe.json', '_promise_audit.json',
-                 '_paired_improvement_B2_vs_B1.json'):
+                 '_paired_improvement_B2_vs_B1.json',
+                 # §6.5.3 定性小节的汇总层证据。为什么必须单独一个文件：
+                 # 该节引用的「67133 劣化量」「最严重变差样本 66013」等量
+                 # 源自 per_sample，而 walk() 对 per_sample 短路排除，
+                 # 故这些量无法从 _cv_nn_measure.json 进入池。
+                 # 由 scripts/build_qualitative_evidence.py 生成。
+                 '_qualitative_panel_67133.json'):
         p = os.path.join(ROOT, 'docs', name)
         if os.path.exists(p):
             walk(json.load(open(p, encoding='utf-8')), 'docs/' + name)
@@ -409,13 +415,27 @@ def audit_file(path, pool):
                     continue
                 ok += 1
 
-            # 受检数量守卫：正文既然引用了配对结果，表行通道就必须命中。
+            # 受检数量守卫：**有配对数据表却零命中**才是正则失效。
             # 防「正则失效 → 零命中 → 因不产生 issue 而假绿」。
-            if 'pct_improved' in json.dumps(pd) and '改善占比' in text \
-                    and seen_rows == 0:
+            #
+            # 触发条件必须是「有表」而不是「提到关键词」。实测（ch4/ch7）：
+            # 原条件写作「正文含『改善占比』且 seen_rows == 0」，把两类
+            # **本就不该有表**的合法写法判成假红：
+            #   · ch4 §4.x 预先规定「配对占比是描述性事实、不设门槛」
+            #     —— 这是方法论声明，摆数据表反而违反「跑前定死判据」；
+            #   · ch7 结论章引述已在 ch6 核验过的 158/79.00%
+            #     —— 结论章按体例不重复摆表。
+            # 这与 C2c 早期同款错误同源：守卫条件应为「有表但没检完」，
+            # 而非「提到就必须有表」。
+            #
+            # 「有表」的判定用表头列名，而不是复用 row_re——否则
+            # row_re 一旦失效，判定同时失效，守卫等于自我豁免（假绿）。
+            has_paired_table = re.search(
+                r'^\|[^|\n]*\|\s*改善样本数\s*\|', text, re.M) is not None
+            if has_paired_table and seen_rows == 0:
                 issues.append(
-                    '[C2b] 正文出现「改善占比」但表行通道零命中 '
-                    '→ 疑似正则失效（假绿风险）')
+                    '[C2b] 存在配对改善表（表头含「改善样本数」）'
+                    '但表行通道零命中 → 疑似正则失效（假绿风险）')
 
     # ---- C2c 裁定完整性（SE 倍数 + 裁定词）----
     # 为什么必须单开一个通道：`8.48` / `0.32` / `0.35` 这三个数**承载了
