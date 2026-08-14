@@ -1,0 +1,174 @@
+{
+  "schema": "puvnet.train_cost/v1",
+  "purpose": "第 6.6.1 节训练代价数据。时间取 epoch 中位数（避免首 epoch 初始化开销污染），显存取全程峰值。",
+  "caliber": {
+    "time_statistic": "median over per-epoch `sec` field",
+    "time_rationale": "首 epoch 含 CUDA 上下文初始化与 cuDNN autotune，系统性偏高；中位数对该单点异常不敏感",
+    "mem_statistic": "max over per-epoch `gpu_peak_gb` field",
+    "cross_host_rule": "3090 组与 5090 组分表；相对开销只在同机器内计算",
+    "attribution_caveat": "B2 vs B1 的时间差同时包含 GAAW 两次反传与 best epoch 不同带来的 I/O 差异，本文只报总差不作单一归因"
+  },
+  "params": {
+    "generator": 1152803,
+    "discriminator": 255426,
+    "note": "判别器仅训练期使用，推理期不参与计算，故推理开销与基线一致"
+  },
+  "groups": {
+    "3090": {
+      "gpu_label": "NVIDIA GeForce RTX 3090",
+      "baseline": "B002_baseline150",
+      "runs": {
+        "B002_baseline150": {
+          "n_epoch": 150,
+          "sec_median": 113.35,
+          "sec_mean": 113.51520000000001,
+          "sec_first": 112.23,
+          "sec_min": 112.23,
+          "sec_max": 131.16,
+          "sec_total": 17027.280000000006,
+          "gpu_peak_gb": 5.511,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "sec_median_rel_pct": 0.0,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": true
+        },
+        "ABL_A1_cd_balance": {
+          "n_epoch": 150,
+          "sec_median": 113.0,
+          "sec_mean": 113.42393333333334,
+          "sec_first": 111.91,
+          "sec_min": 111.91,
+          "sec_max": 118.55,
+          "sec_total": 17013.59,
+          "gpu_peak_gb": 5.511,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "sec_median_rel_pct": -0.30877812086457374,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": false
+        },
+        "ABL_A2_cd_boost_bwd": {
+          "n_epoch": 150,
+          "sec_median": 122.56,
+          "sec_mean": 122.9366,
+          "sec_first": 113.31,
+          "sec_min": 112.05,
+          "sec_max": 139.51,
+          "sec_total": 18440.49000000001,
+          "gpu_peak_gb": 5.511,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "sec_median_rel_pct": 8.12527569475078,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": false
+        },
+        "ABL_C1_uniform": {
+          "n_epoch": 150,
+          "sec_median": 128.13,
+          "sec_mean": 129.90613333333334,
+          "sec_first": 127.98,
+          "sec_min": 125.77,
+          "sec_max": 137.67,
+          "sec_total": 19485.92,
+          "gpu_peak_gb": 5.511,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "sec_median_rel_pct": 13.039258932509926,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": false
+        },
+        "ABL_AC_combo": {
+          "n_epoch": 150,
+          "sec_median": 133.88,
+          "sec_mean": 132.87813333333332,
+          "sec_first": 126.7,
+          "sec_min": 125.85,
+          "sec_max": 140.59,
+          "sec_total": 19931.720000000005,
+          "gpu_peak_gb": 5.511,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "sec_median_rel_pct": 18.112042346713718,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": false
+        },
+        "ABL_D1_scale_qk": {
+          "n_epoch": 150,
+          "sec_median": 120.96,
+          "sec_mean": 121.03386666666667,
+          "sec_first": 124.52,
+          "sec_min": 120.71,
+          "sec_max": 124.52,
+          "sec_total": 18155.079999999998,
+          "gpu_peak_gb": 5.511,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "torch": "2.5.1+cu121",
+          "cuda": "12.1",
+          "sec_median_rel_pct": 6.713718570798412,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": false
+        }
+      }
+    },
+    "5090": {
+      "gpu_label": "NVIDIA GeForce RTX 5090",
+      "baseline": "B002_baseline150_5090",
+      "runs": {
+        "B002_baseline150_5090": {
+          "n_epoch": 150,
+          "sec_median": 57.38,
+          "sec_mean": 56.4384,
+          "sec_first": 59.08,
+          "sec_min": 49.17,
+          "sec_max": 59.08,
+          "sec_total": 8465.759999999998,
+          "gpu_peak_gb": 5.512,
+          "gpu_name": "NVIDIA GeForce RTX 5090",
+          "torch": "2.11.0+cu128",
+          "cuda": "12.8",
+          "sec_median_rel_pct": 0.0,
+          "gpu_peak_rel_pct": 0.0,
+          "is_baseline": true
+        },
+        "ABL_B1_adv_fixed": {
+          "n_epoch": 150,
+          "sec_median": 95.03,
+          "sec_mean": 94.87506666666667,
+          "sec_first": 97.26,
+          "sec_min": 91.3,
+          "sec_max": 97.26,
+          "sec_total": 14231.259999999995,
+          "gpu_peak_gb": 6.018,
+          "gpu_name": "NVIDIA GeForce RTX 5090",
+          "torch": "2.11.0+cu128",
+          "cuda": "12.8",
+          "sec_median_rel_pct": 65.61519693272916,
+          "gpu_peak_rel_pct": 9.179970972423808,
+          "is_baseline": false
+        },
+        "ABL_B2_adv_adaptive": {
+          "n_epoch": 150,
+          "sec_median": 162.10500000000002,
+          "sec_mean": 161.71786666666668,
+          "sec_first": 164.51,
+          "sec_min": 157.02,
+          "sec_max": 221.99,
+          "sec_total": 24257.680000000008,
+          "gpu_peak_gb": 6.498,
+          "gpu_name": "NVIDIA GeForce RTX 5090",
+          "torch": "2.11.0+cu128",
+          "cuda": "12.8",
+          "sec_median_rel_pct": 182.51132798884632,
+          "gpu_peak_rel_pct": 17.88824383164007,
+          "is_baseline": false
+        }
+      }
+    }
+  }
+}
