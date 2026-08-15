@@ -1,11 +1,5 @@
 # 第6章 实验结果与边界分析
 
-> **数据来源纪律**：本章所有数字均回溯至 `docs/_thesis_results.json`（全文唯一数字入口，由 `scripts/build_thesis_results.py` 从 `docs/_cv_nn_measure.json` 汇总生成）、`docs/_paired_improvement_B2_vs_B1.json`、`docs/_train_cost.json` 以及三张插图的 `.meta.json` 存档。正文不出现任何未落盘的数值。`{{cite:⟨key⟩}}` 占位符与前五章统一编号规则，最终在论文交付时一次替换。
->
-> **跨机器红线**：本章同一张表内的数字不跨机器并列。3090 组各消融只与 `B002_baseline150` 对照，5090 组各消融只与 `B002_baseline150_5090` 对照。该约束来自 `docs/_thesis_results.json` 的 `redline` 字段，在下文每张表的表注中重申。
->
-> **判据不可事后修改**：第 4 章预注册的主指标、接收方向与 $2\,\mathrm{SE}$ 门槛在本章原样执行。凡未达门槛者一律记 `REJECT_NULL`，不以"趋势向好"替代；凡对本文方法不利的结果一律如实报告，不省略、不淡化。
-
 ## 6.1 实验设置
 
 ### 6.1.1 数据集、训练配置和复现条件
