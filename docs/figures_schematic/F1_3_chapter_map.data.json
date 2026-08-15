@@ -1,10 +1,11 @@
 {
-  "figure_id": "1-3",
+  "figure_id": "1.3",
   "caption": "研究内容与章节关系图",
   "type": "schematic",
   "chapter": "1.6",
-  "n_chapters": 6,
-  "generated_at": "2026-08-11T18:28:26+08:00",
+  "n_chapters": 7,
+  "revision": "2026-08-15 由六章改为七章结构：拆出第 4 章（命题与判据）与第 5 章（机制形式化），实验章顺延为第 6 章、结论章为第 7 章；图题编号改为点号（FORMAT_TONGJI §2.2）",
+  "generated_at": "2026-08-15T15:50:53+08:00",
   "script": "scripts/make_schematic_figures.py",
   "depends_on_experiment": false
 }

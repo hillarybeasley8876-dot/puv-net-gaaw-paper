@@ -7,7 +7,7 @@
   "n_lower": 10,
   "layout_fix": "下半密集区改四层交错排布，修复单行重叠缺陷；年份未做任何调整",
   "n_layers_lower": 4,
-  "generated_at": "2026-08-11T18:28:26+08:00",
+  "generated_at": "2026-08-15T15:50:53+08:00",
   "script": "scripts/make_schematic_figures.py",
   "depends_on_experiment": false
 }
