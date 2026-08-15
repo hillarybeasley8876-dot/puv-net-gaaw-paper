@@ -12,8 +12,12 @@ import time
 import win32com.client as win32
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOCX = os.path.join(ROOT, 'outputs', 'thesis', 'GAAW_thesis_v2.docx')
-PDF = os.path.join(ROOT, 'outputs', 'thesis', 'GAAW_thesis_v2.pdf')
+# 文件名可由命令行覆盖（不带扩展名）。默认 v3 = 当前成稿。
+# 教训：曾写死 v2，实测把旧稿当本轮成果导出并据此做视觉验收，
+# 差点得出错误结论。此处默认必须跟随当前成稿。
+STEM = sys.argv[1] if len(sys.argv) > 1 else 'GAAW_thesis_v3'
+DOCX = os.path.join(ROOT, 'outputs', 'thesis', STEM + '.docx')
+PDF = os.path.join(ROOT, 'outputs', 'thesis', STEM + '.pdf')
 
 WD_FORMAT_PDF = 17
 

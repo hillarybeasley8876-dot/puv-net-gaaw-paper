@@ -83,9 +83,10 @@ def fig_scmsa():
     ax.set_ylim(0, 66)
     ax.axis("off")
 
-    ax.text(50, 63.6,
-            "图 4.3  通道偏移多头自注意力（SC-MSA）的窗口划分机制与跨头信息通路",
-            ha="center", fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(50, 63.6,
+#             "图 4.3  通道偏移多头自注意力（SC-MSA）的窗口划分机制与跨头信息通路",
+#             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(50, 61.0,
             "以第 4 层编码器 $C'\\!=\\!256$、$\\psi\\!=\\!4$ 为例；相邻窗口重叠 $w\\!-\\!d\\!=\\!32$ 个通道，"
             "构成常规 MSA 不具备的跨头通路",
@@ -242,9 +243,10 @@ def fig_m1():
     ax.set_ylim(0, 56)
     ax.axis("off")
 
-    ax.text(50, 53.6,
-            "图 4.4  梯度自适应对抗权重（GAAW）的量纲失配诊断与闭环调节机制",
-            ha="center", fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(50, 53.6,
+#             "图 4.4  梯度自适应对抗权重（GAAW）的量纲失配诊断与闭环调节机制",
+#             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(50, 51.0,
             "固定权重方案在 CD 损失下降三个数量级的过程中必然失衡；"
             "GAAW 以梯度范数比为观测量，逐步重标定 $w_{adv}$",

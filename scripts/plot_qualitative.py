@@ -316,10 +316,12 @@ def main() -> int:
 
     # 图号跟随正稿章号：七章结构下定性对比属第 6 章 §6.5.3 → 图 6.1。
     # （文件名沿用 F5_1_* 不改，避免打断既有 .meta.json 与引用路径。）
-    fig.suptitle("Fig. 6-1  Qualitative comparison of upsampled point clouds "
-                 "(orthographic XY projection)", fontsize=11.5, y=0.9955)
-    fig.text(0.5, 0.002, CAVEAT, ha="center", va="bottom", fontsize=7.2,
-             style="italic", color="#555", linespacing=1.55)
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     fig.suptitle("Fig. 6-1  Qualitative comparison of upsampled point clouds "
+#                  "(orthographic XY projection)", fontsize=11.5, y=0.9955)
+  # [画布文字移除] 图题与 Caveat 由 Word Caption 与正文承担，画布内不再绘制
+#     fig.text(0.5, 0.002, CAVEAT, ha="center", va="bottom", fontsize=7.2,
+#              style="italic", color="#555", linespacing=1.55)
 
     out = OUTDIR / "F5_1_qualitative_pointclouds.png"
     fig.savefig(out, dpi=200, bbox_inches="tight")
@@ -361,3 +363,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

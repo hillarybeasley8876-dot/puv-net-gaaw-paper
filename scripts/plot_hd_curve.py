@@ -43,12 +43,12 @@ FIELD = "monitor_hd"          # 实测确认的字段名，不是 "hd"
 
 # 分机器分组：同图只作波动形态对比，不并列任何跨机器数值差
 GROUPS = [
-    ("5090 host (adversarial group)", [
+    ("Host B - adversarial weighting group", [
         ("B002_baseline150_5090", "B0  baseline (no adv.)", "#4d4d4d", "-"),
         ("ABL_B1_adv_fixed",      "B1  fixed $w_{adv}=8.27$", "#d62728", "-"),
         ("ABL_B2_adv_adaptive",   "B2  GA-PUT (ours)", "#1f77b4", "-"),
     ]),
-    ("3090 host (uniformity / structure group)", [
+    ("Host A - uniformity / structure group", [
         ("B002_baseline150", "B0  baseline (no adv.)", "#4d4d4d", "-"),
         ("ABL_C1_uniform",   "C1  uniformity loss", "#2ca02c", "-"),
     ]),
@@ -153,12 +153,14 @@ def main() -> int:
         ax.set_ylim(bottom=0)
 
     axes[-1].set_xlabel("epoch", fontsize=10)
-    fig.suptitle("Fig. 5-2  Per-epoch validation Hausdorff distance during "
-                 "training (dotted line = per-run median)",
-                 fontsize=11.5, y=0.985)
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     fig.suptitle("Fig. 5-2  Per-epoch validation Hausdorff distance during "
+#                  "training (dotted line = per-run median)",
+#                  fontsize=11.5, y=0.985)
     fig.tight_layout(rect=(0, 0.105, 1, 0.965))
-    fig.text(0.5, 0.004, CAVEAT, ha="center", va="bottom", fontsize=7.1,
-             style="italic", color="#555", linespacing=1.55)
+  # [画布文字移除] 图题与 Caveat 由 Word Caption 与正文承担，画布内不再绘制
+#     fig.text(0.5, 0.004, CAVEAT, ha="center", va="bottom", fontsize=7.1,
+#              style="italic", color="#555", linespacing=1.55)
 
     out = OUTDIR / "F5_2_hd_epoch_curve.png"
     fig.savefig(out, dpi=200, bbox_inches="tight")
@@ -187,3 +189,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

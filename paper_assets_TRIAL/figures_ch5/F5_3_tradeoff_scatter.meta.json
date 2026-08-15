@@ -7,12 +7,12 @@
   "errorbars": "cross-sample se_sample over the 200 validation samples; NOT across-seed SE",
   "panels": [
     {
-      "title": "3090 host — uniformity / structure ablations",
+      "title": "Host A — uniformity / structure ablations",
       "group": "3090_uniform_structure",
       "baseline": "B002_baseline150"
     },
     {
-      "title": "5090 host — adversarial ablations",
+      "title": "Host B — adversarial ablations",
       "group": "5090_adversarial",
       "baseline": "B002_baseline150_5090"
     }

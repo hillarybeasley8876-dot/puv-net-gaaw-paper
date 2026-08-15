@@ -123,8 +123,9 @@ ax2.legend(loc="upper left", fontsize=8, frameon=True, framealpha=0.92)
 ax2.grid(True, which="both", linestyle=":", alpha=0.4)
 
 # 头部小标题与底部 caveat
-fig.suptitle("Fig. 4-1  Training-dynamics evidence of gradient-adaptive adversarial weighting",
-             fontsize=10, y=0.995)
+# [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+# fig.suptitle("Fig. 4-1  Training-dynamics evidence of gradient-adaptive adversarial weighting",
+#              fontsize=10, y=0.995)
 _CAV = (
     "Caveat 1 (measurement): $\\bar w_{\\text{auto}}$ is the per-epoch arithmetic mean over batches; "
     "$\\hat\\rho$ is a representative value derived from it, not mean($\\rho$).\n"
@@ -136,10 +137,18 @@ _CAV = (
 )
 # 单个文本块 + 显式换行：两个独立 fig.text 在 bbox_inches="tight" 下会因
 # 画布重裁而相互重叠压成一团（实测不可读），故合并为一块并自行控制换行。
-fig.text(0.5, 0.004, _CAV, ha="center", va="bottom",
-         fontsize=6.8, style="italic", color="#555", linespacing=1.6)
+#
+# [画布文字移除] Caveat 英文小字不再画进画布，理由有二：
+#   ① 它与图下 Word Caption 构成同图两套说明，且含 run 名
+#      `ABL_B2_adv_adaptive` 与 seed 20260811 等工程留痕（任务 D 范围）；
+#   ② 其中的三条学理限定（ŵ_auto 为 batch 算术平均、ρ̂ ≠ mean(ρ)、
+#      单次运行不构成跨种子可重复性证据）正文均已有中文表述，
+#      经 scripts/_tmp/check_caveat_coverage.py 核对 11/11 覆盖，不存在净丢。
+# _CAV 常量保留作溯源，不再绘制。
+# fig.text(0.5, 0.004, _CAV, ha="center", va="bottom",
+#          fontsize=6.8, style="italic", color="#555", linespacing=1.6)
 
-plt.tight_layout(rect=(0, 0.115, 1, 0.97))
+plt.tight_layout(rect=(0, 0.02, 1, 0.98))
 out = os.path.join(OUTDIR, "F4_1_rho_curve_B2.png")
 plt.savefig(out, dpi=200, bbox_inches="tight")
 plt.close()

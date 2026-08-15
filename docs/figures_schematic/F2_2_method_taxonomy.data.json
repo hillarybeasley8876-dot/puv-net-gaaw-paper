@@ -5,7 +5,7 @@
   "chapter": "2.1.4",
   "n_categories": 4,
   "n_leaves": 21,
-  "generated_at": "2026-08-15T16:45:02+08:00",
+  "generated_at": "2026-08-15T22:32:29+08:00",
   "script": "scripts/make_schematic_figures.py",
   "depends_on_experiment": false
 }

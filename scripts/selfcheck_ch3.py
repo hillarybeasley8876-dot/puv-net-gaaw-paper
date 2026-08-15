@@ -130,19 +130,31 @@ def main():
     s = rd(CH)
     print("引用库条目数: %d  第3章字节数: %d" % (len(refs), len(s.encode("utf-8"))))
 
-    print("\n[1/7] cite 有效性 + 硬编号")
+    print("\n[1/7] 引用有效性")
+    # 全文引用已由占位符 {{cite:KEY}} 一次性转为定稿编号 [N]（不可逆）。
+    # 因此本通道从「校验 KEY 在库」改为「校验 [N] 在编号范围内」，
+    # 并保留零命中守卫（抽取失效必须报错，不得静默通过）。
     cites = re.findall(r"\{\{cite:([^}]+)\}\}", s)
     bad = sorted({x for x in cites if x not in keys})
-    hard = re.findall(r"(?<!\w)\[\d{1,3}\]", s)
+    # 坑：`(?<!\w)` 在中文语境下失效 —— Python re 把中文
+    # 算作单词字符，而引用编号几乎总是紧跟中文（如「梯度范数比[55]」），
+    # 于是 22 个真实引用一个都匹配不到、通道静默零命中（典型假绿）。
+    # 改为只要求括号内是纯数字：区间写法 [65550, 69000) 含逗号与右
+    # 圆括号，自然不会误命中。
+    nums = [int(x) for x in re.findall(r"\[(\d{1,3})\]", s)]
     zh = len(re.findall(r"[\u4e00-\u9fff]", s))
-    print("  cites=%d uniq=%d 中文=%d invalid=%s hardnum=%d"
-          % (len(cites), len(set(cites)), zh, bad or "none", len(hard)))
-    if len(cites) < EXPECT_MIN_CITES:
-        fails.append("cite 抽取数 %d 低于下限 %d, 疑似抽取失效" % (len(cites), EXPECT_MIN_CITES))
+    max_no = max((r.get('number', 0) for r in refs), default=0) \
+        if isinstance(refs, list) else 0
+    out_of_range = sorted({n for n in nums if n < 1 or (max_no and n > max_no)})
+    print("  占位符=%d 编号引用=%d 中文=%d invalid_key=%s 越界编号=%s"
+          % (len(cites), len(nums), zh, bad or "none", out_of_range or "none"))
+    if len(cites) + len(nums) < EXPECT_MIN_CITES:
+        fails.append("引用抽取数 %d 低于下限 %d, 疑似抽取失效"
+                     % (len(cites) + len(nums), EXPECT_MIN_CITES))
     if bad:
         fails.append("无效 cite key %s" % bad)
-    if hard:
-        fails.append("出现硬编号 %s" % hard[:5])
+    if out_of_range:
+        fails.append("引用编号越界 %s" % out_of_range[:5])
 
     print("\n[2/7] 违规结果性表述")
     hits = []
@@ -185,8 +197,10 @@ def main():
 
     print("\n[5/7] 表格结构")
     seen = set()
-    for m in re.finditer(r"\*\*(表 \d-\d)\s+([^*]+)\*\*", s):
-        tag = m.group(1)
+    # 编号已由连字符改点号（表 3-1 -> 表 3.1）。教训：改了编号格式必须
+    # 同步改全部校验脚本，否则两侧同时失配、静默报「缺少表」或「0 悬空」。
+    for m in re.finditer(r"\*\*(表\s*\d+\.\d+)\s+([^*]+)\*\*", s):
+        tag = re.sub(r'表\s*', '表 ', m.group(1))
         seen.add(tag)
         rows = 0
         for line in s[m.end():].split("\n"):

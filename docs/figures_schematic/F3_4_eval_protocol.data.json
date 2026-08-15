@@ -5,7 +5,7 @@
   "chapter": "3.3.4",
   "n_steps": 6,
   "notes": "口径隔离规则与 PU-GCN 官方协议锚定",
-  "generated_at": "2026-08-15T16:45:02+08:00",
+  "generated_at": "2026-08-15T22:32:29+08:00",
   "script": "scripts/make_schematic_figures.py",
   "depends_on_experiment": false
 }

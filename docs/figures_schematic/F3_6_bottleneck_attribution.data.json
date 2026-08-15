@@ -10,7 +10,7 @@
   "n_evidence": 3,
   "n_candidates": 2,
   "note": "候选位置一律标注待验证，不作为归因结论",
-  "generated_at": "2026-08-15T16:45:05+08:00",
+  "generated_at": "2026-08-15T22:32:32+08:00",
   "script": "scripts/make_ch3_figures.py",
   "depends_on_experiment": true
 }

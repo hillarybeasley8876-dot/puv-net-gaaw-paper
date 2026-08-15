@@ -100,7 +100,8 @@ def fig_1_2_roadmap():
     for _, y, _ in stages:
         arrow(ax, (7.0, y + 0.6), (7.6, 4.15), color="#C9A227", lw=1.0, ls="--", rad=0.12)
 
-    ax.text(5.0, 6.92, "图 1.2  全文技术路线图", ha="center", fontsize=12, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(5.0, 6.92, "图 1.2  全文技术路线图", ha="center", fontsize=12, fontweight="bold")
     ax.text(5.0, 0.55,
             "注：实线箭头为阶段推进顺序，细线箭头为各阶段输出；虚线表示论证约束对各阶段的作用关系。"
             "任一环节缺失时，相应主张不进入结论。",
@@ -174,8 +175,9 @@ def fig_2_1_timeline():
             ha="center", va="center", fontsize=9.2, fontweight="bold",
             bbox=dict(fc=C_HL, ec=C_HLE, lw=1.6, boxstyle="round,pad=0.35"))
 
-    ax.text(2014.0, 12.28, "图 2.1  点云上采样方法发展脉络示意图",
-            ha="center", fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(2014.0, 12.28, "图 2.1  点云上采样方法发展脉络示意图",
+#             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(2014.0, 0.4,
             "注：下半部分采用四层交错排布以避免 2018—2024 年密集条目重叠；竖直引导线标示各方法的真实首次发表年份。",
             ha="center", fontsize=8.4, color="#555")
@@ -221,8 +223,9 @@ def fig_2_2_taxonomy():
                 fs=8.2, lw=1.6 if hl else 1.0, bold=hl)
         ax.plot([x + w / 2, x + w / 2], [y, 4.25], color="#BBB", lw=1.0, zorder=0)
 
-    ax.text(6.25, 6.85, "图 2.2  点云上采样方法分类框图",
-            ha="center", fontsize=12, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.25, 6.85, "图 2.2  点云上采样方法分类框图",
+#             ha="center", fontsize=12, fontweight="bold")
     ax.text(6.25, 0.35, "注：橙色高亮为本文直接构建于其上的两项工作（PU-GAN 的对抗框架与 PU-Transformer 的注意力主干）。",
             ha="center", fontsize=8.5, color="#555")
     save(fig, "F2_2_method_taxonomy",
@@ -280,8 +283,9 @@ def fig_3_2_quality_dims():
     ax.grid(alpha=0.3, ls=":")
     ax.set_title("(b) 保真性—均匀性权衡示意（非实验数据）", fontsize=11, pad=8)
 
-    fig.suptitle("图 3.2  点云上采样质量的四维分解与内在冲突示意图",
-                 fontsize=12.5, fontweight="bold", y=1.02)
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     fig.suptitle("图 3.2  点云上采样质量的四维分解与内在冲突示意图",
+#                  fontsize=12.5, fontweight="bold", y=1.02)
     fig.text(0.5, -0.04,
              "注：子图 (b) 为定性趋势示意，纵轴为归一化相对值，不代表任何实测数据。",
              ha="center", fontsize=8.5, color="#555")
@@ -331,8 +335,9 @@ def fig_3_4_eval_protocol():
         fc="#FDECEA", ec="#C62828", fs=8.6, bold=True)
     arrow(ax, (2.9, 5.15), (9.375, 4.7), color="#C62828", ls=":", lw=1.3, rad=0.1)
 
-    ax.text(6.0, 6.0, "图 3.4  上采样质量评价协议流程框图",
-            ha="center", fontsize=12, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.0, 6.0, "图 3.4  上采样质量评价协议流程框图",
+#             ha="center", fontsize=12, fontweight="bold")
     ax.text(6.0, 0.55,
             "注：红色框标明本文严格执行的口径隔离规则，训练期监控指标与论文报告指标来自不同计算通道。",
             ha="center", fontsize=8.5, color="#555")
@@ -371,8 +376,9 @@ def fig_3_5_bottleneck():
         arrow(ax, (mid[i][0] + 1.75, mid[i][1]), (x + 1.75, y + 1.25),
               color=C_HLE if hl else "#999", lw=1.6 if hl else 1.2)
 
-    ax.text(5.75, 6.35, "图 3.5  均匀性—保真性权衡的成因归因与对策框图",
-            ha="center", fontsize=12, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(5.75, 6.35, "图 3.5  均匀性—保真性权衡的成因归因与对策框图",
+#             ha="center", fontsize=12, fontweight="bold")
     ax.text(5.75, 0.75,
             "注：成因二的梯度尺度失衡由本文实测确认，是主创新机制 M1 的直接依据；具体测量值见第 4.3.1 节。",
             ha="center", fontsize=8.5, color="#555")
@@ -422,7 +428,8 @@ def fig_1_1_task_illustration():
              bbox=dict(fc=C_GRAY, ec="#888", lw=1.2, boxstyle="round,pad=0.28"))
     fig.text(0.655, 0.40, "集合距离", fontsize=8.6, ha="center", color="#555")
 
-    fig.suptitle("图 1.1  点云稀疏性及上采样任务示意图", fontsize=12.5, fontweight="bold", y=0.99)
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     fig.suptitle("图 1.1  点云稀疏性及上采样任务示意图", fontsize=12.5, fontweight="bold", y=0.99)
     fig.text(0.5, 0.035,
              "注：三组点位均由同一解析曲面（环面）随机采样得到，仅用于示意稀疏输入、上采样输出与真值稠密点集的关系，"
              "不代表任何模型的实验输出。$\\mathcal{Q}$ 与 $\\mathcal{Y}$ 采样实例不同，体现任务的采样实例不唯一性。",
@@ -466,8 +473,9 @@ def fig_1_3_chapter_map():
     arrow(ax, (3.45, 6.25), (8.55, 4.85), color="#999", lw=1.1, ls="--", rad=-0.18)
     arrow(ax, (7.55, 5.55), (8.55, 4.90), color="#C9A227", lw=1.3, ls="--")
 
-    ax.text(6.0, 7.10, "图 1.3  研究内容与章节关系图", ha="center", fontsize=12.5,
-            fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.0, 7.10, "图 1.3  研究内容与章节关系图", ha="center", fontsize=12.5,
+#             fontweight="bold")
     ax.text(0.35, 1.75,
             "实线：论证的推进顺序\n虚线（灰）：理论依据的支撑关系\n虚线（黄）：判据对裁定的约束关系",
             fontsize=9.0, color="#555", va="top", linespacing=1.9)
@@ -527,8 +535,9 @@ def fig_2_3_backbone_evolution():
     for x, _, _, _ in gens:
         arrow(ax, (x + BW / 2, 3.20), (x + BW / 2, 2.70), color="#C9A227", lw=1.0, ls="--")
 
-    ax.text(6.3, 7.42, "图 2.3  点云特征学习骨干演进图", ha="center", fontsize=12.5,
-            fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.3, 7.42, "图 2.3  点云特征学习骨干演进图", ha="center", fontsize=12.5,
+#             fontweight="bold")
     ax.text(6.3, 0.72,
             "注：横向箭头表示后一代方法针对前一代已知缺陷的改进方向；灰框为该代方法的已知缺陷或代价。"
             "各方法的机制描述与文献出处见 2.2 节正文。",
@@ -590,8 +599,9 @@ def fig_2_4_loss_quality_map():
         "并标注是否超过显著性门槛（$2\\mathrm{SE}$）",
         fc=C_HL, ec=C_HLE, fs=9.0, lw=1.7, bold=True)
 
-    ax.text(6.2, 7.56, "图 2.4  损失函数与质量维度关系图", ha="center", fontsize=12.5,
-            fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.2, 7.56, "图 2.4  损失函数与质量维度关系图", ha="center", fontsize=12.5,
+#             fontweight="bold")
     save(fig, "F2_4_loss_quality_map",
          {"figure_id": "2-4", "caption": "损失函数与质量维度关系图", "type": "schematic",
           "chapter": "2.5.4", "n_dimensions": 4,

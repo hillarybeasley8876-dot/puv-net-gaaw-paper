@@ -75,8 +75,9 @@ def fig_forward():
     ax.set_ylim(0, 56)
     ax.axis("off")
 
-    ax.text(50, 53.6, "图 4.1  生成器前向过程与张量形状（框图）",
-            ha="center", fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(50, 53.6, "图 4.1  生成器前向过程与张量形状（框图）",
+#             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(50, 51.0,
             "所有形状与参数量取自 scripts/probe_architecture.py 实测；batch 维以 B 表示，本图示例 B=2",
             ha="center", fontsize=8, color="#444444")
@@ -190,8 +191,9 @@ def fig_pipeline():
     ax.set_ylim(0, 54)
     ax.axis("off")
 
-    ax.text(50, 51.8, "图 4.2  训练与评价流程及梯度自适应对抗权重的介入点（流程图）",
-            ha="center", fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(50, 51.8, "图 4.2  训练与评价流程及梯度自适应对抗权重的介入点（流程图）",
+#             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(50, 49.4,
             "深灰块为本文改进 M1；虚线框标注各阶段落盘产物；训练期监控口径与论文主表口径严格隔离",
             ha="center", fontsize=8, color="#444444")

@@ -151,11 +151,12 @@ def fig_3_1_baseline_forward():
     arrow(ax, (0.30 + 8 * GAP + BW / 2, BY), (10.70, 1.72), color="#4C8C4A",
           lw=1.4, rad=-0.18)
 
-    ax.text(7.3, 7.80, "图 3.1  基线模型网络前向过程与张量形状框图", ha="center",
-            fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(7.3, 7.80, "图 3.1  基线模型网络前向过程与张量形状框图", ha="center",
+#             fontsize=12.5, fontweight="bold")
     ax.text(7.3, 0.20,
             "注：红色标注为该阶段输出张量形状（实测，上下交错排列）；Shuffle 阶段不含参数，"
-            "仅重组通道维到点数维。参数量与形状的完整逐层记录见 docs/_ch3_shapes.json。",
+            "仅重组通道维到点数维。参数量与形状的完整逐层记录见表 3.1。",
             ha="center", fontsize=8.2, color="#555")
     save(fig, "F3_1_baseline_forward",
          {"figure_id": "3-1", "caption": "基线模型网络前向过程与张量形状框图",
@@ -220,13 +221,14 @@ def fig_3_2_scmsa_window():
     box(ax, 1.20, 1.42, 10.40, 1.62,
         "结构含义：注意力计算次数不增加，跨头通道交互由窗口重叠免费获得；\n"
         "代价落在输出投影层——输入维由 $C$ 升至 1.75$C$，该层是本结构参数量的主要来源之一\n"
-        "（五级 SC-MSA 合计 %s 参数，占生成器 %.2f%%，实测见 docs/_ch3_shapes.json）"
+        "（五级 SC-MSA 合计 %s 参数，占生成器 %.2f%%，逐层实测见表 3.1）"
         % (format(attn_sum, ","),
            100.0 * attn_sum / SHAPES["generator"]["total_params"]),
         fc=C_GREEN, ec=C_GREENE, fs=9.0, lw=1.6)
 
-    ax.text(6.4, 7.86, "图 3.2  SC-MSA 通道窗口划分与注意力计算示意图", ha="center",
-            fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.4, 7.86, "图 3.2  SC-MSA 通道窗口划分与注意力计算示意图", ha="center",
+#             fontsize=12.5, fontweight="bold")
     ax.text(6.4, 0.72,
             "注：图中取 $C$=%d、$\\psi$=%d 仅为示意，实际各级 $C$ 见图 3.1；"
             "灰格代表通道，彩框代表一个注意力头覆盖的通道窗口（右图窗口高度依次递增仅为便于区分）。"
@@ -280,11 +282,12 @@ def fig_3_3_discriminator():
            str(d["in_shape"]), str(d["out_shape"])),
         fc=C_GREEN, ec=C_GREENE, fs=8.6, lw=1.6)
 
-    ax.text(6.3, 6.20, "图 3.3  点云判别器网络结构框图", ha="center",
-            fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.3, 6.20, "图 3.3  点云判别器网络结构框图", ha="center",
+#             fontsize=12.5, fontweight="bold")
     ax.text(6.3, 0.85,
             "注：原理上判别器可覆盖重建损失的盲区，该互补性是否在训练中兑现须由实验判定（见 3.3.1 节与第 5 章）。"
-            "参数量与形状取自 docs/_ch3_shapes.json。",
+            "参数量与形状为逐层实测值。",
             ha="center", fontsize=8.2, color="#555")
     save(fig, "F3_3_discriminator",
          {"figure_id": "3-3", "caption": "点云判别器网络结构框图", "type": "block_diagram",
@@ -303,20 +306,22 @@ def fig_3_4_metric_isolation():
     pl = STATS["plateau"]
 
     lanes = [
+        # 图内不写工程路径与 run 标识（任务 D：正文已删，图须一致）。
+        # 「第 5 章主表」是七章重构前的旧引用，主表现在在第 6 章。
         (5.62, "训练期监控口径", C_BOX, C_EDGE,
          "样本：验证切片（尾部 5%）\n尺度：归一化后的 patch\n频率：每 epoch\n"
-         "落盘：runs/<run>/metrics.json\n用途：观察收敛趋势",
+         "落盘：逐次训练的指标文件\n用途：观察收敛趋势",
          "不与文献报告值对照"),
         (3.32, "模型选点口径", C_HL, C_HLE,
          "评分：CD %.1f + HD %.1f + NUC %.1f\n预热：前 %d epoch 不参与\n"
-         "同时记录仅看 CD 的影子选点\n落盘：runs/<run>/selection.json\n"
-         "本 run 结果：加权选 ep%d，影子选 ep%d"
+         "同时记录仅看 CD 的影子选点\n落盘：逐次训练的选点文件\n"
+         "本次训练结果：加权选 ep%d，影子选 ep%d"
          % (sel["weights"]["cd"], sel["weights"]["hd"], sel["weights"]["nuc"],
             5, sel["best_epoch_weighted"], sel["best_epoch_cd_only"]),
          "两准则一致不等于等价（见 3.4.5 节）"),
         (1.02, "官方评价口径", C_GREEN, C_GREENE,
          "样本：官方测试集\n尺度：CD/HD 归一化后；P2F 原始尺度\n"
-         "执行：独立评价脚本\n落盘：单独目录\n用途：第 5 章主表",
+         "执行：独立评价流程\n落盘：单独目录\n用途：第 6 章主表",
          "唯一可与文献并列的口径"),
     ]
     for y, title, fc, ec, body, warn in lanes:
@@ -337,8 +342,9 @@ def fig_3_4_metric_isolation():
             "本章报告的平台区结果（CD %.6f ± %.6f）属训练期监控口径。"
             % (pl["cd"]["plateau_mean"], pl["cd"]["plateau_std"]),
             ha="center", fontsize=8.2, color="#555")
-    ax.text(6.4, 7.48, "图 3.4  训练、选点与官方评价三套口径隔离示意图", ha="center",
-            fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.4, 7.48, "图 3.4  训练、选点与官方评价三套口径隔离示意图", ha="center",
+#             fontsize=12.5, fontweight="bold")
     save(fig, "F3_4_metric_isolation",
          {"figure_id": "3-4", "caption": "训练、选点与官方评价三套口径隔离示意图",
           "type": "schematic", "chapter": "3.3.4", "n_lanes": 3,
@@ -401,12 +407,15 @@ def fig_3_5_nn_spacing():
     ax.set_title("(c) 误差随稀疏度单调上升：Q4/Q1 = %.3f" % st["q4_over_q1"], fontsize=9.6)
     ax.tick_params(labelsize=8.4)
 
-    fig.suptitle("图 3.5  预测点云与真值点云最近邻间距分布对比图（%d 样本实测）" % n,
-                 fontsize=12.5, fontweight="bold", y=1.03)
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     fig.suptitle("图 3.5  预测点云与真值点云最近邻间距分布对比图（%d 样本实测）" % n,
+#                  fontsize=12.5, fontweight="bold", y=1.03)
+    # 任务 D：底注不写 checkpoint 路径与 CPU/GPU 等运行环境信息，
+    # 只保留复现所需的口径要素（最优轮次、验证切片区间、增广开关、种子）。
     fig.text(0.5, -0.055,
-             "数据来源：%s（best epoch %s），验证切片 %s，关闭数据增广，CPU 前向推理，"
-             "随机种子 %d；样本量与种子于实验执行前确定。"
-             % (DIAG["source"]["ckpt"], DIAG["source"]["best_epoch"],
+             "数据来源：基线 B0（最优轮次 %s），验证切片 %s，"
+             "关闭数据增广，随机种子 %d；样本量与种子于实验执行前确定。"
+             % (DIAG["source"]["best_epoch"],
                 str(DIAG["source"]["val_range"]), DIAG["source"]["seed"]),
              ha="center", fontsize=8.2, color="#555")
     fig.tight_layout()
@@ -482,8 +491,9 @@ def fig_3_6_bottleneck_attribution():
         "不足以在两者间归因，亦不足以排除第三种可能；归因判定由第 4 章设计配合第 5 章受控消融完成。",
         fc=C_GRAY, ec="#C62828", fs=8.8, lw=1.6)
 
-    ax.text(6.5, 7.66, "图 3.6  基线瓶颈证据与候选归因位置对应图", ha="center",
-            fontsize=12.5, fontweight="bold")
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     ax.text(6.5, 7.66, "图 3.6  基线瓶颈证据与候选归因位置对应图", ha="center",
+#             fontsize=12.5, fontweight="bold")
     save(fig, "F3_6_bottleneck_attribution",
          {"figure_id": "3-6", "caption": "基线瓶颈证据与候选归因位置对应图",
           "type": "schematic", "chapter": "3.5.4",

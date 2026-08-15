@@ -33,8 +33,8 @@ RESULTS = ROOT / "docs" / "_thesis_results.json"
 
 # 面板标题 -> (组 key, 该组 baseline run)
 PANELS = [
-    ("3090 host — uniformity / structure ablations", "3090_uniform_structure"),
-    ("5090 host — adversarial ablations", "5090_adversarial"),
+    ("Host A — uniformity / structure ablations", "3090_uniform_structure"),
+    ("Host B — adversarial ablations", "5090_adversarial"),
 ]
 
 STYLE = {
@@ -144,11 +144,13 @@ def main() -> int:
 
     # 图号跟随正稿章号：权衡平面属第 6 章 §6.5.4 → 图 6.2。
     # （文件名沿用 F5_3_* 不改，避免打断既有 .meta.json 与引用路径。）
-    fig.suptitle("Fig. 6-2  Uniformity / geometry trade-off across ablations "
-                 "(dashed cross = per-host baseline)", fontsize=11.5, y=0.985)
+    # [图题移除] 图题由 Word Caption 承担，画布内不再重复绘制（避免与图下题注重复命名）
+#     fig.suptitle("Fig. 6-2  Uniformity / geometry trade-off across ablations "
+#                  "(dashed cross = per-host baseline)", fontsize=11.5, y=0.985)
     fig.tight_layout(rect=(0, 0.135, 1, 0.955))
-    fig.text(0.5, 0.004, CAVEAT, ha="center", va="bottom", fontsize=7.1,
-             style="italic", color="#555", linespacing=1.55)
+  # [画布文字移除] 图题与 Caveat 由 Word Caption 与正文承担，画布内不再绘制
+#     fig.text(0.5, 0.004, CAVEAT, ha="center", va="bottom", fontsize=7.1,
+#              style="italic", color="#555", linespacing=1.55)
 
     out = OUTDIR / "F5_3_tradeoff_scatter.png"
     fig.savefig(out, dpi=200, bbox_inches="tight")
@@ -178,3 +180,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
