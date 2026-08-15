@@ -79,7 +79,7 @@ def _p(name):
 
 
 # ============================================================
-# 图 3-1 基线前向过程与张量形状框图（形状全部取自实测 hook）
+# 图 3.1 基线前向过程与张量形状框图（形状全部取自实测 hook）
 # ============================================================
 def fig_3_1_baseline_forward():
     fig, ax = plt.subplots(figsize=(14.6, 8.2))
@@ -151,7 +151,7 @@ def fig_3_1_baseline_forward():
     arrow(ax, (0.30 + 8 * GAP + BW / 2, BY), (10.70, 1.72), color="#4C8C4A",
           lw=1.4, rad=-0.18)
 
-    ax.text(7.3, 7.80, "图 3-1  基线模型网络前向过程与张量形状框图", ha="center",
+    ax.text(7.3, 7.80, "图 3.1  基线模型网络前向过程与张量形状框图", ha="center",
             fontsize=12.5, fontweight="bold")
     ax.text(7.3, 0.20,
             "注：红色标注为该阶段输出张量形状（实测，上下交错排列）；Shuffle 阶段不含参数，"
@@ -165,7 +165,7 @@ def fig_3_1_baseline_forward():
 
 
 # ============================================================
-# 图 3-2 SC-MSA 通道窗口划分示意图
+# 图 3.2 SC-MSA 通道窗口划分示意图
 # ============================================================
 def fig_3_2_scmsa_window():
     fig, ax = plt.subplots(figsize=(12.8, 8.2))
@@ -225,10 +225,10 @@ def fig_3_2_scmsa_window():
            100.0 * attn_sum / SHAPES["generator"]["total_params"]),
         fc=C_GREEN, ec=C_GREENE, fs=9.0, lw=1.6)
 
-    ax.text(6.4, 7.86, "图 3-2  SC-MSA 通道窗口划分与注意力计算示意图", ha="center",
+    ax.text(6.4, 7.86, "图 3.2  SC-MSA 通道窗口划分与注意力计算示意图", ha="center",
             fontsize=12.5, fontweight="bold")
     ax.text(6.4, 0.72,
-            "注：图中取 $C$=%d、$\\psi$=%d 仅为示意，实际各级 $C$ 见图 3-1；"
+            "注：图中取 $C$=%d、$\\psi$=%d 仅为示意，实际各级 $C$ 见图 3.1；"
             "灰格代表通道，彩框代表一个注意力头覆盖的通道窗口（右图窗口高度依次递增仅为便于区分）。"
             % (C, psi),
             ha="center", fontsize=8.2, color="#555")
@@ -240,7 +240,7 @@ def fig_3_2_scmsa_window():
 
 
 # ============================================================
-# 图 3-3 判别器结构框图
+# 图 3.3 判别器结构框图
 # ============================================================
 def fig_3_3_discriminator():
     fig, ax = plt.subplots(figsize=(12.6, 6.6))
@@ -280,7 +280,7 @@ def fig_3_3_discriminator():
            str(d["in_shape"]), str(d["out_shape"])),
         fc=C_GREEN, ec=C_GREENE, fs=8.6, lw=1.6)
 
-    ax.text(6.3, 6.20, "图 3-3  点云判别器网络结构框图", ha="center",
+    ax.text(6.3, 6.20, "图 3.3  点云判别器网络结构框图", ha="center",
             fontsize=12.5, fontweight="bold")
     ax.text(6.3, 0.85,
             "注：原理上判别器可覆盖重建损失的盲区，该互补性是否在训练中兑现须由实验判定（见 3.3.1 节与第 5 章）。"
@@ -293,7 +293,7 @@ def fig_3_3_discriminator():
 
 
 # ============================================================
-# 图 3-4 三套指标口径隔离示意图
+# 图 3.4 三套指标口径隔离示意图
 # ============================================================
 def fig_3_4_metric_isolation():
     fig, ax = plt.subplots(figsize=(12.8, 7.8))
@@ -337,7 +337,7 @@ def fig_3_4_metric_isolation():
             "本章报告的平台区结果（CD %.6f ± %.6f）属训练期监控口径。"
             % (pl["cd"]["plateau_mean"], pl["cd"]["plateau_std"]),
             ha="center", fontsize=8.2, color="#555")
-    ax.text(6.4, 7.48, "图 3-4  训练、选点与官方评价三套口径隔离示意图", ha="center",
+    ax.text(6.4, 7.48, "图 3.4  训练、选点与官方评价三套口径隔离示意图", ha="center",
             fontsize=12.5, fontweight="bold")
     save(fig, "F3_4_metric_isolation",
          {"figure_id": "3-4", "caption": "训练、选点与官方评价三套口径隔离示意图",
@@ -346,7 +346,7 @@ def fig_3_4_metric_isolation():
 
 
 # ============================================================
-# 图 3-5 最近邻间距分布对比图（数据图，全部取自 _ch3_diag.json）
+# 图 3.5 最近邻间距分布对比图（数据图，全部取自 _ch3_diag.json）
 # ============================================================
 def fig_3_5_nn_spacing():
     sp = DIAG["spacing"]
@@ -401,7 +401,7 @@ def fig_3_5_nn_spacing():
     ax.set_title("(c) 误差随稀疏度单调上升：Q4/Q1 = %.3f" % st["q4_over_q1"], fontsize=9.6)
     ax.tick_params(labelsize=8.4)
 
-    fig.suptitle("图 3-5  预测点云与真值点云最近邻间距分布对比图（%d 样本实测）" % n,
+    fig.suptitle("图 3.5  预测点云与真值点云最近邻间距分布对比图（%d 样本实测）" % n,
                  fontsize=12.5, fontweight="bold", y=1.03)
     fig.text(0.5, -0.055,
              "数据来源：%s（best epoch %s），验证切片 %s，关闭数据增广，CPU 前向推理，"
@@ -419,7 +419,7 @@ def fig_3_5_nn_spacing():
 
 
 # ============================================================
-# 图 3-6 瓶颈证据与候选归因位置对应图
+# 图 3.6 瓶颈证据与候选归因位置对应图
 # ============================================================
 def fig_3_6_bottleneck_attribution():
     fig, ax = plt.subplots(figsize=(13.0, 8.0))
@@ -482,7 +482,7 @@ def fig_3_6_bottleneck_attribution():
         "不足以在两者间归因，亦不足以排除第三种可能；归因判定由第 4 章设计配合第 5 章受控消融完成。",
         fc=C_GRAY, ec="#C62828", fs=8.8, lw=1.6)
 
-    ax.text(6.5, 7.66, "图 3-6  基线瓶颈证据与候选归因位置对应图", ha="center",
+    ax.text(6.5, 7.66, "图 3.6  基线瓶颈证据与候选归因位置对应图", ha="center",
             fontsize=12.5, fontweight="bold")
     save(fig, "F3_6_bottleneck_attribution",
          {"figure_id": "3-6", "caption": "基线瓶颈证据与候选归因位置对应图",

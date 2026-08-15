@@ -40,11 +40,11 @@ for num, f in FILES.items():
     for m in re.finditer(r'^#\s+第\s*(\d+)\s*章', t, re.M):
         sections.add(m.group(1))
     # 图题定义：表格行 | 图 X-N | ... |
-    for m in re.finditer(r'\|\s*图\s*(\d+-\d+)\s*\|', t):
+    for m in re.finditer(r'\|\s*图\s*(\d+\.\d+)\s*\|', t):
         figures.add(m.group(1))
-    for m in re.finditer(r'^\*\*图\s*(\d+-\d+)\s', t, re.M):
+    for m in re.finditer(r'^\*\*图\s*(\d+\.\d+)\s', t, re.M):
         figures.add(m.group(1))
-    for m in re.finditer(r'^\*\*表\s*(\d+-\d+)\s', t, re.M):
+    for m in re.finditer(r'^\*\*表\s*(\d+\.\d+)\s', t, re.M):
         tables.add(m.group(1))
 
 print(f'锚点：节 {len(sections)}  图 {len(figures)}  表 {len(tables)}')
@@ -60,12 +60,28 @@ for num, f in sorted(FILES.items()):
         for m in re.finditer(r'第\s*(\d+\.\d+(?:\.\d+)?)\s*节', ln):
             if m.group(1) not in sections:
                 bad.append(('节', f, i, m.group(1), ln.strip()[:96]))
-        for m in re.finditer(r'图\s*(\d+-\d+)', ln):
+        for m in re.finditer(r'图\s*(\d+\.\d+)', ln):
             if m.group(1) not in figures:
                 bad.append(('图', f, i, m.group(1), ln.strip()[:96]))
-        for m in re.finditer(r'表\s*(\d+-\d+)', ln):
+        for m in re.finditer(r'表\s*(\d+\.\d+)', ln):
             if m.group(1) not in tables:
                 bad.append(('表', f, i, m.group(1), ln.strip()[:96]))
+
+# ---- 防假绿守卫 ----
+# 锚点集合为空时，「悬空引用」判定失去意义：脚本仍会报「0 处」。
+# 实测教训（2026-08-15）：图表编号由连字符改为点号后，本脚本的锚点正则
+# 仍写 `\d+-\d+`，导致锚点与引用两侧同时匹配为空，全程静默通过。
+# 因此这里显式断言锚点数量非零，且与预期规模相符。
+guard_fail = False
+if not sections:
+    print('  !! 节锚点为空 —— 正则失配，本次判定不可信')
+    guard_fail = True
+if not figures:
+    print('  !! 图锚点为空 —— 正则失配，本次判定不可信')
+    guard_fail = True
+if not tables:
+    print('  !! 表锚点为空 —— 正则失配，本次判定不可信')
+    guard_fail = True
 
 print('=== 悬空交叉引用 ===')
 if not bad:
@@ -76,4 +92,4 @@ else:
         print(f'        {ctx}')
 print()
 print(f'合计 {len(bad)} 处')
-sys.exit(1 if bad else 0)
+sys.exit(2 if guard_fail else (1 if bad else 0))

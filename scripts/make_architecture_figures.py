@@ -67,7 +67,7 @@ def arrow(ax, x1, y1, x2, y2, text=None, ls="-", lw=1.1, fs=7.6,
 
 
 # =====================================================================
-# 图 4-1 链A: 生成器前向过程
+# 图 4.1 链A: 生成器前向过程
 # =====================================================================
 def fig_forward():
     fig, ax = plt.subplots(figsize=(13.6, 7.4))
@@ -75,7 +75,7 @@ def fig_forward():
     ax.set_ylim(0, 56)
     ax.axis("off")
 
-    ax.text(50, 53.6, "图 4-1  生成器前向过程与张量形状（框图）",
+    ax.text(50, 53.6, "图 4.1  生成器前向过程与张量形状（框图）",
             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(50, 51.0,
             "所有形状与参数量取自 scripts/probe_architecture.py 实测；batch 维以 B 表示，本图示例 B=2",
@@ -182,7 +182,7 @@ def fig_forward():
 
 
 # =====================================================================
-# 图 4-2 链B: 训练与评价流程 (含 M1 介入点)
+# 图 4.2 链B: 训练与评价流程 (含 M1 介入点)
 # =====================================================================
 def fig_pipeline():
     fig, ax = plt.subplots(figsize=(13.6, 7.0))
@@ -190,7 +190,7 @@ def fig_pipeline():
     ax.set_ylim(0, 54)
     ax.axis("off")
 
-    ax.text(50, 51.8, "图 4-2  训练与评价流程及梯度自适应对抗权重的介入点（流程图）",
+    ax.text(50, 51.8, "图 4.2  训练与评价流程及梯度自适应对抗权重的介入点（流程图）",
             ha="center", fontsize=12.5, fontweight="bold")
     ax.text(50, 49.4,
             "深灰块为本文改进 M1；虚线框标注各阶段落盘产物；训练期监控口径与论文主表口径严格隔离",
@@ -201,7 +201,7 @@ def fig_pipeline():
     box(ax, 1.0, y1, 12.5, h,
         "数据采样\nPU1K patch\n256 → 1024", fill=FILL_IN, fs=8.2)
     arrow(ax, 13.5, y1 + h / 2, 17.2, y1 + h / 2)
-    box(ax, 17.2, y1, 12.5, h, "生成器 $G_\\theta$\n前向\n（图 4-1）", fs=8.2)
+    box(ax, 17.2, y1, 12.5, h, "生成器 $G_\\theta$\n前向\n（图 4.1）", fs=8.2)
     arrow(ax, 29.7, y1 + h / 2, 33.4, y1 + h / 2, "$\\mathcal{Q}$", tdy=0.75)
     box(ax, 33.4, y1, 13.5, h,
         "损失计算\n$\\mathcal{L}_{cd}$, $\\mathcal{L}_{unif}$, $\\mathcal{L}_{adv}$", fs=8.2)

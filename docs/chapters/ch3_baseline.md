@@ -384,3 +384,17 @@ Chamfer 距离的两个分量语义不对称（第 2.1.2 节）：前向项 $\ma
 上述证据把瓶颈指向"从单点特征生成多个空间位置"与"在稀疏区聚合局部几何证据"两个环节，但本章证据不足以在两者间归因，故两者均标注为待验证候选。本章据此固定了第 4 章的四项设计约束与预先声明的验证指标，其中主指标为 $\mathrm{cv}_{\text{nn}}$，判定门槛为 $2\mathrm{SE}$。
 
 下一章在这些约束下设计训练机制级的改进方案。
+
+---
+
+**本章插图**
+
+| 编号 | 标题 | 类型 | 位置 | 状态 |
+|---|---|---|---|---|
+| 图 3.1 | 基线模型网络前向过程与张量形状框图 | 框图 | §3.1.3 / §3.4.2 | `figures_schematic/F3_1_baseline_forward.png` |
+| 图 3.2 | SC-MSA 通道窗口划分与注意力计算示意图 | 示意图 | §3.2.3 | `figures_schematic/F3_2_scmsa_window.png` |
+| 图 3.3 | 点云判别器网络结构框图 | 框图 | §3.3.1 | `figures_schematic/F3_3_discriminator.png` |
+| 图 3.4 | 训练、选点与官方评价三套口径隔离示意图 | 示意图 | §3.3.4 / §3.4.5 | `figures_schematic/F3_4_metric_isolation.png` |
+| 图 3.5 | 预测点云与真值点云最近邻间距分布对比图 | 数据图 | §3.5.2 | `figures_schematic/F3_5_nn_spacing.png` |
+| 图 3.6 | 基线瓶颈证据与候选归因位置对应图 | 示意图 | §3.5.4 / §3.5.5 | `figures_schematic/F3_6_bottleneck_attribution.png` |
+

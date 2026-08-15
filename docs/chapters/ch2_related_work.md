@@ -289,3 +289,15 @@ $$
 在指标方面，明确了 CD、HD、NUC 与 $\mathrm{cv}_{\text{nn}}$ 各自的度量对象与盲区，确立了多指标同报与显著性门槛判定的报告纪律。
 
 下一章将在此基础上复现基线模型、核验实现与评价协议，并以实测证据定位基线的可测量瓶颈，为第 4 章的命题设计给出约束。
+
+---
+
+**本章插图**
+
+| 编号 | 标题 | 类型 | 状态 |
+|---|---|---|---|
+| 图 2.1 | 点云上采样方法演进时间轴 | 示意图 | 已生成 `figures_schematic/F2_1_method_timeline.png` |
+| 图 2.2 | 点云上采样方法分类图 | 示意图 | 已生成 `figures_schematic/F2_2_method_taxonomy.png` |
+| 图 2.3 | 点云特征学习骨干演进图 | 示意图 | 已生成 `figures_schematic/F2_3_backbone_evolution.png` |
+| 图 2.4 | 损失函数与质量维度关系图 | 示意图 | 已生成 `figures_schematic/F2_4_loss_quality_map.png` |
+

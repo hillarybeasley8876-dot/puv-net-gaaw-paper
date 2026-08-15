@@ -5,7 +5,7 @@
   "chapter": "1.4.4",
   "n_stages": 4,
   "revision": "2026-08-15 对齐七章结构：阶段三由「结构模块」改为「命题与机制」，输出章号改为第 4、5 章与第 6、7 章；「核心纪律」改写为「论证约束」（去项目管理口吻）；图题编号改为点号（FORMAT_TONGJI §2.2）",
-  "generated_at": "2026-08-15T15:50:53+08:00",
+  "generated_at": "2026-08-15T16:45:02+08:00",
   "script": "scripts/make_schematic_figures.py",
   "depends_on_experiment": false
 }

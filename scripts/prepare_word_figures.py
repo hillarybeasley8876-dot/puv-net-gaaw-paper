@@ -2,7 +2,7 @@
 """Prepare schematic figures for Word by removing embedded title bands.
 
 The formal caption is provided below each image in the thesis, so duplicated
-titles such as "图 2-3 ..." inside the bitmap are cropped from the Word copy.
+titles such as "图 2.3 ..." inside the bitmap are cropped from the Word copy.
 Source figures remain unchanged.
 """
 

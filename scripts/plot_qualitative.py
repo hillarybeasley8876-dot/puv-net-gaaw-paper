@@ -314,7 +314,7 @@ def main() -> int:
             "zoom_ylim": [float(zy[0]), float(zy[1])],
         })
 
-    # 图号跟随正稿章号：七章结构下定性对比属第 6 章 §6.5.3 → 图 6-1。
+    # 图号跟随正稿章号：七章结构下定性对比属第 6 章 §6.5.3 → 图 6.1。
     # （文件名沿用 F5_1_* 不改，避免打断既有 .meta.json 与引用路径。）
     fig.suptitle("Fig. 6-1  Qualitative comparison of upsampled point clouds "
                  "(orthographic XY projection)", fontsize=11.5, y=0.9955)

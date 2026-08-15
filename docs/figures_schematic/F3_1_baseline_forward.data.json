@@ -6,7 +6,7 @@
   "source": "docs/_ch3_shapes.json",
   "total_params": 1152803,
   "n_stages": 9,
-  "generated_at": "2026-08-11T19:06:38+08:00",
+  "generated_at": "2026-08-15T16:45:05+08:00",
   "script": "scripts/make_ch3_figures.py",
   "depends_on_experiment": true
 }

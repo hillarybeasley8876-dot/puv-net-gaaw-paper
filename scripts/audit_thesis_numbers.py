@@ -111,7 +111,7 @@ def load_authoritative():
         if os.path.exists(p):
             walk(json.load(open(p, encoding='utf-8')), 'docs/' + name)
     # 插图 .meta.json 属正当存档来源：图注与正文引用的逐 panel 统计量
-    # （如图 5-1 的逐样本 cv_nn、图 5-2 的逐 epoch 尖峰统计）只落在这里，
+    # （如图 5.1 的逐样本 cv_nn、图 5.2 的逐 epoch 尖峰统计）只落在这里，
     # 不在 _thesis_results.json 的汇总层。不纳入池会把正确引用误报为 C2 假红。
     # 仅收 paper_assets_TRIAL 下的图 meta，不收任意 json。
     for p in glob.glob(os.path.join(ROOT, 'paper_assets_TRIAL',
@@ -340,7 +340,7 @@ def audit_file(path, pool):
     # 正确做法是**反向**做：从正文里把数字抽出来，逐个跟存档比。
     #
     # 抽取靶点限定在两种确定写法，避免加宽正则把章节号/epoch 卷进来：
-    #   A. 表 5-4 的表格行：`| <指标> | <改善数> | <变差数> | <占比>% | ...`
+    #   A. 表 5.4 的表格行：`| <指标> | <改善数> | <变差数> | <占比>% | ...`
     #   B. 行内括注：`（<改善数> 对 <变差数>）`
     # 两者都要求**同一处**同时出现两个计数，故一处篡改必然暴露。
     paired_p = os.path.join(ROOT, 'docs',
@@ -470,7 +470,7 @@ def audit_file(path, pool):
                     return 'hd'
                 return None
 
-            # 表 5-3 形态：| 指标 | … | <SE倍数> | <裁定> |
+            # 表 5.3 形态：| 指标 | … | <SE倍数> | <裁定> |
             # 倍数与裁定是最后两个单元格，故从行尾锚定。
             #
             # 单元格可能被三种装饰包裹，必须全部剥掉才能取到数字：

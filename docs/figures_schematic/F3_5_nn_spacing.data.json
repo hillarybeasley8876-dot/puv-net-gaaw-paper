@@ -8,7 +8,7 @@
   "n_sample": 200,
   "cv_ratio": 4.216751471594123,
   "q4_over_q1": 1.4760463614896135,
-  "generated_at": "2026-08-11T19:06:38+08:00",
+  "generated_at": "2026-08-15T16:45:05+08:00",
   "script": "scripts/make_ch3_figures.py",
   "depends_on_experiment": true
 }

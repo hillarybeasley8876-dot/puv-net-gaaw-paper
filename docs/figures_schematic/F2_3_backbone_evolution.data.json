@@ -4,7 +4,7 @@
   "type": "schematic",
   "chapter": "2.2",
   "n_generations": 4,
-  "generated_at": "2026-08-15T15:50:53+08:00",
+  "generated_at": "2026-08-15T16:45:02+08:00",
   "script": "scripts/make_schematic_figures.py",
   "depends_on_experiment": false
 }
